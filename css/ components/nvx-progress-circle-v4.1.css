@@ -1,0 +1,8 @@
+/*======================================*/
+⚡131 css section CIRCLE PROGRESS - FIXED SVG ⚡
+/*======================================*/
+.nvx-progress-circle{width:80px;height:80px;position:relative}
+.nvx-progress-circle svg{width:100%;height:100%;transform:rotate(-90deg)}
+.nvx-progress-circle-bg{fill:none;stroke:var(--nvx-bg-secondary,#f8fafc);stroke-width:8}
+.nvx-progress-circle-fill{fill:none;stroke:var(--nvx-primary,#3b82f6);stroke-width:8;stroke-linecap:round;stroke-dasharray:283;stroke-dashoffset:283;transition:stroke-dashoffset .5s ease}
+.nvx-progress-circle-text{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:18px;font-weight:700;color:var(--nvx-primary,#3b82f6)}
