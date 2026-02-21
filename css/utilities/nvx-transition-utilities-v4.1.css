@@ -1,0 +1,8 @@
+/*======================================*/
+⚡119 css section TRANSITION UTILITIES - OPTIMIZED ⚡
+/*======================================*/
+.nvx-transition-fast{transition-property:opacity,transform;transition-duration:0.15s;transition-timing-function:ease}
+.nvx-transition-normal{transition-property:opacity,transform;transition-duration:0.3s;transition-timing-function:ease}
+.nvx-transition-slow{transition-property:opacity,transform;transition-duration:0.5s;transition-timing-function:ease}
+.nvx-transition-all{transition-property:all;transition-duration:0.3s;transition-timing-function:ease}
+
