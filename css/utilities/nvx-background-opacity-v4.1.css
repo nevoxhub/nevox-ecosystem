@@ -1,0 +1,17 @@
+/*======================================*/
+⚡114 css section  BACKGROUND OPACITY SYSTEM ⚡
+/*======================================*/
+.nvx-bg-primary-10{background:rgba(var(--nvx-primary-rgb),0.1)}
+.nvx-bg-primary-20{background:rgba(var(--nvx-primary-rgb),0.2)}
+.nvx-bg-primary-30{background:rgba(var(--nvx-primary-rgb),0.3)}
+.nvx-bg-primary-40{background:rgba(var(--nvx-primary-rgb),0.4)}
+.nvx-bg-primary-50{background:rgba(var(--nvx-primary-rgb),0.5)}
+.nvx-bg-primary-60{background:rgba(var(--nvx-primary-rgb),0.6)}
+.nvx-bg-primary-70{background:rgba(var(--nvx-primary-rgb),0.7)}
+.nvx-bg-primary-80{background:rgba(var(--nvx-primary-rgb),0.8)}
+.nvx-bg-primary-90{background:rgba(var(--nvx-primary-rgb),0.9)}
+.nvx-bg-secondary-50{background:rgba(var(--nvx-secondary-rgb),0.5)}
+.nvx-bg-accent-50{background:rgba(var(--nvx-accent-rgb),0.5)}
+.nvx-bg-dark-80{background:rgba(30,41,59,0.8)}
+.nvx-bg-light-50{background:rgba(248,250,252,0.5)}
+
