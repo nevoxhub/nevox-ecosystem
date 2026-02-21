@@ -1,0 +1,15 @@
+/*======================================*/
+115 css section GRID SYSTEM - COMPLETE (2-12) ⚡
+/*======================================*/
+.nvx-grid-cols-2{grid-template-columns:repeat(2,1fr)}
+.nvx-grid-cols-3{grid-template-columns:repeat(3,1fr)}
+.nvx-grid-cols-4{grid-template-columns:repeat(4,1fr)}
+.nvx-grid-cols-5{grid-template-columns:repeat(5,1fr)}
+.nvx-grid-cols-6{grid-template-columns:repeat(6,1fr)}
+.nvx-grid-cols-7{grid-template-columns:repeat(7,1fr)}
+.nvx-grid-cols-8{grid-template-columns:repeat(8,1fr)}
+.nvx-grid-cols-9{grid-template-columns:repeat(9,1fr)}
+.nvx-grid-cols-10{grid-template-columns:repeat(10,1fr)}
+.nvx-grid-cols-11{grid-template-columns:repeat(11,1fr)}
+.nvx-grid-cols-12{grid-template-columns:repeat(12,1fr)}
+
