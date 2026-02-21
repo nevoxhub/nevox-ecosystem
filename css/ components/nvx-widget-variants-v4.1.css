@@ -1,0 +1,9 @@
+/*======================================*/
+⚡106 css section  WIDGET VARIANTS ⚡
+/*======================================*/
+.nvx-widget.glass{background:var(--nvx-glass,linear-gradient(135deg,rgba(255,255,255,0.95) 0%,rgba(255,255,255,0.85) 100%));backdrop-filter:blur(20px);border-color:var(--nvx-border-glass,rgba(255,255,255,0.2))}
+.nvx-widget.accent::before{background:linear-gradient(var(--nvx-gradient-angle,180deg),var(--nvx-accent,#ec4899),#f472b6)}
+.nvx-widget.featured{padding-top:var(--nvx-spacing-8,32px)}
+.nvx-widget.featured::after{content:'FEATURED';position:absolute;top:0;right:0;background:linear-gradient(90deg,var(--nvx-primary,#3b82f6),var(--nvx-secondary,#8b5cf6));color:#fff;font-size:10px;font-weight:800;padding:6px 12px;border-radius:0 0 0 12px;letter-spacing:.5px}
+.nvx-widget.stats .nvx-widget-item{padding:var(--nvx-spacing-4,16px);background:var(--nvx-bg-subtle,#f1f5f9);border-radius:12px;margin-bottom:8px;border:none}
+
