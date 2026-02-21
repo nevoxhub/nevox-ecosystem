@@ -1,0 +1,5 @@
+/*======================================*/
+⚡128 css section  SKELETON LOADER ⚡
+/*======================================*/
+.nvx-loading-skeleton{background:linear-gradient(90deg,var(--nvx-bg-secondary,#f8fafc) 25%,var(--nvx-bg,#fff) 50%,var(--nvx-bg-secondary,#f8fafc) 75%);background-size:200% 100%;animation:nvx-skeleton-shimmer 1.5s infinite;border-radius:8px}
+@keyframes nvx-skeleton-shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
