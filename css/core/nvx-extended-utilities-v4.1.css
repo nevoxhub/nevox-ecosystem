@@ -1,0 +1,13 @@
+/*======================================*/
+⚡113 css section EXTENDED UTILITY SYSTEM - FIXED & OPTIMIZED ⚡
+/*======================================*/
+:root{
+  --nvx-primary-rgb:59,130,246;
+  --nvx-secondary-rgb:139,92,246;
+  --nvx-accent-rgb:236,72,153;
+  --nvx-spacing-1:4px; --nvx-spacing-2:8px; --nvx-spacing-3:12px; --nvx-spacing-4:16px;
+  --nvx-spacing-5:20px; --nvx-spacing-6:24px; --nvx-spacing-7:28px; --nvx-spacing-8:32px;
+  --nvx-spacing-9:36px; --nvx-spacing-10:40px; --nvx-spacing-12:48px; --nvx-spacing-14:56px;
+  --nvx-spacing-16:64px; --nvx-spacing-18:72px; --nvx-spacing-20:80px;
+}
+
