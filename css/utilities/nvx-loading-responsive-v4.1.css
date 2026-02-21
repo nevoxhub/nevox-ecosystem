@@ -1,0 +1,6 @@
+
+/*======================================*/
+⚡134 css section  RESPONSIVE OPTIMIZATIONS⚡
+/*======================================*/
+@media(max-width:768px){.nvx-loading::after{width:32px;height:32px;margin:-16px 0 0 -16px}.nvx-loading-lg::after{width:48px;height:48px;margin:-24px 0 0 -24px}.nvx-loading-xl::after{width:60px;height:60px;margin:-30px 0 0 -30px}.nvx-page-loader-spinner{width:48px;height:48px}.nvx-page-loader-logo{font-size:36px}.nvx-page-loader-progress{width:160px}}
+@media(max-width:480px){.nvx-loading::after{width:28px;height:28px;margin:-14px 0 0 -14px}.nvx-loading-lg::after{width:40px;height:40px;margin:-20px 0 0 -20px}.nvx-page-loader-spinner{width:40px;height:40px}.nvx-page-loader-logo{font-size:28px}.nvx-page-loader-progress{width:120px}}
