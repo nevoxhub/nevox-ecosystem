@@ -1,0 +1,9 @@
+/*======================================*/
+⚡122 css section  RESPONSIVE ⚡
+/*======================================*/
+@media(max-width:768px){.nvx-grid-cols-2-mobile{grid-template-columns:repeat(2,1fr)}
+.nvx-grid-cols-3-mobile{grid-template-columns:repeat(3,1fr)}.nvx-grid-cols-4-mobile{grid-template-columns:repeat(4,1fr)}
+.nvx-max-w-full-mobile{max-width:100%}}
+@media(min-width:769px){.nvx-grid-cols-5-desktop{grid-template-columns:repeat(5,1fr)}
+.nvx-grid-cols-6-desktop{grid-template-columns:repeat(6,1fr)}.nvx-grid-cols-10-desktop{grid-template-columns:repeat(10,1fr)}}
+@media(prefers-reduced-motion:reduce){.nvx-transition-fast,.nvx-transition-normal,.nvx-transition-slow,.nvx-transition-all{transition:none}}
