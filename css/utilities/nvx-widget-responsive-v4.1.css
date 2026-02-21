@@ -1,0 +1,7 @@
+
+/*======================================*/
+⚡108 css section  RESPONSIVE ⚡
+/*======================================*/
+@media(max-width:1024px){.nvx-widget{padding:var(--nvx-spacing-5,20px)}}
+@media(max-width:768px){.nvx-widget{margin-bottom:var(--nvx-spacing-5,20px);border-radius:var(--nvx-radius-lg,16px)}.nvx-widget:hover{transform:translateY(-2px)}.nvx-widget-title{font-size:var(--nvx-text-md,16px)}}
+@media(max-width:480px){.nvx-widget{padding:var(--nvx-spacing-4,16px)}.nvx-widget-item{padding:var(--nvx-spacing-2,8px) 0}.nvx-widget.featured::after{font-size:9px;padding:4px 10px}}
