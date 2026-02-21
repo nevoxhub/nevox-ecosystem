@@ -1,0 +1,70 @@
+/*======================================*/
+/* 140. REDUCED MOTION SUPPORT SECTION  */
+/*======================================*/
+
+/* CRITICAL FIX: KEEP SPINNER ANIMATION FOR LOADING STATES */
+@keyframes nvx-spin {
+  to { 
+    transform: rotate(360deg); 
+  }
+}
+
+/* REDUCED MOTION MEDIA QUERY */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Keep essential loading animations */
+  .nvx-loading,
+  .nvx-spinner,
+  .nvx-skeleton,
+  .nvx-btn-loading::after,
+  .nvx-form-b-load::after,
+  .nvx-pagination-loading::after,
+  .nvx-form-load::after {
+    animation: nvx-spin 1s linear infinite !important;
+  }
+
+  /* Disable parallax and transform effects */
+  [data-aos],
+  [class*="animate-"],
+  [class*="transition-"],
+  .nvx-accordion-content,
+  .nvx-accordion-body,
+  .nvx-accordion-icon,
+  .nvx-accordion-header,
+  .nvx-tab-button,
+  .nvx-tab-pane {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  /* Disable smooth scrolling */
+  html {
+    scroll-behavior: auto !important;
+  }
+  
+  /* Disable hover effects */
+  .nvx-btn:hover,
+  .nvx-nav-item:hover,
+  .nvx-user-avatar:hover,
+  .nvx-theme-toggle:hover,
+  .nvx-mobile-menu:hover,
+  .nvx-mobile-search:hover {
+    transform: none !important;
+  }
+  
+  /* Disable skeleton animations */
+  .nvx-skeleton {
+    animation: none !important;
+    background: var(--nvx-bg-tertiary) !important;
+  }
+}
