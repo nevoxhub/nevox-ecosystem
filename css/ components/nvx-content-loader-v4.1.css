@@ -1,0 +1,10 @@
+
+/*======================================*/
+⚡133 css section  CONTENT LOADER ⚡
+/*======================================*/
+.nvx-content-loader{display:grid;gap:16px;padding:24px}
+.nvx-content-loader-line{height:16px;background:linear-gradient(90deg,var(--nvx-bg-secondary,#f8fafc) 25%,var(--nvx-bg,#fff) 50%,var(--nvx-bg-secondary,#f8fafc) 75%);background-size:200% 100%;animation:nvx-skeleton-shimmer 1.5s infinite;border-radius:8px}
+.nvx-content-loader-line:nth-child(1){width:80%}
+.nvx-content-loader-line:nth-child(2){width:100%}
+.nvx-content-loader-line:nth-child(3){width:60%}
+.nvx-content-loader-circle{width:60px;height:60px;border-radius:50%;background:linear-gradient(90deg,var(--nvx-bg-secondary,#f8fafc) 25%,var(--nvx-bg,#fff) 50%,var(--nvx-bg-secondary,#f8fafc) 75%);background-size:200% 100%;animation:nvx-skeleton-shimmer 1.5s infinite}
