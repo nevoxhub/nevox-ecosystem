@@ -1,0 +1,13 @@
+/*======================================*/
+⚡120 css section TRANSFORM UTILITIES - CHAINED ⚡
+/*======================================*/
+.nvx-scale-90{--nvx-scale:0.9}.nvx-scale-95{--nvx-scale:0.95}.nvx-scale-100{--nvx-scale:1}
+.nvx-scale-105{--nvx-scale:1.05}.nvx-scale-110{--nvx-scale:1.1}
+.nvx-rotate-45{--nvx-rotate:45deg}.nvx-rotate-90{--nvx-rotate:90deg}
+.nvx-rotate-180{--nvx-rotate:180deg}.nvx-rotate-270{--nvx-rotate:270deg}
+.nvx-translate-x-1{--nvx-translate-x:var(--nvx-spacing-1)}
+.nvx-translate-x-2{--nvx-translate-x:var(--nvx-spacing-2)}
+.nvx-translate-y-1{--nvx-translate-y:var(--nvx-spacing-1)}
+.nvx-translate-y-2{--nvx-translate-y:var(--nvx-spacing-2)}
+.nvx-transform{transform:scale(var(--nvx-scale,1)) rotate(var(--nvx-rotate,0)) translateX(var(--nvx-translate-x,0)) translateY(var(--nvx-translate-y,0))}
+
