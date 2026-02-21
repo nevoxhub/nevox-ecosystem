@@ -1,0 +1,5 @@
+/*======================================*/
+⚡109 css section  ANIMATIONS ⚡
+/*======================================*/
+.nvx-widget-animated{animation:nvx-widget-enter .6s cubic-bezier(0.4,0,0.2,1) forwards}
+@keyframes nvx-widget-enter{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}.nvx-widget:hover,.nvx-widget-item:hover{will-change:transform,box-shadow}@media(prefers-reduced-motion:reduce){.nvx-widget,.nvx-widget-item,.nvx-widget-animated{transition:none!important;animation:none!important}}@media print{.nvx-widget{box-shadow:none!important;border:1px solid #000!important}}
