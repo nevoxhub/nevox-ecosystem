@@ -1,0 +1,12 @@
+/*======================================*/
+⚡ 57 css section CONTENT NAVIGATION - IMPROVED ⚡
+/*======================================*/
+.nvx-content-nav{position:absolute;right:24px;top:50%;transform:translateY(-50%);z-index:35;
+display:flex;flex-direction:column;gap:15px;opacity:0;transition:opacity 0.3s ease}
+.nvx-ultra-card:hover .nvx-content-nav{opacity:1}
+.nvx-nav-btn{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.95);
+backdrop-filter:blur(15px);border:1px solid var(--nvx-border-glass);display:flex;
+align-items:center;justify-content:center;cursor:pointer;transition:var(--transition);
+color:var(--nvx-text);font-size:20px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.nvx-nav-btn:hover{background:var(--nvx-primary);color:#fff;transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(59,130,246,0.3)}
