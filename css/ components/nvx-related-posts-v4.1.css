@@ -1,0 +1,12 @@
+/*======================================*/
+⚡70 css section  RELATED POSTS CAROUSEL⚡
+/*======================================*/
+.nvx-related-posts{margin-top:32px;padding:24px;background:rgba(100,116,139,0.03);
+border-radius:var(--radius-lg);border:1px solid var(--nvx-border-glass)}
+.nvx-related-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.nvx-related-title{font-size:18px;font-weight:800;color:var(--nvx-text)}
+.nvx-related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.nvx-related-item{aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;position:relative}
+.nvx-related-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
+.nvx-related-item:hover img{transform:scale(1.1)}
+
