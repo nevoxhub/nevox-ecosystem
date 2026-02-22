@@ -1,0 +1,13 @@
+/*======================================*/
+/*⚡10 css section ⚡Reset & Base */
+/*======================================*/
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+background:var(--nvx-bg);color:var(--nvx-text);line-height:1.6;
+transition:background-color 0.3s,color 0.3s;overflow-x:hidden}
+a{color:inherit;text-decoration:none;transition:var(--nvx-transition)}
+img{max-width:100%;height:auto;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+ul{list-style:none}
+
