@@ -1,0 +1,22 @@
+/*======================================*/
+/*⚡09 css section DARK THEME OVERRIDES */
+/*======================================*/
+--nvx-bg-card:#1e293b;
+--nvx-bg-header:rgba(15, 23, 42, 0.9);
+--nvx-bg-sidebar:rgba(15, 23, 42, 0.95);
+--nvx-bg-modal:#1e293b;
+--nvx-bg-input:#334155;
+--nvx-bg-hover:rgba(255, 255, 255, 0.05);
+--nvx-bg-active:rgba(255, 255, 255, 0.1);
+--nvx-gradient-primary:linear-gradient(135deg, #3b82f6, #1d4ed8);
+--nvx-btn-primary-bg:#2563eb;
+--nvx-btn-primary-hover-bg:#1d4ed8;
+--nvx-btn-secondary-bg:#334155;
+--nvx-btn-secondary-text:#cbd5e1;
+--nvx-btn-secondary-border:#475569;
+--nvx-btn-secondary-hover-bg:#475569;
+--nvx-icon-color:#cbd5e1;
+--nvx-icon-color-hover:#3b82f6;
+--nvx-icon-bg-hover:rgba(59, 130, 246, 0.2);
+--nvx-focus-ring:0 0 0 3px rgba(59, 130, 246, 0.3);
+}
