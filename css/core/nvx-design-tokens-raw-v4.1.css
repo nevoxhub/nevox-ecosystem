@@ -1,0 +1,240 @@
+/* =====================================*/
+   css section NEVOX ECOSYSTEM THEME CSS Version: v4.1
+/* =====================================*/
+/* =====================================*/
+NEVOX ECOSYSTEM DESIGN TOKENS v4.1
+Professional Production Grade
+/*======================================*/
+
+:root{
+/* 🏷️ THEME METADATA */
+--nvx-theme-name:"NEVOX";--nvx-theme-version:"4.1.0";--nvx-theme-author:"NEVOX ECOSYSTEM";
+
+/* 🎨 LEVEL 1: RAW COLOR SCALES */
+--nvx-primary-50:#eff6ff;--nvx-primary-100:#dbeafe;--nvx-primary-200:#bfdbfe;--nvx-primary-300:#93c5fd;--nvx-primary-400:#60a5fa;--nvx-primary-500:#3b82f6;--nvx-primary-600:#2563eb;--nvx-primary-700:#1d4ed8;--nvx-primary-800:#1e40af;--nvx-primary-900:#1e3a8a;--nvx-primary-950:#172554;
+--nvx-secondary-50:#f5f3ff;--nvx-secondary-100:#ede9fe;--nvx-secondary-200:#ddd6fe;--nvx-secondary-300:#c4b5fd;--nvx-secondary-400:#a78bfa;--nvx-secondary-500:#8b5cf6;--nvx-secondary-600:#7c3aed;--nvx-secondary-700:#6d28d9;--nvx-secondary-800:#5b21b6;--nvx-secondary-900:#4c1d95;--nvx-secondary-950:#2e1065;
+--nvx-accent-50:#fdf2f8;--nvx-accent-100:#fce7f3;--nvx-accent-200:#fbcfe8;--nvx-accent-300:#f9a8d4;--nvx-accent-400:#f472b6;--nvx-accent-500:#ec4899;--nvx-accent-600:#db2777;--nvx-accent-700:#be185d;--nvx-accent-800:#9d174d;--nvx-accent-900:#831843;--nvx-accent-950:#500724;
+--nvx-gray-50:#f9fafb;--nvx-gray-100:#f3f4f6;--nvx-gray-200:#e5e7eb;--nvx-gray-300:#d1d5db;--nvx-gray-400:#9ca3af;--nvx-gray-500:#6b7280;--nvx-gray-600:#4b5563;--nvx-gray-700:#374151;--nvx-gray-800:#1f2937;--nvx-gray-900:#111827;--nvx-gray-950:#030712;
+--nvx-success-50:#ecfdf5;--nvx-success-100:#d1fae5;--nvx-success-200:#a7f3d0;--nvx-success-300:#6ee7b7;--nvx-success-400:#34d399;--nvx-success-500:#10b981;--nvx-success-600:#059669;--nvx-success-700:#047857;--nvx-success-800:#065f46;--nvx-success-900:#064e3b;--nvx-success-950:#022c22;
+--nvx-warning-50:#fffbeb;--nvx-warning-100:#fef3c7;--nvx-warning-200:#fde68a;--nvx-warning-300:#fcd34d;--nvx-warning-400:#fbbf24;--nvx-warning-500:#f59e0b;--nvx-warning-600:#d97706;--nvx-warning-700:#b45309;--nvx-warning-800:#92400e;--nvx-warning-900:#78350f;--nvx-warning-950:#451a03;
+--nvx-danger-50:#fef2f2;--nvx-danger-100:#fee2e2;--nvx-danger-200:#fecaca;--nvx-danger-300:#fca5a5;--nvx-danger-400:#f87171;--nvx-danger-500:#ef4444;--nvx-danger-600:#dc2626;--nvx-danger-700:#b91c1c;--nvx-danger-800:#991b1b;--nvx-danger-900:#7f1d1d;--nvx-danger-950:#450a0a;
+--nvx-info-50:#ecfeff;--nvx-info-100:#cffafe;--nvx-info-200:#a5f3fc;--nvx-info-300:#67e8f9;--nvx-info-400:#22d3ee;--nvx-info-500:#06b6d4;--nvx-info-600:#0891b2;--nvx-info-700:#0e7490;--nvx-info-800:#155e75;--nvx-info-900:#164e63;--nvx-info-950:#083344;
+/* ===================================== */
+/* 📐 NEVOX DEVICE VIEWPORT SYSTEM v4.1 */
+/* dvh • svh • lvh • All-Device • Enterprise */
+/* Production-Grade • Spec-Compliant */
+/* ===================================== */
+
+/* ===================================== */
+/* LEVEL 1: VIEWPORT UNIT CORE SYSTEM */
+/* ===================================== */
+:root {
+  /* DYNAMIC VIEWPORT (UI-RESILIENT) */
+  --nvx-viewport-dynamic: 100vh;
+
+  /* SAFE VIEWPORT (GUARANTEED VISIBILITY) */
+  --nvx-viewport-safe: 100vh;
+
+  /* MAXIMUM VIEWPORT (IMMERSIVE) */
+  --nvx-viewport-max: 100vh;
+
+  /* ORIENTATION-INVARIANT BASE */
+  --nvx-viewport-portrait: 100vh;
+  --nvx-viewport-landscape: 100vh;
+
+  /* SYSTEM UI AWARE OFFSETS */
+  --nvx-safe-area-top: env(safe-area-inset-top, 0px);
+  --nvx-safe-area-right: env(safe-area-inset-right, 0px);
+  --nvx-safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --nvx-safe-area-left: env(safe-area-inset-left, 0px);
+
+  /* NOTCH & GESTURE AWARE VIEWPORTS */
+  --nvx-viewport-dynamic-safe: calc(
+    var(--nvx-viewport-dynamic) - 
+    var(--nvx-safe-area-top) - 
+    var(--nvx-safe-area-bottom)
+  );
+  --nvx-viewport-safe-area: calc(
+    var(--nvx-viewport-safe) - 
+    var(--nvx-safe-area-top) - 
+    var(--nvx-safe-area-bottom)
+  );
+  --nvx-viewport-max-safe: calc(
+    var(--nvx-viewport-max) - 
+    var(--nvx-safe-area-top) - 
+    var(--nvx-safe-area-bottom)
+  );
+
+  /* ===================================== */
+  /* LEVEL 2: SEMANTIC HEIGHT INTENT LAYER */
+  /* ===================================== */
+
+  /* A. APPLICATION LAYOUTS */
+  --nvx-height-app: var(--nvx-viewport-dynamic-safe);
+  --nvx-height-app-safe: var(--nvx-viewport-safe-area);
+  --nvx-height-app-full: var(--nvx-viewport-max-safe);
+
+  /* B. SCREEN SECTIONS & FULLSCREEN */
+  --nvx-height-screen: var(--nvx-viewport-dynamic);
+  --nvx-height-screen-safe: var(--nvx-viewport-safe);
+  --nvx-height-screen-max: var(--nvx-viewport-max);
+
+  /* C. MODALS, DRAWERS & PANELS */
+  --nvx-height-modal: min(calc(var(--nvx-viewport-safe) * 0.9), 800px);
+  --nvx-height-drawer: var(--nvx-viewport-dynamic);
+  --nvx-height-sheet: min(calc(var(--nvx-viewport-safe) * 0.85), 600px);
+
+  /* D. HERO & IMMERSIVE CONTENT */
+  --nvx-height-hero: var(--nvx-viewport-max);
+  --nvx-height-immersive: var(--nvx-viewport-max-safe);
+  --nvx-height-cinematic: var(--nvx-viewport-dynamic);
+
+  /* E. UTILITY HEIGHTS */
+  --nvx-height-auto: auto;
+  --nvx-height-min: min-content;
+  --nvx-height-max: max-content;
+  --nvx-height-fit: fit-content;
+
+  /* F. TRANSITION & ANIMATION */
+  --nvx-viewport-transition-duration: 0.2s;
+}
+
+/* ===================================== */
+/* LEVEL 3: MODERN VIEWPORT DETECTION */
+/* ===================================== */
+@supports (height: 100dvh) {
+  :root {
+    /* DYNAMIC VIEWPORT - ADAPTS TO BROWSER UI */
+    --nvx-viewport-dynamic: 100dvh;
+
+    /* SAFE VIEWPORT - MINIMUM GUARANTEED SPACE */
+    --nvx-viewport-safe: 100svh;
+
+    /* LARGE VIEWPORT - MAXIMUM AVAILABLE SPACE */
+    --nvx-viewport-max: 100lvh;
+
+    /* ORIENTATION-AWARE CONTAINERS */
+    --nvx-viewport-portrait: 100dvh;
+    --nvx-viewport-landscape: 100dvh;
+  }
+}
+
+/* ===================================== */
+/* LEVEL 4: RESPONSIVE ORIENTATION CONTROLS */
+/* ===================================== */
+@media (orientation: portrait) {
+  :root {
+    --nvx-orientation-height: var(--nvx-viewport-portrait);
+    --nvx-orientation-width: 100vw;
+  }
+}
+
+@media (orientation: landscape) {
+  :root {
+    --nvx-orientation-height: var(--nvx-viewport-landscape);
+    --nvx-orientation-width: 100vw;
+    
+    /* LANDSCAPE-SPECIFIC SAFETY ADJUSTMENTS */
+    --nvx-height-modal: min(calc(var(--nvx-viewport-safe) * 0.8), 600px);
+    --nvx-height-drawer: min(calc(var(--nvx-viewport-safe) * 0.9), 500px);
+  }
+}
+
+/* ===================================== */
+/* LEVEL 5: DEVICE-SCALE ADAPTATION */
+/* ===================================== */
+@media (max-height: 500px) {
+  :root {
+    --nvx-height-modal: calc(var(--nvx-viewport-safe) * 0.95);
+    --nvx-height-sheet: calc(var(--nvx-viewport-safe) * 0.9);
+  }
+}
+
+@media (min-height: 1000px) {
+  :root {
+    --nvx-height-hero: min(var(--nvx-viewport-max), 1000px);
+    --nvx-height-immersive: min(var(--nvx-viewport-max-safe), 900px);
+  }
+}
+
+/* ===================================== */
+/* LEVEL 6: ACCESSIBILITY ENHANCEMENTS */
+/* ===================================== */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --nvx-viewport-transition-duration: 0s;
+  }
+}
+
+/* ===================================== */
+/* LEVEL 7: EMBEDDED CONTEXT SAFETY */
+/* ===================================== */
+.nvx-embedded-context {
+  --nvx-viewport-dynamic: 100vh;
+  --nvx-viewport-safe: 95vh;
+  --nvx-viewport-max: 100vh;
+}
+
+/* ===================================== */
+/* LEVEL 8: FUTURE PLATFORM RESERVE */
+/* ===================================== */
+@supports (horizontal-viewport-segments: 2) {
+  :root {
+    --nvx-viewport-segment-count: env(horizontal-viewport-segments, 1);
+    --nvx-viewport-segment-width: calc(100vw / var(--nvx-viewport-segment-count));
+    --nvx-height-foldable: var(--nvx-viewport-dynamic);
+  }
+}
+
+@supports (vertical-viewport-segments: 2) {
+  :root {
+    --nvx-viewport-segment-count: env(vertical-viewport-segments, 1);
+    --nvx-viewport-segment-height: calc(100dvh / var(--nvx-viewport-segment-count));
+    --nvx-height-foldable: var(--nvx-viewport-segment-height);
+  }
+}
+
+@supports (height: 100svb) {
+  :root {
+    --nvx-viewport-block: 100svb;
+    --nvx-viewport-inline: 100svi;
+  }
+}
+
+/* ===================================== */
+/* LEVEL 9: PRINT OPTIMIZATION */
+/* ===================================== */
+@media print {
+  :root {
+    --nvx-viewport-dynamic: 100%;
+    --nvx-viewport-safe: 100%;
+    --nvx-viewport-max: 100%;
+    --nvx-height-app: auto;
+    --nvx-height-screen: auto;
+    --nvx-height-hero: auto;
+    --nvx-height-modal: auto;
+    --nvx-height-drawer: auto;
+    --nvx-height-sheet: auto;
+  }
+}
+
+/* ===================================== */
+/* SYSTEM UTILITY CLASSES (OPTIONAL) */
+/* ===================================== */
+.nvx-viewport-container {
+  contain: layout paint;
+}
+
+.nvx-viewport-transition {
+  transition: height var(--nvx-viewport-transition-duration) var(--nvx-ease-standard);
+}
+
+.nvx-viewport-animated {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* ===================================== */
+/* NEVOX DEVICE VIEWPORT SYSTEM v4.1 - END */
+/* Enterprise-Grade • Production-Ready */
+/* ===================================== */
