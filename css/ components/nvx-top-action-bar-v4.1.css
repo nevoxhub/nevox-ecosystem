@@ -1,0 +1,15 @@
+/*======================================*/
+⚡54 css section ⚡ TOP ACTION BAR - IMPROVED 
+/*======================================*/
+.nvx-ultra-topbar{position:absolute;top:18px;right:18px;z-index:55;display:flex;gap:10px}
+.nvx-ultra-action{width:42px;height:42px;border-radius:var(--radius-md);background:rgba(255,255,255,0.9);
+backdrop-filter:blur(12px);border:1px solid var(--nvx-border-glass);display:flex;align-items:center;
+justify-content:center;cursor:pointer;transition:var(--transition);color:var(--nvx-text);font-size:16px;
+position:relative}
+.nvx-ultra-action:hover{background:rgba(255,255,255,0.98);transform:scale(1.15);color:var(--nvx-primary)}
+.nvx-ultra-action.active{background:var(--nvx-primary);color:#fff;box-shadow:0 0 0 4px rgba(59,130,246,0.3);
+animation:pulse 2s infinite}
+.nvx-ultra-action[data-action="text-to-speech"]{animation:ttsPulse 2.5s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(59,130,246,0.3)}50%{box-shadow:0 0 0 8px rgba(59,130,246,0.1)}}
+@keyframes ttsPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+
