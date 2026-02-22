@@ -1,0 +1,14 @@
+/*======================================*/
+⚡78 css section REACTION STATS POPUP WITH VISUAL BARS⚡
+/*======================================*/
+.nvx-reaction-stats{position:absolute;bottom:calc(100% + 10px);left:0;background:var(--nvx-glass, rgba(255,255,255,0.95));backdrop-filter:blur(10px);border:2px solid var(--nvx-border-glass, rgba(255,255,255,0.1));border-radius:20px;padding:16px;box-shadow:0 30px 80px rgba(0,0,0,0.2);min-width:250px;z-index:105;display:none}
+.nvx-reaction-stats.show{display:block;animation:nvx-slide-in 0.3s}
+@keyframes nvx-slide-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.nvx-stat-item{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--nvx-border-glass, rgba(255,255,255,0.1));gap:12px}
+.nvx-stat-item:last-child{border-bottom:none}
+.nvx-stat-emoji{font-size:20px;margin-right:12px;min-width:30px}
+.nvx-stat-bar-container{flex:1;height:8px;background:rgba(100,116,139,0.1);border-radius:4px;overflow:hidden}
+.nvx-stat-bar{height:100%;background:linear-gradient(90deg,var(--nvx-primary, #3b82f6),var(--nvx-secondary, #8b5cf6));border-radius:4px;transition:width 1s ease}
+.nvx-stat-count{font-weight:700;color:var(--nvx-primary, #3b82f6);min-width:40px;text-align:right}
+.nvx-stat-percent{font-size:13px;color:var(--nvx-text, #1e293b);opacity:0.7;min-width:45px}
+
