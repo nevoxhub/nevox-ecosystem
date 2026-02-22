@@ -1,0 +1,6 @@
+/*======================================*/
+⚡94 css section  ACCESSIBILITY ⚡
+/*======================================*/
+.nvx-reaction-btn:focus-visible,.nvx-btn:focus-visible{outline:4px solid var(--nvx-primary, #3b82f6);outline-offset:4px}
+.nvx-emoji:focus-visible{outline:3px solid var(--nvx-primary, #3b82f6);border-radius:50%}
+@media(prefers-reduced-motion:reduce){.nvx-reaction-btn,.nvx-btn,.nvx-emoji,.nvx-time-item,.nvx-emoji-picker,.nvx-reaction-float,.nvx-counter-flash,.nvx-countdown-urgent .nvx-countdown-value{transition:none;animation:none;transform:none!important}}
