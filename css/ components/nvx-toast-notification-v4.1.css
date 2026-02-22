@@ -1,0 +1,5 @@
+/*======================================*/
+⚡100 css section  Reaction Multi-Select Limit + Toast Notification ⚡
+/*======================================*/
+.nvx-toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:#1e293b;color:#fff;padding:12px 24px;border-radius:12px;z-index:2000;opacity:0;transition:opacity 0.4s;animation:nvx-toast-in 0.4s forwards}@keyframes nvx-toast-in{0%{opacity:0;transform:translateX(-50%) translateY(20px)}100%{opacity:1;transform:translateX(-50%) translateY(0)}}
+
