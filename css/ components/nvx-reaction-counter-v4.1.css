@@ -1,0 +1,4 @@
+/*======================================*/
+⚡102 css section  Live Reaction Counter Animation + Flash⚡
+/*======================================*/
+.nvx-reaction-count.updated{animation:nvx-flash-count .6s ease-in-out}@keyframes nvx-flash-count{0%,100%{transform:scale(1);color:inherit}50%{transform:scale(1.5);color:var(--nvx-accent,#10b981);text-shadow:0 0 10px var(--nvx-accent,#10b981)}}@media(prefers-reduced-motion:reduce){.nvx-reaction-count.updated{animation:none}}
