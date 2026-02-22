@@ -1,0 +1,18 @@
+/*======================================*/
+/*⚡21 css shead ectioon  header ⚡     */
+/*======================================*/.nvx-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,0.9);
+backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+border-bottom:1px solid var(--nvx-border);height:var(--nvx-header-height);
+transition:var(--nvx-transition);padding-top:env(safe-area-inset-top)}
+[data-theme="dark"] .nvx-header{background:rgba(15,23,42,0.9)}
+
+.nvx-header-inner{max-width:1400px;margin:0 auto;padding:0 20px;height:100%;
+display:flex;align-items:center;justify-content:space-between;gap:20px}
+
+@media (hover:none) and (pointer:coarse){
+.nvx-header{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.nvx-header-inner{padding:0 16px}
+}
+
+@media (prefers-reduced-motion:reduce){.nvx-header{transition:none}}
+
