@@ -1,0 +1,5 @@
+/*======================================*/
+⚡ 15 css section⚡🆕 PRINT OPTIMIZATION 
+/*======================================*/
+@media print{.nvx-sidebar,.nvx-header,.nvx-footer,.nvx-nav,.nvx-skip-link,button:not(.print-only),.no-print{display:none!important}body{background:#fff!important;color:#000!important;font-size:12pt!important;line-height:1.5!important}h1,h2,h3,h4,h5,h6{color:#000!important;page-break-after:avoid}a{color:#000!important;text-decoration:underline!important}a[href^="http"]::after{content:" (" attr(href) ")";font-size:0.9em;font-weight:normal}img{max-width:100%!important;page-break-inside:avoid}table{page-break-inside:avoid;border:1px solid #000!important}tr,td,th{border:1px solid #000!important;color:#000!important}}
+
