@@ -1,0 +1,5 @@
+/*======================================*/
+/*⚡ 30 css section  Container ⚡       */
+/*======================================*/
+.nvx-container{width:100%;max-width:1400px;margin:0 auto;padding:0 var(--nvx-space-5);padding-left:max(var(--nvx-space-5),env(safe-area-inset-left));padding-right:max(var(--nvx-space-5),env(safe-area-inset-right))}.nvx-container-fluid{width:100%;padding:0 var(--nvx-space-5)}.nvx-container-sm{max-width:800px}.nvx-container-lg{max-width:1600px}.nvx-container-xl{max-width:1800px}.nvx-container-full{max-width:100%}@media(max-width:1400px){.nvx-container{padding:0 var(--nvx-space-8)}}@media(max-width:1200px){.nvx-container{padding:0 var(--nvx-space-6)}}@media(max-width:1024px){.nvx-container{padding:0 var(--nvx-space-5)}}@media(max-width:768px){.nvx-container{padding:0 var(--nvx-space-4)}}@media(max-width:480px){.nvx-container{padding:0 var(--nvx-space-3)}}
+
