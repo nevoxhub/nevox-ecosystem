@@ -1,0 +1,17 @@
+/*======================================*/
+⚡89css section BUTTONS WITH RIPPLE EFFECT 
+/*======================================*/
+.nvx-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:12px;font-weight:700;font-size:15px;transition:all 0.3s cubic-bezier(0.4,0,0.2,1);cursor:pointer;border:none;text-decoration:none;position:relative;overflow:hidden;backdrop-filter:blur(10px)}
+.nvx-btn::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,var(--nvx-primary, #3b82f6),var(--nvx-secondary, #8b5cf6));opacity:0;transition:opacity 0.3s}
+.nvx-btn:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(0,0,0,0.2)}
+.nvx-btn:hover::before{opacity:0.1}
+.nvx-btn-primary{background:var(--nvx-primary, #3b82f6);color:#fff;box-shadow:0 8px 20px rgba(59,130,246,0.3);border:2px solid var(--nvx-primary, #3b82f6)}
+.nvx-btn-primary:hover{background:#2563eb;color:#fff;box-shadow:0 15px 35px rgba(59,130,246,0.4);border-color:#2563eb}
+.nvx-btn-secondary{background:rgba(255,255,255,0.8);color:var(--nvx-text, #1e293b);border:2px solid var(--nvx-border-glass, rgba(255,255,255,0.1))}
+.nvx-btn-secondary:hover{background:rgba(255,255,255,0.95);color:var(--nvx-primary, #3b82f6);border-color:var(--nvx-primary, #3b82f6)}
+.nvx-btn-success{background:linear-gradient(135deg,#10b981,#059669);color:#fff;box-shadow:0 8px 20px rgba(16,185,129,0.3);border:2px solid #10b981}
+.nvx-btn-success:hover{background:linear-gradient(135deg,#059669,#047857);box-shadow:0 15px 35px rgba(16,185,129,0.4)}
+.nvx-btn-icon{padding:12px;border-radius:50%;min-width:48px;min-height:48px;justify-content:center}
+.nvx-btn-icon i{font-size:20px;margin:0}
+.nvx-ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,0.6);transform:scale(0);animation:nvx-ripple-anim 0.6s linear}
+@keyframes nvx-ripple-anim{to{transform:scale(4);opacity:0}}
