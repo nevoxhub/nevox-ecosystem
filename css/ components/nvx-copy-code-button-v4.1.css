@@ -1,0 +1,13 @@
+/*======================================*/
+⚡71 css section COPY CODE BUTTON ⚡
+/*======================================*/
+.nvx-code-block{position:relative;margin:20px 0;background:#1e293b;border-radius:var(--radius-md);
+overflow:hidden}
+.nvx-code-block pre{color:#e2e8f0;padding:20px;overflow-x:auto}
+.nvx-copy-code-btn{position:absolute;top:12px;right:12px;opacity:0;transition:opacity 0.3s ease;
+background:rgba(30,41,59,0.8);color:#fff;border:1px solid #475569;padding:8px 16px;border-radius:6px;
+font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:8px}
+.nvx-code-block:hover .nvx-copy-code-btn{opacity:1}
+.nvx-copy-code-btn:hover{background:var(--nvx-primary);border-color:var(--nvx-primary)}
+.nvx-copy-code-btn.copied{background:#10b981;border-color:#10b981}
+
