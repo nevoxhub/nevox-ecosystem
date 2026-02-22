@@ -1,0 +1,10 @@
+/*======================================*/
+⚡92 css section RESPONSIVE ADJUSTMENTS ⚡
+/*======================================*/
+@media(max-width:768px){.nvx-reactions{flex-wrap:wrap;gap:12px;justify-content:center}
+.nvx-reaction-btn{padding:8px 16px;font-size:14px}.nvx-time-system{flex-direction:column}
+.nvx-time-item{width:100%}.nvx-post-actions{justify-content:center}
+.nvx-btn{padding:12px 20px;font-size:14px}.nvx-countdown-item{min-width:40px;padding:6px}}
+@media(max-width:480px){.nvx-emoji-picker{width:200px;gap:6px}.nvx-emoji{width:36px;height:36px}
+.nvx-reaction-btn{gap:6px;padding:6px 12px}.nvx-btn{padding:10px 16px}
+.nvx-countdown-item{min-width:35px;padding:4px}}
