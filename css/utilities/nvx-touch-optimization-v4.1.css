@@ -1,0 +1,5 @@
+/*======================================*/
+⚡95 css section TOUCH OPTIMIZATION ⚡
+/*======================================*/
+@media(hover:none) and (pointer:coarse){.nvx-reaction-btn,.nvx-btn{min-height:48px;min-width:48px}
+.nvx-emoji-picker.active{bottom:calc(100% + 15px)}.nvx-emoji-tooltip,.nvx-time-tooltip{display:none}}
