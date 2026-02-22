@@ -1,0 +1,5 @@
+/*======================================*/
+/* ⚡34 css section  Flex ⚡            */
+/*======================================*/
+.nvx-flex{display:flex}.nvx-inline-flex{display:inline-flex}.nvx-flex-col{flex-direction:column}.nvx-flex-row{flex-direction:row}.nvx-flex-wrap{flex-wrap:wrap}.nvx-flex-nowrap{flex-wrap:nowrap}.nvx-flex-1{flex:1 1 0%}.nvx-flex-auto{flex:1 1 auto}.nvx-flex-initial{flex:0 1 auto}.nvx-flex-none{flex:none}.nvx-flex-grow{flex-grow:1}.nvx-flex-shrink{flex-shrink:1}.nvx-flex-grow-0{flex-grow:0}.nvx-flex-shrink-0{flex-shrink:0}.nvx-items-start{align-items:flex-start}.nvx-items-center{align-items:center}.nvx-items-end{align-items:flex-end}.nvx-items-stretch{align-items:stretch}.nvx-items-baseline{align-items:baseline}.nvx-justify-start{justify-content:flex-start}.nvx-justify-center{justify-content:center}.nvx-justify-end{justify-content:flex-end}.nvx-justify-between{justify-content:space-between}.nvx-justify-around{justify-content:space-around}.nvx-justify-evenly{justify-content:space-evenly}.nvx-self-start{align-self:flex-start}.nvx-self-center{align-self:center}.nvx-self-end{align-self:flex-end}.nvx-self-stretch{align-self:stretch}
+
