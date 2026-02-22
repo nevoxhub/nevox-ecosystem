@@ -1,0 +1,18 @@
+/*======================================*/
+/*⚡12 css section⚡ AAL DEVICE FRIENDLY FOCUS */
+/*======================================*/
+@media (hover: none) and (pointer: coarse) {
+  *:focus-visible { outline-width: 4px; outline-offset: 3px; }
+  button:focus-visible, a:focus-visible { 
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4); 
+    transform: scale(1.02);
+  }
+}
+@media (prefers-contrast: high) {
+  *:focus-visible { outline: 3px solid #000; }
+  [data-theme="dark"] *:focus-visible { outline: 3px solid #fff; }
+}
+/* Skip Link */
+.nvx-skip-link { position: absolute; top: -40px; left: 0; background: var(--nvx-primary); color: white; padding: 8px 16px; z-index: 10000; text-decoration: none; border-radius: 0 0 8px 0; }
+.nvx-skip-link:focus { top: 0; }
+
