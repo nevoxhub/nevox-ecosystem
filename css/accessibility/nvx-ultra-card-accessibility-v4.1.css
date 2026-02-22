@@ -1,0 +1,21 @@
+/*======================================*/
+⚡74 css section ACCESSIBILITY ⚡
+/*======================================*/
+.nvx-ultra-btn:focus-visible,.nvx-ultra-action:focus-visible,.nvx-ultra-stat:focus-visible,
+.nvx-nav-btn:focus-visible,.nvx-dropdown-item:focus{outline:4px solid var(--nvx-primary);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.nvx-ultra-card,.nvx-ultra-btn,.nvx-ultra-action,
+.nvx-ultra-stat,.nvx-ultra-category,.nvx-ultra-tag,.nvx-star,.nvx-ultra-media img,
+.nvx-ultra-media video,.nvx-ultra-dropdown,.nvx-nav-btn,.nvx-emoji-float{transition:none;
+transform:none!important;animation:none}}
+@media(prefers-contrast:high){.nvx-ultra-card,.nvx-ultra-btn,.nvx-ultra-action{border-width:2px}
+.nvx-ultra-bottombar{border-top-width:3px}}
+@media(hover:none) and (pointer:coarse){.nvx-ultra-card:hover{transform:none}
+.nvx-media-overlay{opacity:1}.nvx-content-nav{opacity:1}.nvx-copy-code-btn{opacity:1}
+.nvx-ultra-btn,.nvx-ultra-action,.nvx-ultra-stat,.nvx-nav-btn{min-height:48px;min-width:48px}}
+@media(max-height:500px) and (orientation:landscape){.nvx-ultra-card{flex-direction:row;min-height:260px}
+.nvx-ultra-media{width:45%;aspect-ratio:1/1}.nvx-ultra-content{width:55%}
+.nvx-ultra-excerpt,.nvx-ultra-tags,.nvx-auto-theme,.nvx-comment-preview,.nvx-related-posts{display:none}}
+@media print{.nvx-ultra-card{break-inside:avoid;border:1px solid #ccc;box-shadow:none;background:#fff}
+.nvx-ultra-badges,.nvx-ultra-topbar,.nvx-ultra-bottombar,.nvx-auto-theme,.nvx-content-nav,
+.nvx-tts-container,.nvx-review-section{display:none}}
+
