@@ -1,0 +1,12 @@
+/*======================================*/
+⚡79 css section  REACTION HISTORY TOOLTIP ⚡
+/*======================================*/
+.nvx-reaction-history{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:#1e293b;color:#fff;padding:12px;border-radius:12px;font-size:13px;max-width:200px;min-width:150px;box-shadow:0 20px 60px rgba(0,0,0,0.3);z-index:120;display:none;margin-bottom:15px}
+.nvx-reaction-history.show{display:block;animation:nvx-fade-in-up 0.3s}
+@keyframes nvx-fade-in-up{from{opacity:0;transform:translateX(-50%) translateY(10px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.nvx-history-list{max-height:200px;overflow-y:auto;margin-top:8px}
+.nvx-history-item{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.1)}
+.nvx-history-item:last-child{border-bottom:none}
+.nvx-history-emoji{font-size:18px}
+.nvx-history-name{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
