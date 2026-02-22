@@ -1,0 +1,5 @@
+/*======================================*/
+/*⚡39 css section  Display & Position  */
+/*======================================*/
+.nvx-block{display:block}.nvx-inline-block{display:inline-block}.nvx-inline{display:inline}.nvx-hidden{display:none}.nvx-visible{visibility:visible}.nvx-invisible{visibility:hidden}.nvx-relative{position:relative}.nvx-absolute{position:absolute}.nvx-fixed{position:fixed}.nvx-sticky{position:sticky}.nvx-static{position:static}.nvx-top-0{top:0}.nvx-right-0{right:0}.nvx-bottom-0{bottom:0}.nvx-left-0{left:0}.nvx-inset-0{top:0;right:0;bottom:0;left:0}.nvx-z-0{z-index:0}.nvx-z-10{z-index:10}.nvx-z-20{z-index:20}.nvx-z-30{z-index:30}.nvx-z-40{z-index:40}.nvx-z-50{z-index:50}.nvx-z-auto{z-index:auto}
+
