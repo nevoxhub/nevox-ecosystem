@@ -1,0 +1,5 @@
+/*======================================*/
+/*⚡49 css section  MAIN CONTENT ⚡     */
+/*======================================*/
+.nvx-container{max-width:1400px;margin:0 auto;padding:30px 20px;margin-left:0;transition:margin-left .3s}.nvx-sidebar.active~.nvx-container{margin-left:0}@media(min-width:769px){.nvx-container{margin-left:250px;padding:40px 30px}.nvx-sidebar.active~.nvx-container{margin-left:0}}@media(max-width:480px){.nvx-container{padding:20px 15px}}
+
