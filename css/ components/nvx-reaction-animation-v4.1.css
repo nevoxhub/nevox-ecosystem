@@ -1,0 +1,7 @@
+/*======================================*/
+⚡80 css section LIVE REACTION ANIMATION ⚡
+/*======================================*/
+.nvx-reaction-float{position:absolute;pointer-events:none;font-size:42px;z-index:120;animation:nvx-float-up 1.2s cubic-bezier(0.4,0,0.2,1) forwards;filter:drop-shadow(0 6px 12px rgba(0,0,0,0.3))}
+@keyframes nvx-float-up{0%{opacity:1;transform:translateY(0) scale(0.8)}50%{opacity:1}100%{opacity:0;transform:translateY(-150px) scale(1.3)}}
+.nvx-reaction-wave{position:absolute;top:50%;left:50%;width:0;height:0;border-radius:50%;background:rgba(59,130,246,0.2);transform:translate(-50%,-50%);animation:nvx-wave 0.8s ease-out;pointer-events:none}
+@keyframes nvx-wave{0%{width:0;height:0;opacity:1}100%{width:100px;height:100px;opacity:0}}
