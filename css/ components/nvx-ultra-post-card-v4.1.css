@@ -1,0 +1,15 @@
+/* ==================================== */
+⚡50 css section  NEVOX ULTRA POST CARD  ENHANCED & MINIFIED CSS ⚡
+/* ==================================== */
+:root{
+--nvx-glass:rgba(255,255,255,0.92);--nvx-glass-dark:rgba(30,41,59,0.92);
+--nvx-border-glass:rgba(255,255,255,0.35);--nvx-border-glass-dark:rgba(255,255,255,0.15);
+--nvx-primary:#3b82f6;--nvx-secondary:#8b5cf6;--nvx-accent:#10b981;
+--nvx-danger:#ef4444;--nvx-warning:#f59e0b;--nvx-text:#1e293b;
+--nvx-text-dark:#f8fafc;--radius-xl:20px;--radius-lg:16px;--radius-md:12px;
+--radius-sm:8px;--transition:all 0.3s cubic-bezier(0.4,0,0.2,1);
+--blur:blur(24px);--shadow:0 25px 60px rgba(0,0,0,0.12)}
+[data-theme="dark"]{
+--nvx-glass:var(--nvx-glass-dark);--nvx-border-glass:var(--nvx-border-glass-dark);
+--nvx-text:var(--nvx-text-dark)}
+
