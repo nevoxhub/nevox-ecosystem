@@ -1,0 +1,15 @@
+/*======================================*/
+⚡69 css section DROPDOWNS - ENHANCED ⚡
+/*======================================*/
+.nvx-ultra-dropdown{position:absolute;bottom:100%;right:0;margin-bottom:12px;background:var(--nvx-glass);
+backdrop-filter:var(--blur);border:1px solid var(--nvx-border-glass);border-radius:var(--radius-lg);
+box-shadow:0 30px 80px rgba(0,0,0,0.2);min-width:240px;z-index:70;display:none;
+opacity:0;transform:scale(0.9) translateY(15px);transition:var(--transition)}
+.nvx-ultra-dropdown.show{display:block;opacity:1;transform:scale(1) translateY(0)}
+.nvx-dropdown-item{padding:16px 20px;display:flex;align-items:center;gap:14px;cursor:pointer;
+color:var(--nvx-text);font-size:15px;transition:var(--transition);border-bottom:1px solid var(--nvx-border-glass);
+role="menuitem"}
+.nvx-dropdown-item:last-child{border-bottom:none}
+.nvx-dropdown-item:hover{background:rgba(59,130,246,0.15);color:var(--nvx-primary);padding-left:24px}
+.nvx-dropdown-item i{font-size:18px;width:24px}
+
