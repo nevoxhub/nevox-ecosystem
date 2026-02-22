@@ -1,0 +1,9 @@
+/*======================================*/
+/*⚡ 08 css section ⚡Dark Theme */
+/*======================================*/
+[data-theme="dark"]{
+--nvx-bg:#0f172a;--nvx-bg-secondary:#1e293b;--nvx-bg-tertiary:#334155;
+--nvx-text:#f1f5f9;--nvx-text-secondary:#cbd5e1;--nvx-text-tertiary:#64748b;
+--nvx-border:#334155;--nvx-glass:rgba(255,255,255,0.05);
+--nvx-glass-border:rgba(255,255,255,0.1);
+
