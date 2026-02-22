@@ -1,0 +1,20 @@
+/*======================================*/
+⚡56 css section  UNIFIED MEDIA CONTAINER - ENHANCED ⚡
+/*======================================*/
+.nvx-ultra-media{position:relative;width:100%;overflow:hidden;border-radius:var(--radius-lg);
+background:#000;cursor:pointer;margin-bottom:20px}
+.nvx-ultra-media[data-type="image"]{aspect-ratio:16/9}
+.nvx-ultra-media[data-type="video"]{aspect-ratio:16/9}
+.nvx-ultra-media[data-type="reels"]{aspect-ratio:9/16;max-height:75vh}
+.nvx-ultra-media img,.nvx-ultra-media video{width:100%;height:100%;object-fit:cover;
+transition:transform 0.7s cubic-bezier(0.4,0,0.2,1)}
+.nvx-ultra-media:hover img,.nvx-ultra-media:hover video{transform:scale(1.08)}
+.nvx-media-overlay{position:absolute;bottom:0;left:0;right:0;padding:20px;
+background:linear-gradient(transparent,rgba(0,0,0,0.8));color:#fff;display:flex;
+justify-content:space-between;align-items:center;opacity:0;transition:opacity 0.4s ease}
+.nvx-ultra-media:hover .nvx-media-overlay{opacity:1}
+.nvx-play-btn{width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,0.95);
+display:flex;align-items:center;justify-content:center;font-size:36px;color:var(--nvx-primary);
+backdrop-filter:blur(15px);transition:var(--transition)}
+.nvx-play-btn:hover{transform:scale(1.15);background:#fff}
+
