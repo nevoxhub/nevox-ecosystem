@@ -1,0 +1,15 @@
+/*======================================*/
+/*⚡51  css section BASE CARD ⚡        */
+/*======================================*/
+.nvx-ultra-card{background:var(--nvx-glass);backdrop-filter:var(--blur);
+-webkit-backdrop-filter:var(--blur);border-radius:var(--radius-xl);
+border:1px solid var(--nvx-border-glass);box-shadow:var(--shadow);position:relative;
+overflow:hidden;transition:var(--transition);height:100%;min-height:440px;
+display:flex;flex-direction:column;overflow-y:auto}
+.nvx-ultra-card:hover{transform:translateY(-5px);box-shadow:0 35px 80px rgba(0,0,0,0.18)}
+.nvx-ultra-card:focus-within{outline:4px solid var(--nvx-primary);outline-offset:3px}
+.nvx-ultra-card.skeleton *{visibility:hidden}
+.nvx-ultra-card.skeleton::before{content:'';position:absolute;top:0;left:0;right:0;
+bottom:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.1),transparent);
+background-size:200% 100%;animation:shimmer 1.8s infinite;z-index:1}
+@keyframes shimmer{0%{background-position:-200%}100%{background-position:200%}}
