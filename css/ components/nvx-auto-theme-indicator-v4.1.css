@@ -1,0 +1,13 @@
+/*======================================*/
+⚡52 css section AUTO THEME INDICATOR IMPROVED ⚡ 
+/*======================================*/
+.nvx-auto-theme{position:absolute;top:18px;left:50%;transform:translateX(-50%);z-index:60;
+padding:8px 16px;border-radius:24px;background:rgba(255,255,255,0.25);
+backdrop-filter:blur(15px);border:1px solid var(--nvx-border-glass);font-size:12px;
+color:var(--nvx-text);text-transform:uppercase;letter-spacing:0.6px;display:flex;
+align-items:center;gap:10px;transition:var(--transition)}
+.nvx-theme-dot{width:14px;height:14px;border-radius:50%;background:linear-gradient(45deg,#f59e0b,#3b82f6,#8b5cf6)}
+.nvx-auto-theme[data-theme="light"] .nvx-theme-dot{background:#f59e0b}
+.nvx-auto-theme[data-theme="dark"] .nvx-theme-dot{background:#3b82f6}
+.nvx-auto-theme:hover{background:rgba(255,255,255,0.35);transform:translateX(-50%) scale(1.05)}
+
