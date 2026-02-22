@@ -1,0 +1,11 @@
+
+/*======================================*/
+⚡58 css section  POST CONTENT - FIXED ⚡
+/*======================================*/
+.nvx-ultra-content{flex:1;padding:28px;display:flex;flex-direction:column;gap:20px;
+overflow-y:auto;scroll-behavior:smooth}
+.nvx-ultra-content::-webkit-scrollbar{width:8px}
+.nvx-ultra-content::-webkit-scrollbar-track{background:rgba(0,0,0,0.05);border-radius:4px}
+.nvx-ultra-content::-webkit-scrollbar-thumb{background:rgba(59,130,246,0.3);border-radius:4px}
+.nvx-ultra-content::-webkit-scrollbar-thumb:hover{background:rgba(59,130,246,0.5)}
+
