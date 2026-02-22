@@ -1,0 +1,8 @@
+/*======================================*/
+⚡81 css section LIVE COUNTER ANIMATION ⚡
+/*======================================*/
+.nvx-counter-flash{animation:nvx-flash-count 0.5s ease-in-out 2}
+@keyframes nvx-flash-count{0%,100%{color:inherit}50%{color:var(--nvx-primary, #3b82f6);text-shadow:0 0 10px var(--nvx-primary, #3b82f6)}}
+.nvx-counter-pulse{animation:nvx-pulse-count 0.3s ease-in-out}
+@keyframes nvx-pulse-count{0%{transform:scale(1)}50%{transform:scale(1.5)}100%{transform:scale(1)}}
+
