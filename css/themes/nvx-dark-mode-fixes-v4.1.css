@@ -1,0 +1,10 @@
+/*======================================*/
+⚡73 css section  DARK MODE FIXES ⚡
+/*======================================*/
+[data-theme="dark"] .nvx-tts-progress-bar{opacity:0.95}
+[data-theme="dark"] .nvx-tts-container{background:rgba(59,130,246,0.12)}
+[data-theme="dark"] .nvx-ultra-btn{background:rgba(30,41,59,0.8);color:#f1f5f9}
+[data-theme="dark"] .nvx-ultra-btn:hover{background:rgba(30,41,59,0.95)}
+[data-theme="dark"] .nvx-code-block{background:#0f172a}
+[data-theme="dark"] .nvx-copy-code-btn{background:rgba(15,23,42,0.9);color:#cbd5e1}
+
