@@ -1,0 +1,13 @@
+/*======================================*/
+/*⚡23 css section  Navigation ⚡       */
+/*======================================*/
+.nvx-nav{display:flex;align-items:center;gap:8px;flex:1;justify-content:center}
+.nvx-nav-item{padding:10px 16px;border-radius:8px;font-weight:600;font-size:14px;
+display:flex;align-items:center;gap:8px;transition:var(--nvx-transition);
+color:var(--nvx-text-secondary);cursor:pointer;text-decoration:none}
+.nvx-nav-item:hover,.nvx-nav-item.active{background:var(--nvx-primary);color:#fff}
+@media(hover:none) and (pointer:coarse){.nvx-nav-item{padding:12px 20px;min-height:44px;min-width:44px}}
+@media(prefers-reduced-motion:reduce){.nvx-nav-item{transition:none}}
+.nvx-nav-item:focus-visible{outline:3px solid var(--nvx-primary);outline-offset:2px}
+@media(max-width:1024px){.nvx-nav{display:none}.nvx-nav.mobile-open{display:flex;position:fixed;top:var(--nvx-header-height);left:0;right:0;background:var(--nvx-bg);flex-direction:column;padding:20px;border-top:1px solid var(--nvx-border);box-shadow:var(--nvx-shadow-lg)}.nvx-nav-item.mobile-open{width:100%;justify-content:center}}
+
