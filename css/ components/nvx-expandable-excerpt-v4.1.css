@@ -1,0 +1,11 @@
+/*======================================*/
+⚡61 css section EXPANDABLE EXCERPT ⚡
+/*======================================*/
+.nvx-ultra-excerpt{color:var(--nvx-text);line-height:1.7;font-size:16px;margin:8px 0;
+transition:max-height 0.5s ease;overflow:hidden}
+.nvx-ultra-excerpt.collapsed{max-height:100px;-webkit-line-clamp:4;-webkit-box-orient:vertical;
+display:-webkit-box}
+.nvx-read-more-btn{color:var(--nvx-primary);cursor:pointer;font-weight:700;margin-top:12px;
+display:inline-flex;align-items:center;gap:6px;transition:var(--transition)}
+.nvx-read-more-btn:hover{text-decoration:underline;gap:8px}
+
