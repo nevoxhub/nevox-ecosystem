@@ -1,0 +1,7 @@
+/*======================================*/
+⚡93 css section DARK MODE ENHANCEMENTS ⚡
+/*======================================*/
+[data-theme="dark"] .nvx-reaction-btn{background:rgba(30,41,59,0.8);color:#f1f5f9}
+[data-theme="dark"] .nvx-btn-secondary{background:rgba(30,41,59,0.8);color:#f1f5f9}
+[data-theme="dark"] .nvx-time-item{background:rgba(30,41,59,0.7)}
+[data-theme="dark"] .nvx-pinned-comment{background:linear-gradient(135deg,rgba(234,179,8,0.15),rgba(217,119,6,0.15))!important}
