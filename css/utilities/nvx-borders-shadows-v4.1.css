@@ -1,0 +1,5 @@
+/*======================================*/
+/*⚡41 css section Borders & Shadows ⚡ */
+/*======================================*/
+.nvx-border{border:1px solid var(--nvx-border)}.nvx-border-t{border-top:1px solid var(--nvx-border)}.nvx-border-r{border-right:1px solid var(--nvx-border)}.nvx-border-b{border-bottom:1px solid var(--nvx-border)}.nvx-border-l{border-left:1px solid var(--nvx-border)}.nvx-border-none{border:none}.nvx-rounded-none{border-radius:0}.nvx-rounded-sm{border-radius:var(--nvx-space-1)}.nvx-rounded{border-radius:var(--nvx-space-2)}.nvx-rounded-lg{border-radius:var(--nvx-space-3)}.nvx-rounded-xl{border-radius:var(--nvx-space-4)}.nvx-rounded-full{border-radius:9999px}.nvx-shadow-sm{box-shadow:0 1px 2px 0 rgba(0,0,0,0.05)}.nvx-shadow{box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)}.nvx-shadow-lg{box-shadow:0 10px 15px -3px rgba(0,0,0,0.1)}.nvx-shadow-xl{box-shadow:0 20px 25px -5px rgba(0,0,0,0.1)}.nvx-shadow-none{box-shadow:none}
+
