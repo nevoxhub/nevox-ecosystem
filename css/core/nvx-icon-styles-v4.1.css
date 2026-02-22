@@ -1,0 +1,11 @@
+/*======================================*/
+/*⚡06 css section ⚡🆕 ICON STYLES     */
+/*======================================*/
+--nvx-icon-size-sm:1rem;
+--nvx-icon-size-md:1.25rem;
+--nvx-icon-size-lg:1.5rem;
+--nvx-icon-size-xl:2rem;
+--nvx-icon-color:var(--nvx-text-secondary);
+--nvx-icon-color-hover:var(--nvx-primary);
+--nvx-icon-bg:transparent;
+--nvx-icon-bg-hover:rgba(59, 130, 246, 0.1);
