@@ -1,0 +1,5 @@
+/*======================================*/
+⚡96 css section  Button Pressed State (Active Click Feedback) ⚡
+/*======================================*/
+.nvx-btn:active{transform:scale(0.95)!important}
+.nvx-reaction-btn:active{transform:scale(0.92)!important}
