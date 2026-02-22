@@ -1,0 +1,12 @@
+/*======================================*/
+⚡66 css section COMMENT PREVIEW ⚡
+/*======================================*/
+.nvx-comment-preview{margin:24px 0;padding:20px;background:rgba(100,116,139,0.03);
+border-radius:var(--radius-lg);border:1px solid var(--nvx-border-glass)}
+.nvx-comment-item{padding:16px 0;border-bottom:1px solid var(--nvx-border-glass)}
+.nvx-comment-item:last-child{border-bottom:none}
+.nvx-comment-header{display:flex;justify-content:space-between;margin-bottom:8px}
+.nvx-comment-author{font-weight:700;color:var(--nvx-text)}
+.nvx-comment-time{font-size:12px;color:var(--nvx-text);opacity:0.6}
+.nvx-comment-text{color:var(--nvx-text);line-height:1.6}
+
