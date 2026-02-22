@@ -1,0 +1,17 @@
+/*======================================*/
+/*⚡ 05 css section ⚡🆕 BUTTON STYLES  */
+/*======================================*/
+--nvx-btn-padding-y:0.625rem;
+--nvx-btn-padding-x:1.25rem;
+--nvx-btn-font-size:0.875rem;
+--nvx-btn-font-weight:600;
+--nvx-btn-border-radius:0.5rem;
+--nvx-btn-primary-bg:var(--nvx-primary);
+--nvx-btn-primary-text:#ffffff;
+--nvx-btn-primary-hover-bg:#2563eb;
+--nvx-btn-primary-shadow:0 4px 14px 0 rgba(0, 118, 255, 0.39);
+--nvx-btn-secondary-bg:var(--nvx-bg-secondary);
+--nvx-btn-secondary-text:var(--nvx-text);
+--nvx-btn-secondary-border:var(--nvx-border);
+--nvx-btn-secondary-hover-bg:var(--nvx-bg-tertiary);
+
