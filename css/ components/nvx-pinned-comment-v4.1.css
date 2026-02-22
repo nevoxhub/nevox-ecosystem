@@ -1,0 +1,8 @@
+/*======================================*/
+⚡87 css section PINNED COMMENT HIGHLIGHT ⚡
+/*======================================*/
+.nvx-pinned-comment{position:relative;background:linear-gradient(135deg,rgba(234,179,8,0.1),rgba(217,119,6,0.1))!important;border-left:4px solid #eab308!important;padding-left:20px!important}
+.nvx-pinned-comment::before{content:'📌';position:absolute;left:8px;top:12px;font-size:14px}
+.nvx-pinned-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;background:#eab308;color:#000;font-size:12px;font-weight:800;border-radius:12px;margin-left:12px;animation:nvx-glow-pinned 3s infinite}
+@keyframes nvx-glow-pinned{0%,100%{box-shadow:0 0 5px #eab308}50%{box-shadow:0 0 15px #eab308}}
+
