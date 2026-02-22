@@ -1,5 +1,5 @@
 /*======================================*/
-/*⚡11 css section ALL DEVICE FRIENDLY */
+/* css section ALL DEVICE FRIENDLY      */
 /*======================================*/
 img[loading="lazy"]{opacity:0;transition:opacity 0.3s}
 img[loading="lazy"].loaded{opacity:1}
