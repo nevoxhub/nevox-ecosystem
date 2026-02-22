@@ -1,0 +1,455 @@
+/*======================================*/
+/ NEVOX ALERT & TOAST SYSTEM v4.1 - IMPROVED       /
+/*======================================*/
+
+/* 🎯 BASE ALERT STYLES - IMPROVED */
+.nvx-alert {
+    position: relative;
+    padding: var(--nvx-space-4, 1rem) var(--nvx-space-6, 1.5rem);
+    border-radius: var(--nvx-radius-lg, 0.75rem);
+    border: 1px solid transparent;
+    margin-bottom: var(--nvx-space-4, 1rem);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--nvx-space-3, 0.75rem);
+    animation: nvx-alert-slide-in 0.3s var(--nvx-ease-out, ease-out);
+    box-shadow: var(--nvx-shadow-sm, 0 1px 2px rgba(0,0,0,0.05));
+    background: var(--nvx-bg-card, #ffffff);
+    /* backdrop-filter removed for better compatibility */
+}
+
+/* Animation with fallback */
+@keyframes nvx-alert-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Alert icon - FIXED grouping */
+.nvx-alert-icon {
+    position: absolute;
+    left: var(--nvx-space-4, 1rem);
+    top: var(--nvx-space-4, 1rem);
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+/* Toast positions - SEPARATED from alert-icon */
+.nvx-toast-top-left {
+    top: var(--nvx-space-4, 1rem);
+    left: var(--nvx-space-4, 1rem);
+}
+
+.nvx-toast-top-right {
+    top: var(--nvx-space-4, 1rem);
+    right: var(--nvx-space-4, 1rem);
+}
+
+.nvx-toast-top-center {
+    top: var(--nvx-space-4, 1rem);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nvx-toast-bottom-left {
+    bottom: var(--nvx-space-4, 1rem);
+    left: var(--nvx-space-4, 1rem);
+}
+
+.nvx-toast-bottom-right {
+    bottom: var(--nvx-space-4, 1rem);
+    right: var(--nvx-space-4, 1rem);
+}
+
+.nvx-toast-bottom-center {
+    bottom: var(--nvx-space-4, 1rem);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 🎯 BUTTONS - SEPARATED & IMPROVED */
+.nvx-alert-action-btn {
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--nvx-duration-fast, 150ms);
+    font-weight: var(--nvx-font-semibold, 600);
+    padding: var(--nvx-space-1, 0.25rem) var(--nvx-space-3, 0.75rem);
+    font-size: var(--nvx-text-xs, 0.75rem);
+    border-radius: var(--nvx-radius-sm, 0.5rem);
+    border: 1px solid currentColor;
+    color: inherit;
+}
+
+.nvx-alert-action-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.nvx-alert-close {
+    background: transparent;
+    cursor: pointer;
+    transition: all var(--nvx-duration-fast, 150ms);
+    border: none;
+    padding: var(--nvx-space-1, 0.25rem);
+    margin-left: var(--nvx-space-2, 0.5rem);
+    opacity: 0.7;
+    border-radius: var(--nvx-radius-sm, 0.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: inherit;
+}
+
+.nvx-alert-close:hover {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .nvx-alert-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 🎯 ALERT VARIANTS - IMPROVED (NO !important) */
+
+/* Info Alert */
+.nvx-alert-info {
+    background: rgba(59, 130, 246, 0.08);
+    border-color: rgba(59, 130, 246, 0.2);
+    color: var(--nvx-primary-700, #1d4ed8);
+}
+
+[data-theme="dark"] .nvx-alert-info {
+    background: rgba(59, 130, 246, 0.12);
+    border-color: rgba(59, 130, 246, 0.3);
+    color: var(--nvx-primary-300, #93c5fd);
+}
+
+.nvx-alert-info .nvx-alert-icon {
+    color: var(--nvx-primary-500, #3b82f6);
+}
+
+/* Success Alert */
+.nvx-alert-success {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.2);
+    color: var(--nvx-success-700, #047857);
+}
+
+[data-theme="dark"] .nvx-alert-success {
+    background: rgba(16, 185, 129, 0.12);
+    border-color: rgba(16, 185, 129, 0.3);
+    color: var(--nvx-success-300, #6ee7b7);
+}
+
+.nvx-alert-success .nvx-alert-icon {
+    color: var(--nvx-success-500, #10b981);
+}
+
+/* Warning Alert */
+.nvx-alert-warning {
+    background: rgba(245, 158, 11, 0.08);
+    border-color: rgba(245, 158, 11, 0.2);
+    color: var(--nvx-warning-700, #b45309);
+}
+
+[data-theme="dark"] .nvx-alert-warning {
+    background: rgba(245, 158, 11, 0.12);
+    border-color: rgba(245, 158, 11, 0.3);
+    color: var(--nvx-warning-300, #fcd34d);
+}
+
+.nvx-alert-warning .nvx-alert-icon {
+    color: var(--nvx-warning-500, #f59e0b);
+}
+
+/* Danger Alert */
+.nvx-alert-danger {
+    background: rgba(239, 68, 68, 0.08);
+    border-color: rgba(239, 68, 68, 0.2);
+    color: var(--nvx-danger-700, #b91c1c);
+}
+
+[data-theme="dark"] .nvx-alert-danger {
+    background: rgba(239, 68, 68, 0.12);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: var(--nvx-danger-300, #fca5a5);
+}
+
+.nvx-alert-danger .nvx-alert-icon {
+    color: var(--nvx-danger-500, #ef4444);
+}
+
+/* 🎯 ALERT STYLES - IMPROVED (NO !important) */
+
+/* Outline Style - FIXED */
+.nvx-alert-outline {
+    background: transparent;
+    border-width: 2px;
+}
+
+/* Solid Style - FIXED (better specificity) */
+.nvx-alert-solid {
+    border: none;
+}
+
+.nvx-alert.nvx-alert-solid.nvx-alert-info {
+    background: var(--nvx-primary-500, #3b82f6);
+    color: var(--nvx-color-on-primary, #ffffff);
+}
+
+.nvx-alert.nvx-alert-solid.nvx-alert-success {
+    background: var(--nvx-success-500, #10b981);
+    color: var(--nvx-color-on-success, #ffffff);
+}
+
+.nvx-alert.nvx-alert-solid.nvx-alert-warning {
+    background: var(--nvx-warning-500, #f59e0b);
+    color: var(--nvx-color-on-warning, #1e293b);
+}
+
+[data-theme="dark"] .nvx-alert.nvx-alert-solid.nvx-alert-warning {
+    color: var(--nvx-color-on-warning-dark, #f8fafc);
+}
+
+.nvx-alert.nvx-alert-solid.nvx-alert-danger {
+    background: var(--nvx-danger-500, #ef4444);
+    color: var(--nvx-color-on-danger, #ffffff);
+}
+
+/* 🎯 TOAST SYSTEM - IMPROVED */
+
+.nvx-toast-container {
+    position: fixed;
+    z-index: var(--nvx-z-toast, 1050);
+    pointer-events: none;
+}
+
+.nvx-toast {
+    pointer-events: auto;
+    max-width: 400px;
+    width: 100%;
+    margin-bottom: var(--nvx-space-2, 0.5rem);
+    animation: nvx-toast-slide-in 0.3s var(--nvx-ease-out, ease-out);
+    background: var(--nvx-bg-card, #ffffff);
+    border: 1px solid var(--nvx-border, #e5e7eb);
+    border-radius: var(--nvx-radius-lg, 0.75rem);
+    box-shadow: var(--nvx-shadow-lg, 0 10px 15px -3px rgba(0,0,0,0.1));
+    /* backdrop-filter removed for compatibility */
+}
+
+/* Unique animation for each toast */
+@keyframes nvx-toast-slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.nvx-toast-exiting {
+    animation: nvx-toast-slide-out 0.3s var(--nvx-ease-in, ease-in) forwards;
+}
+
+@keyframes nvx-toast-slide-out {
+    to {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+}
+
+/* Toast progress with unique name */
+.nvx-toast-progress-bar {
+    height: 100%;
+    background: currentColor;
+    opacity: 0.5;
+    width: 100%;
+    transform-origin: left;
+    animation: nvx-toast-progress-animation var(--nvx-toast-duration, 5s) linear forwards;
+}
+
+@keyframes nvx-toast-progress-animation {
+    from {
+        transform: scaleX(1);
+    }
+    to {
+        transform: scaleX(0);
+    }
+}
+
+/* 🎯 NOTIFICATION - IMPROVED */
+.nvx-notification {
+    position: relative;
+    padding: var(--nvx-space-4, 1rem);
+    border-radius: var(--nvx-radius-lg, 0.75rem);
+    background: var(--nvx-bg-card, #ffffff);
+    border: 1px solid var(--nvx-border, #e5e7eb);
+    box-shadow: var(--nvx-shadow-lg, 0 10px 15px -3px rgba(0,0,0,0.1));
+    max-width: 350px;
+    animation: nvx-notification-pop 0.3s var(--nvx-ease-out, ease-out);
+}
+
+/* 🎯 OVERLAY - WITH TRANSITION */
+.nvx-toast-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: calc(var(--nvx-z-toast, 1050) - 1);
+    opacity: 0;
+    transition: opacity 0.3s var(--nvx-ease-out, ease-out);
+    pointer-events: none;
+}
+
+.nvx-toast-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 🎯 MESSAGE COLOR - IMPROVED */
+.nvx-alert-message {
+    color: var(--nvx-text-secondary, #4b5563);
+    font-size: var(--nvx-text-sm, 0.875rem);
+    line-height: 1.5;
+}
+
+[data-theme="dark"] .nvx-alert-message {
+    color: var(--nvx-text-secondary-dark, #9ca3af);
+}
+
+/* 🎯 VARIABLE FALLBACKS */
+:root {
+    --nvx-toast-duration: 5s;
+    --nvx-alert-dismiss-duration: 5s;
+    --nvx-z-toast: 1050;
+    --nvx-z-notification: 1060;
+    
+    /* Color fallbacks */
+    --nvx-color-on-primary: #ffffff;
+    --nvx-color-on-success: #ffffff;
+    --nvx-color-on-danger: #ffffff;
+    --nvx-color-on-warning: #1e293b;
+    --nvx-color-on-warning-dark: #f8fafc;
+    --nvx-text-secondary: #4b5563;
+    --nvx-text-secondary-dark: #9ca3af;
+}
+
+/* 🎯 PRINT STYLES - ENHANCED */
+@media print {
+    .nvx-toast-container,
+    .nvx-toast,
+    .nvx-notification {
+        display: none !important;
+    }
+    
+    .nvx-alert {
+        break-inside: avoid;
+        border: 1px solid #000 !important;
+        background: #fff !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        margin: 0.5cm 0;
+        page-break-inside: avoid;
+    }
+    
+    .nvx-alert-title {
+        font-weight: bold;
+        border-bottom: 1px solid #000;
+        padding-bottom: 0.2cm;
+        margin-bottom: 0.3cm;
+    }
+}
+
+/* 🎯 RESPONSIVE IMPROVEMENTS */
+@media (max-width: 768px) {
+    .nvx-toast {
+        max-width: calc(100vw - var(--nvx-space-8, 2rem));
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Stack toasts on mobile */
+    .nvx-toast-container {
+        width: 100%;
+        padding: 0 var(--nvx-space-4, 1rem);
+    }
+    
+    .nvx-toast-top-left,
+    .nvx-toast-top-right,
+    .nvx-toast-bottom-left,
+    .nvx-toast-bottom-right,
+    .nvx-toast-top-center,
+    .nvx-toast-bottom-center {
+        position: static;
+        transform: none;
+        margin: 0 auto var(--nvx-space-2, 0.5rem);
+    }
+    
+    .nvx-alert {
+        padding: var(--nvx-space-3, 0.75rem) var(--nvx-space-4, 1rem);
+    }
+}
+
+/* 🎯 ACCESSIBILITY ENHANCEMENTS */
+.nvx-alert[role="alert"]:focus,
+.nvx-toast[role="alert"]:focus,
+.nvx-notification[role="status"]:focus {
+    outline: 3px solid var(--nvx-primary-500, #3b82f6);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nvx-alert,
+    .nvx-toast,
+    .nvx-notification,
+    .nvx-toast-progress-bar,
+    .nvx-toast-overlay {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .nvx-alert {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (prefers-contrast: high) {
+    .nvx-alert {
+        border-width: 2px;
+        background: #ffffff !important;
+        color: #000000 !important;
+    }
+    
+    [data-theme="dark"] .nvx-alert {
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+    
+    .nvx-toast {
+        border: 2px solid currentColor;
+    }
+}
+
+/* 🎯 PERFORMANCE OPTIMIZATIONS */
+.nvx-toast-progress-bar {
+    will-change: transform;
+}
+
+.nvx-toast-overlay {
+    will-change: opacity;
+}
+
+/* 🎯 VERSION INFO */
+/* NEVOX ALERT & TOAST SYSTEM v4.1 | Improved & Fixed | 2026 */
+
+
