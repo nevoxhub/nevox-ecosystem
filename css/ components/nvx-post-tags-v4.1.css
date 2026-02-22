@@ -1,0 +1,11 @@
+/*======================================*/
+⚡64 css section POST TAGS - ENHANCED ⚡
+/*======================================*/
+.nvx-ultra-tags{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.nvx-ultra-tag{padding:8px 14px;border-radius:20px;background:rgba(100,116,139,0.12);
+color:var(--nvx-text);text-decoration:none;font-size:14px;font-weight:600;
+border:1px solid rgba(100,116,139,0.2);backdrop-filter:blur(8px);transition:var(--transition);
+display:flex;align-items:center;gap:6px}
+.nvx-ultra-tag:hover{background:var(--nvx-primary);color:#fff;transform:translateY(-3px);
+box-shadow:0 8px 20px rgba(59,130,246,0.3);border-color:var(--nvx-primary)}
+
