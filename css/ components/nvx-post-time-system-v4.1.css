@@ -1,0 +1,13 @@
+/*======================================*/
+⚡82 css section  POST TIME SYSTEM - ENHANCED ⚡
+/*======================================*/
+.nvx-time-system{display:flex;align-items:center;gap:20px;margin:16px 0;padding:16px;background:rgba(100,116,139,0.05);border-radius:20px;border:1px solid var(--nvx-border-glass, rgba(255,255,255,0.1))}
+.nvx-time-item{display:flex;align-items:center;gap:12px;flex:1;padding:12px;border-radius:16px;background:rgba(255,255,255,0.7);backdrop-filter:blur(8px);border:1px solid var(--nvx-border-glass, rgba(255,255,255,0.1));transition:all 0.3s ease}
+.nvx-time-item:hover{background:rgba(255,255,255,0.9);transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,0.1)}
+.nvx-time-icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--nvx-primary, #3b82f6),var(--nvx-secondary, #8b5cf6));display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px}
+.nvx-time-content{flex:1}
+.nvx-time-label{font-size:13px;color:var(--nvx-text, #1e293b);opacity:0.8;margin-bottom:4px}
+.nvx-time-value{font-size:16px;font-weight:700;color:var(--nvx-text, #1e293b)}
+.nvx-time-dynamic{font-size:14px;color:var(--nvx-primary, #3b82f6);font-weight:600;margin-top:4px;display:flex;align-items:center;gap:6px}
+.nvx-time-dynamic i{font-size:12px}
+
