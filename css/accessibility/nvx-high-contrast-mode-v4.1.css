@@ -1,0 +1,5 @@
+/*======================================*/
+/*⚡17 css section⚡🆕 HIGH CONTRAST MODE ENHANCEMENT */
+/*======================================*/
+@media (prefers-contrast:high){:root{--nvx-border:#000;--nvx-shadow:0 0 0 1px #000;--nvx-shadow-lg:0 0 0 2px #000;--nvx-primary:#0000ff;--nvx-secondary:#800080;--nvx-accent:#008000}[data-theme="dark"]{--nvx-border:#fff;--nvx-shadow:0 0 0 1px #fff;--nvx-shadow-lg:0 0 0 2px #fff;--nvx-primary:#ffff00;--nvx-secondary:#ffa500;--nvx-accent:#00ffff}*:focus-visible{outline:3px solid #000!important;outline-offset:3px!important}[data-theme="dark"] *:focus-visible{outline:3px solid #fff!important;outline-offset:3px!important}button:focus-visible,a:focus-visible,input:focus-visible{box-shadow:0 0 0 4px #000!important;border:2px solid #000!important}[data-theme="dark"] button:focus-visible,[data-theme="dark"] a:focus-visible,[data-theme="dark"] input:focus-visible{box-shadow:0 0 0 4px #fff!important;border:2px solid #fff!important}}
+
