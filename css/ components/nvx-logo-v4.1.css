@@ -1,0 +1,13 @@
+/*======================================*/
+/*⚡ 22 css section logo ⚡             */
+/*======================================*/
+.nvx-logo{display:flex;align-items:center;gap:10px;font-size:24px;font-weight:900;
+background:linear-gradient(135deg,var(--nvx-primary),var(--nvx-secondary));
+-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+background-clip:text;transition:transform 0.3s;text-decoration:none}
+.nvx-logo:hover{transform:scale(1.05)}
+.nvx-logo i{font-size:28px}
+@media(hover:none) and (pointer:coarse){.nvx-logo{padding:8px;margin:-8px;min-height:44px;min-width:44px}.nvx-logo:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.nvx-logo{transition:none}.nvx-logo:hover{transform:none}}
+@media(prefers-contrast:high){.nvx-logo{background:none;-webkit-text-fill-color:initial;color:var(--nvx-primary)}}
+
