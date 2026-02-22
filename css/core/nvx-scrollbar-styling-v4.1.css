@@ -1,0 +1,5 @@
+/*======================================*/
+/*⚡18 css section ⚡ 🆕 MODERN SCROLLBAR STYLING */
+/*======================================*/
+*{scrollbar-width:thin;scrollbar-color:var(--nvx-primary) var(--nvx-bg-secondary)}::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-track{background:var(--nvx-bg-secondary);border-radius:5px}::-webkit-scrollbar-thumb{background:var(--nvx-primary);border-radius:5px;border:2px solid var(--nvx-bg-secondary)}::-webkit-scrollbar-thumb:hover{background:var(--nvx-secondary)}@media (max-width:768px){::-webkit-scrollbar{width:8px;height:8px}}@media (hover:none){::-webkit-scrollbar-thumb{min-height:44px}}
+
