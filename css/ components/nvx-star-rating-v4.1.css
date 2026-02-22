@@ -1,0 +1,11 @@
+/*======================================*/
+⚡63 css section 5-STAR RATING ENHANCED ⚡
+/*======================================*/
+.nvx-star-system{display:flex;align-items:center;gap:16px;margin:20px 0}
+.nvx-stars{display:flex;gap:6px}
+.nvx-star{font-size:26px;color:#e2e8f0;cursor:pointer;transition:all 0.2s ease;position:relative}
+.nvx-star:hover{transform:scale(1.4);color:#fbbf24}
+.nvx-star.active{color:#f59e0b;text-shadow:0 0 8px rgba(245,158,11,0.5)}
+.nvx-star.half::before{content:"★";position:absolute;width:50%;overflow:hidden;color:#f59e0b}
+.nvx-rating-count{font-size:15px;font-weight:700;color:var(--nvx-text)}
+.nvx-rating-avg{font-size:20px;font-weight:800;color:#f59e0b}
