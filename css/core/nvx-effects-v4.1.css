@@ -1,0 +1,11 @@
+/*======================================*/
+/*⚡ 07 css section ⚡🆕 EFFECTS */
+/*======================================*/
+--nvx-glass-blur:blur(20px);
+--nvx-glass-saturate:saturate(180%);
+--nvx-backdrop-blur:blur(10px);
+--nvx-scrollbar-thumb:var(--nvx-primary);
+--nvx-scrollbar-track:var(--nvx-bg-secondary);
+--nvx-focus-ring:0 0 0 3px rgba(59, 130, 246, 0.5);
+--nvx-border-hover:var(--nvx-primary);
+}
