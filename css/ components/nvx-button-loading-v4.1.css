@@ -1,0 +1,7 @@
+/*======================================*/
+⚡90 css section BUTTON LOADING STATE ⚡
+/*======================================*/
+.nvx-btn-loading{position:relative;color:transparent!important}
+.nvx-btn-loading::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:24px;height:24px;border:3px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:nvx-spin 0.8s linear infinite}
+@keyframes nvx-spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+
