@@ -1,0 +1,10 @@
+/*======================================*/
+/*⚡ 04 css section ⚡🆕 GRADIENTS      */
+/*======================================*/
+--nvx-gradient-primary:linear-gradient(135deg, var(--nvx-primary), var(--nvx-secondary));
+--nvx-gradient-accent:linear-gradient(135deg, var(--nvx-accent), var(--nvx-secondary));
+--nvx-gradient-success:linear-gradient(135deg, var(--nvx-success), var(--nvx-info));
+--nvx-gradient-warning:linear-gradient(135deg, var(--nvx-warning), var(--nvx-danger));
+--nvx-gradient-dark:linear-gradient(135deg, var(--nvx-dark), #000000);
+--nvx-gradient-light:linear-gradient(135deg, var(--nvx-light), #ffffff);
+
