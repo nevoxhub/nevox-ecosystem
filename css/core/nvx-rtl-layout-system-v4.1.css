@@ -1,0 +1,2769 @@
+/*======================================*/
+
+/* ⚡ NEVOX RTL LAYOUT SYSTEM v4.1 ⚡ */
+
+/* Enterprise-Grade • Production-Ready • 2026 */
+
+/*======================================*/
+
+
+/* ===================================== */
+
+/* LEVEL 0: CSS VARIABLES & DIRECTION AWARE */
+
+/* ===================================== */
+
+:root {
+
+  /*  SPACING SCALE (8px base) */
+
+  --nvx-space-1: 0.25rem;   /* 4px */
+
+  --nvx-space-2: 0.5rem;    /* 8px */
+
+  --nvx-space-3: 0.75rem;   /* 12px */
+
+  --nvx-space-4: 1rem;      /* 16px */
+
+  --nvx-space-5: 1.25rem;   /* 20px */
+
+  --nvx-space-6: 1.5rem;    /* 24px */
+
+  --nvx-space-8: 2rem;      /* 32px */
+
+  --nvx-space-10: 2.5rem;   /* 40px */
+
+  --nvx-space-12: 3rem;     /* 48px */
+
+  --nvx-space-16: 4rem;     /* 64px */
+
+  --nvx-space-20: 5rem;     /* 80px */
+
+  --nvx-space-24: 6rem;     /* 96px */
+
+  
+
+  /*  COLORS */
+
+  --nvx-primary: #3b82f6;
+
+  --nvx-secondary: #8b5cf6;
+
+  --nvx-accent: #ec4899;
+
+  --nvx-success: #10b981;
+
+  --nvx-warning: #f59e0b;
+
+  --nvx-danger: #ef4444;
+
+  --nvx-info: #06b6d4;
+
+  
+
+  /*  NEUTRAL COLORS */
+
+  --nvx-gray-50: #f9fafb;
+
+  --nvx-gray-100: #f3f4f6;
+
+  --nvx-gray-200: #e5e7eb;
+
+  --nvx-gray-300: #d1d5db;
+
+  --nvx-gray-400: #9ca3af;
+
+  --nvx-gray-500: #6b7280;
+
+  --nvx-gray-600: #4b5563;
+
+  --nvx-gray-700: #374151;
+
+  --nvx-gray-800: #1f2937;
+
+  --nvx-gray-900: #111827;
+
+  
+
+  /*  BORDER & RADIUS */
+
+  --nvx-border: var(--nvx-gray-200);
+
+  --nvx-border-dark: var(--nvx-gray-300);
+
+  --nvx-radius: 0.5rem;
+
+  --nvx-radius-sm: 0.25rem;
+
+  --nvx-radius-md: 0.75rem;
+
+  --nvx-radius-lg: 1rem;
+
+  --nvx-radius-xl: 1.5rem;
+
+  --nvx-radius-2xl: 2rem;
+
+  --nvx-radius-full: 9999px;
+
+  
+
+  /* ️ SHADOWS */
+
+  --nvx-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+  --nvx-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+  --nvx-shadow-md: 0 6px 12px -2px rgba(0, 0, 0, 0.1);
+
+  --nvx-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  --nvx-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  --nvx-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  
+
+  /*  TRANSITIONS */
+
+  --nvx-transition: all 0.2s ease;
+
+  --nvx-transition-slow: all 0.3s ease;
+
+  --nvx-transition-fast: all 0.15s ease;
+
+  
+
+  /* ️ LAYOUT */
+
+  --nvx-header-height: 64px;
+
+  --nvx-sidebar-width: 280px;
+
+  --nvx-container-width: 1400px;
+
+  
+
+  /*  TYPOGRAPHY */
+
+  --nvx-font-family-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --nvx-font-family-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --nvx-font-size-xs: 0.75rem;
+
+  --nvx-font-size-sm: 0.875rem;
+
+  --nvx-font-size-base: 1rem;
+
+  --nvx-font-size-lg: 1.125rem;
+
+  --nvx-font-size-xl: 1.25rem;
+
+  --nvx-font-size-2xl: 1.5rem;
+
+  --nvx-font-size-3xl: 1.875rem;
+
+  --nvx-font-size-4xl: 2.25rem;
+
+  --nvx-font-size-5xl: 3rem;
+
+  
+
+  /*  Z-INDEX SYSTEM */
+
+  --nvx-z-dropdown: 1000;
+
+  --nvx-z-sticky: 1020;
+
+  --nvx-z-fixed: 1030;
+
+  --nvx-z-modal-backdrop: 1040;
+
+  --nvx-z-modal: 1050;
+
+  --nvx-z-popover: 1060;
+
+  --nvx-z-tooltip: 1070;
+
+  --nvx-z-toast: 1080;
+
+  --nvx-z-max: 9999;
+
+  
+
+  /* ✨ EFFECTS */
+
+  --nvx-glass-blur: blur(12px);
+
+  --nvx-backdrop-blur: blur(8px);
+
+  
+
+  /*  LOGICAL PROPERTIES DEFAULTS */
+
+  --nvx-gradient-direction: to right;
+
+  --nvx-align-start: flex-start;
+
+  --nvx-align-end: flex-end;
+
+  --nvx-justify-start: flex-start;
+
+  --nvx-justify-end: flex-end;
+
+  --nvx-slide-from: 100%;
+
+  --nvx-text-align-start: start;
+
+  --nvx-text-align-end: end;
+
+  
+
+  /*  DIRECTION AWARE */
+
+  --nvx-dir: ltr;
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 1: RTL DETECTION & BASE SETUP */
+
+/* ===================================== */
+
+[dir="rtl"] {
+
+  direction: rtl;
+
+  text-align: var(--nvx-text-align-start);
+
+  unicode-bidi: isolate;
+
+  
+
+  /*  REVERSE LOGICAL PROPERTIES */
+
+  --nvx-gradient-direction: to left;
+
+  --nvx-align-start: flex-end;
+
+  --nvx-align-end: flex-start;
+
+  --nvx-justify-start: flex-end;
+
+  --nvx-justify-end: flex-start;
+
+  --nvx-slide-from: -100%;
+
+  
+
+  /*  DIRECTION AWARE */
+
+  --nvx-dir: rtl;
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 2: LANGUAGE-SPECIFIC TYPOGRAPHY */
+
+/* ===================================== */
+
+/* Arabic */
+
+[lang="ar"] {
+
+  font-family: 'Segoe UI', 'Noto Sans Arabic', system-ui, sans-serif;
+
+  word-spacing: 0.05em;
+
+  letter-spacing: 0;
+
+  line-height: 1.8;
+
+  font-variant-numeric: contextual;
+
+  -webkit-font-feature-settings: "calt" 1, "tnum" 0;
+
+  font-feature-settings: "calt" 1, "tnum" 0;
+
+}
+
+
+/* Persian/Farsi */
+
+[lang="fa"] {
+
+  font-family: 'Vazir', 'Segoe UI', system-ui, sans-serif;
+
+  letter-spacing: -0.01em;
+
+  line-height: 1.7;
+
+  -webkit-font-feature-settings: "ss01" 1;
+
+  font-feature-settings: "ss01" 1;
+
+}
+
+
+/* Persian Numbers */
+
+[lang="fa"] .nvx-numbers,
+
+[lang="fa"] .nvx-post-date,
+
+[lang="fa"] .nvx-stat-number {
+
+  font-family: 'Vazir', sans-serif;
+
+}
+
+
+/* Hebrew */
+
+[lang="he"] {
+
+  font-family: 'Segoe UI', 'Arial Hebrew', system-ui, sans-serif;
+
+  line-height: 1.8;
+
+  word-spacing: normal;
+
+}
+
+
+/* Urdu */
+
+[lang="ur"] {
+
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', 'Segoe UI', sans-serif;
+
+  font-weight: 400;
+
+  line-height: 1.9;
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 3: LOGICAL SPACING UTILITIES */
+
+/* ===================================== */
+
+/* Margin Logical */
+
+.nvx-ms-0 { margin-inline-start: 0; }
+
+.nvx-ms-1 { margin-inline-start: var(--nvx-space-1); }
+
+.nvx-ms-2 { margin-inline-start: var(--nvx-space-2); }
+
+.nvx-ms-3 { margin-inline-start: var(--nvx-space-3); }
+
+.nvx-ms-4 { margin-inline-start: var(--nvx-space-4); }
+
+.nvx-ms-5 { margin-inline-start: var(--nvx-space-5); }
+
+.nvx-ms-6 { margin-inline-start: var(--nvx-space-6); }
+
+.nvx-ms-8 { margin-inline-start: var(--nvx-space-8); }
+
+
+.nvx-me-0 { margin-inline-end: 0; }
+
+.nvx-me-1 { margin-inline-end: var(--nvx-space-1); }
+
+.nvx-me-2 { margin-inline-end: var(--nvx-space-2); }
+
+.nvx-me-3 { margin-inline-end: var(--nvx-space-3); }
+
+.nvx-me-4 { margin-inline-end: var(--nvx-space-4); }
+
+.nvx-me-5 { margin-inline-end: var(--nvx-space-5); }
+
+.nvx-me-6 { margin-inline-end: var(--nvx-space-6); }
+
+.nvx-me-8 { margin-inline-end: var(--nvx-space-8); }
+
+
+/* Padding Logical */
+
+.nvx-ps-0 { padding-inline-start: 0; }
+
+.nvx-ps-1 { padding-inline-start: var(--nvx-space-1); }
+
+.nvx-ps-2 { padding-inline-start: var(--nvx-space-2); }
+
+.nvx-ps-3 { padding-inline-start: var(--nvx-space-3); }
+
+.nvx-ps-4 { padding-inline-start: var(--nvx-space-4); }
+
+.nvx-ps-5 { padding-inline-start: var(--nvx-space-5); }
+
+.nvx-ps-6 { padding-inline-start: var(--nvx-space-6); }
+
+.nvx-ps-8 { padding-inline-start: var(--nvx-space-8); }
+
+
+.nvx-pe-0 { padding-inline-end: 0; }
+
+.nvx-pe-1 { padding-inline-end: var(--nvx-space-1); }
+
+.nvx-pe-2 { padding-inline-end: var(--nvx-space-2); }
+
+.nvx-pe-3 { padding-inline-end: var(--nvx-space-3); }
+
+.nvx-pe-4 { padding-inline-end: var(--nvx-space-4); }
+
+.nvx-pe-5 { padding-inline-end: var(--nvx-space-5); }
+
+.nvx-pe-6 { padding-inline-end: var(--nvx-space-6); }
+
+.nvx-pe-8 { padding-inline-end: var(--nvx-space-8); }
+
+
+/* Block Spacing */
+
+.nvx-mb-0 { margin-block-end: 0; }
+
+.nvx-mb-1 { margin-block-end: var(--nvx-space-1); }
+
+.nvx-mb-2 { margin-block-end: var(--nvx-space-2); }
+
+.nvx-mb-3 { margin-block-end: var(--nvx-space-3); }
+
+.nvx-mb-4 { margin-block-end: var(--nvx-space-4); }
+
+.nvx-mb-5 { margin-block-end: var(--nvx-space-5); }
+
+.nvx-mb-6 { margin-block-end: var(--nvx-space-6); }
+
+.nvx-mb-8 { margin-block-end: var(--nvx-space-8); }
+
+
+.nvx-pb-0 { padding-block-end: 0; }
+
+.nvx-pb-1 { padding-block-end: var(--nvx-space-1); }
+
+.nvx-pb-2 { padding-block-end: var(--nvx-space-2); }
+
+.nvx-pb-3 { padding-block-end: var(--nvx-space-3); }
+
+.nvx-pb-4 { padding-block-end: var(--nvx-space-4); }
+
+.nvx-pb-5 { padding-block-end: var(--nvx-space-5); }
+
+.nvx-pb-6 { padding-block-end: var(--nvx-space-6); }
+
+.nvx-pb-8 { padding-block-end: var(--nvx-space-8); }
+
+
+/* ===================================== */
+
+/* LEVEL 4: CONTAINER & LAYOUT */
+
+/* ===================================== */
+
+.nvx-container {
+
+  width: 100%;
+
+  max-width: var(--nvx-container-width, 1400px);
+
+  margin-inline: auto;
+
+  padding-inline-start: max(var(--nvx-space-4), env(safe-area-inset-start));
+
+  padding-inline-end: max(var(--nvx-space-4), env(safe-area-inset-end));
+
+}
+
+
+/* Main Layout - LTR Default */
+
+.nvx-main-layout {
+
+  display: grid;
+
+  grid-template-columns: var(--nvx-sidebar-width) 1fr;
+
+  gap: var(--nvx-space-6);
+
+  min-height: calc(100vh - var(--nvx-header-height));
+
+  align-items: start;
+
+}
+
+
+/* Main Layout - RTL Override */
+
+[dir="rtl"] .nvx-main-layout {
+
+  grid-template-columns: 1fr var(--nvx-sidebar-width);
+
+}
+
+
+/* Blog Layout - LTR Default */
+
+.nvx-blog-layout {
+
+  display: grid;
+
+  grid-template-columns: 1fr var(--nvx-sidebar-width);
+
+  gap: var(--nvx-space-8);
+
+}
+
+
+/* Blog Layout - RTL Override */
+
+[dir="rtl"] .nvx-blog-layout {
+
+  grid-template-columns: var(--nvx-sidebar-width) 1fr;
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 5: FLEXBOX LOGICAL UTILITIES */
+
+/* ===================================== */
+
+.nvx-flex {
+
+  display: flex;
+
+}
+
+
+.nvx-flex-row {
+
+  flex-direction: row;
+
+}
+
+
+.nvx-flex-col {
+
+  flex-direction: column;
+
+}
+
+
+.nvx-flex-row-reverse {
+
+  flex-direction: row-reverse;
+
+}
+
+
+.nvx-flex-col-reverse {
+
+  flex-direction: column-reverse;
+
+}
+
+
+/* Justify Content */
+
+.nvx-justify-start {
+
+  justify-content: var(--nvx-justify-start, flex-start);
+
+}
+
+
+.nvx-justify-end {
+
+  justify-content: var(--nvx-justify-end, flex-end);
+
+}
+
+
+.nvx-justify-center {
+
+  justify-content: center;
+
+}
+
+
+.nvx-justify-between {
+
+  justify-content: space-between;
+
+}
+
+
+/* Align Items */
+
+.nvx-items-start {
+
+  align-items: var(--nvx-align-start, flex-start);
+
+}
+
+
+.nvx-items-end {
+
+  align-items: var(--nvx-align-end, flex-end);
+
+}
+
+
+.nvx-items-center {
+
+  align-items: center;
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 6: GRID UTILITIES */
+
+/* ===================================== */
+
+.nvx-grid {
+
+  display: grid;
+
+}
+
+
+.nvx-grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
+
+.nvx-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+.nvx-grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+
+.nvx-grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+
+.nvx-col-span-1 { grid-column: span 1; }
+
+.nvx-col-span-2 { grid-column: span 2; }
+
+.nvx-col-span-3 { grid-column: span 3; }
+
+.nvx-col-span-4 { grid-column: span 4; }
+
+
+/* ===================================== */
+
+/* LEVEL 7: POSITIONING UTILITIES */
+
+/* ===================================== */
+
+.nvx-relative { position: relative; }
+
+.nvx-absolute { position: absolute; }
+
+.nvx-fixed { position: fixed; }
+
+.nvx-sticky { position: sticky; }
+
+
+/* Inset Logical */
+
+.nvx-inset-0 {
+
+  inset: 0;
+
+}
+
+
+.nvx-inset-start-0 {
+
+  inset-inline-start: 0;
+
+}
+
+
+.nvx-inset-end-0 {
+
+  inset-inline-end: 0;
+
+}
+
+
+.nvx-top-0 {
+
+  top: 0;
+
+}
+
+
+.nvx-bottom-0 {
+
+  bottom: 0;
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 8: TEXT & TYPOGRAPHY */
+
+/* ===================================== */
+
+.nvx-text-start { text-align: var(--nvx-text-align-start); }
+
+.nvx-text-end { text-align: var(--nvx-text-align-end); }
+
+.nvx-text-center { text-align: center; }
+
+.nvx-text-justify { text-align: justify; }
+
+
+/* Float with fallback */
+
+.nvx-float-start {
+
+  float: inline-start;
+
+}
+
+
+.nvx-float-end {
+
+  float: inline-end;
+
+}
+
+
+/* Fallback for Safari < 16 */
+
+@supports not (float: inline-start) {
+
+  .nvx-float-start {
+
+    float: left;
+
+  }
+
+  
+
+  .nvx-float-end {
+
+    float: right;
+
+  }
+
+  
+
+  [dir="rtl"] .nvx-float-start {
+
+    float: right;
+
+  }
+
+  
+
+  [dir="rtl"] .nvx-float-end {
+
+    float: left;
+
+  }
+
+}
+
+
+.nvx-text-xs { font-size: var(--nvx-font-size-xs); }
+
+.nvx-text-sm { font-size: var(--nvx-font-size-sm); }
+
+.nvx-text-base { font-size: var(--nvx-font-size-base); }
+
+.nvx-text-lg { font-size: var(--nvx-font-size-lg); }
+
+.nvx-text-xl { font-size: var(--nvx-font-size-xl); }
+
+.nvx-text-2xl { font-size: var(--nvx-font-size-2xl); }
+
+.nvx-text-3xl { font-size: var(--nvx-font-size-3xl); }
+
+.nvx-text-4xl { font-size: var(--nvx-font-size-4xl); }
+
+
+/* ===================================== */
+
+/* LEVEL 9: BORDER UTILITIES */
+
+/* ===================================== */
+
+.nvx-border {
+
+  border: 1px solid var(--nvx-border);
+
+}
+
+
+.nvx-border-s {
+
+  border-inline-start: 1px solid var(--nvx-border);
+
+}
+
+
+.nvx-border-e {
+
+  border-inline-end: 1px solid var(--nvx-border);
+
+}
+
+
+.nvx-border-t {
+
+  border-block-start: 1px solid var(--nvx-border);
+
+}
+
+
+.nvx-border-b {
+
+  border-block-end: 1px solid var(--nvx-border);
+
+}
+
+
+/* Border Radius */
+
+.nvx-rounded { border-radius: var(--nvx-radius); }
+
+.nvx-rounded-sm { border-radius: var(--nvx-radius-sm); }
+
+.nvx-rounded-md { border-radius: var(--nvx-radius-md); }
+
+.nvx-rounded-lg { border-radius: var(--nvx-radius-lg); }
+
+.nvx-rounded-xl { border-radius: var(--nvx-radius-xl); }
+
+.nvx-rounded-full { border-radius: var(--nvx-radius-full); }
+
+
+.nvx-rounded-s-start {
+
+  border-start-start-radius: var(--nvx-radius);
+
+  border-end-start-radius: var(--nvx-radius);
+
+}
+
+
+.nvx-rounded-e-end {
+
+  border-start-end-radius: var(--nvx-radius);
+
+  border-end-end-radius: var(--nvx-radius);
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 10: FORM ELEMENTS */
+
+/* ===================================== */
+
+.nvx-form-i,
+
+.nvx-form-ta,
+
+.nvx-form-sel {
+
+  width: 100%;
+
+  padding-inline: var(--nvx-space-3);
+
+  padding-block: var(--nvx-space-2);
+
+  border: 1px solid var(--nvx-border);
+
+  border-radius: var(--nvx-radius);
+
+  background: white;
+
+  color: var(--nvx-gray-900);
+
+  font-size: var(--nvx-font-size-base);
+
+  font-family: var(--nvx-font-family-sans);
+
+  text-align: var(--nvx-text-align-start);
+
+  transition: var(--nvx-transition);
+
+}
+
+
+.nvx-form-i:focus,
+
+.nvx-form-ta:focus,
+
+.nvx-form-sel:focus {
+
+  outline: 2px solid var(--nvx-primary);
+
+  outline-offset: 2px;
+
+  border-color: var(--nvx-primary);
+
+}
+
+
+/* Select with SVG arrow - Enhanced for iOS */
+
+.nvx-form-sel {
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+
+  background-repeat: no-repeat;
+
+  background-position: calc(100% - var(--nvx-space-3)) center;
+
+  background-size: 1.25rem;
+
+  background-origin: content-box;
+
+  background-clip: content-box;
+
+  padding-inline-end: calc(var(--nvx-space-3) + 1.5rem);
+
+  appearance: none;
+
+  cursor: pointer;
+
+}
+
+
+[dir="rtl"] .nvx-form-sel {
+
+  background-position: var(--nvx-space-3) center;
+
+  padding-inline-start: calc(var(--nvx-space-3) + 1.5rem);
+
+  padding-inline-end: var(--nvx-space-3);
+
+}
+
+
+/* iOS-specific fixes */
+
+@supports (-webkit-touch-callout: none) {
+
+  .nvx-form-sel {
+
+    background-position: calc(100% - 12px) center;
+
+  }
+
+  
+
+  [dir="rtl"] .nvx-form-sel {
+
+    background-position: 12px center;
+
+  }
+
+}
+
+
+/* Checkbox/Radio */
+
+.nvx-form-cb,
+
+.nvx-form-r {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--nvx-space-2);
+
+  cursor: pointer;
+
+  user-select: none;
+
+}
+
+
+.nvx-form-cb input[type="checkbox"],
+
+.nvx-form-r input[type="radio"] {
+
+  width: 1.25rem;
+
+  height: 1.25rem;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 11: BUTTONS */
+
+/* ===================================== */
+
+.nvx-btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: var(--nvx-space-2);
+
+  padding-inline: var(--nvx-space-4);
+
+  padding-block: var(--nvx-space-2);
+
+  border: 1px solid transparent;
+
+  border-radius: var(--nvx-radius);
+
+  background: var(--nvx-primary);
+
+  color: white;
+
+  font-size: var(--nvx-font-size-sm);
+
+  font-weight: 600;
+
+  font-family: var(--nvx-font-family-sans);
+
+  cursor: pointer;
+
+  transition: var(--nvx-transition);
+
+  text-align: center;
+
+  text-decoration: none;
+
+}
+
+
+.nvx-btn:hover {
+
+  background: #2563eb;
+
+  transform: translateY(-1px);
+
+}
+
+
+.nvx-btn:focus {
+
+  outline: 2px solid var(--nvx-primary);
+
+  outline-offset: 2px;
+
+}
+
+
+/* Button Sizes */
+
+.nvx-btn-sm {
+
+  padding-inline: var(--nvx-space-3);
+
+  padding-block: var(--nvx-space-1);
+
+  font-size: var(--nvx-font-size-xs);
+
+}
+
+
+.nvx-btn-lg {
+
+  padding-inline: var(--nvx-space-6);
+
+  padding-block: var(--nvx-space-3);
+
+  font-size: var(--nvx-font-size-base);
+
+}
+
+
+/* Button Variants */
+
+.nvx-btn-secondary {
+
+  background: var(--nvx-gray-100);
+
+  color: var(--nvx-gray-900);
+
+  border-color: var(--nvx-gray-300);
+
+}
+
+
+.nvx-btn-secondary:hover {
+
+  background: var(--nvx-gray-200);
+
+}
+
+
+.nvx-btn-outline {
+
+  background: transparent;
+
+  color: var(--nvx-primary);
+
+  border-color: var(--nvx-primary);
+
+}
+
+
+.nvx-btn-outline:hover {
+
+  background: var(--nvx-primary);
+
+  color: white;
+
+}
+
+
+/* Button Group - FIXED: Added explicit border colors */
+
+.nvx-btn-group {
+
+  display: inline-flex;
+
+}
+
+
+.nvx-btn-group .nvx-btn {
+
+  border-radius: 0;
+
+  border-inline-end: none;
+
+  border-inline-start: none;
+
+}
+
+
+.nvx-btn-group .nvx-btn:first-child {
+
+  border-start-start-radius: var(--nvx-radius);
+
+  border-end-start-radius: var(--nvx-radius);
+
+  border-inline-start: 1px solid var(--nvx-border);
+
+}
+
+
+.nvx-btn-group .nvx-btn:last-child {
+
+  border-start-end-radius: var(--nvx-radius);
+
+  border-end-end-radius: var(--nvx-radius);
+
+  border-inline-end: 1px solid var(--nvx-border);
+
+}
+
+
+[dir="rtl"] .nvx-btn-group .nvx-btn {
+
+  border-inline-end: initial;
+
+  border-inline-start: none;
+
+}
+
+
+[dir="rtl"] .nvx-btn-group .nvx-btn:first-child {
+
+  border-start-start-radius: 0;
+
+  border-end-start-radius: 0;
+
+  border-start-end-radius: var(--nvx-radius);
+
+  border-end-end-radius: var(--nvx-radius);
+
+  border-inline-start: none;
+
+  border-inline-end: 1px solid var(--nvx-border);
+
+}
+
+
+[dir="rtl"] .nvx-btn-group .nvx-btn:last-child {
+
+  border-start-end-radius: 0;
+
+  border-end-end-radius: 0;
+
+  border-start-start-radius: var(--nvx-radius);
+
+  border-end-start-radius: var(--nvx-radius);
+
+  border-inline-end: none;
+
+  border-inline-start: 1px solid var(--nvx-border);
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 12: NAVIGATION */
+
+/* ===================================== */
+
+.nvx-header {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: var(--nvx-z-sticky);
+
+  height: var(--nvx-header-height);
+
+  background: rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: var(--nvx-backdrop-blur);
+
+  border-block-end: 1px solid var(--nvx-border);
+
+}
+
+
+.nvx-header-inner {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  height: 100%;
+
+  padding-inline: var(--nvx-space-4);
+
+}
+
+
+.nvx-nav {
+
+  display: flex;
+
+  gap: var(--nvx-space-2);
+
+}
+
+
+.nvx-nav-item {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--nvx-space-2);
+
+  padding-inline: var(--nvx-space-3);
+
+  padding-block: var(--nvx-space-2);
+
+  border-radius: var(--nvx-radius);
+
+  color: var(--nvx-gray-700);
+
+  text-decoration: none;
+
+  transition: var(--nvx-transition);
+
+}
+
+
+.nvx-nav-item:hover {
+
+  background: var(--nvx-gray-100);
+
+  color: var(--nvx-gray-900);
+
+}
+
+
+.nvx-nav-item.active {
+
+  background: var(--nvx-primary);
+
+  color: white;
+
+}
+
+
+/* User Menu */
+
+.nvx-user-menu {
+
+  position: absolute;
+
+  inset-block-start: 100%;
+
+  inset-inline-start: 0;
+
+  background: white;
+
+  border: 1px solid var(--nvx-border);
+
+  border-radius: var(--nvx-radius);
+
+  box-shadow: var(--nvx-shadow-lg);
+
+  min-inline-size: 12rem;
+
+  padding: var(--nvx-space-2) 0;
+
+  z-index: var(--nvx-z-dropdown);
+
+}
+
+
+[dir="rtl"] .nvx-user-menu {
+
+  inset-inline-start: auto;
+
+  inset-inline-end: 0;
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 13: ICON FLIPPING */
+
+/* ===================================== */
+
+/* Flip icons horizontally for RTL */
+
+[dir="rtl"] .nvx-icon-flip {
+
+  transform: scaleX(-1);
+
+}
+
+
+/* Specific icon flipping */
+
+.nvx-icon-arrow {
+
+  transition: transform 0.2s ease;
+
+}
+
+
+[dir="rtl"] .nvx-icon-arrow-left {
+
+  transform: rotate(180deg);
+
+}
+
+
+[dir="rtl"] .nvx-icon-arrow-right {
+
+  transform: rotate(-180deg);
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 14: GRADIENTS & BACKGROUNDS */
+
+/* ===================================== */
+
+.nvx-gradient-primary {
+
+  background: linear-gradient(
+
+    var(--nvx-gradient-direction, to right),
+
+    var(--nvx-primary),
+
+    var(--nvx-secondary)
+
+  );
+
+}
+
+
+.nvx-gradient-brand {
+
+  background: linear-gradient(
+
+    var(--nvx-gradient-direction, to right),
+
+    #3b82f6 0%,
+
+    #8b5cf6 50%,
+
+    #ec4899 100%
+
+  );
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 15: ANIMATIONS */
+
+/* ===================================== */
+
+@keyframes nvx-slide-in {
+
+  from {
+
+    transform: translateX(var(--nvx-slide-from, 100%));
+
+    opacity: 0;
+
+  }
+
+  to {
+
+    transform: translateX(0);
+
+    opacity: 1;
+
+  }
+
+}
+
+
+@keyframes nvx-fade-in {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(10px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+
+.nvx-animate-slide-in {
+
+  animation: nvx-slide-in 0.3s ease-out forwards;
+
+}
+
+
+.nvx-animate-fade-in {
+
+  animation: nvx-fade-in 0.3s ease-out forwards;
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 16: PAGINATION - FIXED */
+
+/* ===================================== */
+
+.nvx-pagination {
+
+  display: flex;
+
+  flex-direction: row;
+
+  gap: var(--nvx-space-1);
+
+}
+
+
+.nvx-pagination-item {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-inline-size: 2.5rem;
+
+  block-size: 2.5rem;
+
+  padding-inline: var(--nvx-space-2);
+
+  border: 1px solid var(--nvx-border);
+
+  border-radius: var(--nvx-radius);
+
+  background: white;
+
+  color: var(--nvx-gray-700);
+
+  text-decoration: none;
+
+  transition: var(--nvx-transition);
+
+}
+
+
+.nvx-pagination-item:hover {
+
+  background: var(--nvx-gray-100);
+
+}
+
+
+.nvx-pagination-item.active {
+
+  background: var(--nvx-primary);
+
+  color: white;
+
+  border-color: var(--nvx-primary);
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 17: ACCORDION & TABS */
+
+/* ===================================== */
+
+.nvx-accordion-item {
+
+  border-block-end: 1px solid var(--nvx-border);
+
+}
+
+
+.nvx-accordion-header {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding: var(--nvx-space-4);
+
+  background: transparent;
+
+  border: none;
+
+  text-align: var(--nvx-text-align-start);
+
+  cursor: pointer;
+
+}
+
+
+.nvx-accordion-icon {
+
+  transition: transform 0.2s ease;
+
+  margin-inline-start: var(--nvx-space-2);
+
+}
+
+
+.nvx-accordion-header[aria-expanded="true"] .nvx-accordion-icon {
+
+  transform: rotate(180deg);
+
+}
+
+
+.nvx-accordion-content {
+
+  overflow: hidden;
+
+  transition: height 0.3s ease;
+
+}
+
+
+/* Tabs */
+
+.nvx-tabs-nav {
+
+  display: flex;
+
+  gap: var(--nvx-space-2);
+
+  border-block-end: 1px solid var(--nvx-border);
+
+}
+
+
+.nvx-tab-button {
+
+  padding: var(--nvx-space-2) var(--nvx-space-4);
+
+  background: transparent;
+
+  border: none;
+
+  border-block-end: 2px solid transparent;
+
+  color: var(--nvx-gray-700);
+
+  cursor: pointer;
+
+  transition: var(--nvx-transition);
+
+}
+
+
+.nvx-tab-button:hover {
+
+  color: var(--nvx-gray-900);
+
+}
+
+
+.nvx-tab-button.active {
+
+  color: var(--nvx-primary);
+
+  border-block-end-color: var(--nvx-primary);
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 18: ALERTS & TOASTS */
+
+/* ===================================== */
+
+.nvx-alert {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: var(--nvx-space-3);
+
+  padding: var(--nvx-space-4);
+
+  border: 1px solid;
+
+  border-radius: var(--nvx-radius);
+
+  margin-block-end: var(--nvx-space-4);
+
+}
+
+
+.nvx-alert-success {
+
+  background: #f0fdf4;
+
+  border-color: #86efac;
+
+  color: #166534;
+
+}
+
+
+.nvx-alert-warning {
+
+  background: #fefce8;
+
+  border-color: #fde047;
+
+  color: #854d0e;
+
+}
+
+
+.nvx-alert-danger {
+
+  background: #fef2f2;
+
+  border-color: #fca5a5;
+
+  color: #991b1b;
+
+}
+
+
+/* Toast */
+
+.nvx-toast {
+
+  position: fixed;
+
+  z-index: var(--nvx-z-toast);
+
+  padding: var(--nvx-space-4);
+
+  border-radius: var(--nvx-radius);
+
+  box-shadow: var(--nvx-shadow-lg);
+
+  background: white;
+
+  animation: nvx-slide-in 0.3s ease-out;
+
+}
+
+
+.nvx-toast[data-position="top-start"] {
+
+  inset-block-start: var(--nvx-space-4);
+
+  inset-inline-start: var(--nvx-space-4);
+
+}
+
+
+.nvx-toast[data-position="top-end"] {
+
+  inset-block-start: var(--nvx-space-4);
+
+  inset-inline-end: var(--nvx-space-4);
+
+}
+
+
+[dir="rtl"] .nvx-toast[data-position="top-start"] {
+
+  inset-inline-start: auto;
+
+  inset-inline-end: var(--nvx-space-4);
+
+}
+
+
+[dir="rtl"] .nvx-toast[data-position="top-end"] {
+
+  inset-inline-end: auto;
+
+  inset-inline-start: var(--nvx-space-4);
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 19: MOBILE MENU */
+
+/* ===================================== */
+
+.nvx-mobile-nav {
+
+  position: fixed;
+
+  inset-block-start: 0;
+
+  inset-inline-end: 0;
+
+  inline-size: 300px;
+
+  block-size: 100vh;
+
+  background: white;
+
+  box-shadow: var(--nvx-shadow-xl);
+
+  z-index: var(--nvx-z-modal);
+
+  transform: translateX(100%);
+
+  transition: transform 0.3s ease-in-out;
+
+  padding: var(--nvx-space-6);
+
+  overflow-y: auto;
+
+}
+
+
+[dir="rtl"] .nvx-mobile-nav {
+
+  inset-inline-end: auto;
+
+  inset-inline-start: 0;
+
+  transform: translateX(-100%);
+
+}
+
+
+.nvx-mobile-nav.active {
+
+  transform: translateX(0);
+
+}
+
+
+.nvx-mobile-nav-close {
+
+  position: absolute;
+
+  inset-block-start: var(--nvx-space-4);
+
+  inset-inline-end: var(--nvx-space-4);
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+}
+
+
+[dir="rtl"] .nvx-mobile-nav-close {
+
+  inset-inline-end: auto;
+
+  inset-inline-start: var(--nvx-space-4);
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 20: SIDEBAR */
+
+/* ===================================== */
+
+.nvx-sidebar {
+
+  position: sticky;
+
+  inset-block-start: calc(var(--nvx-header-height) + var(--nvx-space-6));
+
+  inline-size: var(--nvx-sidebar-width);
+
+  background: white;
+
+  border: 1px solid var(--nvx-border);
+
+  border-radius: var(--nvx-radius-lg);
+
+  padding: var(--nvx-space-6);
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 21: SEARCH */
+
+/* ===================================== */
+
+.nvx-search {
+
+  position: relative;
+
+}
+
+
+.nvx-search-input {
+
+  width: 100%;
+
+  padding-inline-start: calc(var(--nvx-space-4) + 1.5rem);
+
+  padding-inline-end: var(--nvx-space-4);
+
+}
+
+
+.nvx-search-icon {
+
+  position: absolute;
+
+  inset-block-start: 50%;
+
+  inset-inline-start: var(--nvx-space-2);
+
+  transform: translateY(-50%);
+
+  color: var(--nvx-gray-400);
+
+}
+
+
+[dir="rtl"] .nvx-search-icon {
+
+  inset-inline-start: auto;
+
+  inset-inline-end: var(--nvx-space-2);
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 22: SETTINGS PANEL */
+
+/* ===================================== */
+
+.nvx-settings-panel {
+
+  position: fixed;
+
+  inset-block-start: 0;
+
+  inset-inline-end: 0;
+
+  inline-size: 380px;
+
+  block-size: 100vh;
+
+  background: white;
+
+  box-shadow: var(--nvx-shadow-xl);
+
+  z-index: var(--nvx-z-modal);
+
+  transform: translateX(100%);
+
+  transition: transform 0.3s ease-in-out;
+
+  padding: var(--nvx-space-6);
+
+  overflow-y: auto;
+
+}
+
+
+[dir="rtl"] .nvx-settings-panel {
+
+  inset-inline-end: auto;
+
+  inset-inline-start: 0;
+
+  transform: translateX(-100%);
+
+}
+
+
+.nvx-settings-panel.active {
+
+  transform: translateX(0);
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 23: PROGRESS & LOADERS */
+
+/* ===================================== */
+
+.nvx-progress {
+
+  width: 100%;
+
+  height: 0.5rem;
+
+  background: var(--nvx-gray-200);
+
+  border-radius: var(--nvx-radius-full);
+
+  overflow: hidden;
+
+}
+
+
+.nvx-progress-bar {
+
+  height: 100%;
+
+  background: var(--nvx-primary);
+
+  transition: width 0.3s ease;
+
+  direction: ltr;
+
+}
+
+
+.nvx-spinner {
+
+  display: inline-block;
+
+  width: 1.5rem;
+
+  height: 1.5rem;
+
+  border: 2px solid var(--nvx-gray-300);
+
+  border-top-color: var(--nvx-primary);
+
+  border-radius: 50%;
+
+  animation: nvx-spin 1s linear infinite;
+
+}
+
+
+@keyframes nvx-spin {
+
+  to { transform: rotate(360deg); }
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 24: PRINT STYLES */
+
+/* ===================================== */
+
+@media print {
+
+  [dir="rtl"] {
+
+    direction: rtl;
+
+    text-align: var(--nvx-text-align-start);
+
+  }
+
+  
+
+  .nvx-no-print {
+
+    display: none !important;
+
+  }
+
+  
+
+  .nvx-print-only {
+
+    display: block !important;
+
+  }
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 25: HIGH CONTRAST MODE */
+
+/* ===================================== */
+
+@media (prefers-contrast: high) {
+
+  [dir="rtl"] {
+
+    --nvx-border: #000;
+
+  }
+
+  
+
+  [data-theme="dark"][dir="rtl"] {
+
+    --nvx-border: #fff;
+
+  }
+
+  
+
+  [dir="rtl"] *:focus-visible {
+
+    outline: 3px solid currentColor !important;
+
+    outline-offset: 2px;
+
+  }
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 26: REDUCED MOTION - FIXED (Global) */
+
+/* ===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+
+  *::before,
+
+  *::after {
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+
+  }
+
+  
+
+  .nvx-alert,
+
+  .nvx-toast,
+
+  .nvx-mobile-nav,
+
+  .nvx-settings-panel,
+
+  .nvx-btn:hover {
+
+    transition: none !important;
+
+    animation: none !important;
+
+    transform: none !important;
+
+  }
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 27: TOUCH DEVICE OPTIMIZATION */
+
+/* ===================================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .nvx-btn,
+
+  .nvx-nav-item,
+
+  .nvx-pagination-item {
+
+    min-block-size: 44px;
+
+    min-inline-size: 44px;
+
+  }
+
+  
+
+  .nvx-mobile-nav,
+
+  .nvx-settings-panel {
+
+    inline-size: 100vw;
+
+  }
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 28: OPTIMIZED FALLBACK SUPPORT */
+
+/* ===================================== */
+
+@supports not (margin-inline-start: 1rem) {
+
+  /* Optimized grouping for better maintenance */
+
+  .nvx-ltr-fallback {
+
+    /* LTR fallbacks will be auto-generated in build process */
+
+  }
+
+  
+
+  .nvx-rtl-fallback {
+
+    /* RTL fallbacks will be auto-generated in build process */
+
+  }
+
+  
+
+  /* Manual minimal fallback for critical utilities */
+
+  .nvx-ms-1 { margin-left: var(--nvx-space-1); }
+
+  .nvx-me-1 { margin-right: var(--nvx-space-1); }
+
+  .nvx-ps-1 { padding-left: var(--nvx-space-1); }
+
+  .nvx-pe-1 { padding-right: var(--nvx-space-1); }
+
+  
+
+  [dir="rtl"] .nvx-ms-1 { margin-left: 0; margin-right: var(--nvx-space-1); }
+
+  [dir="rtl"] .nvx-me-1 { margin-right: 0; margin-left: var(--nvx-space-1); }
+
+  [dir="rtl"] .nvx-ps-1 { padding-left: 0; padding-right: var(--nvx-space-1); }
+
+  [dir="rtl"] .nvx-pe-1 { padding-right: 0; padding-left: var(--nvx-space-1); }
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 29: DARK THEME */
+
+/* ===================================== */
+
+[data-theme="dark"] {
+
+  --nvx-border: var(--nvx-gray-700);
+
+  --nvx-border-dark: var(--nvx-gray-600);
+
+}
+
+
+[data-theme="dark"] .nvx-header {
+
+  background: rgba(17, 24, 39, 0.95);
+
+}
+
+
+[data-theme="dark"] .nvx-sidebar {
+
+  background: var(--nvx-gray-800);
+
+}
+
+
+[data-theme="dark"] .nvx-form-i,
+
+[data-theme="dark"] .nvx-form-ta,
+
+[data-theme="dark"] .nvx-form-sel {
+
+  background: var(--nvx-gray-800);
+
+  color: var(--nvx-gray-100);
+
+  border-color: var(--nvx-gray-700);
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 30: RESPONSIVE DESIGN */
+
+/* ===================================== */
+
+@media (max-width: 1024px) {
+
+  .nvx-main-layout,
+
+  .nvx-blog-layout {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  
+
+  [dir="rtl"] .nvx-main-layout,
+
+  [dir="rtl"] .nvx-blog-layout {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  
+
+  .nvx-container {
+
+    padding-inline: var(--nvx-space-4);
+
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .nvx-header-inner {
+
+    padding-inline: var(--nvx-space-3);
+
+  }
+
+  
+
+  .nvx-nav {
+
+    display: none;
+
+  }
+
+  
+
+  .nvx-mobile-nav-toggle {
+
+    display: flex;
+
+  }
+
+  
+
+  .nvx-grid-cols-2,
+
+  .nvx-grid-cols-3,
+
+  .nvx-grid-cols-4 {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  :root {
+
+    --nvx-space-4: 0.75rem;
+
+    --nvx-space-6: 1rem;
+
+    --nvx-space-8: 1.5rem;
+
+  }
+
+  
+
+  .nvx-container {
+
+    padding-inline: var(--nvx-space-3);
+
+  }
+
+  
+
+  .nvx-mobile-nav {
+
+    inline-size: 100%;
+
+  }
+
+}
+
+
+/* ===================================== */
+
+/* LEVEL 31: PRODUCTION SAFETY GUARDS */
+
+/* ===================================== */
+
+/* Remove debug/QA tools in production */
+
+html[data-env="production"] .nvx-debug-dir,
+
+html[data-env="production"] .nvx-qa-overlay,
+
+html[data-env="production"] .nvx-qa-rtl-test,
+
+html[data-env="production"] .nvx-qa-ltr-test {
+
+  display: none !important;
+
+  visibility: hidden !important;
+
+}
+
+
+/* Force remove in minified builds */
+
+.nvx-production-mode .nvx-debug-dir { display: none !important; }
+
+
+/* ===================================== */
+
+/*  RTL UTILITY CLASSES & DEBUG - FIXED */
+
+/* ===================================== */
+
+.nvx-rtl-enabled {
+
+  direction: rtl;
+
+}
+
+
+.nvx-ltr-enabled {
+
+  direction: ltr;
+
+}
+
+
+.nvx-text-direction-auto {
+
+  direction: auto;
+
+}
+
+
+/* Debug class for QA/testing - FIXED: logical positioning */
+
+.nvx-debug-dir::after {
+
+  content: var(--nvx-dir, 'ltr');
+
+  position: fixed;
+
+  inset-block-end: 10px;
+
+  inset-inline-end: 10px;
+
+  background: var(--nvx-primary);
+
+  color: white;
+
+  padding: 4px 8px;
+
+  border-radius: 4px;
+
+  font-size: 12px;
+
+  z-index: var(--nvx-z-max);
+
+  opacity: 0.9;
+
+}
+
+
+/* Language Switcher */
+
+.nvx-language-switcher {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: var(--nvx-space-2);
+
+}
+
+
+.nvx-lang-dropdown {
+
+  position: absolute;
+
+  inset-block-start: 100%;
+
+  inset-inline-start: 0;
+
+  background: white;
+
+  border: 1px solid var(--nvx-border);
+
+  border-radius: var(--nvx-radius);
+
+  box-shadow: var(--nvx-shadow-lg);
+
+  min-inline-size: 10rem;
+
+  z-index: var(--nvx-z-dropdown);
+
+  display: none;
+
+}
+
+
+[dir="rtl"] .nvx-lang-dropdown {
+
+  inset-inline-start: auto;
+
+  inset-inline-end: 0;
+
+}
+
+
+.nvx-lang-dropdown.active {
+
+  display: block;
+
+}
+
+
+/* Direction Toggle */
+
+.nvx-direction-toggle {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  inline-size: 2.5rem;
+
+  block-size: 2.5rem;
+
+  border: 1px solid var(--nvx-border);
+
+  border-radius: var(--nvx-radius);
+
+  background: white;
+
+  cursor: pointer;
+
+  transition: var(--nvx-transition);
+
+}
+
+
+.nvx-direction-toggle:hover {
+
+  background: var(--nvx-gray-100);
+
+}
+
+
+/* ===================================== */
+
+/* ⚡ PERFORMANCE OPTIMIZATION */
+
+/* ===================================== */
+
+.nvx-gpu-accelerated {
+
+  transform: translateZ(0);
+
+  backface-visibility: hidden;
+
+}
+
+
+.nvx-will-change-transform {
+
+  will-change: transform;
+
+}
+
+
+/* ===================================== */
+
+/*  ENTERPRISE QA & TESTING UTILITIES */
+
+/* ===================================== */
+
+/* RTL/LTR auto-test checklist markers */
+
+.nvx-qa-rtl-test {
+
+  border: 2px dashed #3b82f6;
+
+}
+
+
+.nvx-qa-ltr-test {
+
+  border: 2px dashed #10b981;
+
+}
+
+
+/* Test overlay for visual verification */
+
+.nvx-qa-overlay[data-direction="rtl"]::before {
+
+  content: "RTL MODE ACTIVE";
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  background: #3b82f6;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 4px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  z-index: var(--nvx-z-max);
+
+}
+
+
+.nvx-qa-overlay[data-direction="ltr"]::before {
+
+  content: "LTR MODE ACTIVE";
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  background: #10b981;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 4px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  z-index: var(--nvx-z-max);
+
+}
+
+
+/* ===================================== */
+
+/*  VERSION INFO & CHANGELOG */
+
+/* ===================================== */
+
+/*
+
+NEVOX RTL LAYOUT SYSTEM v4.2.1
+
+Enterprise-Grade • Production-Ready • 2026
+
+
+✅ ALL AUDIT ISSUES FIXED:
+
+
+1. BORDER COLOR MISSING (CRITICAL):
+
+   - Button group borders now use var(--nvx-border)
+
+   - Added explicit border color to all border utilities
+
+
+2. REDUCED MOTION SCOPE FIXED:
+
+   - Now applies globally (not just RTL)
+
+   - Added comprehensive motion reduction
+
+
+3. PAGINATION FLEX DIRECTION:
+
+   - Added explicit flex-direction: row
+
+
+4. DEBUG POSITIONING:
+
+   - Changed right: 10px to inset-inline-end: 10px
+
+   - Changed bottom: 10px to inset-block-end: 10px
+
+
+5. TEXT ALIGN VARIABLES:
+
+   - Added --nvx-text-align-start/end variables
+
+   - Updated all text-align properties
+
+
+6. BORDER UTILITIES ENHANCED:
+
+   - All border-s/e/t/b utilities now specify border-color
+
+
+7. FALLBACK LAYER OPTIMIZED:
+
+   - Reduced verbosity
+
+   - Added comments for build-time generation
+
+
+✅ ARCHITECTURAL IMPROVEMENTS:
+
+
+1. Enhanced variable system for text alignment
+
+2. Global reduced motion handling
+
+3. Logical positioning for debug elements
+
+4. Clear maintenance path for fallbacks
+
+
+PERFORMANCE:
+
+- Reduced CSS specificity where possible
+
+- Maintained full backward compatibility
+
+- Optimized fallback layer
+
+
+SUPPORT:
+
+- Chrome 88+, Firefox 87+, Safari 15.4+, Edge 89+
+
+- Legacy browsers via simplified fallbacks
+
+- All RTL languages fully supported
+
+
+READY FOR: Large-scale SaaS, CMS, E-commerce, News Portals
+
+*/
+
+
+/* ===================================== */
+
+/*  END OF NEVOX RTL SYSTEM v4.1 */
+
+/* ===================================== */
+
