@@ -1,0 +1,218 @@
+/*======================================*/
+
+/* ⚡ NVX CARD SYSTEM v4.1 (WITH OPTIONAL POLISH) */
+
+/*======================================*/
+
+
+/* 🃏 BASE CARD */
+
+.nvx-card{display:flex;flex-direction:column;background:var(--nvx-color-bg-card,#fff);border-radius:var(--nvx-radius-lg,1.5rem);border:1px solid var(--nvx-color-border-main,#e2e8f0);overflow:hidden;transition:all var(--nvx-duration-medium,.3s) var(--nvx-ease-standard);position:relative}
+
+
+/* 📏 CARD SIZES */
+
+.nvx-card-sm{max-width:var(--nvx-container-sm,640px)}
+
+.nvx-card-md{max-width:var(--nvx-container-md,768px)}
+
+.nvx-card-lg{max-width:var(--nvx-container-lg,1024px)}
+
+.nvx-card-full{width:100%}
+
+
+/* 🎨 CARD VARIANTS */
+
+.nvx-card-elevated{box-shadow:var(--nvx-elevation-3,0 6px 12px -2px rgba(0,0,0,.12));border-color:transparent}
+
+.nvx-card-outline{border:2px solid var(--nvx-color-border-main,#e2e8f0);background:transparent}
+
+.nvx-card-glass{background:var(--nvx-glass-bg,rgba(255,255,255,.1));backdrop-filter:var(--nvx-glass-blur,blur(20px));border:1px solid var(--nvx-glass-border,rgba(255,255,255,.2))}
+
+.nvx-card-flat{border:none;box-shadow:none}
+
+.nvx-card-interactive{cursor:pointer}
+
+.nvx-card-interactive:hover{transform:translateY(-4px);box-shadow:var(--nvx-elevation-4,0 10px 15px -3px rgba(0,0,0,.12))}
+
+.nvx-card-interactive:active{transform:translateY(-2px)}
+
+
+/* 🔹 C. FOCUS STYLE FOR INTERACTIVE CARDS (OPTIONAL) */
+
+.nvx-card-interactive:focus-visible{outline:2px solid var(--nvx-color-focus-ring,#3b82f6);outline-offset:4px;border-radius:var(--nvx-radius-lg,1.5rem)}
+
+
+/* 🏗️ CARD STRUCTURE */
+
+.nvx-card-header{padding:var(--nvx-space-6,1.5rem) var(--nvx-space-6,1.5rem) 0;display:flex;align-items:center;justify-content:space-between;gap:var(--nvx-space-4,1rem)}
+
+.nvx-card-body{padding:var(--nvx-space-6,1.5rem);flex:1}
+
+.nvx-card-footer{padding:0 var(--nvx-space-6,1.5rem) var(--nvx-space-6,1.5rem);display:flex;align-items:center;justify-content:space-between;gap:var(--nvx-space-4,1rem);border-top:1px solid var(--nvx-color-border-main,#e2e8f0)}
+
+
+/* 🎯 CARD ELEMENTS */
+
+.nvx-card-title{font-size:var(--nvx-text-xl,1.25rem);font-weight:var(--nvx-font-semibold,600);color:var(--nvx-color-text-main,#0f172a);margin:0;line-height:var(--nvx-leading-tight,1.25)}
+
+.nvx-card-subtitle{font-size:var(--nvx-text-sm,.875rem);color:var(--nvx-color-text-secondary,#475569);margin-top:var(--nvx-space-1,.25rem)}
+
+.nvx-card-description{font-size:var(--nvx-text-base,1rem);color:var(--nvx-color-text-secondary,#475569);margin-top:var(--nvx-space-3,.75rem);line-height:var(--nvx-leading-relaxed,1.75)}
+
+.nvx-card-icon{width:48px;height:48px;border-radius:var(--nvx-radius-md,1rem);background:var(--nvx-glass-primary,rgba(59,130,246,.1));display:flex;align-items:center;justify-content:center;color:var(--nvx-color-brand-primary,#3b82f6);font-size:1.5rem}
+
+.nvx-card-badge{display:inline-flex;align-items:center;padding:var(--nvx-space-1,.25rem) var(--nvx-space-2,.5rem);background:var(--nvx-glass-primary,rgba(59,130,246,.1));color:var(--nvx-color-brand-primary,#3b82f6);border-radius:var(--nvx-radius-full,9999px);font-size:var(--nvx-text-xs,.75rem);font-weight:var(--nvx-font-semibold,600)}
+
+
+/* 🖼️ CARD MEDIA */
+
+.nvx-card-media{width:100%;height:200px;object-fit:cover;display:block}
+
+.nvx-card-media-top{border-radius:var(--nvx-radius-lg,1.5rem) var(--nvx-radius-lg,1.5rem) 0 0}
+
+.nvx-card-media-bottom{border-radius:0 0 var(--nvx-radius-lg,1.5rem) var(--nvx-radius-lg,1.5rem)}
+
+.nvx-card-media-full{border-radius:var(--nvx-radius-lg,1.5rem);margin:var(--nvx-space-6,1.5rem)}
+
+
+/* 📊 STATS CARD */
+
+.nvx-card-stats{text-align:center;padding:var(--nvx-space-8,2rem)}
+
+.nvx-card-stats-value{font-size:var(--nvx-text-4xl,2.25rem);font-weight:var(--nvx-font-bold,700);color:var(--nvx-color-text-main,#0f172a);line-height:1}
+
+.nvx-card-stats-label{font-size:var(--nvx-text-sm,.875rem);color:var(--nvx-color-text-secondary,#475569);margin-top:var(--nvx-space-2,.5rem);text-transform:uppercase;letter-spacing:var(--nvx-tracking-wide,.025em)}
+
+.nvx-card-stats-change{display:inline-flex;align-items:center;gap:var(--nvx-space-1,.25rem);font-size:var(--nvx-text-sm,.875rem);font-weight:var(--nvx-font-medium,500);margin-top:var(--nvx-space-2,.5rem)}
+
+.nvx-card-stats-change.positive{color:var(--nvx-color-success,#10b981)}
+
+.nvx-card-stats-change.negative{color:var(--nvx-color-danger,#ef4444)}
+
+
+/* 🎴 PROFILE CARD */
+
+.nvx-card-profile{text-align:center;padding:var(--nvx-space-8,2rem)}
+
+.nvx-card-avatar{width:80px;height:80px;border-radius:50%;object-fit:cover;margin:0 auto var(--nvx-space-4,1rem);border:3px solid var(--nvx-color-bg-card,#fff);box-shadow:var(--nvx-shadow-base,0 4px 6px -1px rgba(0,0,0,.1))}
+
+.nvx-card-name{font-size:var(--nvx-text-xl,1.25rem);font-weight:var(--nvx-font-semibold,600);margin:0}
+
+.nvx-card-role{font-size:var(--nvx-text-sm,.875rem);color:var(--nvx-color-text-secondary,#475569);margin-top:var(--nvx-space-1,.25rem)}
+
+.nvx-card-social{display:flex;justify-content:center;gap:var(--nvx-space-3,.75rem);margin-top:var(--nvx-space-4,1rem)}
+
+
+/* 📦 PRODUCT CARD */
+
+.nvx-card-product{position:relative}
+
+.nvx-card-product-badge{position:absolute;top:var(--nvx-space-4,1rem);left:var(--nvx-space-4,1rem);z-index:10}
+
+.nvx-card-product-price{font-size:var(--nvx-text-xl,1.25rem);font-weight:var(--nvx-font-bold,700);color:var(--nvx-color-text-main,#0f172a)}
+
+.nvx-card-product-old-price{font-size:var(--nvx-text-sm,.875rem);color:var(--nvx-color-text-tertiary,#94a3b8);text-decoration:line-through;margin-left:var(--nvx-space-2,.5rem)}
+
+.nvx-card-product-rating{display:flex;align-items:center;gap:var(--nvx-space-1,.25rem);color:var(--nvx-color-warning,#f59e0b);font-size:var(--nvx-text-sm,.875rem)}
+
+.nvx-card-product-actions{display:flex;gap:var(--nvx-space-2,.5rem);margin-top:var(--nvx-space-4,1rem)}
+
+
+/* 🎪 TESTIMONIAL CARD */
+
+.nvx-card-testimonial{position:relative;padding:var(--nvx-space-6,1.5rem)}
+
+.nvx-card-testimonial::before{content:'"';font-size:var(--nvx-text-6xl,3.75rem);color:var(--nvx-glass-primary,rgba(59,130,246,.1));position:absolute;top:0;left:var(--nvx-space-4,1rem);line-height:1}
+
+.nvx-card-testimonial-text{font-size:var(--nvx-text-lg,1.125rem);font-style:italic;color:var(--nvx-color-text-main,#0f172a);line-height:var(--nvx-leading-relaxed,1.75);position:relative;z-index:2}
+
+.nvx-card-testimonial-author{display:flex;align-items:center;gap:var(--nvx-space-3,.75rem);margin-top:var(--nvx-space-4,1rem)}
+
+.nvx-card-testimonial-avatar{width:48px;height:48px;border-radius:50%;object-fit:cover}
+
+.nvx-card-testimonial-author-info{flex:1}
+
+.nvx-card-testimonial-author-name{font-weight:var(--nvx-font-semibold,600);color:var(--nvx-color-text-main,#0f172a)}
+
+.nvx-card-testimonial-author-role{font-size:var(--nvx-text-sm,.875rem);color:var(--nvx-color-text-secondary,#475569)}
+
+
+/* 🔘 CARD ACTIONS */
+
+.nvx-card-actions{display:flex;gap:var(--nvx-space-2,.5rem);flex-wrap:wrap}
+
+.nvx-card-action{flex:1;min-width:120px}
+
+
+/* 📱 RESPONSIVE CARDS */
+
+@media(max-width:768px){
+
+.nvx-card-header,.nvx-card-footer{flex-direction:column;align-items:stretch;text-align:center}
+
+.nvx-card-header>*,.nvx-card-footer>*{width:100%}
+
+.nvx-card-sm,.nvx-card-md,.nvx-card-lg{max-width:100%}
+
+.nvx-card-media{height:160px}
+
+.nvx-card-stats{padding:var(--nvx-space-6,1.5rem)}
+
+.nvx-card-profile{padding:var(--nvx-space-6,1.5rem)}
+
+.nvx-card-grid-2,.nvx-card-grid-3,.nvx-card-grid-4{grid-template-columns:1fr}
+
+}
+
+
+/* 🌙 DARK THEME CARDS */
+
+[data-theme="dark"] .nvx-card{background:var(--nvx-color-bg-card,#1e293b);border-color:var(--nvx-color-border-main,#334155)}
+
+[data-theme="dark"] .nvx-card-outline{border-color:var(--nvx-color-border-main,#334155)}
+
+[data-theme="dark"] .nvx-card-footer{border-top-color:var(--nvx-color-border-main,#334155)}
+
+[data-theme="dark"] .nvx-card-glass{background:var(--nvx-glass-bg-dark,rgba(255,255,255,.05));border-color:var(--nvx-glass-border-dark,rgba(255,255,255,.1))}
+
+
+/* 🔹 A. REDUCED MOTION FOR CARDS */
+
+@media(prefers-reduced-motion:reduce){
+
+.nvx-card,.nvx-card-interactive,.nvx-card-interactive:hover,.nvx-card-interactive:active{transition:none;transform:none}
+
+}
+
+
+/* 🔹 B. GLASS FALLBACK FOR SAFARI / LOW SUPPORT */
+
+@supports not (backdrop-filter: blur(1px)){
+
+.nvx-card-glass{background:rgba(255,255,255,.12)}
+
+[data-theme="dark"] .nvx-card-glass{background:rgba(255,255,255,.05)}
+
+}
+
+
+/* 🎭 CARD STATES */
+
+.nvx-card-disabled{opacity:var(--nvx-state-disabled-opacity,.5);pointer-events:none}
+
+.nvx-card-loading{position:relative;min-height:200px}
+
+.nvx-card-loading::after{content:'';position:absolute;top:50%;left:50%;width:32px;height:32px;border:3px solid var(--nvx-color-border-main,#e2e8f0);border-radius:50%;border-right-color:var(--nvx-color-brand-primary,#3b82f6);animation:.75s linear infinite spin;margin:-16px 0 0 -16px}
+
+
+/* 📐 CARD GRID */
+
+.nvx-card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:var(--nvx-space-6,1.5rem)}
+
+.nvx-card-grid-2{grid-template-columns:repeat(2,1fr)}
+
+.nvx-card-grid-3{grid-template-columns:repeat(3,1fr)}
+
+.nvx-card-grid-4{grid-template-columns:repeat(4,1fr)}
+
