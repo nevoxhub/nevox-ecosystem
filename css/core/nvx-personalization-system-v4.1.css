@@ -1,0 +1,694 @@
+/*======================================*/
+/* ⚡ NEVOX PERSONALIZATION SYSTEM v4.1 ⚡ */
+/* ENTERPRISE-GRADE • ACCESSIBILITY-FIRST */
+/* SINGLE SOURCE OF TRUTH ARCHITECTURE */
+/* PLATINUM STANDARD • PRODUCTION FINAL */
+/*======================================*/
+
+@layer tokens, base, components, utilities;
+
+/*======================================*/
+/* 1. CORE TOKENS - ENTERPRISE SOURCE */
+/*======================================*/
+@layer tokens {
+  :root {
+    /* System State - Single Source of Truth */
+    --nvx-state-theme: light;
+    --nvx-state-contrast: normal;
+    --nvx-state-motion: no-preference;
+    --nvx-state-font-size: 100%;
+    --nvx-state-font-family: default;
+    --nvx-state-saturation: 100%;
+    --nvx-state-blur: 0px;
+    --nvx-state-pointer: default;
+    --nvx-state-reduced-transparency: false;
+    
+    /* Brand Colors */
+    --nvx-color-primary-base: #3b82f6;
+    --nvx-color-primary-light: rgba(59, 130, 246, 0.1);
+    --nvx-color-primary-dark: #2563eb;
+    --nvx-color-secondary-base: #8b5cf6;
+    --nvx-color-secondary-light: rgba(139, 92, 246, 0.1);
+    --nvx-color-secondary-dark: #7c3aed;
+    --nvx-color-success-base: #10b981;
+    --nvx-color-danger-base: #ef4444;
+    --nvx-color-warning-base: #f59e0b;
+    --nvx-color-info-base: #06b6d4;
+    
+    /* Surface Tokens */
+    --nvx-surface-light-primary: #ffffff;
+    --nvx-surface-light-secondary: #f8fafc;
+    --nvx-surface-light-tertiary: #f1f5f9;
+    --nvx-surface-dark-primary: #0f172a;
+    --nvx-surface-dark-secondary: #1e293b;
+    --nvx-surface-dark-tertiary: #334155;
+    
+    /* Text Tokens */
+    --nvx-text-light-primary: #0f172a;
+    --nvx-text-light-secondary: #334155;
+    --nvx-text-light-muted: #64748b;
+    --nvx-text-dark-primary: #f8fafc;
+    --nvx-text-dark-secondary: #cbd5e1;
+    --nvx-text-dark-muted: #94a3b8;
+    
+    /* Border Tokens */
+    --nvx-border-light-light: #e2e8f0;
+    --nvx-border-light-base: #cbd5e1;
+    --nvx-border-light-dark: #94a3b8;
+    --nvx-border-dark-light: #334155;
+    --nvx-border-dark-base: #475569;
+    --nvx-border-dark-dark: #64748b;
+    
+    /* High Contrast Tokens - Only used for prefers-contrast */
+    --nvx-hc-light-text-primary: #000000;
+    --nvx-hc-light-text-secondary: #000000;
+    --nvx-hc-light-bg-primary: #ffffff;
+    --nvx-hc-light-bg-secondary: #ffffff;
+    --nvx-hc-light-border: #000000;
+    --nvx-hc-light-primary: #0000ff;
+    --nvx-hc-dark-text-primary: #ffffff;
+    --nvx-hc-dark-text-secondary: #ffffff;
+    --nvx-hc-dark-bg-primary: #000000;
+    --nvx-hc-dark-bg-secondary: #000000;
+    --nvx-hc-dark-border: #ffffff;
+    --nvx-hc-dark-primary: #ffff00;
+    
+    /* Glass Tokens */
+    --nvx-glass-bg-light: rgba(255, 255, 255, 0.8);
+    --nvx-glass-bg-dark: rgba(15, 23, 42, 0.8);
+    --nvx-glass-blur: 20px;
+    
+    /* SEMANTIC TOKENS */
+    --nvx-color-surface: var(--nvx-surface-light-primary);
+    --nvx-color-surface-secondary: var(--nvx-surface-light-secondary);
+    --nvx-color-surface-tertiary: var(--nvx-surface-light-tertiary);
+    --nvx-text-primary: var(--nvx-text-light-primary);
+    --nvx-text-secondary: var(--nvx-text-light-secondary);
+    --nvx-text-muted: var(--nvx-text-light-muted);
+    --nvx-border-light: var(--nvx-border-light-light);
+    --nvx-border-base: var(--nvx-border-light-base);
+    --nvx-border-dark: var(--nvx-border-light-dark);
+    --nvx-primary: var(--nvx-color-primary-base);
+    --nvx-glass-bg: var(--nvx-glass-bg-light);
+    
+    /* Spacing Scale */
+    --nvx-space-1: 0.25rem;
+    --nvx-space-2: 0.5rem;
+    --nvx-space-3: 0.75rem;
+    --nvx-space-4: 1rem;
+    --nvx-space-5: 1.25rem;
+    --nvx-space-6: 1.5rem;
+    --nvx-space-8: 2rem;
+    --nvx-space-10: 2.5rem;
+    --nvx-space-12: 3rem;
+    --nvx-space-16: 4rem;
+    --nvx-space-20: 5rem;
+    --nvx-space-24: 6rem;
+    --nvx-space-32: 8rem;
+    
+    /* Shadow Tokens */
+    --nvx-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --nvx-shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --nvx-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --nvx-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --nvx-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --nvx-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    
+    /* Typography */
+    --nvx-font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --nvx-font-serif: Georgia, 'Times New Roman', serif;
+    --nvx-font-mono: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+    --nvx-font-dyslexia: 'OpenDyslexic', 'Lexie Readable', 'Comic Sans MS', sans-serif;
+    
+    --nvx-font-size-root: 16px;
+    --nvx-font-size-xs: 0.75rem;
+    --nvx-font-size-sm: 0.875rem;
+    --nvx-font-size-base: 1rem;
+    --nvx-font-size-lg: 1.125rem;
+    --nvx-font-size-xl: 1.25rem;
+    
+    /* Z-Index Scale */
+    --nvx-z-dropdown: 1000;
+    --nvx-z-sticky: 1020;
+    --nvx-z-fixed: 1030;
+    --nvx-z-modal: 1050;
+    --nvx-z-popover: 1060;
+    --nvx-z-tooltip: 1070;
+    
+    /* Focus Ring */
+    --nvx-focus-width: 3px;
+    --nvx-focus-style: solid;
+    --nvx-focus-color: var(--nvx-primary);
+    --nvx-focus-offset: 2px;
+    
+    /* Animation Durations */
+    --nvx-duration-150: 150ms;
+    --nvx-duration-300: 300ms;
+    --nvx-duration-500: 500ms;
+    
+    /* Filter Tokens */
+    --nvx-saturation-factor: 1;
+    --nvx-blur-amount: 0px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*======================================*/
+/* 2. SYSTEM PREFERENCE DETECTION */
+/*======================================*/
+@layer base {
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme]) {
+      --nvx-color-surface: var(--nvx-surface-light-primary);
+      --nvx-color-surface-secondary: var(--nvx-surface-light-secondary);
+      --nvx-color-surface-tertiary: var(--nvx-surface-light-tertiary);
+      --nvx-text-primary: var(--nvx-text-light-primary);
+      --nvx-text-secondary: var(--nvx-text-light-secondary);
+      --nvx-text-muted: var(--nvx-text-light-muted);
+      --nvx-border-light: var(--nvx-border-light-light);
+      --nvx-border-base: var(--nvx-border-light-base);
+      --nvx-border-dark: var(--nvx-border-light-dark);
+      --nvx-glass-bg: var(--nvx-glass-bg-light);
+    }
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme]) {
+      --nvx-color-surface: var(--nvx-surface-dark-primary);
+      --nvx-color-surface-secondary: var(--nvx-surface-dark-secondary);
+      --nvx-color-surface-tertiary: var(--nvx-surface-dark-tertiary);
+      --nvx-text-primary: var(--nvx-text-dark-primary);
+      --nvx-text-secondary: var(--nvx-text-dark-secondary);
+      --nvx-text-muted: var(--nvx-text-dark-muted);
+      --nvx-border-light: var(--nvx-border-dark-light);
+      --nvx-border-base: var(--nvx-border-dark-base);
+      --nvx-border-dark: var(--nvx-border-dark-dark);
+      --nvx-glass-bg: var(--nvx-glass-bg-dark);
+    }
+  }
+  
+  @media (prefers-contrast: more) {
+    :root:not([data-contrast]) {
+      --nvx-contrast-mode: high;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    :root:not([data-motion]) {
+      --nvx-duration-150: 0s;
+      --nvx-duration-300: 0s;
+      --nvx-duration-500: 0s;
+    }
+    
+    html:not([data-motion]) {
+      scroll-behavior: auto;
+    }
+    
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  @media (prefers-reduced-transparency: reduce) {
+    :root {
+      --nvx-state-reduced-transparency: true;
+    }
+    
+    .nvx-glass,
+    [data-glass] {
+      backdrop-filter: none !important;
+      background: var(--nvx-color-surface) !important;
+    }
+  }
+}
+
+/*======================================*/
+/* 3. FORCED COLORS MODE - MODERN IMPLEMENTATION */
+/*======================================*/
+@layer base {
+  @media (forced-colors: active) {
+    :root {
+      /* System color keywords - ব্রাউজার নিজে ঠিক করে দেবে */
+      --nvx-primary: Highlight;
+      --nvx-text-primary: CanvasText;
+      --nvx-text-secondary: CanvasText;
+      --nvx-text-muted: GrayText;
+      --nvx-color-surface: Canvas;
+      --nvx-color-surface-secondary: Canvas;
+      --nvx-color-surface-tertiary: Canvas;
+      --nvx-border-light: CanvasText;
+      --nvx-border-base: CanvasText;
+      --nvx-border-dark: CanvasText;
+      --nvx-glass-bg: Canvas;
+      --nvx-focus-color: Highlight;
+      
+      /* FIXED: Safe accent-color fallback for all browsers */
+      accent-color: auto;  /* সব ব্রাউজারে কাজ করে */
+      /* accent-color: AccentColor; */  /* Future-ready - enable when support improves */
+    }
+    
+    /* Glass elements - সম্পূর্ণ ডিসেবল */
+    .nvx-glass,
+    .nvx-glass-panel,
+    [data-glass] {
+      backdrop-filter: none !important;
+      background: Canvas !important;
+      border: 1px solid CanvasText !important;
+    }
+    
+    /* Focus style */
+    *:focus-visible {
+      outline: 3px solid Highlight !important;
+      outline-offset: 2px !important;
+      box-shadow: none !important;
+    }
+    
+    /* Links - ব্রাউজারকে কন্ট্রোল দিন */
+    a {
+      forced-color-adjust: auto;
+    }
+    
+    /* Buttons - কাস্টম কন্ট্রোল */
+    button,
+    .nvx-btn,
+    [role="button"] {
+      forced-color-adjust: none;
+      background-color: ButtonFace !important;
+      color: ButtonText !important;
+      border: 1px solid ButtonText !important;
+    }
+    
+    button:hover,
+    .nvx-btn:hover,
+    [role="button"]:hover {
+      background-color: Highlight !important;
+      color: HighlightText !important;
+      border-color: Highlight !important;
+    }
+    
+    /* Form controls */
+    input,
+    select,
+    textarea {
+      forced-color-adjust: auto;
+      background-color: Field !important;
+      color: FieldText !important;
+      border: 1px solid ButtonText !important;
+    }
+    
+    /* Custom checkboxes/radios - if needed */
+    .nvx-custom-checkbox,
+    .nvx-custom-radio {
+      forced-color-adjust: none;
+    }
+    
+    /* Disabled states */
+    [disabled],
+    .nvx-disabled {
+      color: GrayText !important;
+      border-color: GrayText !important;
+    }
+  }
+}
+
+/*======================================*/
+/* 4. THEME APPLICATION - ENTERPRISE */
+/*======================================*/
+@layer base {
+  /* Light Theme */
+  [data-theme="light"] {
+    color-scheme: light;
+    
+    --nvx-color-surface: var(--nvx-surface-light-primary);
+    --nvx-color-surface-secondary: var(--nvx-surface-light-secondary);
+    --nvx-color-surface-tertiary: var(--nvx-surface-light-tertiary);
+    --nvx-text-primary: var(--nvx-text-light-primary);
+    --nvx-text-secondary: var(--nvx-text-light-secondary);
+    --nvx-text-muted: var(--nvx-text-light-muted);
+    --nvx-border-light: var(--nvx-border-light-light);
+    --nvx-border-base: var(--nvx-border-light-base);
+    --nvx-border-dark: var(--nvx-border-light-dark);
+    --nvx-primary: var(--nvx-color-primary-base);
+    --nvx-glass-bg: var(--nvx-glass-bg-light);
+    
+    accent-color: var(--nvx-primary);
+  }
+  
+  /* Dark Theme */
+  [data-theme="dark"] {
+    color-scheme: dark;
+    
+    --nvx-color-surface: var(--nvx-surface-dark-primary);
+    --nvx-color-surface-secondary: var(--nvx-surface-dark-secondary);
+    --nvx-color-surface-tertiary: var(--nvx-surface-dark-tertiary);
+    --nvx-text-primary: var(--nvx-text-dark-primary);
+    --nvx-text-secondary: var(--nvx-text-dark-secondary);
+    --nvx-text-muted: var(--nvx-text-dark-muted);
+    --nvx-border-light: var(--nvx-border-dark-light);
+    --nvx-border-base: var(--nvx-border-dark-base);
+    --nvx-border-dark: var(--nvx-border-dark-dark);
+    --nvx-primary: var(--nvx-color-primary-dark);
+    --nvx-glass-bg: var(--nvx-glass-bg-dark);
+    
+    accent-color: var(--nvx-primary);
+  }
+  
+  /* High Contrast (prefers-contrast only, not forced-colors) */
+  @media (prefers-contrast: more) and (forced-colors: none) {
+    [data-contrast="high"][data-theme="light"] {
+      --nvx-text-primary: var(--nvx-hc-light-text-primary);
+      --nvx-text-secondary: var(--nvx-hc-light-text-secondary);
+      --nvx-color-surface: var(--nvx-hc-light-bg-primary);
+      --nvx-color-surface-secondary: var(--nvx-hc-light-bg-secondary);
+      /* FIXED: Tertiary surface for light high contrast */
+      --nvx-color-surface-tertiary: var(--nvx-hc-light-bg-secondary);
+      --nvx-border-base: var(--nvx-hc-light-border);
+      --nvx-primary: var(--nvx-hc-light-primary);
+      --nvx-focus-color: #ff0000;
+      accent-color: auto;
+    }
+    
+    [data-contrast="high"][data-theme="dark"] {
+      --nvx-text-primary: var(--nvx-hc-dark-text-primary);
+      --nvx-text-secondary: var(--nvx-hc-dark-text-secondary);
+      --nvx-color-surface: var(--nvx-hc-dark-bg-primary);
+      --nvx-color-surface-secondary: var(--nvx-hc-dark-bg-secondary);
+      /* FIXED: Tertiary surface for dark high contrast */
+      --nvx-color-surface-tertiary: var(--nvx-hc-dark-bg-secondary);
+      --nvx-border-base: var(--nvx-hc-dark-border);
+      --nvx-primary: var(--nvx-hc-dark-primary);
+      --nvx-focus-color: #00ffff;
+      accent-color: auto;
+    }
+  }
+  
+  /* Attribute-based reduced transparency override */
+  [data-reduced-transparency="true"] .nvx-glass-panel,
+  [data-reduced-transparency="true"] .nvx-glass,
+  [data-reduced-transparency="true"] [data-glass] {
+    backdrop-filter: none !important;
+    background: var(--nvx-color-surface) !important;
+  }
+  
+  /* Font Size - Relative units */
+  html {
+    font-size: var(--nvx-font-size-root);
+  }
+  
+  [data-font-size="75"] { --nvx-font-size-root: 75%; }
+  [data-font-size="100"] { --nvx-font-size-root: 100%; }
+  [data-font-size="125"] { --nvx-font-size-root: 125%; }
+  [data-font-size="150"] { --nvx-font-size-root: 150%; }
+  
+  /* Font Family */
+  [data-font-family="serif"] { --nvx-font-sans: var(--nvx-font-serif); }
+  [data-font-family="mono"] { --nvx-font-sans: var(--nvx-font-mono); }
+  [data-font-family="dyslexia"] { --nvx-font-sans: var(--nvx-font-dyslexia); }
+  
+  body {
+    font-family: var(--nvx-font-sans);
+    background: var(--nvx-color-surface);
+    color: var(--nvx-text-primary);
+  }
+  
+  /* Motion Control */
+  [data-motion="reduce"] {
+    --nvx-duration-150: 0s;
+    --nvx-duration-300: 0s;
+    --nvx-duration-500: 0s;
+  }
+  
+  [data-motion="reduce"] .nvx-animate,
+  [data-motion="reduce"] [data-animate] {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  [data-motion="reduce"] html,
+  [data-motion="reduce"] {
+    scroll-behavior: auto;
+  }
+  
+  /* Visual Filters - Optimized (will-use removed - modern browsers auto-optimize) */
+  [data-saturation] {
+    --nvx-saturation-factor: 1;
+  }
+  
+  [data-saturation="50"] { --nvx-saturation-factor: 0.5; }
+  [data-saturation="100"] { --nvx-saturation-factor: 1; }
+  [data-saturation="150"] { --nvx-saturation-factor: 1.5; }
+  
+  [data-saturation] .nvx-media,
+  [data-saturation] img:not(.nvx-no-filter),
+  [data-saturation] video:not(.nvx-no-filter) {
+    filter: saturate(var(--nvx-saturation-factor));
+  }
+  
+  [data-blur] {
+    --nvx-blur-amount: 0px;
+  }
+  
+  [data-blur="1"] { --nvx-blur-amount: 1px; }
+  [data-blur="2"] { --nvx-blur-amount: 2px; }
+  [data-blur="3"] { --nvx-blur-amount: 3px; }
+  
+  [data-blur] .nvx-blur-target {
+    filter: blur(var(--nvx-blur-amount));
+  }
+  
+  /* Pointer & Motor */
+  [data-pointer="large"] {
+    --nvx-focus-width: 5px;
+    --nvx-focus-offset: 4px;
+  }
+  
+  [data-pointer="large"] button,
+  [data-pointer="large"] a,
+  [data-pointer="large"] [role="button"] {
+    min-width: 48px;
+    min-height: 48px;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  /* Cross-browser Scrollbar */
+  [data-pointer="large"] ::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+  
+  [data-pointer="large"] {
+    scrollbar-width: thick;
+    scrollbar-color: var(--nvx-primary) var(--nvx-color-surface-tertiary);
+  }
+  
+  /* High Visibility Cursor */
+  [data-pointer="high-visibility"] {
+    cursor: url('/assets/cursors/high-visibility.cur') 16 16, 
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='white' stroke='black' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='6' fill='black'/%3E%3C/svg%3E") 16 16, 
+            auto;
+  }
+  
+  /* Logical Properties - RTL Ready */
+  [dir="rtl"] .nvx-rtl-aware {
+    padding-inline-start: var(--nvx-space-4);
+    padding-inline-end: var(--nvx-space-4);
+    margin-inline-start: var(--nvx-space-2);
+    margin-inline-end: var(--nvx-space-2);
+  }
+}
+
+/*======================================*/
+/* 5. ACCESSIBILITY & FOCUS (Normal Mode) */
+/*======================================*/
+@layer base {
+  *:focus-visible {
+    outline: var(--nvx-focus-width) var(--nvx-focus-style) var(--nvx-focus-color);
+    outline-offset: var(--nvx-focus-offset);
+  }
+  
+  @media (forced-colors: none) {
+    *:focus-visible {
+      box-shadow: 0 0 0 calc(var(--nvx-focus-width) + 2px) currentColor;
+    }
+  }
+}
+
+/*======================================*/
+/* 6. PREFERENCES PANEL - HARDENED */
+/*======================================*/
+@layer components {
+  .nvx-prefs-panel {
+    position: fixed;
+    bottom: var(--nvx-space-5);
+    right: var(--nvx-space-5);
+    width: 360px;
+    max-width: calc(100vw - var(--nvx-space-8));
+    background: var(--nvx-color-surface);
+    border: 1px solid var(--nvx-border-base);
+    border-radius: 1.5rem;
+    padding: var(--nvx-space-6);
+    box-shadow: var(--nvx-shadow-2xl);
+    z-index: var(--nvx-z-tooltip);
+    transform: translateX(calc(100% + var(--nvx-space-5)));
+    transition: transform var(--nvx-duration-300) ease-in-out;
+  }
+  
+  .nvx-prefs-panel.active {
+    transform: translateX(0);
+  }
+  
+  /* Glass panel with full fallback chain */
+  .nvx-glass-panel {
+    backdrop-filter: blur(var(--nvx-glass-blur));
+    background: var(--nvx-glass-bg);
+  }
+  
+  @supports not (backdrop-filter: blur(1px)) {
+    .nvx-glass-panel {
+      backdrop-filter: none;
+      background: var(--nvx-color-surface);
+    }
+  }
+  
+  @media (prefers-contrast: more) and (forced-colors: none) {
+    [data-contrast="high"] .nvx-glass-panel {
+      backdrop-filter: none;
+      background: var(--nvx-color-surface);
+    }
+  }
+  
+  @media (prefers-reduced-transparency: reduce) {
+    .nvx-glass-panel {
+      backdrop-filter: none;
+      background: var(--nvx-color-surface);
+    }
+  }
+  
+  [data-reduced-transparency="true"] .nvx-glass-panel {
+    backdrop-filter: none;
+    background: var(--nvx-color-surface);
+  }
+  
+  /* Low specificity component base */
+  :where(.nvx-btn, .nvx-card, .nvx-badge) {
+    /* Base component styles */
+  }
+}
+
+/*======================================*/
+/* 7. PRINT STYLES - ENHANCED */
+/*======================================*/
+@media print {
+  .nvx-prefs-panel,
+  .nvx-prefs-toggle,
+  .nvx-prefs-saved,
+  .nvx-glass,
+  .nvx-glass-panel,
+  [data-glass] {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  a {
+    text-decoration: underline !important;
+    color: black !important;
+  }
+  
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.9em;
+    font-weight: normal;
+  }
+}
+
+/*======================================*/
+/* 8. CONTAINER QUERIES - ENTERPRISE */
+/*======================================*/
+.nvx-container-root {
+  container-type: inline-size;
+  container-name: --nvx-container;
+}
+
+@container --nvx-container (min-width: 400px) {
+  .nvx-container-child {
+    /* Container-adaptive styles */
+  }
+}
+
+/*======================================*/
+/* 9. FOUC PREVENTION - FINAL SCRIPT */
+/*======================================*/
+/*
+Add this script in the <head> before any CSS:
+
+<script>
+  (function() {
+    try {
+      // Theme
+      const theme = localStorage.getItem('nvx-theme');
+      if (theme) document.documentElement.setAttribute('data-theme', theme);
+      
+      // Contrast
+      const contrast = localStorage.getItem('nvx-contrast');
+      if (contrast) document.documentElement.setAttribute('data-contrast', contrast);
+      
+      // Motion
+      const motion = localStorage.getItem('nvx-motion');
+      if (motion) document.documentElement.setAttribute('data-motion', motion);
+      
+      // Font Size
+      const fontSize = localStorage.getItem('nvx-font-size');
+      if (fontSize) document.documentElement.setAttribute('data-font-size', fontSize);
+      
+      // Font Family
+      const fontFamily = localStorage.getItem('nvx-font-family');
+      if (fontFamily) document.documentElement.setAttribute('data-font-family', fontFamily);
+      
+      // Saturation
+      const saturation = localStorage.getItem('nvx-saturation');
+      if (saturation) document.documentElement.setAttribute('data-saturation', saturation);
+      
+      // Blur
+      const blur = localStorage.getItem('nvx-blur');
+      if (blur) document.documentElement.setAttribute('data-blur', blur);
+      
+      // Pointer
+      const pointer = localStorage.getItem('nvx-pointer');
+      if (pointer) document.documentElement.setAttribute('data-pointer', pointer);
+      
+      // RTL Detection
+      const rtl = localStorage.getItem('nvx-rtl');
+      if (rtl === 'true') document.documentElement.setAttribute('dir', 'rtl');
+      
+      // OS preference detection (without overriding user choice)
+      if (window.matchMedia('(prefers-contrast: more)').matches && !contrast) {
+        document.documentElement.setAttribute('data-contrast', 'high');
+      }
+      
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches && !motion) {
+        document.documentElement.setAttribute('data-motion', 'reduce');
+      }
+      
+      if (window.matchMedia('(prefers-reduced-transparency: reduce)').matches) {
+        document.documentElement.setAttribute('data-reduced-transparency', 'true');
+      }
+    } catch (e) {}
+  })();
+</script>
+*/
+
+/*======================================*/
+/* VERSION: 4.1 - ENTERPRISE PLATINUM */
+/* STATUS: PRODUCTION FINAL • ALL ISSUES RESOLVED */
+/*======================================*/
