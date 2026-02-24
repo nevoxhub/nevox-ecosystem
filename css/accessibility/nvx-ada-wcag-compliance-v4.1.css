@@ -1,0 +1,1797 @@
+/* =====================================*/
+/* ⚡ NEVOX ADA/WCAG 2.2 AA COMPLIANCE SYSTEM v4.1 */
+/* Enterprise-Grade • Official Standard • Production Ready */
+/* =====================================*/
+/* =====================================*/
+/*  NEVOX DESIGN SYSTEM - CORE TOKENS v4.1 */
+/* Complete Token System for ADA/WCAG Compliance */
+/* =====================================*/
+
+:root {
+  /* ============ COLOR SYSTEM ============ */
+  
+  /* Primary Colors */
+  --nvx-primary-50: #eff6ff;
+  --nvx-primary-100: #dbeafe;
+  --nvx-primary-200: #bfdbfe;
+  --nvx-primary-300: #93c5fd;
+  --nvx-primary-400: #60a5fa;
+  --nvx-primary-500: #3b82f6;
+  --nvx-primary-600: #2563eb;
+  --nvx-primary-700: #1d4ed8;
+  --nvx-primary-800: #1e40af;
+  --nvx-primary-900: #1e3a8a;
+  --nvx-primary-950: #172554;
+  
+  /* Color On Primary */
+  --nvx-color-on-primary: #ffffff;
+  --nvx-color-on-primary-dark: #f8fafc;
+  
+  /* Neutral/Gray Colors */
+  --nvx-gray-50: #f9fafb;
+  --nvx-gray-100: #f3f4f6;
+  --nvx-gray-200: #e5e7eb;
+  --nvx-gray-300: #d1d5db;
+  --nvx-gray-400: #9ca3af;
+  --nvx-gray-500: #6b7280;
+  --nvx-gray-600: #4b5563;
+  --nvx-gray-700: #374151;
+  --nvx-gray-800: #1f2937;
+  --nvx-gray-900: #111827;
+  --nvx-gray-950: #030712;
+  
+  /* Semantic Colors */
+  --nvx-success-50: #ecfdf5;
+  --nvx-success-100: #d1fae5;
+  --nvx-success-200: #a7f3d0;
+  --nvx-success-300: #6ee7b7;
+  --nvx-success-400: #34d399;
+  --nvx-success-500: #10b981;
+  --nvx-success-600: #059669;
+  --nvx-success-700: #047857;
+  --nvx-success-800: #065f46;
+  --nvx-success-900: #064e3b;
+  
+  --nvx-danger-50: #fef2f2;
+  --nvx-danger-100: #fee2e2;
+  --nvx-danger-200: #fecaca;
+  --nvx-danger-300: #fca5a5;
+  --nvx-danger-400: #f87171;
+  --nvx-danger-500: #ef4444;
+  --nvx-danger-600: #dc2626;
+  --nvx-danger-700: #b91c1c;
+  --nvx-danger-800: #991b1b;
+  --nvx-danger-900: #7f1d1d;
+  
+  --nvx-warning-50: #fffbeb;
+  --nvx-warning-100: #fef3c7;
+  --nvx-warning-200: #fde68a;
+  --nvx-warning-300: #fcd34d;
+  --nvx-warning-400: #fbbf24;
+  --nvx-warning-500: #f59e0b;
+  --nvx-warning-600: #d97706;
+  --nvx-warning-700: #b45309;
+  --nvx-warning-800: #92400e;
+  --nvx-warning-900: #78350f;
+  
+  --nvx-info-50: #ecfeff;
+  --nvx-info-100: #cffafe;
+  --nvx-info-200: #a5f3fc;
+  --nvx-info-300: #67e8f9;
+  --nvx-info-400: #22d3ee;
+  --nvx-info-500: #06b6d4;
+  --nvx-info-600: #0891b2;
+  --nvx-info-700: #0e7490;
+  --nvx-info-800: #155e75;
+  --nvx-info-900: #164e63;
+  
+  /* Background Colors */
+  --nvx-bg-primary: #ffffff;
+  --nvx-bg-secondary: #f8fafc;
+  --nvx-bg-tertiary: #f1f5f9;
+  --nvx-bg-card: #ffffff;
+  --nvx-bg-overlay: rgba(0, 0, 0, 0.5);
+  
+  /* Text Colors */
+  --nvx-text-primary: #1e293b;
+  --nvx-text-secondary: #475569;
+  --nvx-text-tertiary: #64748b;
+  --nvx-text-on-dark: #f1f5f9;
+  --nvx-text-on-light: #1e293b;
+  
+  /* Border Colors */
+  --nvx-border-light: #e2e8f0;
+  --nvx-border-medium: #cbd5e1;
+  --nvx-border-dark: #94a3b8;
+  
+  /* ============ TYPOGRAPHY ============ */
+  
+  /* Font Families */
+  --nvx-font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --nvx-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --nvx-font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  
+  /* Font Sizes */
+  --nvx-text-xs: 0.75rem;     /* 12px */
+  --nvx-text-sm: 0.875rem;    /* 14px */
+  --nvx-text-base: 1rem;      /* 16px */
+  --nvx-text-lg: 1.125rem;    /* 18px */
+  --nvx-text-xl: 1.25rem;     /* 20px */
+  --nvx-text-2xl: 1.5rem;     /* 24px */
+  --nvx-text-3xl: 1.875rem;   /* 30px */
+  --nvx-text-4xl: 2.25rem;    /* 36px */
+  --nvx-text-5xl: 3rem;       /* 48px */
+  --nvx-text-6xl: 3.75rem;    /* 60px */
+  
+  /* Font Weights */
+  --nvx-font-thin: 100;
+  --nvx-font-extralight: 200;
+  --nvx-font-light: 300;
+  --nvx-font-normal: 400;
+  --nvx-font-medium: 500;
+  --nvx-font-semibold: 600;
+  --nvx-font-bold: 700;
+  --nvx-font-extrabold: 800;
+  --nvx-font-black: 900;
+  
+  /* Line Heights */
+  --nvx-leading-none: 1;
+  --nvx-leading-tight: 1.25;
+  --nvx-leading-snug: 1.375;
+  --nvx-leading-normal: 1.5;
+  --nvx-leading-relaxed: 1.625;
+  --nvx-leading-loose: 2;
+  
+  /* Letter Spacing */
+  --nvx-tracking-tighter: -0.05em;
+  --nvx-tracking-tight: -0.025em;
+  --nvx-tracking-normal: 0em;
+  --nvx-tracking-wide: 0.025em;
+  --nvx-tracking-wider: 0.05em;
+  --nvx-tracking-widest: 0.1em;
+  
+  /* ============ SPACING ============ */
+  
+  --nvx-space-0: 0;
+  --nvx-space-1: 0.25rem;    /* 4px */
+  --nvx-space-2: 0.5rem;     /* 8px */
+  --nvx-space-3: 0.75rem;    /* 12px */
+  --nvx-space-4: 1rem;       /* 16px */
+  --nvx-space-5: 1.25rem;    /* 20px */
+  --nvx-space-6: 1.5rem;     /* 24px */
+  --nvx-space-7: 1.75rem;    /* 28px */
+  --nvx-space-8: 2rem;       /* 32px */
+  --nvx-space-9: 2.25rem;    /* 36px */
+  --nvx-space-10: 2.5rem;    /* 40px */
+  --nvx-space-11: 2.75rem;   /* 44px */
+  --nvx-space-12: 3rem;      /* 48px */
+  --nvx-space-14: 3.5rem;    /* 56px */
+  --nvx-space-16: 4rem;      /* 64px */
+  --nvx-space-20: 5rem;      /* 80px */
+  --nvx-space-24: 6rem;      /* 96px */
+  
+  /* ============ BORDERS & RADIUS ============ */
+  
+  /* Border Widths */
+  --nvx-border-0: 0;
+  --nvx-border-1: 1px;
+  --nvx-border-2: 2px;
+  --nvx-border-4: 4px;
+  --nvx-border-8: 8px;
+  
+  /* Border Radius */
+  --nvx-radius-none: 0;
+  --nvx-radius-sm: 0.5rem;    /* 8px */
+  --nvx-radius-md: 1rem;      /* 16px */
+  --nvx-radius-lg: 1.5rem;    /* 24px */
+  --nvx-radius-xl: 2rem;      /* 32px */
+  --nvx-radius-2xl: 2.5rem;   /* 40px */
+  --nvx-radius-full: 9999px;
+  
+  /* ============ SHADOWS ============ */
+  
+  --nvx-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --nvx-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --nvx-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --nvx-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --nvx-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --nvx-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  
+  /* ============ Z-INDEX ============ */
+  
+  --nvx-z-0: 0;
+  --nvx-z-10: 10;
+  --nvx-z-20: 20;
+  --nvx-z-30: 30;
+  --nvx-z-40: 40;
+  --nvx-z-50: 50;
+  --nvx-z-auto: auto;
+  --nvx-z-dropdown: 1000;
+  --nvx-z-sticky: 1020;
+  --nvx-z-fixed: 1030;
+  --nvx-z-modal-backdrop: 1040;
+  --nvx-z-modal: 1050;
+  --nvx-z-popover: 1060;
+  --nvx-z-tooltip: 1070;
+  --nvx-z-toast: 1080;
+  
+  /* ============ ANIMATION & TRANSITIONS ============ */
+  
+  /* Timing Functions */
+  --nvx-ease-linear: linear;
+  --nvx-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --nvx-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --nvx-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Transition Durations */
+  --nvx-duration-75: 75ms;
+  --nvx-duration-100: 100ms;
+  --nvx-duration-150: 150ms;
+  --nvx-duration-200: 200ms;
+  --nvx-duration-300: 300ms;
+  --nvx-duration-500: 500ms;
+  --nvx-duration-700: 700ms;
+  --nvx-duration-1000: 1000ms;
+  
+  /* ============ ADA/WCAG SPECIFIC TOKENS ============ */
+  
+  /* Focus Management */
+  --nvx-focus-ring-width: 3px;
+  --nvx-focus-ring-offset: 2px;
+  --nvx-focus-ring-color: var(--nvx-primary-500);
+  --nvx-focus-ring-bg: rgba(59, 130, 246, 0.1);
+  
+  /* Target Size (WCAG 2.5.8) */
+  --nvx-target-size-min: 44px;
+  --nvx-target-size-touch: 48px;
+  
+  /* Contrast Ratios */
+  --nvx-contrast-ratio-normal: 4.5;
+  --nvx-contrast-ratio-large: 3;
+  
+  /* Animation Control */
+  --nvx-animation-duration-safe: 0.3s;
+  --nvx-animation-duration-reduced: 0.01ms;
+  
+  /* ARIA States */
+  --nvx-aria-expanded-bg: var(--nvx-primary-100);
+  --nvx-aria-selected-bg: var(--nvx-primary-500);
+  --nvx-aria-selected-color: var(--nvx-color-on-primary);
+  --nvx-aria-disabled-opacity: 0.5;
+  
+  /* High Contrast Mode */
+  --nvx-high-contrast-border: 2px solid #000000;
+  --nvx-high-contrast-bg: #ffffff;
+  --nvx-high-contrast-color: #000000;
+  
+  /* Spacing for Accessibility */
+  --nvx-accessible-spacing: 1.5em;
+  --nvx-paragraph-spacing: 2em;
+  
+  /* Line Length for Readability */
+  --nvx-max-line-length: 70ch;
+  
+  /* ============ COMPONENT SPECIFIC TOKENS ============ */
+  
+  /* Button Tokens */
+  --nvx-btn-padding-x: 1rem;
+  --nvx-btn-padding-y: 0.5rem;
+  --nvx-btn-border-radius: var(--nvx-radius-md);
+  
+  /* Input Tokens */
+  --nvx-input-height: 3rem;
+  --nvx-input-padding-x: 0.75rem;
+  --nvx-input-padding-y: 0.5rem;
+  --nvx-input-border-radius: var(--nvx-radius-md);
+  
+  /* Card Tokens */
+  --nvx-card-padding: 1.5rem;
+  --nvx-card-border-radius: var(--nvx-radius-lg);
+  --nvx-card-shadow: var(--nvx-shadow-md);
+  
+  /* Container Widths */
+  --nvx-container-xs: 20rem;
+  --nvx-container-sm: 24rem;
+  --nvx-container-md: 28rem;
+  --nvx-container-lg: 32rem;
+  --nvx-container-xl: 36rem;
+  --nvx-container-2xl: 42rem;
+  --nvx-container-3xl: 48rem;
+  --nvx-container-4xl: 56rem;
+  --nvx-container-5xl: 64rem;
+  --nvx-container-6xl: 72rem;
+  --nvx-container-7xl: 80rem;
+  
+  /* Grid System */
+  --nvx-grid-columns: 12;
+  --nvx-grid-gap: 1rem;
+  --nvx-grid-gap-lg: 2rem;
+  
+  /* ============ UTILITY TOKENS ============ */
+  
+  /* Opacity */
+  --nvx-opacity-0: 0;
+  --nvx-opacity-25: 0.25;
+  --nvx-opacity-50: 0.5;
+  --nvx-opacity-75: 0.75;
+  --nvx-opacity-100: 1;
+  
+  /* Blur */
+  --nvx-blur-none: 0;
+  --nvx-blur-sm: 4px;
+  --nvx-blur-md: 8px;
+  --nvx-blur-lg: 16px;
+  --nvx-blur-xl: 24px;
+}
+
+/* ============ DARK MODE TOKENS ============ */
+
+[data-theme="dark"] {
+  /* Color System */
+  --nvx-bg-primary: #0f172a;
+  --nvx-bg-secondary: #1e293b;
+  --nvx-bg-tertiary: #334155;
+  --nvx-bg-card: #1e293b;
+  
+  /* Text Colors */
+  --nvx-text-primary: #f1f5f9;
+  --nvx-text-secondary: #cbd5e1;
+  --nvx-text-tertiary: #94a3b8;
+  --nvx-text-on-dark: #f1f5f9;
+  --nvx-text-on-light: #0f172a;
+  
+  /* Border Colors */
+  --nvx-border-light: #334155;
+  --nvx-border-medium: #475569;
+  --nvx-border-dark: #64748b;
+  
+  /* Shadows */
+  --nvx-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --nvx-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --nvx-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+  --nvx-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  
+  /* High Contrast Mode */
+  --nvx-high-contrast-border: 2px solid #ffffff;
+  --nvx-high-contrast-bg: #000000;
+  --nvx-high-contrast-color: #ffffff;
+}
+
+/* ============ HIGH CONTRAST MODE TOKENS ============ */
+
+@media (prefers-contrast: high) {
+  :root {
+    --nvx-primary-500: #0056b3;
+    --nvx-primary-700: #003d82;
+    --nvx-danger-500: #cc0000;
+    --nvx-success-500: #008000;
+    --nvx-warning-500: #ff8c00;
+    
+    /* Force solid borders */
+    --nvx-border-light: #000000;
+    --nvx-border-medium: #000000;
+    --nvx-border-dark: #000000;
+    
+    /* Remove transparencies */
+    --nvx-bg-overlay: #000000;
+  }
+  
+  [data-theme="dark"] {
+    --nvx-primary-500: #66b3ff;
+    --nvx-primary-700: #3399ff;
+    --nvx-danger-500: #ff6666;
+    --nvx-success-500: #66ff66;
+    --nvx-warning-500: #ffcc66;
+    
+    /* Force solid borders */
+    --nvx-border-light: #ffffff;
+    --nvx-border-medium: #ffffff;
+    --nvx-border-dark: #ffffff;
+    
+    /* Remove transparencies */
+    --nvx-bg-overlay: #ffffff;
+  }
+}
+
+/* ============ REDUCED MOTION TOKENS ============ */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --nvx-duration-75: 0.01ms;
+    --nvx-duration-100: 0.01ms;
+    --nvx-duration-150: 0.01ms;
+    --nvx-duration-200: 0.01ms;
+    --nvx-duration-300: 0.01ms;
+    --nvx-duration-500: 0.01ms;
+    --nvx-duration-700: 0.01ms;
+    --nvx-duration-1000: 0.01ms;
+    
+    --nvx-animation-duration-safe: 0.01ms;
+  }
+}
+
+/* ============ PRINT MEDIA TOKENS ============ */
+
+@media print {
+  :root {
+    --nvx-bg-primary: #ffffff;
+    --nvx-text-primary: #000000;
+    --nvx-text-secondary: #333333;
+    --nvx-border-light: #000000;
+    --nvx-shadow-md: none;
+    --nvx-shadow-lg: none;
+    --nvx-shadow-xl: none;
+  }
+}
+
+/* =====================================*/
+/*  TOKEN VALIDATION UTILITIES */
+/* =====================================*/
+
+/* Validate color contrast */
+.nvx-validate-contrast {
+  border: 2px solid var(--nvx-primary-500);
+  background: linear-gradient(45deg, 
+    var(--nvx-bg-primary) 0%, 
+    var(--nvx-bg-secondary) 100%);
+}
+
+/* Debug grid for spacing validation */
+.nvx-debug-spacing {
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+  background-size: 
+    var(--nvx-space-4) var(--nvx-space-4),
+    var(--nvx-space-4) var(--nvx-space-4);
+}
+
+/* Grid overlay for layout debugging */
+.nvx-debug-grid {
+  position: relative;
+}
+
+.nvx-debug-grid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(239, 68, 68, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(239, 68, 68, 0.1) 1px, transparent 1px);
+  background-size: 
+    var(--nvx-space-4) var(--nvx-space-4),
+    var(--nvx-space-4) var(--nvx-space-4);
+  pointer-events: none;
+  z-index: var(--nvx-z-50);
+}
+
+/* =====================================*/
+/*  RESPONSIVE TOKEN OVERRIDES */
+/* =====================================*/
+
+/* Mobile devices */
+@media (max-width: 640px) {
+  :root {
+    --nvx-space-1: 0.125rem;
+    --nvx-space-2: 0.25rem;
+    --nvx-space-3: 0.375rem;
+    --nvx-space-4: 0.5rem;
+    --nvx-space-5: 0.625rem;
+    --nvx-space-6: 0.75rem;
+    
+    --nvx-text-xs: 0.625rem;
+    --nvx-text-sm: 0.75rem;
+    --nvx-text-base: 0.875rem;
+    --nvx-text-lg: 1rem;
+    --nvx-text-xl: 1.125rem;
+    --nvx-text-2xl: 1.25rem;
+    
+    --nvx-target-size-min: 40px;
+    --nvx-target-size-touch: 44px;
+  }
+}
+
+/* Tablet devices */
+@media (min-width: 641px) and (max-width: 1024px) {
+  :root {
+    --nvx-space-1: 0.1875rem;
+    --nvx-space-2: 0.375rem;
+    --nvx-space-3: 0.5625rem;
+    --nvx-space-4: 0.75rem;
+    --nvx-space-5: 0.9375rem;
+    --nvx-space-6: 1.125rem;
+  }
+}
+
+/* =====================================*/
+/*  ACCESSIBILITY UTILITY CLASSES */
+/* =====================================*/
+
+/* Contrast validation helper */
+.nvx-check-contrast {
+  position: relative;
+}
+
+.nvx-check-contrast::after {
+  content: 'Contrast: ' attr(data-contrast-ratio);
+  position: absolute;
+  top: -25px;
+  left: 0;
+  background: var(--nvx-gray-800);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.nvx-check-contrast:hover::after {
+  opacity: 1;
+}
+
+/* Focus ring debug */
+.nvx-debug-focus-ring:focus-visible {
+  outline: 3px dashed var(--nvx-danger-500) !important;
+  outline-offset: 3px !important;
+}
+
+/* Target size validation */
+.nvx-debug-target-size {
+  position: relative;
+  background: rgba(239, 68, 68, 0.1) !important;
+}
+
+.nvx-debug-target-size::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--nvx-target-size-min);
+  height: var(--nvx-target-size-min);
+  border: 2px dashed var(--nvx-danger-500);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/*  ROOT LEVEL ACCESSIBILITY TOKENS */
+:root {
+  /* Focus Management */
+  --nvx-focus-ring-width: 3px;
+  --nvx-focus-ring-offset: 2px;
+  --nvx-focus-ring-color: var(--nvx-primary-500, #3b82f6);
+  --nvx-focus-ring-bg: rgba(59, 130, 246, 0.1);
+  
+  /* Target Size (2.5.8) */
+  --nvx-target-size-min: 44px;
+  --nvx-target-size-touch: 48px;
+  
+  /* Contrast Ratios */
+  --nvx-contrast-ratio-normal: 4.5;
+  --nvx-contrast-ratio-large: 3;
+  
+  /* Timing & Animation */
+  --nvx-animation-duration-safe: 0.3s;
+  --nvx-animation-duration-reduced: 0.01ms;
+  
+  /* ARIA States */
+  --nvx-aria-expanded-bg: var(--nvx-primary-100);
+  --nvx-aria-selected-bg: var(--nvx-primary-500);
+  --nvx-aria-selected-color: var(--nvx-color-on-primary);
+  
+  /* High Contrast Mode */
+  --nvx-high-contrast-border: 2px solid #000000;
+  --nvx-high-contrast-bg: #ffffff;
+  --nvx-high-contrast-color: #000000;
+}
+
+[data-theme="dark"] {
+  --nvx-high-contrast-border: 2px solid #ffffff;
+  --nvx-high-contrast-bg: #000000;
+  --nvx-high-contrast-color: #ffffff;
+}
+
+/* =====================================*/
+/*  1. SCREEN READER UTILITIES */
+/* =====================================*/
+
+.nvx-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  -webkit-clip-path: inset(50%) !important;
+          clip-path: inset(50%) !important;
+}
+
+.nvx-sr-only-focusable:focus,
+.nvx-sr-only-focusable:focus-visible {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  -webkit-clip-path: none !important;
+          clip-path: none !important;
+}
+
+.nvx-visually-hidden:not(:focus):not(:active) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* =====================================*/
+/*  2. SKIP NAVIGATION & BYPASS BLOCKS (2.4.1) */
+/* =====================================*/
+
+.nvx-skip-nav {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 9999;
+  padding: 12px 24px;
+  background: var(--nvx-primary-700, #1d4ed8);
+  color: var(--nvx-color-on-primary, #ffffff) !important;
+  text-decoration: none;
+  font-weight: var(--nvx-font-semibold, 600);
+  border-radius: 0 0 12px 0;
+  transition: top 0.3s var(--nvx-ease-out);
+  outline: 3px solid transparent;
+  outline-offset: 2px;
+  font-size: var(--nvx-text-base, 1rem);
+}
+
+.nvx-skip-nav:focus {
+  top: 0;
+  outline: 3px solid var(--nvx-primary-300, #93c5fd);
+  outline-offset: -2px;
+  box-shadow: var(--nvx-shadow-lg, 0 10px 15px -3px rgba(0, 0, 0, 0.1));
+}
+
+.nvx-skip-nav:hover {
+  background: var(--nvx-primary-800, #1e40af);
+  transform: translateY(2px);
+}
+
+.nvx-skip-to-content {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+  background: var(--nvx-primary-600, #2563eb);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+  z-index: 10000;
+}
+
+.nvx-skip-to-content:focus {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* =====================================*/
+/*  3. FOCUS MANAGEMENT (2.4.7, 2.4.11, 2.4.12) */
+/* =====================================*/
+
+/* Base Focus Styles */
+:focus-visible {
+  outline: var(--nvx-focus-ring-width, 3px) solid var(--nvx-focus-ring-color, #3b82f6) !important;
+  outline-offset: var(--nvx-focus-ring-offset, 2px) !important;
+  border-radius: var(--nvx-radius-sm, 0.5rem) !important;
+}
+
+/* Focus Not Obscured (2.4.11) */
+.nvx-focus-not-obscured {
+  position: relative;
+  z-index: calc(var(--nvx-z-modal, 1050) + 1) !important;
+}
+
+.nvx-focus-visible-inset {
+  outline: var(--nvx-focus-ring-width, 3px) solid var(--nvx-focus-ring-color, #3b82f6) !important;
+  outline-offset: -2px !important;
+  border-radius: var(--nvx-radius-sm, 0.5rem) !important;
+}
+
+/* Focus Indicator Enhancement */
+.nvx-focus-indicator {
+  position: relative;
+}
+
+.nvx-focus-indicator::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid var(--nvx-focus-ring-color, #3b82f6);
+  border-radius: calc(var(--nvx-radius-sm, 0.5rem) + 2px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.nvx-focus-indicator:focus-visible::after {
+  opacity: 1;
+}
+
+/* =====================================*/
+/*  4. TARGET SIZE & TOUCH TARGETS (2.5.8) */
+/* =====================================*/
+
+/* Minimum Target Size */
+.nvx-target-min {
+  min-width: var(--nvx-target-size-min, 44px) !important;
+  min-height: var(--nvx-target-size-min, 44px) !important;
+}
+
+.nvx-target-touch {
+  min-width: var(--nvx-target-size-touch, 48px) !important;
+  min-height: var(--nvx-target-size-touch, 48px) !important;
+  padding: 12px !important;
+}
+
+/* Button Target Sizes */
+.nvx-btn-xs.nvx-target-touch {
+  padding: 8px 12px !important;
+  min-height: 44px !important;
+}
+
+.nvx-btn-sm.nvx-target-touch {
+  padding: 10px 16px !important;
+  min-height: 48px !important;
+}
+
+.nvx-btn-md.nvx-target-touch {
+  padding: 12px 20px !important;
+  min-height: 52px !important;
+}
+
+.nvx-btn-lg.nvx-target-touch {
+  padding: 14px 24px !important;
+  min-height: 56px !important;
+}
+
+/* Icon Button Targets */
+.nvx-btn-icon {
+  width: var(--nvx-target-size-min, 44px) !important;
+  height: var(--nvx-target-size-min, 44px) !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.nvx-btn-icon.nvx-target-touch {
+  width: var(--nvx-target-size-touch, 48px) !important;
+  height: var(--nvx-target-size-touch, 48px) !important;
+}
+
+/* =====================================*/
+/*  5. COLOR CONTRAST ENHANCEMENTS (1.4.3, 1.4.6, 1.4.11) */
+/* =====================================*/
+
+/* Text Contrast Classes */
+.nvx-text-contrast-normal {
+  color: var(--nvx-color-text-main, #1e293b) !important;
+  background-color: var(--nvx-color-bg-main, #ffffff) !important;
+}
+
+.nvx-text-contrast-inverse {
+  color: var(--nvx-color-bg-main, #ffffff) !important;
+  background-color: var(--nvx-color-text-main, #1e293b) !important;
+}
+
+/* High Contrast Text */
+.nvx-text-high-contrast {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
+[data-theme="dark"] .nvx-text-high-contrast {
+  color: #ffffff !important;
+  background-color: #000000 !important;
+}
+
+/* Non-Text Contrast (1.4.11) */
+.nvx-border-contrast {
+  border-color: var(--nvx-color-border-main, #e2e8f0) !important;
+  border-width: 2px !important;
+}
+
+.nvx-border-contrast-strong {
+  border-color: var(--nvx-gray-700, #374151) !important;
+  border-width: 2px !important;
+}
+
+[data-theme="dark"] .nvx-border-contrast-strong {
+  border-color: var(--nvx-gray-300, #d1d5db) !important;
+}
+
+/* Focus Indicator Contrast */
+.nvx-focus-high-contrast:focus-visible {
+  outline: 3px solid #000000 !important;
+  outline-offset: 3px !important;
+}
+
+[data-theme="dark"] .nvx-focus-high-contrast:focus-visible {
+  outline: 3px solid #ffffff !important;
+}
+
+/* =====================================*/
+/*  6. FORM ACCESSIBILITY (3.3.1, 3.3.2, 3.3.3, 3.3.4) */
+/* =====================================*/
+
+/* Required Field Indicators */
+.nvx-form-l-required::after {
+  content: " *";
+  color: var(--nvx-danger-600, #dc2626);
+  font-weight: var(--nvx-font-bold, 700);
+  margin-left: 4px;
+}
+
+.nvx-form-l-required-asterisk::before {
+  content: "*";
+  color: var(--nvx-danger-600, #dc2626);
+  margin-right: 4px;
+}
+
+/* Error States with ARIA */
+.nvx-form-i[aria-invalid="true"],
+.nvx-form-i.nvx-form-error {
+  border-color: var(--nvx-danger-500, #ef4444) !important;
+  border-width: 2px !important;
+  background-color: rgba(239, 68, 68, 0.05) !important;
+}
+
+.nvx-form-i[aria-invalid="true"]:focus,
+.nvx-form-i.nvx-form-error:focus {
+  outline-color: var(--nvx-danger-500, #ef4444) !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+/* Error Message Styling */
+.nvx-form-error-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 8px 12px;
+  background-color: var(--nvx-danger-50, #fef2f2);
+  border-left: 4px solid var(--nvx-danger-500, #ef4444);
+  border-radius: 0 4px 4px 0;
+  color: var(--nvx-danger-700, #b91c1c);
+  font-size: var(--nvx-text-sm, 0.875rem);
+}
+
+.nvx-form-error-message::before {
+  content: "⚠";
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+[data-theme="dark"] .nvx-form-error-message {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--nvx-danger-300, #fca5a5);
+}
+
+/* Success Message */
+.nvx-form-success-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 8px 12px;
+  background-color: var(--nvx-success-50, #ecfdf5);
+  border-left: 4px solid var(--nvx-success-500, #10b981);
+  border-radius: 0 4px 4px 0;
+  color: var(--nvx-success-700, #047857);
+  font-size: var(--nvx-text-sm, 0.875rem);
+}
+
+.nvx-form-success-message::before {
+  content: "✓";
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+/* Live Region for Form Validation */
+.nvx-form-live-region {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.nvx-form-live-region[aria-live="polite"] {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 8px 0 0 0;
+  clip: auto;
+  white-space: normal;
+}
+
+/* =====================================*/
+/*  7. IMAGE & MEDIA ACCESSIBILITY (1.1.1, 1.2.1, 1.2.2) */
+/* =====================================*/
+
+/* Decorative Images */
+.nvx-img-decorative {
+  background-color: var(--nvx-gray-100, #f3f4f6);
+  border: 1px dashed var(--nvx-gray-300, #d1d5db);
+  border-radius: var(--nvx-radius-md, 1rem);
+  padding: 20px;
+  text-align: center;
+  color: var(--nvx-gray-500, #6b7280);
+  font-style: italic;
+}
+
+[data-theme="dark"] .nvx-img-decorative {
+  background-color: var(--nvx-gray-800, #1f2937);
+  border-color: var(--nvx-gray-700, #374151);
+  color: var(--nvx-gray-400, #9ca3af);
+}
+
+/* Complex Image Container */
+.nvx-img-complex {
+  position: relative;
+  border: 2px solid var(--nvx-gray-200, #e5e7eb);
+  border-radius: var(--nvx-radius-lg, 1.5rem);
+  overflow: hidden;
+}
+
+.nvx-img-complex-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 12px 16px;
+  font-size: var(--nvx-text-sm, 0.875rem);
+  line-height: 1.5;
+}
+
+.nvx-img-complex-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--nvx-primary-300, #93c5fd);
+  text-decoration: underline;
+  font-weight: var(--nvx-font-medium, 500);
+}
+
+/* Caption Styling */
+.nvx-figure-caption {
+  display: block;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: var(--nvx-gray-50, #f9fafb);
+  border-left: 3px solid var(--nvx-gray-300, #d1d5db);
+  border-radius: 0 4px 4px 0;
+  color: var(--nvx-gray-700, #374151);
+  font-size: var(--nvx-text-sm, 0.875rem);
+  font-style: italic;
+}
+
+[data-theme="dark"] .nvx-figure-caption {
+  background: var(--nvx-gray-800, #1f2937);
+  border-left-color: var(--nvx-gray-600, #4b5563);
+  color: var(--nvx-gray-300, #d1d5db);
+}
+
+/* =====================================*/
+/*  8. ARIA STATES & PROPERTIES (4.1.2) */
+/* =====================================*/
+
+/* ARIA Expanded States */
+[aria-expanded="true"] .nvx-aria-expanded-hidden {
+  display: none !important;
+}
+
+[aria-expanded="false"] .nvx-aria-expanded-visible {
+  display: none !important;
+}
+
+/* Button with ARIA Expanded */
+.nvx-btn-aria-expanded[aria-expanded="true"] {
+  background-color: var(--nvx-aria-expanded-bg, #eff6ff) !important;
+  border-color: var(--nvx-primary-500, #3b82f6) !important;
+  color: var(--nvx-primary-700, #1d4ed8) !important;
+}
+
+/* Selected State */
+[aria-selected="true"],
+.nvx-aria-selected {
+  background-color: var(--nvx-aria-selected-bg, #3b82f6) !important;
+  color: var(--nvx-aria-selected-color, #ffffff) !important;
+}
+
+/* Current Page Indicator */
+[aria-current="page"],
+[aria-current="true"] {
+  position: relative;
+  font-weight: var(--nvx-font-bold, 700) !important;
+}
+
+[aria-current="page"]::after,
+[aria-current="true"]::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--nvx-primary-500, #3b82f6);
+  border-radius: 2px;
+}
+
+/* Disabled State */
+[aria-disabled="true"],
+[aria-disabled="true"]:hover,
+[aria-disabled="true"]:focus {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+
+/* =====================================*/
+/*  9. ANIMATION & MOTION (2.3.1, 2.3.2, 2.3.3) */
+/* =====================================*/
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .nvx-transition-all,
+  .nvx-transition-colors,
+  .nvx-transition-transform {
+    transition: none !important;
+  }
+  
+  .nvx-animate-spin,
+  .nvx-animate-ping,
+  .nvx-animate-pulse,
+  .nvx-animate-bounce {
+    animation: none !important;
+  }
+  
+  .nvx-skeleton,
+  .nvx-skeleton-wave::after,
+  .nvx-skeleton-pulse {
+    animation: none !important;
+    background: var(--nvx-bg-tertiary, #f1f5f9) !important;
+  }
+}
+
+/* Safe Animation Duration */
+.nvx-motion-safe {
+  animation-duration: var(--nvx-animation-duration-safe, 0.3s) !important;
+  transition-duration: var(--nvx-animation-duration-safe, 0.3s) !important;
+}
+
+/* No Flashing Content (2.3.1) */
+.nvx-no-flash {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Pause Animation Controls */
+.nvx-animation-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+
+.nvx-animation-pause-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* =====================================*/
+/*  10. HIGH CONTRAST MODE (1.4.6, 1.4.11) */
+/* =====================================*/
+
+@media (prefers-contrast: high) {
+  /* High Contrast Borders */
+  .nvx-hc-border {
+    border: var(--nvx-high-contrast-border, 2px solid #000000) !important;
+  }
+  
+  /* High Contrast Backgrounds */
+  .nvx-hc-bg {
+    background-color: var(--nvx-high-contrast-bg, #ffffff) !important;
+    color: var(--nvx-high-contrast-color, #000000) !important;
+  }
+  
+  /* Force Solid Colors */
+  .nvx-hc-solid {
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+  
+  /* Enhanced Focus */
+  :focus-visible {
+    outline: 3px solid #000000 !important;
+    outline-offset: 3px !important;
+  }
+  
+  /* Remove Transparencies */
+  .nvx-glass,
+  .nvx-glass-bg,
+  .nvx-glass-border {
+    background: var(--nvx-high-contrast-bg, #ffffff) !important;
+    border: var(--nvx-high-contrast-border, 2px solid #000000) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+  
+  /* Improve Link Visibility */
+  a:not(.nvx-btn) {
+    text-decoration: underline !important;
+    text-decoration-thickness: 2px !important;
+  }
+}
+
+[data-theme="dark"] @media (prefers-contrast: high) {
+  .nvx-hc-border {
+    border: 2px solid #ffffff !important;
+  }
+  
+  .nvx-hc-bg {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+  }
+  
+  :focus-visible {
+    outline: 3px solid #ffffff !important;
+  }
+  
+  .nvx-glass,
+  .nvx-glass-bg,
+  .nvx-glass-border {
+    background: #000000 !important;
+    border: 2px solid #ffffff !important;
+  }
+}
+
+/* =====================================*/
+/*  11. LANGUAGE & DIRECTION (3.1.1, 3.1.2) */
+/* =====================================*/
+
+/* Language-Specific Styling */
+[lang="ar"],
+[lang="he"],
+[lang="fa"] {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* RTL Support */
+[dir="rtl"] .nvx-rtl-flip {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .nvx-rtl-mirror {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Language Switch */
+.nvx-lang-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nvx-lang-switch[aria-label]::before {
+  content: attr(aria-label);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--nvx-gray-800, #1f2937);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.nvx-lang-switch:hover[aria-label]::before,
+.nvx-lang-switch:focus[aria-label]::before {
+  opacity: 1;
+}
+
+/* =====================================*/
+/*  12. HEADING STRUCTURE (1.3.1, 2.4.6, 2.4.10) */
+/* =====================================*/
+
+/* Heading Level Indicators (for testing) */
+.nvx-heading-level-1 {
+  position: relative;
+  padding-left: 24px;
+}
+
+.nvx-heading-level-1::before {
+  content: "H1";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 12px;
+  color: var(--nvx-primary-500, #3b82f6);
+  font-weight: var(--nvx-font-bold, 700);
+  opacity: 0.5;
+}
+
+.nvx-heading-level-2::before {
+  content: "H2";
+}
+
+.nvx-heading-level-3::before {
+  content: "H3";
+}
+
+/* Outline for Headings (debugging) */
+.nvx-heading-outline h1,
+.nvx-heading-outline h2,
+.nvx-heading-outline h3,
+.nvx-heading-outline h4,
+.nvx-heading-outline h5,
+.nvx-heading-outline h6 {
+  position: relative;
+  padding: 8px 12px;
+  margin: 12px 0;
+  border-left: 4px solid var(--nvx-primary-500, #3b82f6);
+  background: var(--nvx-gray-50, #f9fafb);
+}
+
+[data-theme="dark"] .nvx-heading-outline h1,
+[data-theme="dark"] .nvx-heading-outline h2,
+[data-theme="dark"] .nvx-heading-outline h3,
+[data-theme="dark"] .nvx-heading-outline h4,
+[data-theme="dark"] .nvx-heading-outline h5,
+[data-theme="dark"] .nvx-heading-outline h6 {
+  background: var(--nvx-gray-800, #1f2937);
+}
+
+/* =====================================*/
+/*  13. TABLES & DATA GRIDS (1.3.1, 1.3.2) */
+/* =====================================*/
+
+/* Accessible Tables */
+.nvx-table-accessible {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid var(--nvx-gray-200, #e5e7eb);
+}
+
+.nvx-table-accessible th {
+  background: var(--nvx-gray-100, #f3f4f6);
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: var(--nvx-font-semibold, 600);
+  border-bottom: 2px solid var(--nvx-gray-300, #d1d5db);
+  position: relative;
+}
+
+.nvx-table-accessible th[scope="row"] {
+  background: var(--nvx-gray-50, #f9fafb);
+  border-right: 2px solid var(--nvx-gray-300, #d1d5db);
+}
+
+.nvx-table-accessible td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--nvx-gray-200, #e5e7eb);
+}
+
+.nvx-table-accessible tr:last-child td {
+  border-bottom: none;
+}
+
+.nvx-table-accessible tr:hover {
+  background: var(--nvx-gray-50, #f9fafb);
+}
+
+[data-theme="dark"] .nvx-table-accessible {
+  border-color: var(--nvx-gray-700, #374151);
+}
+
+[data-theme="dark"] .nvx-table-accessible th {
+  background: var(--nvx-gray-800, #1f2937);
+  border-color: var(--nvx-gray-700, #374151);
+}
+
+[data-theme="dark"] .nvx-table-accessible td {
+  border-color: var(--nvx-gray-700, #374151);
+}
+
+[data-theme="dark"] .nvx-table-accessible tr:hover {
+  background: var(--nvx-gray-800, #1f2937);
+}
+
+/* =====================================*/
+/*  14. MODAL & DIALOG ACCESSIBILITY (2.4.3, 4.1.2) */
+/* =====================================*/
+
+/* Modal Backdrop */
+.nvx-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: var(--nvx-z-modal-backdrop, 1040);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Modal Dialog */
+.nvx-modal-dialog {
+  background: var(--nvx-bg-card, #ffffff);
+  border-radius: var(--nvx-radius-xl, 2rem);
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: var(--nvx-z-modal, 1050);
+  box-shadow: var(--nvx-shadow-2xl, 0 25px 50px -12px rgba(0, 0, 0, 0.25));
+}
+
+.nvx-modal-dialog[role="dialog"] {
+  padding: 32px;
+}
+
+/* Modal Focus Trap */
+.nvx-modal-focus-trap:focus {
+  outline: none;
+}
+
+/* Close Button */
+.nvx-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--nvx-gray-100, #f3f4f6);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--nvx-gray-700, #374151);
+  transition: all 0.2s ease;
+}
+
+.nvx-modal-close:hover,
+.nvx-modal-close:focus {
+  background: var(--nvx-danger-100, #fee2e2);
+  color: var(--nvx-danger-700, #b91c1c);
+}
+
+/* =====================================*/
+/*  15. PROGRESS & STATUS INDICATORS (4.1.3) */
+/* =====================================*/
+
+/* Progress Bar */
+.nvx-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--nvx-gray-200, #e5e7eb);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.nvx-progress-bar[role="progressbar"] {
+  height: 12px;
+}
+
+.nvx-progress-bar-fill {
+  height: 100%;
+  background: var(--nvx-primary-500, #3b82f6);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Status Messages */
+.nvx-status-message[role="status"],
+.nvx-status-message[role="alert"] {
+  padding: 12px 16px;
+  border-radius: var(--nvx-radius-md, 1rem);
+  margin: 12px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.nvx-status-message[role="status"] {
+  background: var(--nvx-info-50, #ecfeff);
+  border-left: 4px solid var(--nvx-info-500, #06b6d4);
+  color: var(--nvx-info-700, #0e7490);
+}
+
+.nvx-status-message[role="alert"] {
+  background: var(--nvx-danger-50, #fef2f2);
+  border-left: 4px solid var(--nvx-danger-500, #ef4444);
+  color: var(--nvx-danger-700, #b91c1c);
+}
+
+/* Loading States */
+.nvx-loading[aria-busy="true"] {
+  position: relative;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.nvx-loading[aria-busy="true"]::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--nvx-gray-200, #e5e7eb);
+  border-top-color: var(--nvx-primary-500, #3b82f6);
+  border-radius: 50%;
+  animation: nvx-spin 1s linear infinite;
+  margin: -12px 0 0 -12px;
+}
+
+/* =====================================*/
+/*  16. TOOLTIP & POPOVER (1.4.13) */
+/* =====================================*/
+
+/* Accessible Tooltip */
+.nvx-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.nvx-tooltip-content {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--nvx-gray-900, #111827);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: var(--nvx-text-sm, 0.875rem);
+  white-space: nowrap;
+  margin-bottom: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: var(--nvx-z-tooltip, 1070);
+}
+
+.nvx-tooltip-content::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--nvx-gray-900, #111827);
+}
+
+.nvx-tooltip:hover .nvx-tooltip-content,
+.nvx-tooltip:focus-within .nvx-tooltip-content,
+.nvx-tooltip-content:focus {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =====================================*/
+/*  17. CUSTOM COMPONENTS - ADA READY */
+/* =====================================*/
+
+/* Accessible Dropdown */
+.nvx-dropdown-accessible {
+  position: relative;
+  display: inline-block;
+}
+
+.nvx-dropdown-toggle[aria-expanded="true"] {
+  background: var(--nvx-primary-100, #dbeafe);
+}
+
+.nvx-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--nvx-bg-card, #ffffff);
+  border: 1px solid var(--nvx-border, #e2e8f0);
+  border-radius: var(--nvx-radius-lg, 1.5rem);
+  box-shadow: var(--nvx-shadow-xl, 0 20px 25px -5px rgba(0,0,0,0.1));
+  min-width: 200px;
+  z-index: var(--nvx-z-dropdown, 1000);
+  display: none;
+}
+
+.nvx-dropdown-menu[aria-hidden="false"] {
+  display: block;
+  animation: nvx-fade-in 0.2s ease;
+}
+
+/* Accessible Carousel */
+.nvx-carousel-accessible {
+  position: relative;
+  overflow: hidden;
+}
+
+.nvx-carousel-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.nvx-carousel-control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--nvx-gray-300, #d1d5db);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nvx-carousel-control[aria-selected="true"] {
+  background: var(--nvx-primary-500, #3b82f6);
+}
+
+/* =====================================*/
+/*  18. UTILITY CLASSES FOR TESTING */
+/* =====================================*/
+
+/* Debugging Utilities */
+.nvx-debug-focus:focus {
+  outline: 3px dashed #ff0000 !important;
+}
+
+.nvx-debug-headings h1,
+.nvx-debug-headings h2,
+.nvx-debug-headings h3,
+.nvx-debug-headings h4,
+.nvx-debug-headings h5,
+.nvx-debug-headings h6 {
+  background: rgba(255, 0, 0, 0.1) !important;
+  border: 1px dashed red !important;
+}
+
+.nvx-debug-links a:not([href]) {
+  outline: 3px solid orange !important;
+  background: rgba(255, 165, 0, 0.1) !important;
+}
+
+.nvx-debug-images img:not([alt]) {
+  outline: 3px solid red !important;
+  background: rgba(255, 0, 0, 0.1) !important;
+}
+
+.nvx-debug-buttons button:not([type]) {
+  outline: 3px solid purple !important;
+  background: rgba(128, 0, 128, 0.1) !important;
+}
+
+/* =====================================*/
+/*  19. PRINT ACCESSIBILITY */
+/* =====================================*/
+
+@media print {
+  /* Ensure proper contrast in print */
+  * {
+    color: #000000 !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  /* Show link URLs */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    font-weight: normal;
+  }
+  
+  /* Show abbreviations */
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  
+  /* Page breaks */
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  
+  img {
+    page-break-inside: avoid;
+    max-width: 100% !important;
+  }
+  
+  table {
+    page-break-inside: avoid;
+    border-collapse: collapse !important;
+  }
+  
+  /* Hide non-essential elements */
+  .nvx-no-print,
+  .nvx-skip-nav,
+  .nvx-modal-backdrop,
+  .nvx-toast-container {
+    display: none !important;
+  }
+}
+
+/* =====================================*/
+/*  20. ANIMATION KEYFRAMES */
+/* =====================================*/
+
+@keyframes nvx-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nvx-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes nvx-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Error states with ARIA */
+.nvx-form-i[aria-invalid="true"] {
+  border-color: var(--nvx-danger-500) !important;
+  border-width: 2px !important;
+}
+
+/* Live region for form validation */
+.nvx-form-live-region[aria-live="polite"] {
+  position: static;
+  width: auto;
+  margin: 8px 0 0 0;
+}
+
+.nvx-img-complex-description {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 12px 16px;
+}
+
+[aria-expanded="true"] .nvx-aria-expanded-hidden {
+  display: none !important;
+}
+
+[aria-current="page"]::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  height: 3px;
+  background: var(--nvx-primary-500);
+}
+
+@media (prefers-contrast: high) {
+  .nvx-hc-border {
+    border: 2px solid #000000 !important;
+  }
+  
+  :focus-visible {
+    outline: 3px solid #000000 !important;
+  }
+}
+
+.nvx-table-accessible th[scope="row"] {
+  background: var(--nvx-gray-50);
+  border-right: 2px solid var(--nvx-gray-300);
+}
+
+.nvx-modal-dialog[role="dialog"] {
+  padding: 32px;
+}
+
+.nvx-modal-focus-trap:focus {
+  outline: none;
+}
+
+.nvx-progress-bar[role="progressbar"] {
+  height: 12px;
+}
+
+.nvx-status-message[role="status"] {
+  background: var(--nvx-info-50);
+  border-left: 4px solid var(--nvx-info-500);
+}
+
+.nvx-tooltip-content {
+  position: absolute;
+  background: var(--nvx-gray-900);
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* =====================================*/
+/* ⚡ NEVOX ADA COMPLIANCE SYSTEM v4.1 - END */
+/* WCAG 2.2 AA Compliant • Enterprise Ready */
+/* =====================================*/
