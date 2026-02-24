@@ -1,0 +1,226 @@
+/*======================================*/
+/* NEVOX ECOSYSTEM – CSS COLOR-MIX() SYSTEM v4.1 */
+/* LEVEL 3: DERIVED MIXES – ENTERPRISE-GRADE */
+/*======================================*/
+
+/* A. INTERACTION STATE MIXES */
+--nvx-mix-primary-hover: color-mix(in oklab, var(--nvx-color-brand-primary) 92%, var(--nvx-gray-100));
+--nvx-mix-primary-active: color-mix(in oklab, var(--nvx-color-brand-primary) 80%, var(--nvx-gray-200));
+--nvx-mix-primary-pressed: color-mix(in oklab, var(--nvx-color-brand-primary) 72%, var(--nvx-gray-300));
+
+--nvx-mix-secondary-hover: color-mix(in oklab, var(--nvx-color-brand-secondary) 90%, var(--nvx-gray-50));
+--nvx-mix-secondary-active: color-mix(in oklab, var(--nvx-color-brand-secondary) 78%, var(--nvx-gray-100));
+--nvx-mix-secondary-pressed: color-mix(in oklab, var(--nvx-color-brand-secondary) 70%, var(--nvx-gray-200));
+
+--nvx-mix-danger-hover: color-mix(in oklab, var(--nvx-color-danger) 92%, var(--nvx-gray-50));
+--nvx-mix-danger-active: color-mix(in oklab, var(--nvx-color-danger) 82%, var(--nvx-gray-100));
+--nvx-mix-danger-pressed: color-mix(in oklab, var(--nvx-color-danger) 74%, var(--nvx-gray-200));
+
+--nvx-mix-success-hover: color-mix(in oklab, var(--nvx-color-success) 90%, var(--nvx-gray-50));
+--nvx-mix-success-active: color-mix(in oklab, var(--nvx-color-success) 78%, var(--nvx-gray-100));
+--nvx-mix-success-pressed: color-mix(in oklab, var(--nvx-color-success) 70%, var(--nvx-gray-200));
+
+--nvx-mix-warning-hover: color-mix(in oklab, var(--nvx-color-warning) 88%, var(--nvx-gray-50));
+--nvx-mix-warning-active: color-mix(in oklab, var(--nvx-color-warning) 76%, var(--nvx-gray-100));
+--nvx-mix-warning-pressed: color-mix(in oklab, var(--nvx-color-warning) 68%, var(--nvx-gray-200));
+
+--nvx-mix-neutral-hover: color-mix(in oklab, var(--nvx-gray-400) 15%, var(--nvx-gray-50));
+--nvx-mix-neutral-active: color-mix(in oklab, var(--nvx-gray-500) 25%, var(--nvx-gray-100));
+--nvx-mix-neutral-pressed: color-mix(in oklab, var(--nvx-gray-600) 30%, var(--nvx-gray-200));
+
+/* B. SOFT & TINTED SURFACES */
+--nvx-mix-primary-soft: color-mix(in oklab, var(--nvx-color-brand-primary) 12%, var(--nvx-bg-card));
+--nvx-mix-primary-subtle: color-mix(in oklab, var(--nvx-color-brand-primary) 6%, var(--nvx-bg-card));
+
+--nvx-mix-secondary-soft: color-mix(in oklab, var(--nvx-color-brand-secondary) 10%, var(--nvx-bg-card));
+--nvx-mix-secondary-subtle: color-mix(in oklab, var(--nvx-color-brand-secondary) 5%, var(--nvx-bg-card));
+
+--nvx-mix-danger-soft: color-mix(in oklab, var(--nvx-color-danger) 10%, var(--nvx-bg-card));
+--nvx-mix-danger-subtle: color-mix(in oklab, var(--nvx-color-danger) 5%, var(--nvx-bg-card));
+
+--nvx-mix-success-soft: color-mix(in oklab, var(--nvx-color-success) 10%, var(--nvx-bg-card));
+--nvx-mix-success-subtle: color-mix(in oklab, var(--nvx-color-success) 5%, var(--nvx-bg-card));
+
+--nvx-mix-warning-soft: color-mix(in oklab, var(--nvx-color-warning) 10%, var(--nvx-bg-card));
+--nvx-mix-warning-subtle: color-mix(in oklab, var(--nvx-color-warning) 5%, var(--nvx-bg-card));
+
+--nvx-mix-neutral-soft: color-mix(in oklab, var(--nvx-gray-500) 8%, var(--nvx-bg-card));
+--nvx-mix-neutral-subtle: color-mix(in oklab, var(--nvx-gray-400) 4%, var(--nvx-bg-card));
+
+/* C. BORDERS & DIVIDERS */
+--nvx-mix-border-subtle: color-mix(in oklab, var(--nvx-color-border-main) 40%, var(--nvx-bg-card));
+--nvx-mix-border-strong: color-mix(in oklab, var(--nvx-color-border-main) 75%, var(--nvx-gray-800));
+--nvx-mix-border-focus: color-mix(in oklab, var(--nvx-color-brand-primary) 65%, var(--nvx-gray-100));
+
+--nvx-mix-border-primary-subtle: color-mix(in oklab, var(--nvx-color-brand-primary) 25%, var(--nvx-color-border-main));
+--nvx-mix-border-danger-subtle: color-mix(in oklab, var(--nvx-color-danger) 25%, var(--nvx-color-border-main));
+--nvx-mix-border-success-subtle: color-mix(in oklab, var(--nvx-color-success) 25%, var(--nvx-color-border-main));
+
+/* D. GLASS / TRANSLUCENT LAYERS */
+--nvx-mix-glass-primary: color-mix(in oklab, var(--nvx-color-brand-primary) 15%, transparent);
+--nvx-mix-glass-secondary: color-mix(in oklab, var(--nvx-color-brand-secondary) 15%, transparent);
+--nvx-mix-glass-neutral: color-mix(in oklab, var(--nvx-gray-400) 8%, transparent);
+--nvx-mix-glass-danger: color-mix(in oklab, var(--nvx-color-danger) 12%, transparent);
+--nvx-mix-glass-success: color-mix(in oklab, var(--nvx-color-success) 12%, transparent);
+
+/* E. FOCUS, RINGS & A11Y STATES */
+--nvx-mix-focus-ring: color-mix(in oklab, var(--nvx-color-brand-primary) 70%, var(--nvx-gray-100));
+--nvx-mix-focus-bg: color-mix(in oklab, var(--nvx-color-brand-primary) 10%, transparent);
+--nvx-mix-focus-contrast: color-mix(in oklab, var(--nvx-color-brand-primary) 85%, black);
+--nvx-mix-focus-danger: color-mix(in oklab, var(--nvx-color-danger) 70%, var(--nvx-gray-100));
+--nvx-mix-focus-success: color-mix(in oklab, var(--nvx-color-success) 70%, var(--nvx-gray-100));
+}
+
+/* FALLBACK SYSTEM */
+@supports not (color: color-mix(in oklab, white, black)) {
+:root {
+--nvx-mix-primary-hover: var(--nvx-color-primary-hover);
+--nvx-mix-primary-active: var(--nvx-color-primary-active);
+--nvx-mix-primary-pressed: var(--nvx-color-primary-active);
+--nvx-mix-secondary-hover: var(--nvx-color-secondary-hover);
+--nvx-mix-secondary-active: var(--nvx-color-secondary-active);
+--nvx-mix-secondary-pressed: var(--nvx-color-secondary-active);
+--nvx-mix-danger-hover: var(--nvx-color-danger-hover);
+--nvx-mix-danger-active: var(--nvx-color-danger-active);
+--nvx-mix-danger-pressed: var(--nvx-color-danger-active);
+--nvx-mix-success-hover: var(--nvx-color-success-hover);
+--nvx-mix-success-active: var(--nvx-color-success-active);
+--nvx-mix-success-pressed: var(--nvx-color-success-active);
+--nvx-mix-warning-hover: var(--nvx-color-warning-hover);
+--nvx-mix-warning-active: var(--nvx-color-warning-active);
+--nvx-mix-warning-pressed: var(--nvx-color-warning-active);
+--nvx-mix-neutral-hover: var(--nvx-color-bg-tertiary);
+--nvx-mix-neutral-active: var(--nvx-color-bg-tertiary);
+--nvx-mix-neutral-pressed: var(--nvx-color-bg-tertiary);
+--nvx-mix-primary-soft: var(--nvx-glass-primary);
+--nvx-mix-primary-subtle: rgba(59, 130, 246, 0.06);
+--nvx-mix-secondary-soft: var(--nvx-glass-secondary);
+--nvx-mix-secondary-subtle: rgba(139, 92, 246, 0.05);
+--nvx-mix-danger-soft: rgba(239, 68, 68, 0.1);
+--nvx-mix-danger-subtle: rgba(239, 68, 68, 0.05);
+--nvx-mix-success-soft: rgba(16, 185, 129, 0.1);
+--nvx-mix-success-subtle: rgba(16, 185, 129, 0.05);
+--nvx-mix-warning-soft: rgba(245, 158, 11, 0.1);
+--nvx-mix-warning-subtle: rgba(245, 158, 11, 0.05);
+--nvx-mix-neutral-soft: var(--nvx-color-bg-tertiary);
+--nvx-mix-neutral-subtle: var(--nvx-color-bg-secondary);
+--nvx-mix-border-subtle: var(--nvx-color-border-main);
+--nvx-mix-border-strong: var(--nvx-gray-600);
+--nvx-mix-border-focus: var(--nvx-color-border-focus);
+--nvx-mix-border-primary-subtle: var(--nvx-primary-300);
+--nvx-mix-border-danger-subtle: var(--nvx-danger-300);
+--nvx-mix-border-success-subtle: var(--nvx-success-300);
+--nvx-mix-glass-primary: var(--nvx-glass-primary);
+--nvx-mix-glass-secondary: var(--nvx-glass-secondary);
+--nvx-mix-glass-neutral: var(--nvx-glass-bg);
+--nvx-mix-glass-danger: rgba(239, 68, 68, 0.12);
+--nvx-mix-glass-success: rgba(16, 185, 129, 0.12);
+--nvx-mix-focus-ring: var(--nvx-color-focus-ring);
+--nvx-mix-focus-bg: var(--nvx-color-focus-bg);
+--nvx-mix-focus-contrast: var(--nvx-primary-700);
+--nvx-mix-focus-danger: var(--nvx-danger-600);
+--nvx-mix-focus-success: var(--nvx-success-600);
+}
+}
+
+/* DARK THEME */
+[data-theme="dark"] {
+--nvx-mix-primary-hover: color-mix(in oklab, var(--nvx-color-brand-primary) 92%, var(--nvx-gray-900));
+--nvx-mix-primary-active: color-mix(in oklab, var(--nvx-color-brand-primary) 80%, var(--nvx-gray-800));
+--nvx-mix-primary-pressed: color-mix(in oklab, var(--nvx-color-brand-primary) 72%, var(--nvx-gray-700));
+--nvx-mix-secondary-hover: color-mix(in oklab, var(--nvx-color-brand-secondary) 90%, var(--nvx-gray-900));
+--nvx-mix-secondary-active: color-mix(in oklab, var(--nvx-color-brand-secondary) 78%, var(--nvx-gray-800));
+--nvx-mix-secondary-pressed: color-mix(in oklab, var(--nvx-color-brand-secondary) 70%, var(--nvx-gray-700));
+--nvx-mix-danger-hover: color-mix(in oklab, var(--nvx-color-danger) 92%, var(--nvx-gray-900));
+--nvx-mix-danger-active: color-mix(in oklab, var(--nvx-color-danger) 82%, var(--nvx-gray-800));
+--nvx-mix-danger-pressed: color-mix(in oklab, var(--nvx-color-danger) 74%, var(--nvx-gray-700));
+--nvx-mix-success-hover: color-mix(in oklab, var(--nvx-color-success) 90%, var(--nvx-gray-900));
+--nvx-mix-success-active: color-mix(in oklab, var(--nvx-color-success) 78%, var(--nvx-gray-800));
+--nvx-mix-success-pressed: color-mix(in oklab, var(--nvx-color-success) 70%, var(--nvx-gray-700));
+--nvx-mix-warning-hover: color-mix(in oklab, var(--nvx-color-warning) 88%, var(--nvx-gray-900));
+--nvx-mix-warning-active: color-mix(in oklab, var(--nvx-color-warning) 76%, var(--nvx-gray-800));
+--nvx-mix-warning-pressed: color-mix(in oklab, var(--nvx-color-warning) 68%, var(--nvx-gray-700));
+--nvx-mix-neutral-hover: color-mix(in oklab, var(--nvx-gray-300) 15%, var(--nvx-gray-900));
+--nvx-mix-neutral-active: color-mix(in oklab, var(--nvx-gray-400) 25%, var(--nvx-gray-800));
+--nvx-mix-neutral-pressed: color-mix(in oklab, var(--nvx-gray-500) 30%, var(--nvx-gray-700));
+--nvx-mix-primary-soft: color-mix(in oklab, var(--nvx-color-brand-primary) 18%, var(--nvx-bg-card));
+--nvx-mix-primary-subtle: color-mix(in oklab, var(--nvx-color-brand-primary) 8%, var(--nvx-bg-card));
+--nvx-mix-secondary-soft: color-mix(in oklab, var(--nvx-color-brand-secondary) 16%, var(--nvx-bg-card));
+--nvx-mix-secondary-subtle: color-mix(in oklab, var(--nvx-color-brand-secondary) 8%, var(--nvx-bg-card));
+--nvx-mix-danger-soft: color-mix(in oklab, var(--nvx-color-danger) 16%, var(--nvx-bg-card));
+--nvx-mix-danger-subtle: color-mix(in oklab, var(--nvx-color-danger) 8%, var(--nvx-bg-card));
+--nvx-mix-success-soft: color-mix(in oklab, var(--nvx-color-success) 16%, var(--nvx-bg-card));
+--nvx-mix-success-subtle: color-mix(in oklab, var(--nvx-color-success) 8%, var(--nvx-bg-card));
+--nvx-mix-warning-soft: color-mix(in oklab, var(--nvx-color-warning) 16%, var(--nvx-bg-card));
+--nvx-mix-warning-subtle: color-mix(in oklab, var(--nvx-color-warning) 8%, var(--nvx-bg-card));
+--nvx-mix-neutral-soft: color-mix(in oklab, var(--nvx-gray-300) 10%, var(--nvx-bg-card));
+--nvx-mix-neutral-subtle: color-mix(in oklab, var(--nvx-gray-200) 5%, var(--nvx-bg-card));
+--nvx-mix-border-subtle: color-mix(in oklab, var(--nvx-color-border-main) 50%, var(--nvx-bg-card));
+--nvx-mix-border-strong: color-mix(in oklab, var(--nvx-color-border-main) 85%, var(--nvx-gray-50));
+--nvx-mix-border-focus: color-mix(in oklab, var(--nvx-color-brand-primary) 65%, var(--nvx-gray-800));
+--nvx-mix-border-primary-subtle: color-mix(in oklab, var(--nvx-color-brand-primary) 30%, var(--nvx-color-border-main));
+--nvx-mix-border-danger-subtle: color-mix(in oklab, var(--nvx-color-danger) 30%, var(--nvx-color-border-main));
+--nvx-mix-border-success-subtle: color-mix(in oklab, var(--nvx-color-success) 30%, var(--nvx-color-border-main));
+--nvx-mix-glass-primary: color-mix(in oklab, var(--nvx-color-brand-primary) 20%, transparent);
+--nvx-mix-glass-secondary: color-mix(in oklab, var(--nvx-color-brand-secondary) 20%, transparent);
+--nvx-mix-glass-neutral: color-mix(in oklab, var(--nvx-gray-300) 10%, transparent);
+--nvx-mix-glass-danger: color-mix(in oklab, var(--nvx-color-danger) 18%, transparent);
+--nvx-mix-glass-success: color-mix(in oklab, var(--nvx-color-success) 18%, transparent);
+--nvx-mix-focus-ring: color-mix(in oklab, var(--nvx-color-brand-primary) 70%, var(--nvx-gray-800));
+--nvx-mix-focus-bg: color-mix(in oklab, var(--nvx-color-brand-primary) 15%, transparent);
+--nvx-mix-focus-contrast: color-mix(in oklab, var(--nvx-color-brand-primary) 85%, white);
+--nvx-mix-focus-danger: color-mix(in oklab, var(--nvx-color-danger) 70%, var(--nvx-gray-800));
+--nvx-mix-focus-success: color-mix(in oklab, var(--nvx-color-success) 70%, var(--nvx-gray-800));
+}
+
+/* DARK THEME FALLBACK */
+@supports not (color: color-mix(in oklab, white, black)) {
+[data-theme="dark"] {
+--nvx-mix-primary-hover: var(--nvx-primary-600);
+--nvx-mix-primary-active: var(--nvx-primary-700);
+--nvx-mix-primary-pressed: var(--nvx-primary-800);
+--nvx-mix-secondary-hover: var(--nvx-secondary-600);
+--nvx-mix-secondary-active: var(--nvx-secondary-700);
+--nvx-mix-secondary-pressed: var(--nvx-secondary-800);
+--nvx-mix-danger-hover: var(--nvx-danger-600);
+--nvx-mix-danger-active: var(--nvx-danger-700);
+--nvx-mix-danger-pressed: var(--nvx-danger-800);
+--nvx-mix-success-hover: var(--nvx-success-600);
+--nvx-mix-success-active: var(--nvx-success-700);
+--nvx-mix-success-pressed: var(--nvx-success-800);
+--nvx-mix-warning-hover: var(--nvx-warning-600);
+--nvx-mix-warning-active: var(--nvx-warning-700);
+--nvx-mix-warning-pressed: var(--nvx-warning-800);
+--nvx-mix-neutral-hover: var(--nvx-gray-700);
+--nvx-mix-neutral-active: var(--nvx-gray-800);
+--nvx-mix-neutral-pressed: var(--nvx-gray-900);
+--nvx-mix-primary-soft: var(--nvx-glass-primary);
+--nvx-mix-primary-subtle: rgba(59, 130, 246, 0.12);
+--nvx-mix-secondary-soft: var(--nvx-glass-secondary);
+--nvx-mix-secondary-subtle: rgba(139, 92, 246, 0.10);
+--nvx-mix-danger-soft: rgba(239, 68, 68, 0.12);
+--nvx-mix-danger-subtle: rgba(239, 68, 68, 0.08);
+--nvx-mix-success-soft: rgba(16, 185, 129, 0.12);
+--nvx-mix-success-subtle: rgba(16, 185, 129, 0.08);
+--nvx-mix-warning-soft: rgba(245, 158, 11, 0.12);
+--nvx-mix-warning-subtle: rgba(245, 158, 11, 0.08);
+--nvx-mix-neutral-soft: var(--nvx-color-bg-tertiary);
+--nvx-mix-neutral-subtle: var(--nvx-color-bg-secondary);
+--nvx-mix-border-subtle: var(--nvx-gray-700);
+--nvx-mix-border-strong: var(--nvx-gray-400);
+--nvx-mix-border-focus: var(--nvx-primary-400);
+--nvx-mix-border-primary-subtle: var(--nvx-primary-500);
+--nvx-mix-border-danger-subtle: var(--nvx-danger-500);
+--nvx-mix-border-success-subtle: var(--nvx-success-500);
+--nvx-mix-glass-primary: var(--nvx-glass-primary);
+--nvx-mix-glass-secondary: var(--nvx-glass-secondary);
+--nvx-mix-glass-neutral: var(--nvx-glass-bg);
+--nvx-mix-glass-danger: rgba(239, 68, 68, 0.15);
+--nvx-mix-glass-success: rgba(16, 185, 129, 0.15);
+--nvx-mix-focus-ring: var(--nvx-primary-400);
+--nvx-mix-focus-bg: rgba(59, 130, 246, 0.2);
+--nvx-mix-focus-contrast: var(--nvx-primary-300);
+--nvx-mix-focus-danger: var(--nvx-danger-400);
+--nvx-mix-focus-success: var(--nvx-success-400);
+}
+}
