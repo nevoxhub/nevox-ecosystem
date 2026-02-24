@@ -1,0 +1,3516 @@
+/*======================================*/
+/* ⚡ NEVOX ADVANCED INTERACTIONS v4.1 ⚡ */
+/* Enterprise-Grade • Production-Ready • Fully Accessible */
+/*======================================*/
+
+/*!
+ * NEVOX Interaction System v4.1
+ * Copyright (c) 2026 NEVOX ECOSYSTEM
+ * License: MIT
+ * @browsersupport Chrome 64+, Firefox 59+, Safari 12.1+, Edge 79+
+ */
+
+/*======================================*/
+/* 0. INTERACTION VARIABLES & TOKENS */
+/*======================================*/
+
+:root {
+  /* Colors - Complete Set with RGB Variants */
+  --nvx-primary: #3b82f6;
+  --nvx-primary-dark: #2563eb;
+  --nvx-primary-light: #60a5fa;
+  --nvx-primary-rgb: 59, 130, 246;
+  
+  --nvx-secondary: #8b5cf6;
+  --nvx-secondary-dark: #7c3aed;
+  --nvx-secondary-rgb: 139, 92, 246;
+  
+  --nvx-accent: #ec4899;
+  --nvx-accent-dark: #db2777;
+  --nvx-accent-rgb: 236, 72, 153;
+  
+  --nvx-success: #10b981;
+  --nvx-success-dark: #059669;
+  --nvx-success-rgb: 16, 185, 129;
+  
+  --nvx-warning: #f59e0b;
+  --nvx-warning-dark: #d97706;
+  --nvx-warning-rgb: 245, 158, 11;
+  
+  --nvx-danger: #ef4444;
+  --nvx-danger-dark: #dc2626;
+  --nvx-danger-rgb: 239, 68, 68;
+  
+  --nvx-info: #06b6d4;
+  --nvx-info-dark: #0891b2;
+  --nvx-info-rgb: 6, 182, 212;
+  
+  /* Gray Scale */
+  --nvx-gray-50: #f9fafb;
+  --nvx-gray-100: #f3f4f6;
+  --nvx-gray-200: #e5e7eb;
+  --nvx-gray-300: #d1d5db;
+  --nvx-gray-400: #9ca3af;
+  --nvx-gray-500: #6b7280;
+  --nvx-gray-600: #4b5563;
+  --nvx-gray-700: #374151;
+  --nvx-gray-800: #1f2937;
+  --nvx-gray-900: #111827;
+  --nvx-gray-950: #030712;
+  
+  /* Semantic Colors */
+  --nvx-bg: #ffffff;
+  --nvx-bg-secondary: #f8fafc;
+  --nvx-bg-tertiary: #f1f5f9;
+  --nvx-bg-card: #ffffff;
+  --nvx-bg-card-hover: #f8fafc;
+  --nvx-bg-rgb: 255, 255, 255;
+  
+  --nvx-text: #0f172a;
+  --nvx-text-secondary: #475569;
+  --nvx-text-tertiary: #94a3b8;
+  --nvx-text-inverse: #ffffff;
+  --nvx-text-rgb: 15, 23, 42;
+  
+  --nvx-border: #e2e8f0;
+  --nvx-border-light: #f1f5f9;
+  --nvx-border-dark: #cbd5e1;
+  
+  /* Spacing Scale */
+  --nvx-space-1: 0.25rem;
+  --nvx-space-2: 0.5rem;
+  --nvx-space-3: 0.75rem;
+  --nvx-space-4: 1rem;
+  --nvx-space-5: 1.25rem;
+  --nvx-space-6: 1.5rem;
+  --nvx-space-8: 2rem;
+  --nvx-space-10: 2.5rem;
+  --nvx-space-12: 3rem;
+  --nvx-space-16: 4rem;
+  
+  /* Border Radius */
+  --nvx-radius-sm: 0.25rem;
+  --nvx-radius-md: 0.375rem;
+  --nvx-radius-lg: 0.5rem;
+  --nvx-radius-xl: 0.75rem;
+  --nvx-radius-2xl: 1rem;
+  --nvx-radius-full: 9999px;
+  
+  /* Shadows */
+  --nvx-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --nvx-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --nvx-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --nvx-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --nvx-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Interaction Timing */
+  --nvx-interaction-fast: 150ms;
+  --nvx-interaction-normal: 300ms;
+  --nvx-interaction-slow: 500ms;
+  --nvx-interaction-slower: 800ms;
+  
+  /* Animation Curves */
+  --nvx-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --nvx-ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --nvx-ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+  --nvx-ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+  --nvx-ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --nvx-ease-in-back: cubic-bezier(0.36, 0, 0.66, -0.56);
+  --nvx-ease-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  
+  /* Touch Targets */
+  --nvx-touch-minimum: 44px;
+  
+  /* Z-Index System */
+  --nvx-z-base: 1;
+  --nvx-z-dropdown: 100;
+  --nvx-z-sticky: 200;
+  --nvx-z-fixed: 300;
+  --nvx-z-modal-backdrop: 400;
+  --nvx-z-modal: 500;
+  --nvx-z-popover: 600;
+  --nvx-z-tooltip: 700;
+  --nvx-z-toast: 800;
+  --nvx-z-drag: 900;
+  
+  /* Interaction Colors */
+  --nvx-interaction-primary: rgba(59, 130, 246, 0.1);
+  --nvx-interaction-secondary: rgba(139, 92, 246, 0.1);
+  --nvx-interaction-success: rgba(16, 185, 129, 0.1);
+  --nvx-interaction-danger: rgba(239, 68, 68, 0.1);
+  --nvx-interaction-overlay: rgba(0, 0, 0, 0.05);
+  
+  /* Scroll Behavior */
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --nvx-bg: #0f172a;
+  --nvx-bg-secondary: #1e293b;
+  --nvx-bg-tertiary: #334155;
+  --nvx-bg-card: #1e293b;
+  --nvx-bg-card-hover: #2d3a4f;
+  --nvx-bg-rgb: 15, 23, 42;
+  
+  --nvx-text: #f8fafc;
+  --nvx-text-secondary: #cbd5e1;
+  --nvx-text-tertiary: #94a3b8;
+  --nvx-text-rgb: 248, 250, 252;
+  
+  --nvx-border: #334155;
+  --nvx-border-light: #1e293b;
+  --nvx-border-dark: #475569;
+  
+  --nvx-interaction-overlay: rgba(255, 255, 255, 0.05);
+}
+
+/*======================================*/
+/* 1. ADVANCED HOVER EFFECTS */
+/*======================================*/
+
+/**
+ * Magnetic Button Effect
+ * @requires JavaScript: Tracks mouse position relative to button
+ * @browsersupport All modern browsers
+ * 
+ * Usage: <button class="nvx-magnetic" data-magnetic>Hover me</button>
+ */
+.nvx-magnetic {
+  position: relative;
+  display: inline-block;
+  transition: transform var(--nvx-interaction-normal) var(--nvx-ease-out-back);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.nvx-magnetic[data-magnetic] {
+  -webkit-transform: translate(
+    calc(var(--nvx-magnetic-x, 0) * 1px),
+    calc(var(--nvx-magnetic-y, 0) * 1px)
+  );
+  -moz-transform: translate(
+    calc(var(--nvx-magnetic-x, 0) * 1px),
+    calc(var(--nvx-magnetic-y, 0) * 1px)
+  );
+  -ms-transform: translate(
+    calc(var(--nvx-magnetic-x, 0) * 1px),
+    calc(var(--nvx-magnetic-y, 0) * 1px)
+  );
+  -o-transform: translate(
+    calc(var(--nvx-magnetic-x, 0) * 1px),
+    calc(var(--nvx-magnetic-y, 0) * 1px)
+  );
+  transform: translate(
+    calc(var(--nvx-magnetic-x, 0) * 1px),
+    calc(var(--nvx-magnetic-y, 0) * 1px)
+  );
+}
+
+.nvx-magnetic[data-magnetic]:hover {
+  -webkit-transform: translate(
+    calc(var(--nvx-magnetic-x, 0) * 1px),
+    calc(var(--nvx-magnetic-y, 0) * 1px)
+  ) scale(1.05);
+  -moz-transform: translate(
+    calc(var(--nvx-magnetic-x, 0) * 1px),
+    calc(var(--nvx-magnetic-y, 0) * 1px)
+  ) scale(1.05);
+  -ms-transform: translate(
+    calc(var(--nvx-magnetic-x, 0) * 1px),
+    calc(var(--nvx-magnetic-y, 0) * 1px)
+  ) scale(1.05);
+  -o-transform: translate(
+    calc(var(--nvx-magnetic-x, 0) * 1px),
+    calc(var(--nvx-magnetic-y, 0) * 1px)
+  ) scale(1.05);
+  transform: translate(
+    calc(var(--nvx-magnetic-x, 0) * 1px),
+    calc(var(--nvx-magnetic-y, 0) * 1px)
+  ) scale(1.05);
+}
+
+.nvx-magnetic::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: -webkit-radial-gradient(
+    circle at 
+    calc(var(--nvx-magnetic-x-percent, 50%) * 1%) 
+    calc(var(--nvx-magnetic-y-percent, 50%) * 1%), 
+    rgba(var(--nvx-primary-rgb), 0.15) 0%, 
+    transparent 70%
+  );
+  background: -moz-radial-gradient(
+    circle at 
+    calc(var(--nvx-magnetic-x-percent, 50%) * 1%) 
+    calc(var(--nvx-magnetic-y-percent, 50%) * 1%), 
+    rgba(var(--nvx-primary-rgb), 0.15) 0%, 
+    transparent 70%
+  );
+  background: -o-radial-gradient(
+    circle at 
+    calc(var(--nvx-magnetic-x-percent, 50%) * 1%) 
+    calc(var(--nvx-magnetic-y-percent, 50%) * 1%), 
+    rgba(var(--nvx-primary-rgb), 0.15) 0%, 
+    transparent 70%
+  );
+  background: radial-gradient(
+    circle at 
+    calc(var(--nvx-magnetic-x-percent, 50%) * 1%) 
+    calc(var(--nvx-magnetic-y-percent, 50%) * 1%), 
+    rgba(var(--nvx-primary-rgb), 0.15) 0%, 
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity var(--nvx-interaction-normal) ease;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.nvx-magnetic:hover::before {
+  opacity: 1;
+}
+
+/* CSS-only fallback */
+.nvx-magnetic:not([data-magnetic]):hover {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/**
+ * Glowing Border Effect
+ * @requires: No JavaScript needed
+ */
+.nvx-glow-border {
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  border-radius: inherit;
+  isolation: isolate;
+}
+
+.nvx-glow-border::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: -webkit-linear-gradient(45deg, 
+    var(--nvx-primary), 
+    var(--nvx-secondary), 
+    var(--nvx-accent),
+    var(--nvx-primary));
+  background: -moz-linear-gradient(45deg, 
+    var(--nvx-primary), 
+    var(--nvx-secondary), 
+    var(--nvx-accent),
+    var(--nvx-primary));
+  background: -o-linear-gradient(45deg, 
+    var(--nvx-primary), 
+    var(--nvx-secondary), 
+    var(--nvx-accent),
+    var(--nvx-primary));
+  background: linear-gradient(45deg, 
+    var(--nvx-primary), 
+    var(--nvx-secondary), 
+    var(--nvx-accent),
+    var(--nvx-primary));
+  background-size: 300% 300%;
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity var(--nvx-interaction-normal) ease;
+  -webkit-animation: nvx-gradient-shift 3s ease infinite;
+  -moz-animation: nvx-gradient-shift 3s ease infinite;
+  -o-animation: nvx-gradient-shift 3s ease infinite;
+  animation: nvx-gradient-shift 3s ease infinite;
+  pointer-events: none;
+}
+
+.nvx-glow-border:hover::after {
+  opacity: 0.8;
+}
+
+@-webkit-keyframes nvx-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@-moz-keyframes nvx-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@-o-keyframes nvx-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes nvx-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* High contrast mode fallback */
+@media (prefers-contrast: high) {
+  .nvx-glow-border::after {
+    display: none;
+  }
+  
+  .nvx-glow-border:hover {
+    border: 2px solid var(--nvx-primary);
+  }
+}
+
+/**
+ * Floating Depth Effect
+ */
+.nvx-float-depth {
+  transition: transform var(--nvx-interaction-normal) var(--nvx-ease-out-back),
+              box-shadow var(--nvx-interaction-normal) ease;
+  box-shadow: var(--nvx-shadow-md);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.nvx-float-depth:hover {
+  -webkit-transform: translateY(-8px) scale(1.02);
+  -moz-transform: translateY(-8px) scale(1.02);
+  -ms-transform: translateY(-8px) scale(1.02);
+  -o-transform: translateY(-8px) scale(1.02);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--nvx-shadow-xl), 0 0 0 1px var(--nvx-primary-light);
+}
+
+/**
+ * Shine Effect
+ */
+.nvx-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.nvx-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  background: -o-linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  -webkit-transform: skewX(-25deg);
+  -moz-transform: skewX(-25deg);
+  -ms-transform: skewX(-25deg);
+  -o-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+  transition: left 0.5s var(--nvx-ease-decelerate);
+  pointer-events: none;
+}
+
+.nvx-shine:hover::before {
+  left: 150%;
+}
+
+[data-theme="dark"] .nvx-shine::before {
+  background: -webkit-linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  background: -o-linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+}
+
+/*======================================*/
+/* 2. ENHANCED CLICK INTERACTIONS */
+/*======================================*/
+
+/**
+ * Ripple Effect with Custom Colors
+ * @requires JavaScript: Handles click events and ripple positioning
+ * 
+ * Usage: <button class="nvx-ripple-custom" data-ripple>Click me</button>
+ */
+.nvx-ripple-custom {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  isolation: isolate;
+}
+
+.nvx-ripple-custom .nvx-ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: -webkit-radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
+  background: -moz-radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
+  background: -o-radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-animation: nvx-ripple-animation var(--nvx-interaction-slow) var(--nvx-ease-out-back);
+  -moz-animation: nvx-ripple-animation var(--nvx-interaction-slow) var(--nvx-ease-out-back);
+  -o-animation: nvx-ripple-animation var(--nvx-interaction-slow) var(--nvx-ease-out-back);
+  animation: nvx-ripple-animation var(--nvx-interaction-slow) var(--nvx-ease-out-back);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@-webkit-keyframes nvx-ripple-animation {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: scale(4);
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes nvx-ripple-animation {
+  0% {
+    -moz-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    -moz-transform: scale(4);
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@-o-keyframes nvx-ripple-animation {
+  0% {
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    -o-transform: scale(4);
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes nvx-ripple-animation {
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: scale(4);
+    -moz-transform: scale(4);
+    -o-transform: scale(4);
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* CSS-only fallback */
+.nvx-ripple-custom:not([data-ripple])::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(var(--nvx-primary-rgb), 0.3);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nvx-ripple-custom:not([data-ripple]):active::after {
+  width: 300px;
+  height: 300px;
+  opacity: 0.6;
+  transition: none;
+}
+
+/**
+ * Click Scale with Bounce
+ */
+.nvx-click-bounce {
+  transition: transform var(--nvx-interaction-fast) var(--nvx-ease-out-back);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.nvx-click-bounce:active {
+  -webkit-transform: scale(0.92);
+  -moz-transform: scale(0.92);
+  -ms-transform: scale(0.92);
+  -o-transform: scale(0.92);
+  transform: scale(0.92);
+}
+
+.nvx-click-bounce[data-active="true"] {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/**
+ * Double Click Protection
+ * @requires JavaScript: Handles double-click detection
+ */
+.nvx-click-protect {
+  position: relative;
+}
+
+.nvx-click-protect[data-clicked="true"] {
+  pointer-events: none;
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.nvx-click-protect[data-clicked="true"]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--nvx-interaction-overlay);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border-radius: inherit;
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not ((-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px))) {
+  .nvx-click-protect[data-clicked="true"]::after {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+/*======================================*/
+/* 3. ADVANCED LOADING ANIMATIONS */
+/*======================================*/
+
+/**
+ * Neon Pulse Loader
+ */
+.nvx-loader-neon {
+  width: 60px;
+  height: 60px;
+  border: 3px solid transparent;
+  border-top-color: var(--nvx-primary);
+  border-bottom-color: var(--nvx-secondary);
+  border-radius: 50%;
+  -webkit-animation: nvx-neon-spin 1.2s var(--nvx-ease-emphasized) infinite;
+  -moz-animation: nvx-neon-spin 1.2s var(--nvx-ease-emphasized) infinite;
+  -o-animation: nvx-neon-spin 1.2s var(--nvx-ease-emphasized) infinite;
+  animation: nvx-neon-spin 1.2s var(--nvx-ease-emphasized) infinite;
+  box-shadow: 0 0 20px rgba(var(--nvx-primary-rgb), 0.3);
+  will-change: transform;
+}
+
+@-webkit-keyframes nvx-neon-spin {
+  0% { -webkit-transform: rotate(0deg) scale(1); transform: rotate(0deg) scale(1); }
+  50% { -webkit-transform: rotate(180deg) scale(1.1); transform: rotate(180deg) scale(1.1); }
+  100% { -webkit-transform: rotate(360deg) scale(1); transform: rotate(360deg) scale(1); }
+}
+
+@-moz-keyframes nvx-neon-spin {
+  0% { -moz-transform: rotate(0deg) scale(1); transform: rotate(0deg) scale(1); }
+  50% { -moz-transform: rotate(180deg) scale(1.1); transform: rotate(180deg) scale(1.1); }
+  100% { -moz-transform: rotate(360deg) scale(1); transform: rotate(360deg) scale(1); }
+}
+
+@-o-keyframes nvx-neon-spin {
+  0% { -o-transform: rotate(0deg) scale(1); transform: rotate(0deg) scale(1); }
+  50% { -o-transform: rotate(180deg) scale(1.1); transform: rotate(180deg) scale(1.1); }
+  100% { -o-transform: rotate(360deg) scale(1); transform: rotate(360deg) scale(1); }
+}
+
+@keyframes nvx-neon-spin {
+  0% { -webkit-transform: rotate(0deg) scale(1); -moz-transform: rotate(0deg) scale(1); -o-transform: rotate(0deg) scale(1); transform: rotate(0deg) scale(1); }
+  50% { -webkit-transform: rotate(180deg) scale(1.1); -moz-transform: rotate(180deg) scale(1.1); -o-transform: rotate(180deg) scale(1.1); transform: rotate(180deg) scale(1.1); }
+  100% { -webkit-transform: rotate(360deg) scale(1); -moz-transform: rotate(360deg) scale(1); -o-transform: rotate(360deg) scale(1); transform: rotate(360deg) scale(1); }
+}
+
+/**
+ * Morphing Square Loader
+ */
+.nvx-loader-morph {
+  width: 40px;
+  height: 40px;
+  background: -webkit-linear-gradient(135deg, var(--nvx-primary), var(--nvx-secondary));
+  background: -moz-linear-gradient(135deg, var(--nvx-primary), var(--nvx-secondary));
+  background: -o-linear-gradient(135deg, var(--nvx-primary), var(--nvx-secondary));
+  background: linear-gradient(135deg, var(--nvx-primary), var(--nvx-secondary));
+  -webkit-animation: nvx-morph 1.5s var(--nvx-ease-emphasized) infinite;
+  -moz-animation: nvx-morph 1.5s var(--nvx-ease-emphasized) infinite;
+  -o-animation: nvx-morph 1.5s var(--nvx-ease-emphasized) infinite;
+  animation: nvx-morph 1.5s var(--nvx-ease-emphasized) infinite;
+  will-change: transform, border-radius;
+}
+
+@-webkit-keyframes nvx-morph {
+  0%, 100% { 
+    border-radius: 0; 
+    -webkit-transform: rotate(0deg) scale(1); 
+    transform: rotate(0deg) scale(1);
+  }
+  33% { 
+    border-radius: 50%; 
+    -webkit-transform: rotate(90deg) scale(1.2); 
+    transform: rotate(90deg) scale(1.2);
+  }
+  66% { 
+    border-radius: 20px; 
+    -webkit-transform: rotate(180deg) scale(0.9); 
+    transform: rotate(180deg) scale(0.9);
+  }
+}
+
+@-moz-keyframes nvx-morph {
+  0%, 100% { 
+    border-radius: 0; 
+    -moz-transform: rotate(0deg) scale(1); 
+    transform: rotate(0deg) scale(1);
+  }
+  33% { 
+    border-radius: 50%; 
+    -moz-transform: rotate(90deg) scale(1.2); 
+    transform: rotate(90deg) scale(1.2);
+  }
+  66% { 
+    border-radius: 20px; 
+    -moz-transform: rotate(180deg) scale(0.9); 
+    transform: rotate(180deg) scale(0.9);
+  }
+}
+
+@-o-keyframes nvx-morph {
+  0%, 100% { 
+    border-radius: 0; 
+    -o-transform: rotate(0deg) scale(1); 
+    transform: rotate(0deg) scale(1);
+  }
+  33% { 
+    border-radius: 50%; 
+    -o-transform: rotate(90deg) scale(1.2); 
+    transform: rotate(90deg) scale(1.2);
+  }
+  66% { 
+    border-radius: 20px; 
+    -o-transform: rotate(180deg) scale(0.9); 
+    transform: rotate(180deg) scale(0.9);
+  }
+}
+
+@keyframes nvx-morph {
+  0%, 100% { 
+    border-radius: 0; 
+    -webkit-transform: rotate(0deg) scale(1); 
+    -moz-transform: rotate(0deg) scale(1); 
+    -o-transform: rotate(0deg) scale(1); 
+    transform: rotate(0deg) scale(1);
+  }
+  33% { 
+    border-radius: 50%; 
+    -webkit-transform: rotate(90deg) scale(1.2); 
+    -moz-transform: rotate(90deg) scale(1.2); 
+    -o-transform: rotate(90deg) scale(1.2); 
+    transform: rotate(90deg) scale(1.2);
+  }
+  66% { 
+    border-radius: 20px; 
+    -webkit-transform: rotate(180deg) scale(0.9); 
+    -moz-transform: rotate(180deg) scale(0.9); 
+    -o-transform: rotate(180deg) scale(0.9); 
+    transform: rotate(180deg) scale(0.9);
+  }
+}
+
+/**
+ * Progress Ring with Percentage
+ * @requires JavaScript: Updates stroke-dashoffset
+ */
+.nvx-progress-ring {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.nvx-progress-ring svg {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.nvx-progress-ring circle {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+.nvx-progress-ring-bg {
+  stroke: var(--nvx-bg-tertiary);
+}
+
+.nvx-progress-ring-fill {
+  stroke: var(--nvx-primary);
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transition: stroke-dashoffset var(--nvx-interaction-normal) ease;
+}
+
+.nvx-progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--nvx-primary);
+}
+
+/*======================================*/
+/* 4. ADVANCED FORM INTERACTIONS */
+/*======================================*/
+
+/**
+ * Floating Label Input
+ */
+.nvx-input-floating {
+  position: relative;
+  margin-top: calc(var(--nvx-space-6) + 4px);
+}
+
+.nvx-input-floating input,
+.nvx-input-floating textarea,
+.nvx-input-floating select {
+  width: 100%;
+  padding: var(--nvx-space-4) var(--nvx-space-3) var(--nvx-space-2);
+  border: 2px solid var(--nvx-border);
+  border-radius: var(--nvx-radius-md);
+  background: transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: border-color var(--nvx-interaction-fast) ease;
+}
+
+.nvx-input-floating label {
+  position: absolute;
+  left: var(--nvx-space-3);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: var(--nvx-text-tertiary);
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all var(--nvx-interaction-fast) var(--nvx-ease-standard);
+  background: var(--nvx-bg);
+  padding: 0 var(--nvx-space-1);
+  line-height: 1;
+}
+
+.nvx-input-floating textarea ~ label {
+  top: var(--nvx-space-4);
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.nvx-input-floating input:focus ~ label,
+.nvx-input-floating textarea:focus ~ label,
+.nvx-input-floating select:focus ~ label,
+.nvx-input-floating input:not(:placeholder-shown) ~ label,
+.nvx-input-floating textarea:not(:placeholder-shown) ~ label {
+  top: 0;
+  -webkit-transform: translateY(-50%) scale(0.85);
+  -moz-transform: translateY(-50%) scale(0.85);
+  -ms-transform: translateY(-50%) scale(0.85);
+  -o-transform: translateY(-50%) scale(0.85);
+  transform: translateY(-50%) scale(0.85);
+  color: var(--nvx-primary);
+  background: var(--nvx-bg);
+}
+
+.nvx-input-floating input:focus,
+.nvx-input-floating textarea:focus,
+.nvx-input-floating select:focus {
+  border-color: var(--nvx-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(var(--nvx-primary-rgb), 0.1);
+}
+
+/**
+ * Password Strength Visualizer
+ * @requires JavaScript: Calculates password strength
+ */
+.nvx-password-strength {
+  height: 6px;
+  background: var(--nvx-bg-tertiary);
+  border-radius: var(--nvx-radius-full);
+  margin-top: var(--nvx-space-2);
+  overflow: hidden;
+  position: relative;
+}
+
+.nvx-password-strength-bar {
+  height: 100%;
+  width: 0;
+  transition: width var(--nvx-interaction-normal) ease,
+              background-color var(--nvx-interaction-normal) ease;
+  border-radius: var(--nvx-radius-full);
+}
+
+.nvx-password-strength-bar[data-strength="0"],
+.nvx-password-strength-bar[data-strength="1"] {
+  width: 20%;
+  background: var(--nvx-danger);
+}
+
+.nvx-password-strength-bar[data-strength="2"] {
+  width: 40%;
+  background: #f97316;
+}
+
+.nvx-password-strength-bar[data-strength="3"] {
+  width: 60%;
+  background: var(--nvx-warning);
+}
+
+.nvx-password-strength-bar[data-strength="4"] {
+  width: 80%;
+  background: #84cc16;
+}
+
+.nvx-password-strength-bar[data-strength="5"] {
+  width: 100%;
+  background: var(--nvx-success);
+}
+
+/**
+ * Animated Checkbox
+ */
+.nvx-checkbox-animated {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+}
+
+.nvx-checkbox-animated input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.nvx-checkbox-custom {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--nvx-border);
+  border-radius: var(--nvx-radius-sm);
+  margin-right: var(--nvx-space-2);
+  position: relative;
+  transition: all var(--nvx-interaction-fast) var(--nvx-ease-out-back);
+  background: var(--nvx-bg);
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.nvx-checkbox-custom::after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  -moz-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  -ms-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  -o-transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  transform: translate(-50%, -50%) rotate(45deg) scale(0);
+  transition: -webkit-transform var(--nvx-interaction-fast) var(--nvx-ease-out-back);
+  transition: -moz-transform var(--nvx-interaction-fast) var(--nvx-ease-out-back);
+  transition: -o-transform var(--nvx-interaction-fast) var(--nvx-ease-out-back);
+  transition: transform var(--nvx-interaction-fast) var(--nvx-ease-out-back);
+}
+
+.nvx-checkbox-animated input:checked + .nvx-checkbox-custom {
+  background: var(--nvx-primary);
+  border-color: var(--nvx-primary);
+  -webkit-animation: nvx-checkbox-pop 0.3s var(--nvx-ease-out-back);
+  -moz-animation: nvx-checkbox-pop 0.3s var(--nvx-ease-out-back);
+  -o-animation: nvx-checkbox-pop 0.3s var(--nvx-ease-out-back);
+  animation: nvx-checkbox-pop 0.3s var(--nvx-ease-out-back);
+}
+
+.nvx-checkbox-animated input:checked + .nvx-checkbox-custom::after {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  -moz-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  -ms-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  -o-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+@-webkit-keyframes nvx-checkbox-pop {
+  0%, 100% { -webkit-transform: scale(1); transform: scale(1); }
+  50% { -webkit-transform: scale(1.2); transform: scale(1.2); }
+}
+
+@-moz-keyframes nvx-checkbox-pop {
+  0%, 100% { -moz-transform: scale(1); transform: scale(1); }
+  50% { -moz-transform: scale(1.2); transform: scale(1.2); }
+}
+
+@-o-keyframes nvx-checkbox-pop {
+  0%, 100% { -o-transform: scale(1); transform: scale(1); }
+  50% { -o-transform: scale(1.2); transform: scale(1.2); }
+}
+
+@keyframes nvx-checkbox-pop {
+  0%, 100% { -webkit-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
+  50% { -webkit-transform: scale(1.2); -moz-transform: scale(1.2); -o-transform: scale(1.2); transform: scale(1.2); }
+}
+
+.nvx-checkbox-animated input:focus-visible + .nvx-checkbox-custom {
+  outline: 2px solid var(--nvx-primary);
+  outline-offset: 2px;
+}
+
+/*======================================*/
+/* 5. ADVANCED CARD INTERACTIONS */
+/*======================================*/
+
+/**
+ * Tilt Card Effect
+ * @requires JavaScript: Tracks mouse position
+ */
+.nvx-card-tilt {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: perspective(1000px) 
+             rotateX(calc(var(--nvx-tilt-y, 0) * 1deg)) 
+             rotateY(calc(var(--nvx-tilt-x, 0) * -1deg));
+  -moz-transform: perspective(1000px) 
+             rotateX(calc(var(--nvx-tilt-y, 0) * 1deg)) 
+             rotateY(calc(var(--nvx-tilt-x, 0) * -1deg));
+  -ms-transform: perspective(1000px) 
+             rotateX(calc(var(--nvx-tilt-y, 0) * 1deg)) 
+             rotateY(calc(var(--nvx-tilt-x, 0) * -1deg));
+  -o-transform: perspective(1000px) 
+             rotateX(calc(var(--nvx-tilt-y, 0) * 1deg)) 
+             rotateY(calc(var(--nvx-tilt-x, 0) * -1deg));
+  transform: perspective(1000px) 
+             rotateX(calc(var(--nvx-tilt-y, 0) * 1deg)) 
+             rotateY(calc(var(--nvx-tilt-x, 0) * -1deg));
+  transition: transform 0.1s var(--nvx-ease-decelerate);
+  will-change: transform;
+  position: relative;
+}
+
+.nvx-card-tilt-content {
+  -webkit-transform: translateZ(20px);
+  -moz-transform: translateZ(20px);
+  -ms-transform: translateZ(20px);
+  -o-transform: translateZ(20px);
+  transform: translateZ(20px);
+  position: relative;
+  z-index: 2;
+}
+
+.nvx-card-tilt-glow {
+  position: absolute;
+  inset: 0;
+  background: -webkit-radial-gradient(
+    circle at 
+    calc(var(--nvx-tilt-x-percent, 50%) * 1%) 
+    calc(var(--nvx-tilt-y-percent, 50%) * 1%), 
+    rgba(var(--nvx-primary-rgb), 0.2) 0%, 
+    transparent 70%
+  );
+  background: -moz-radial-gradient(
+    circle at 
+    calc(var(--nvx-tilt-x-percent, 50%) * 1%) 
+    calc(var(--nvx-tilt-y-percent, 50%) * 1%), 
+    rgba(var(--nvx-primary-rgb), 0.2) 0%, 
+    transparent 70%
+  );
+  background: -o-radial-gradient(
+    circle at 
+    calc(var(--nvx-tilt-x-percent, 50%) * 1%) 
+    calc(var(--nvx-tilt-y-percent, 50%) * 1%), 
+    rgba(var(--nvx-primary-rgb), 0.2) 0%, 
+    transparent 70%
+  );
+  background: radial-gradient(
+    circle at 
+    calc(var(--nvx-tilt-x-percent, 50%) * 1%) 
+    calc(var(--nvx-tilt-y-percent, 50%) * 1%), 
+    rgba(var(--nvx-primary-rgb), 0.2) 0%, 
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity var(--nvx-interaction-normal) ease;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 3;
+}
+
+.nvx-card-tilt:hover .nvx-card-tilt-glow {
+  opacity: 1;
+}
+
+/* CSS-only fallback */
+.nvx-card-tilt:not([data-tilt]):hover {
+  -webkit-transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+  -moz-transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+  -ms-transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+  -o-transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+  transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+}
+
+/**
+ * 3D Carousel Effect
+ */
+.nvx-carousel-3d {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  perspective: 1200px;
+}
+
+/**
+ * Flip Card
+ */
+.nvx-card-flip {
+  -webkit-perspective: 1500px;
+  -moz-perspective: 1500px;
+  perspective: 1500px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.nvx-card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s var(--nvx-ease-emphasized);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.nvx-card-flip:hover .nvx-card-flip-inner,
+.nvx-card-flip:focus-within .nvx-card-flip-inner {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.nvx-card-flip-front,
+.nvx-card-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: var(--nvx-radius-lg);
+  overflow: hidden;
+}
+
+.nvx-card-flip-front {
+  background: var(--nvx-bg-card);
+}
+
+.nvx-card-flip-back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background: -webkit-linear-gradient(135deg, var(--nvx-primary), var(--nvx-secondary));
+  background: -moz-linear-gradient(135deg, var(--nvx-primary), var(--nvx-secondary));
+  background: -o-linear-gradient(135deg, var(--nvx-primary), var(--nvx-secondary));
+  background: linear-gradient(135deg, var(--nvx-primary), var(--nvx-secondary));
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--nvx-space-6);
+}
+
+/* Reduced motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  .nvx-card-flip:hover .nvx-card-flip-inner {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+  
+  .nvx-card-flip-back {
+    display: none;
+  }
+}
+
+/**
+ * Expandable Card
+ * @requires JavaScript: Handles expand/collapse
+ */
+.nvx-card-expandable {
+  transition: all var(--nvx-interaction-normal) var(--nvx-ease-emphasized);
+  overflow: hidden;
+  position: relative;
+}
+
+.nvx-card-expandable[data-expanded="true"] {
+  grid-column: span 2;
+  grid-row: span 2;
+  z-index: 10;
+  box-shadow: var(--nvx-shadow-2xl);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+/* Fallback for non-grid layouts */
+@supports not (display: grid) {
+  .nvx-card-expandable[data-expanded="true"] {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1.02);
+    -moz-transform: translate(-50%, -50%) scale(1.02);
+    -ms-transform: translate(-50%, -50%) scale(1.02);
+    -o-transform: translate(-50%, -50%) scale(1.02);
+    transform: translate(-50%, -50%) scale(1.02);
+    max-width: 90vw;
+    max-height: 90vh;
+    z-index: var(--nvx-z-modal);
+  }
+}
+
+.nvx-card-expandable .nvx-card-preview {
+  transition: opacity var(--nvx-interaction-normal) ease;
+}
+
+.nvx-card-expandable[data-expanded="true"] .nvx-card-preview {
+  opacity: 0.5;
+}
+
+.nvx-expand-trigger {
+  position: absolute;
+  top: var(--nvx-space-3);
+  right: var(--nvx-space-3);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--nvx-radius-full);
+  background: var(--nvx-bg-card);
+  border: 1px solid var(--nvx-border);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--nvx-interaction-normal) ease,
+              -webkit-transform var(--nvx-interaction-fast) var(--nvx-ease-out-back);
+  transition: opacity var(--nvx-interaction-normal) ease,
+              -moz-transform var(--nvx-interaction-fast) var(--nvx-ease-out-back);
+  transition: opacity var(--nvx-interaction-normal) ease,
+              -o-transform var(--nvx-interaction-fast) var(--nvx-ease-out-back);
+  transition: opacity var(--nvx-interaction-normal) ease,
+              transform var(--nvx-interaction-fast) var(--nvx-ease-out-back);
+  z-index: 5;
+}
+
+.nvx-card-expandable:hover .nvx-expand-trigger,
+.nvx-card-expandable:focus-within .nvx-expand-trigger {
+  opacity: 1;
+}
+
+.nvx-expand-trigger:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  background: var(--nvx-primary);
+  color: white;
+  border-color: var(--nvx-primary);
+}
+
+/*======================================*/
+/* 6. ADVANCED NAVIGATION INTERACTIONS */
+/*======================================*/
+
+/**
+ * Smart Scroll Progress
+ * @requires JavaScript: Tracks scroll position
+ */
+.nvx-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: -webkit-linear-gradient(90deg, 
+    var(--nvx-primary) 0%, 
+    var(--nvx-secondary) 50%, 
+    var(--nvx-accent) 100%);
+  background: -moz-linear-gradient(90deg, 
+    var(--nvx-primary) 0%, 
+    var(--nvx-secondary) 50%, 
+    var(--nvx-accent) 100%);
+  background: -o-linear-gradient(90deg, 
+    var(--nvx-primary) 0%, 
+    var(--nvx-secondary) 50%, 
+    var(--nvx-accent) 100%);
+  background: linear-gradient(90deg, 
+    var(--nvx-primary) 0%, 
+    var(--nvx-secondary) 50%, 
+    var(--nvx-accent) 100%);
+  -webkit-transform-origin: 0 50%;
+  -moz-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  -o-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  z-index: var(--nvx-z-fixed);
+  pointer-events: none;
+  will-change: transform;
+}
+
+/**
+ * Sticky Nav with Blur
+ * @requires JavaScript: Toggles class on scroll
+ */
+.nvx-sticky-smart {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: var(--nvx-z-sticky);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(var(--nvx-bg-rgb), 0.85);
+  transition: all var(--nvx-interaction-normal) ease;
+  border-bottom: 1px solid transparent;
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not ((-webkit-backdrop-filter: blur(12px)) or (backdrop-filter: blur(12px))) {
+  .nvx-sticky-smart {
+    background: var(--nvx-bg);
+    opacity: 0.98;
+  }
+}
+
+.nvx-sticky-smart[data-scrolled="true"] {
+  box-shadow: var(--nvx-shadow-md);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom-color: var(--nvx-border-light);
+}
+
+/**
+ * Animated Menu Indicator
+ * @requires JavaScript: Updates indicator position
+ */
+.nvx-menu-indicator {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: var(--nvx-space-4);
+}
+
+.nvx-menu-indicator .active-indicator {
+  position: absolute;
+  bottom: -2px;
+  height: 3px;
+  background: -webkit-linear-gradient(90deg, var(--nvx-primary), var(--nvx-secondary));
+  background: -moz-linear-gradient(90deg, var(--nvx-primary), var(--nvx-secondary));
+  background: -o-linear-gradient(90deg, var(--nvx-primary), var(--nvx-secondary));
+  background: linear-gradient(90deg, var(--nvx-primary), var(--nvx-secondary));
+  border-radius: var(--nvx-radius-full);
+  transition: left var(--nvx-interaction-normal) var(--nvx-ease-emphasized),
+              width var(--nvx-interaction-normal) var(--nvx-ease-emphasized);
+  pointer-events: none;
+}
+
+/*======================================*/
+/* 7. ENHANCED TOOLTIPS & POPOVERS */
+/*======================================*/
+
+/**
+ * Smart Tooltip
+ */
+.nvx-tooltip-smart {
+  position: relative;
+}
+
+.nvx-tooltip-smart::before,
+.nvx-tooltip-smart::after {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--nvx-interaction-fast) ease,
+              -webkit-transform var(--nvx-interaction-fast) ease;
+  transition: opacity var(--nvx-interaction-fast) ease,
+              -moz-transform var(--nvx-interaction-fast) ease;
+  transition: opacity var(--nvx-interaction-fast) ease,
+              -o-transform var(--nvx-interaction-fast) ease;
+  transition: opacity var(--nvx-interaction-fast) ease,
+              transform var(--nvx-interaction-fast) ease;
+  z-index: var(--nvx-z-tooltip);
+}
+
+.nvx-tooltip-smart::before {
+  content: attr(data-tooltip);
+  background: var(--nvx-gray-900);
+  color: white;
+  padding: var(--nvx-space-2) var(--nvx-space-3);
+  border-radius: var(--nvx-radius-md);
+  font-size: 0.875rem;
+  white-space: nowrap;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-8px);
+  -moz-transform: translateX(-50%) translateY(-8px);
+  -ms-transform: translateX(-50%) translateY(-8px);
+  -o-transform: translateX(-50%) translateY(-8px);
+  transform: translateX(-50%) translateY(-8px);
+  box-shadow: var(--nvx-shadow-lg);
+  max-width: 250px;
+  white-space: normal;
+  text-align: center;
+}
+
+.nvx-tooltip-smart::after {
+  content: '';
+  border: 6px solid transparent;
+  border-top-color: var(--nvx-gray-900);
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(6px);
+  -moz-transform: translateX(-50%) translateY(6px);
+  -ms-transform: translateX(-50%) translateY(6px);
+  -o-transform: translateX(-50%) translateY(6px);
+  transform: translateX(-50%) translateY(6px);
+}
+
+.nvx-tooltip-smart:hover::before,
+.nvx-tooltip-smart:hover::after,
+.nvx-tooltip-smart:focus::before,
+.nvx-tooltip-smart:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(-50%) translateY(0);
+  -moz-transform: translateX(-50%) translateY(0);
+  -ms-transform: translateX(-50%) translateY(0);
+  -o-transform: translateX(-50%) translateY(0);
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Position variants */
+.nvx-tooltip-smart[data-tooltip-position="bottom"]::before {
+  top: 100%;
+  bottom: auto;
+  -webkit-transform: translateX(-50%) translateY(8px);
+  -moz-transform: translateX(-50%) translateY(8px);
+  -ms-transform: translateX(-50%) translateY(8px);
+  -o-transform: translateX(-50%) translateY(8px);
+  transform: translateX(-50%) translateY(8px);
+}
+
+.nvx-tooltip-smart[data-tooltip-position="bottom"]::after {
+  top: 100%;
+  bottom: auto;
+  border-top-color: transparent;
+  border-bottom-color: var(--nvx-gray-900);
+  -webkit-transform: translateX(-50%) translateY(-14px);
+  -moz-transform: translateX(-50%) translateY(-14px);
+  -ms-transform: translateX(-50%) translateY(-14px);
+  -o-transform: translateX(-50%) translateY(-14px);
+  transform: translateX(-50%) translateY(-14px);
+}
+
+.nvx-tooltip-smart[data-tooltip-position="left"]::before {
+  top: 50%;
+  right: 100%;
+  bottom: auto;
+  left: auto;
+  -webkit-transform: translateX(-8px) translateY(-50%);
+  -moz-transform: translateX(-8px) translateY(-50%);
+  -ms-transform: translateX(-8px) translateY(-50%);
+  -o-transform: translateX(-8px) translateY(-50%);
+  transform: translateX(-8px) translateY(-50%);
+}
+
+.nvx-tooltip-smart[data-tooltip-position="left"]::after {
+  top: 50%;
+  left: auto;
+  right: 100%;
+  border-top-color: transparent;
+  border-left-color: var(--nvx-gray-900);
+  -webkit-transform: translateX(14px) translateY(-50%);
+  -moz-transform: translateX(14px) translateY(-50%);
+  -ms-transform: translateX(14px) translateY(-50%);
+  -o-transform: translateX(14px) translateY(-50%);
+  transform: translateX(14px) translateY(-50%);
+}
+
+.nvx-tooltip-smart[data-tooltip-position="right"]::before {
+  top: 50%;
+  left: 100%;
+  bottom: auto;
+  -webkit-transform: translateX(8px) translateY(-50%);
+  -moz-transform: translateX(8px) translateY(-50%);
+  -ms-transform: translateX(8px) translateY(-50%);
+  -o-transform: translateX(8px) translateY(-50%);
+  transform: translateX(8px) translateY(-50%);
+}
+
+.nvx-tooltip-smart[data-tooltip-position="right"]::after {
+  top: 50%;
+  left: 100%;
+  right: auto;
+  border-top-color: transparent;
+  border-right-color: var(--nvx-gray-900);
+  -webkit-transform: translateX(-14px) translateY(-50%);
+  -moz-transform: translateX(-14px) translateY(-50%);
+  -ms-transform: translateX(-14px) translateY(-50%);
+  -o-transform: translateX(-14px) translateY(-50%);
+  transform: translateX(-14px) translateY(-50%);
+}
+
+/**
+ * Interactive Popover
+ * @requires JavaScript: Handles positioning
+ */
+.nvx-popover-interactive {
+  position: absolute;
+  background: var(--nvx-bg-card);
+  border: 1px solid var(--nvx-border);
+  border-radius: var(--nvx-radius-lg);
+  box-shadow: var(--nvx-shadow-xl);
+  padding: var(--nvx-space-4);
+  min-width: 250px;
+  z-index: var(--nvx-z-popover);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--nvx-interaction-normal) ease,
+              visibility var(--nvx-interaction-normal) ease,
+              -webkit-transform var(--nvx-interaction-normal) var(--nvx-ease-out-back);
+  transition: opacity var(--nvx-interaction-normal) ease,
+              visibility var(--nvx-interaction-normal) ease,
+              -moz-transform var(--nvx-interaction-normal) var(--nvx-ease-out-back);
+  transition: opacity var(--nvx-interaction-normal) ease,
+              visibility var(--nvx-interaction-normal) ease,
+              -o-transform var(--nvx-interaction-normal) var(--nvx-ease-out-back);
+  transition: opacity var(--nvx-interaction-normal) ease,
+              visibility var(--nvx-interaction-normal) ease,
+              transform var(--nvx-interaction-normal) var(--nvx-ease-out-back);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.nvx-popover-interactive[data-visible="true"] {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.nvx-popover-arrow {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: var(--nvx-bg-card);
+  border-left: 1px solid var(--nvx-border);
+  border-top: 1px solid var(--nvx-border);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*======================================*/
+/* 8. ADVANCED SCROLL ANIMATIONS */
+/*======================================*/
+
+/**
+ * Reveal on Scroll
+ * @requires JavaScript: Intersection Observer
+ */
+.nvx-reveal {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  -moz-transform: translateY(30px);
+  -ms-transform: translateY(30px);
+  -o-transform: translateY(30px);
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--nvx-ease-emphasized),
+              -webkit-transform 0.8s var(--nvx-ease-emphasized);
+  transition: opacity 0.8s var(--nvx-ease-emphasized),
+              -moz-transform 0.8s var(--nvx-ease-emphasized);
+  transition: opacity 0.8s var(--nvx-ease-emphasized),
+              -o-transform 0.8s var(--nvx-ease-emphasized);
+  transition: opacity 0.8s var(--nvx-ease-emphasized),
+              transform 0.8s var(--nvx-ease-emphasized);
+  will-change: opacity, transform;
+}
+
+.nvx-reveal[data-revealed="true"] {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* Reveal variants */
+.nvx-reveal-left {
+  -webkit-transform: translateX(-30px);
+  -moz-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  -o-transform: translateX(-30px);
+  transform: translateX(-30px);
+}
+
+.nvx-reveal-right {
+  -webkit-transform: translateX(30px);
+  -moz-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  -o-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+.nvx-reveal-scale {
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
+/**
+ * Parallax Effect
+ * @requires JavaScript: Tracks scroll position
+ */
+.nvx-parallax {
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.nvx-parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-size: cover;
+  background-position: center;
+  -webkit-transform: translateY(calc(var(--nvx-parallax-offset, 0) * 1px));
+  -moz-transform: translateY(calc(var(--nvx-parallax-offset, 0) * 1px));
+  -ms-transform: translateY(calc(var(--nvx-parallax-offset, 0) * 1px));
+  -o-transform: translateY(calc(var(--nvx-parallax-offset, 0) * 1px));
+  transform: translateY(calc(var(--nvx-parallax-offset, 0) * 1px));
+  will-change: transform;
+  pointer-events: none;
+}
+
+/**
+ * Stagger Children Animation
+ * @requires JavaScript: Triggers animation on visibility
+ */
+.nvx-stagger {
+  --nvx-stagger-delay: 0.1s;
+}
+
+.nvx-stagger > * {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -o-transform: translateY(20px);
+  transform: translateY(20px);
+  transition: opacity 0.5s var(--nvx-ease-emphasized),
+              -webkit-transform 0.5s var(--nvx-ease-emphasized);
+  transition: opacity 0.5s var(--nvx-ease-emphasized),
+              -moz-transform 0.5s var(--nvx-ease-emphasized);
+  transition: opacity 0.5s var(--nvx-ease-emphasized),
+              -o-transform 0.5s var(--nvx-ease-emphasized);
+  transition: opacity 0.5s var(--nvx-ease-emphasized),
+              transform 0.5s var(--nvx-ease-emphasized);
+  transition-delay: calc(var(--nvx-stagger-index, 0) * var(--nvx-stagger-delay));
+}
+
+.nvx-stagger[data-visible="true"] > * {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/*======================================*/
+/* 9. DRAG & DROP INTERACTIONS */
+/*======================================*/
+
+/**
+ * Drag Handle
+ * @requires JavaScript: Handles drag events
+ */
+.nvx-drag-handle {
+  cursor: -webkit-grab;
+  cursor: grab;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: element;
+  -webkit-touch-callout: none;
+  touch-action: none;
+}
+
+.nvx-drag-handle:active {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/**
+ * Draggable Item
+ */
+.nvx-draggable {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: -webkit-grab;
+  cursor: grab;
+  position: relative;
+  -webkit-touch-callout: none;
+  touch-action: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.nvx-draggable[data-dragging="true"] {
+  opacity: 0.8;
+  -webkit-transform: scale(1.02) rotate(1deg) translateZ(0);
+  -moz-transform: scale(1.02) rotate(1deg) translateZ(0);
+  -ms-transform: scale(1.02) rotate(1deg) translateZ(0);
+  -o-transform: scale(1.02) rotate(1deg) translateZ(0);
+  transform: scale(1.02) rotate(1deg) translateZ(0);
+  box-shadow: var(--nvx-shadow-xl);
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+  z-index: var(--nvx-z-drag);
+  transition: none;
+}
+
+/**
+ * Drop Zone
+ */
+.nvx-drop-zone {
+  border: 2px dashed var(--nvx-border);
+  border-radius: var(--nvx-radius-lg);
+  transition: border-color var(--nvx-interaction-normal) ease,
+              background var(--nvx-interaction-normal) ease;
+  min-height: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.nvx-drop-zone[data-drag-over="true"] {
+  border-color: var(--nvx-primary);
+  background: rgba(var(--nvx-primary-rgb), 0.05);
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
+/*======================================*/
+/* 10. ADVANCED GESTURE SUPPORT */
+/*======================================*/
+
+/**
+ * Swipe Indicators
+ * @requires JavaScript: Detects swipe gestures
+ */
+.nvx-swipeable {
+  -ms-touch-action: pan-y pinch-zoom;
+  touch-action: pan-y pinch-zoom;
+  position: relative;
+  overflow: hidden;
+}
+
+.nvx-swipe-indicator {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(var(--nvx-bg-rgb), 0.9);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  border-radius: var(--nvx-radius-full);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--nvx-interaction-normal) ease,
+              -webkit-transform var(--nvx-interaction-normal) var(--nvx-ease-out-back);
+  transition: opacity var(--nvx-interaction-normal) ease,
+              -moz-transform var(--nvx-interaction-normal) var(--nvx-ease-out-back);
+  transition: opacity var(--nvx-interaction-normal) ease,
+              -o-transform var(--nvx-interaction-normal) var(--nvx-ease-out-back);
+  transition: opacity var(--nvx-interaction-normal) ease,
+              transform var(--nvx-interaction-normal) var(--nvx-ease-out-back);
+  pointer-events: none;
+  box-shadow: var(--nvx-shadow-md);
+  z-index: 5;
+  color: var(--nvx-primary);
+  font-size: 1.25rem;
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter: blur(4px))) {
+  .nvx-swipe-indicator {
+    background: rgba(var(--nvx-bg-rgb), 0.98);
+  }
+}
+
+.nvx-swipe-indicator.left {
+  left: var(--nvx-space-4);
+}
+
+.nvx-swipe-indicator.right {
+  right: var(--nvx-space-4);
+}
+
+.nvx-swipeable[data-swiping="true"][data-swipe-direction="left"] .nvx-swipe-indicator.left,
+.nvx-swipeable[data-swiping="true"][data-swipe-direction="right"] .nvx-swipe-indicator.right {
+  opacity: 1;
+  -webkit-transform: translateY(-50%) scale(1.1);
+  -moz-transform: translateY(-50%) scale(1.1);
+  -ms-transform: translateY(-50%) scale(1.1);
+  -o-transform: translateY(-50%) scale(1.1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/**
+ * Pull to Refresh
+ * @requires JavaScript: Detects pull gesture
+ */
+.nvx-pull-to-refresh {
+  position: relative;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+.nvx-pull-spinner {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--nvx-border);
+  border-top-color: var(--nvx-primary);
+  border-radius: var(--nvx-radius-full);
+  opacity: 0;
+  transition: opacity var(--nvx-interaction-normal) ease;
+  pointer-events: none;
+}
+
+.nvx-pull-to-refresh[data-pulling="true"] .nvx-pull-spinner,
+.nvx-pull-to-refresh[data-refreshing="true"] .nvx-pull-spinner {
+  opacity: 1;
+  -webkit-animation: nvx-spin 1s linear infinite;
+  -moz-animation: nvx-spin 1s linear infinite;
+  -o-animation: nvx-spin 1s linear infinite;
+  animation: nvx-spin 1s linear infinite;
+}
+
+@-webkit-keyframes nvx-spin {
+  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-moz-keyframes nvx-spin {
+  from { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-o-keyframes nvx-spin {
+  from { -o-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes nvx-spin {
+  from { -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+/**
+ * Double Tap Detection
+ */
+.nvx-double-tap {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nvx-double-tap[data-double-tapped="true"] {
+  -webkit-animation: nvx-double-tap-feedback 0.3s var(--nvx-ease-out-back) forwards;
+  -moz-animation: nvx-double-tap-feedback 0.3s var(--nvx-ease-out-back) forwards;
+  -o-animation: nvx-double-tap-feedback 0.3s var(--nvx-ease-out-back) forwards;
+  animation: nvx-double-tap-feedback 0.3s var(--nvx-ease-out-back) forwards;
+}
+
+@-webkit-keyframes nvx-double-tap-feedback {
+  0%, 100% { -webkit-transform: scale(1); transform: scale(1); }
+  50% { -webkit-transform: scale(0.95); transform: scale(0.95); background: rgba(var(--nvx-primary-rgb), 0.1); }
+}
+
+@-moz-keyframes nvx-double-tap-feedback {
+  0%, 100% { -moz-transform: scale(1); transform: scale(1); }
+  50% { -moz-transform: scale(0.95); transform: scale(0.95); background: rgba(var(--nvx-primary-rgb), 0.1); }
+}
+
+@-o-keyframes nvx-double-tap-feedback {
+  0%, 100% { -o-transform: scale(1); transform: scale(1); }
+  50% { -o-transform: scale(0.95); transform: scale(0.95); background: rgba(var(--nvx-primary-rgb), 0.1); }
+}
+
+@keyframes nvx-double-tap-feedback {
+  0%, 100% { -webkit-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
+  50% { -webkit-transform: scale(0.95); -moz-transform: scale(0.95); -o-transform: scale(0.95); transform: scale(0.95); background: rgba(var(--nvx-primary-rgb), 0.1); }
+}
+
+/**
+ * Long Press Detection
+ */
+.nvx-long-press {
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.nvx-long-press[data-long-press="true"] {
+  -webkit-animation: nvx-long-press-feedback 0.5s ease forwards;
+  -moz-animation: nvx-long-press-feedback 0.5s ease forwards;
+  -o-animation: nvx-long-press-feedback 0.5s ease forwards;
+  animation: nvx-long-press-feedback 0.5s ease forwards;
+}
+
+@-webkit-keyframes nvx-long-press-feedback {
+  0% { box-shadow: 0 0 0 0 rgba(var(--nvx-primary-rgb), 0.5); }
+  100% { box-shadow: 0 0 0 10px rgba(var(--nvx-primary-rgb), 0); }
+}
+
+@-moz-keyframes nvx-long-press-feedback {
+  0% { box-shadow: 0 0 0 0 rgba(var(--nvx-primary-rgb), 0.5); }
+  100% { box-shadow: 0 0 0 10px rgba(var(--nvx-primary-rgb), 0); }
+}
+
+@-o-keyframes nvx-long-press-feedback {
+  0% { box-shadow: 0 0 0 0 rgba(var(--nvx-primary-rgb), 0.5); }
+  100% { box-shadow: 0 0 0 10px rgba(var(--nvx-primary-rgb), 0); }
+}
+
+@keyframes nvx-long-press-feedback {
+  0% { box-shadow: 0 0 0 0 rgba(var(--nvx-primary-rgb), 0.5); }
+  100% { box-shadow: 0 0 0 10px rgba(var(--nvx-primary-rgb), 0); }
+}
+
+/*======================================*/
+/* 11. SMART INTERACTION UTILITIES */
+/*======================================*/
+
+.nvx-hover-intent {
+  transition: all var(--nvx-interaction-normal) var(--nvx-ease-emphasized);
+  transition-delay: 0s;
+}
+
+.nvx-hover-intent:hover {
+  transition-delay: 0.2s;
+}
+
+.nvx-focus-within:focus-within {
+  outline: 2px solid var(--nvx-primary);
+  outline-offset: 2px;
+  border-radius: inherit;
+}
+
+.nvx-keyboard-nav *:focus-visible {
+  outline: 3px solid var(--nvx-primary) !important;
+  outline-offset: 3px !important;
+  border-radius: var(--nvx-radius-sm);
+  box-shadow: 0 0 0 6px rgba(var(--nvx-primary-rgb), 0.1);
+}
+
+/*======================================*/
+/* 12. ADVANCED FEEDBACK SYSTEMS */
+/*======================================*/
+
+/**
+ * Toast with Actions
+ * @requires JavaScript: Creates toast notifications
+ */
+.nvx-toast-actions {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: var(--nvx-space-3);
+  padding: var(--nvx-space-4) var(--nvx-space-5);
+  background: var(--nvx-bg-card);
+  border-left: 4px solid var(--nvx-primary);
+  border-radius: var(--nvx-radius-md);
+  box-shadow: var(--nvx-shadow-xl);
+  max-width: 400px;
+  min-width: 300px;
+  -webkit-animation: nvx-toast-slide 0.3s var(--nvx-ease-out-back);
+  -moz-animation: nvx-toast-slide 0.3s var(--nvx-ease-out-back);
+  -o-animation: nvx-toast-slide 0.3s var(--nvx-ease-out-back);
+  animation: nvx-toast-slide 0.3s var(--nvx-ease-out-back);
+  position: relative;
+  overflow: hidden;
+}
+
+@-webkit-keyframes nvx-toast-slide {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@-moz-keyframes nvx-toast-slide {
+  from {
+    opacity: 0;
+    -moz-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    -moz-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@-o-keyframes nvx-toast-slide {
+  from {
+    opacity: 0;
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes nvx-toast-slide {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.nvx-toast-actions[data-type="success"] {
+  border-left-color: var(--nvx-success);
+}
+
+.nvx-toast-actions[data-type="error"] {
+  border-left-color: var(--nvx-danger);
+}
+
+.nvx-toast-actions[data-type="warning"] {
+  border-left-color: var(--nvx-warning);
+}
+
+.nvx-toast-actions[data-type="info"] {
+  border-left-color: var(--nvx-info);
+}
+
+.nvx-toast-actions .toast-close {
+  padding: var(--nvx-space-2);
+  border-radius: var(--nvx-radius-full);
+  cursor: pointer;
+  transition: all var(--nvx-interaction-fast) ease;
+  background: transparent;
+  border: none;
+  color: var(--nvx-text-tertiary);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.nvx-toast-actions .toast-close:hover {
+  background: var(--nvx-interaction-overlay);
+  color: var(--nvx-text);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.nvx-toast-actions .toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: -webkit-linear-gradient(90deg, var(--nvx-primary), var(--nvx-secondary));
+  background: -moz-linear-gradient(90deg, var(--nvx-primary), var(--nvx-secondary));
+  background: -o-linear-gradient(90deg, var(--nvx-primary), var(--nvx-secondary));
+  background: linear-gradient(90deg, var(--nvx-primary), var(--nvx-secondary));
+  width: 100%;
+  -webkit-transform-origin: 0 50%;
+  -moz-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  -o-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-animation: nvx-progress-shrink 5s linear forwards;
+  -moz-animation: nvx-progress-shrink 5s linear forwards;
+  -o-animation: nvx-progress-shrink 5s linear forwards;
+  animation: nvx-progress-shrink 5s linear forwards;
+}
+
+@-webkit-keyframes nvx-progress-shrink {
+  to { -webkit-transform: scaleX(0); transform: scaleX(0); }
+}
+
+@-moz-keyframes nvx-progress-shrink {
+  to { -moz-transform: scaleX(0); transform: scaleX(0); }
+}
+
+@-o-keyframes nvx-progress-shrink {
+  to { -o-transform: scaleX(0); transform: scaleX(0); }
+}
+
+@keyframes nvx-progress-shrink {
+  to { -webkit-transform: scaleX(0); -moz-transform: scaleX(0); -o-transform: scaleX(0); transform: scaleX(0); }
+}
+
+/**
+ * Notification Badge
+ */
+.nvx-notification-badge {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.nvx-notification-badge .badge-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  min-width: 20px;
+  height: 20px;
+  background: var(--nvx-danger);
+  color: white;
+  border-radius: var(--nvx-radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 4px;
+  -webkit-animation: nvx-badge-pop 0.3s var(--nvx-ease-out-back);
+  -moz-animation: nvx-badge-pop 0.3s var(--nvx-ease-out-back);
+  -o-animation: nvx-badge-pop 0.3s var(--nvx-ease-out-back);
+  animation: nvx-badge-pop 0.3s var(--nvx-ease-out-back);
+}
+
+@-webkit-keyframes nvx-badge-pop {
+  from { -webkit-transform: scale(0); transform: scale(0); }
+  to { -webkit-transform: scale(1); transform: scale(1); }
+}
+
+@-moz-keyframes nvx-badge-pop {
+  from { -moz-transform: scale(0); transform: scale(0); }
+  to { -moz-transform: scale(1); transform: scale(1); }
+}
+
+@-o-keyframes nvx-badge-pop {
+  from { -o-transform: scale(0); transform: scale(0); }
+  to { -o-transform: scale(1); transform: scale(1); }
+}
+
+@keyframes nvx-badge-pop {
+  from { -webkit-transform: scale(0); -moz-transform: scale(0); -o-transform: scale(0); transform: scale(0); }
+  to { -webkit-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
+}
+
+/*======================================*/
+/* 13. PERFORMANCE OPTIMIZATIONS */
+/*======================================*/
+
+.nvx-gpu {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+  will-change: transform;
+}
+
+.nvx-lazy-render {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+.nvx-smooth-scroll {
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/*======================================*/
+/* 14. ACCESSIBILITY ENHANCEMENTS */
+/*======================================*/
+
+/* Screen Reader Only */
+.nvx-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+    -moz-animation-duration: 0.01ms !important;
+    -o-animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+    -moz-animation-iteration-count: 1 !important;
+    -o-animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Keep essential loading animations */
+  .nvx-loader-neon,
+  .nvx-loader-morph,
+  .nvx-pull-spinner,
+  .nvx-loading::after {
+    -webkit-animation-duration: 1s !important;
+    -moz-animation-duration: 1s !important;
+    -o-animation-duration: 1s !important;
+    animation-duration: 1s !important;
+  }
+  
+  /* Disable transform effects */
+  .nvx-card-tilt:hover,
+  .nvx-card-flip:hover .nvx-card-flip-inner,
+  .nvx-magnetic:hover,
+  .nvx-float-depth:hover {
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important;
+  }
+  
+  .nvx-card-flip-back {
+    display: none;
+  }
+  
+  .nvx-shine::before,
+  .nvx-magnetic::before,
+  .nvx-card-tilt-glow {
+    display: none;
+  }
+}
+
+@media (prefers-contrast: high) {
+  :root {
+    --nvx-primary: #0000ff;
+    --nvx-secondary: #800080;
+    --nvx-accent: #008000;
+    --nvx-border: #000000;
+  }
+  
+  [data-theme="dark"] {
+    --nvx-primary: #ffff00;
+    --nvx-secondary: #ffa500;
+    --nvx-accent: #00ffff;
+    --nvx-border: #ffffff;
+  }
+  
+  .nvx-glow-border::after,
+  .nvx-shine::before,
+  .nvx-magnetic::before,
+  .nvx-card-tilt-glow {
+    display: none;
+  }
+  
+  .nvx-glow-border:hover {
+    border: 2px solid var(--nvx-primary);
+  }
+}
+
+@media (prefers-reduced-data: reduce) {
+  .nvx-glow-border::after,
+  .nvx-shine::before,
+  .nvx-magnetic::before,
+  .nvx-card-tilt-glow {
+    display: none;
+  }
+}
+
+/*======================================*/
+/* 15. TOUCH OPTIMIZATIONS */
+/*======================================*/
+
+@media (hover: none) and (pointer: coarse) {
+  .nvx-magnetic,
+  .nvx-click-bounce,
+  .nvx-ripple-custom,
+  .nvx-drag-handle {
+    min-height: var(--nvx-touch-minimum);
+    min-width: var(--nvx-touch-minimum);
+    padding: var(--nvx-space-3);
+  }
+  
+  .nvx-magnetic:hover,
+  .nvx-float-depth:hover {
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+  
+  .nvx-card-tilt-glow,
+  .nvx-magnetic::before,
+  .nvx-shine::before {
+    display: none;
+  }
+  
+  .nvx-swipe-indicator {
+    opacity: 0.5;
+  }
+  
+  .nvx-expand-trigger {
+    opacity: 1;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/*======================================*/
+/* 16. PRINT OPTIMIZATION */
+/*======================================*/
+
+@media print {
+  .nvx-magnetic,
+  .nvx-glow-border,
+  .nvx-shine,
+  .nvx-ripple-custom,
+  .nvx-click-bounce,
+  .nvx-card-tilt,
+  .nvx-card-flip,
+  .nvx-card-expandable[data-expanded="true"],
+  .nvx-tooltip-smart::before,
+  .nvx-tooltip-smart::after,
+  .nvx-popover-interactive,
+  .nvx-draggable[data-dragging="true"],
+  .nvx-swipeable,
+  .nvx-pull-to-refresh,
+  .nvx-loader-neon,
+  .nvx-loader-morph,
+  .nvx-toast-actions,
+  .nvx-sticky-smart,
+  .nvx-scroll-progress {
+    display: none !important;
+  }
+  
+  .nvx-card-flip-front,
+  .nvx-card-flip-back {
+    position: static;
+    -webkit-backface-visibility: visible;
+    -moz-backface-visibility: visible;
+    backface-visibility: visible;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+  
+  .nvx-card-flip-back {
+    display: block;
+    margin-top: var(--nvx-space-4);
+  }
+}
+
+/*======================================*/
+/* 17. ADDITIONAL UTILITIES */
+/*======================================*/
+
+/**
+ * Text Gradient
+ */
+.nvx-text-gradient {
+  background: -webkit-linear-gradient(45deg, var(--nvx-primary), var(--nvx-secondary));
+  background: -moz-linear-gradient(45deg, var(--nvx-primary), var(--nvx-secondary));
+  background: -o-linear-gradient(45deg, var(--nvx-primary), var(--nvx-secondary));
+  background: linear-gradient(45deg, var(--nvx-primary), var(--nvx-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-animation: nvx-gradient-shift 3s ease infinite;
+  -moz-animation: nvx-gradient-shift 3s ease infinite;
+  -o-animation: nvx-gradient-shift 3s ease infinite;
+  animation: nvx-gradient-shift 3s ease infinite;
+}
+
+/**
+ * Button Loading State
+ */
+.nvx-btn-loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.nvx-btn-loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  left: calc(50% - 8px);
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  -webkit-animation: nvx-spin 0.6s linear infinite;
+  -moz-animation: nvx-spin 0.6s linear infinite;
+  -o-animation: nvx-spin 0.6s linear infinite;
+  animation: nvx-spin 0.6s linear infinite;
+}
+
+/**
+ * Skeleton Loading
+ */
+.nvx-skeleton {
+  background: -webkit-linear-gradient(
+    90deg,
+    var(--nvx-bg-tertiary) 25%,
+    var(--nvx-bg-card-hover) 37%,
+    var(--nvx-bg-tertiary) 63%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    var(--nvx-bg-tertiary) 25%,
+    var(--nvx-bg-card-hover) 37%,
+    var(--nvx-bg-tertiary) 63%
+  );
+  background: -o-linear-gradient(
+    90deg,
+    var(--nvx-bg-tertiary) 25%,
+    var(--nvx-bg-card-hover) 37%,
+    var(--nvx-bg-tertiary) 63%
+  );
+  background: linear-gradient(
+    90deg,
+    var(--nvx-bg-tertiary) 25%,
+    var(--nvx-bg-card-hover) 37%,
+    var(--nvx-bg-tertiary) 63%
+  );
+  background-size: 400% 100%;
+  -webkit-animation: nvx-skeleton-loading 1.4s ease infinite;
+  -moz-animation: nvx-skeleton-loading 1.4s ease infinite;
+  -o-animation: nvx-skeleton-loading 1.4s ease infinite;
+  animation: nvx-skeleton-loading 1.4s ease infinite;
+}
+
+@-webkit-keyframes nvx-skeleton-loading {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+@-moz-keyframes nvx-skeleton-loading {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+@-o-keyframes nvx-skeleton-loading {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+@keyframes nvx-skeleton-loading {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+/*======================================*/
+/* 18. RTL SUPPORT */
+/*======================================*/
+
+[dir="rtl"] .nvx-swipe-indicator.left {
+  left: auto;
+  right: var(--nvx-space-4);
+}
+
+[dir="rtl"] .nvx-swipe-indicator.right {
+  right: auto;
+  left: var(--nvx-space-4);
+}
+
+[dir="rtl"] .nvx-expand-trigger {
+  right: auto;
+  left: var(--nvx-space-3);
+}
+
+[dir="rtl"] .nvx-notification-badge .badge-count {
+  right: auto;
+  left: -8px;
+}
+
+[dir="rtl"] .nvx-toast-actions {
+  border-left: none;
+  border-right: 4px solid var(--nvx-primary);
+}
+
+[dir="rtl"] .nvx-toast-actions[data-type="success"] {
+  border-right-color: var(--nvx-success);
+}
+
+[dir="rtl"] .nvx-toast-actions[data-type="error"] {
+  border-right-color: var(--nvx-danger);
+}
+
+[dir="rtl"] .nvx-toast-actions[data-type="warning"] {
+  border-right-color: var(--nvx-warning);
+}
+
+[dir="rtl"] .nvx-toast-actions[data-type="info"] {
+  border-right-color: var(--nvx-info);
+}
+
+/*======================================*/
+/* 19. GRID FALLBACKS */
+/*======================================*/
+
+/* CSS Grid fallback for older browsers */
+.nvx-grid-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: var(--nvx-space-4);
+}
+
+@supports (display: grid) {
+  .nvx-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Container query support */
+@supports (container-type: inline-size) {
+  .nvx-card-container {
+    container-type: inline-size;
+    container-name: card;
+  }
+  
+  @container card (min-width: 400px) {
+    .nvx-card-expandable[data-expanded="true"] {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+/*======================================*/
+/* 20. JAVASCRIPT INTEGRATION */
+/*======================================*/
+
+/**
+ * JavaScript Integration Guide:
+ * 
+ * The following data attributes are used for JS interactions:
+ * 
+ * @attribute data-magnetic - Enables magnetic effect
+ * @attribute data-magnetic-strength - Controls magnetic pull (default: 10)
+ * 
+ * @attribute data-ripple - Enables ripple effect
+ * @attribute data-ripple-color - Custom ripple color
+ * 
+ * @attribute data-tilt - Enables 3D tilt
+ * @attribute data-tilt-max - Max rotation angle (default: 15)
+ * 
+ * @attribute data-reveal - Enables reveal on scroll
+ * @attribute data-reveal-threshold - Intersection threshold (default: 0.2)
+ * 
+ * @attribute data-parallax - Enables parallax
+ * @attribute data-parallax-speed - Scroll speed factor (default: 0.5)
+ * 
+ * @attribute data-draggable - Enables drag
+ * @attribute data-drag-handle - Element used as drag handle
+ * 
+ * @attribute data-swipeable - Enables swipe detection
+ * @attribute data-ptr - Enables pull to refresh
+ * 
+ * Example initialization:
+ * 
+ * document.querySelectorAll('[data-magnetic]').forEach(el => {
+ *   new NVXMagnetic(el);
+ * });
+ */
+/*======================================*/
+/* 21. ANIMATED BACKGROUND EFFECTS */
+/*======================================*/
+
+/**
+ * Particle Background
+ * @requires JavaScript: Creates floating particles
+ */
+.nvx-bg-particles {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.nvx-bg-particles canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nvx-bg-particles > * {
+  position: relative;
+  z-index: 1;
+}
+
+/**
+ * Gradient Orb
+ */
+.nvx-bg-orb {
+  position: relative;
+  background: var(--nvx-bg);
+  isolation: isolate;
+}
+
+.nvx-bg-orb::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: -webkit-radial-gradient(
+    circle at 30% 50%,
+    rgba(var(--nvx-primary-rgb), 0.3) 0%,
+    rgba(var(--nvx-secondary-rgb), 0.2) 30%,
+    transparent 70%
+  );
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(var(--nvx-primary-rgb), 0.3) 0%,
+    rgba(var(--nvx-secondary-rgb), 0.2) 30%,
+    transparent 70%
+  );
+  -webkit-animation: nvx-orb-drift 20s ease-in-out infinite alternate;
+  animation: nvx-orb-drift 20s ease-in-out infinite alternate;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.nvx-bg-orb::after {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: -webkit-radial-gradient(
+    circle at 70% 60%,
+    rgba(var(--nvx-accent-rgb), 0.2) 0%,
+    rgba(var(--nvx-info-rgb), 0.1) 40%,
+    transparent 80%
+  );
+  background: radial-gradient(
+    circle at 70% 60%,
+    rgba(var(--nvx-accent-rgb), 0.2) 0%,
+    rgba(var(--nvx-info-rgb), 0.1) 40%,
+    transparent 80%
+  );
+  -webkit-animation: nvx-orb-drift-reverse 25s ease-in-out infinite alternate;
+  animation: nvx-orb-drift-reverse 25s ease-in-out infinite alternate;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@-webkit-keyframes nvx-orb-drift {
+  0% { -webkit-transform: translate(0, 0) rotate(0deg); transform: translate(0, 0) rotate(0deg); }
+  100% { -webkit-transform: translate(5%, 5%) rotate(10deg); transform: translate(5%, 5%) rotate(10deg); }
+}
+
+@keyframes nvx-orb-drift {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(5%, 5%) rotate(10deg); }
+}
+
+@-webkit-keyframes nvx-orb-drift-reverse {
+  0% { -webkit-transform: translate(0, 0) rotate(0deg); transform: translate(0, 0) rotate(0deg); }
+  100% { -webkit-transform: translate(-5%, -5%) rotate(-15deg); transform: translate(-5%, -5%) rotate(-15deg); }
+}
+
+@keyframes nvx-orb-drift-reverse {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(-5%, -5%) rotate(-15deg); }
+}
+
+/**
+ * Animated Mesh Gradient
+ */
+.nvx-bg-mesh {
+  background: 
+    -webkit-radial-gradient(circle at 0% 0%, rgba(var(--nvx-primary-rgb), 0.15) 0%, transparent 50%),
+    -webkit-radial-gradient(circle at 100% 0%, rgba(var(--nvx-secondary-rgb), 0.15) 0%, transparent 50%),
+    -webkit-radial-gradient(circle at 0% 100%, rgba(var(--nvx-accent-rgb), 0.15) 0%, transparent 50%),
+    -webkit-radial-gradient(circle at 100% 100%, rgba(var(--nvx-info-rgb), 0.15) 0%, transparent 50%);
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(var(--nvx-primary-rgb), 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 100% 0%, rgba(var(--nvx-secondary-rgb), 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 0% 100%, rgba(var(--nvx-accent-rgb), 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(var(--nvx-info-rgb), 0.15) 0%, transparent 50%);
+  background-blend-mode: screen;
+  -webkit-animation: nvx-mesh-shift 15s ease infinite alternate;
+  animation: nvx-mesh-shift 15s ease infinite alternate;
+}
+
+@-webkit-keyframes nvx-mesh-shift {
+  0% { background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%; }
+  100% { background-position: 20% 20%, 80% 20%, 20% 80%, 80% 80%; }
+}
+
+@keyframes nvx-mesh-shift {
+  0% { background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%; }
+  100% { background-position: 20% 20%, 80% 20%, 20% 80%, 80% 80%; }
+}
+
+/* Reduced motion fallback */
+@media (prefers-reduced-motion: reduce) {
+  .nvx-bg-orb::before,
+  .nvx-bg-orb::after,
+  .nvx-bg-mesh {
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+
+/*======================================*/
+/* 22. ADVANCED TEXT INTERACTIONS */
+/*======================================*/
+
+/**
+ * Split Text Animation
+ * @requires JavaScript: Splits text into characters/words
+ */
+.nvx-split-text {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.nvx-split-text[data-visible="true"] {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.nvx-split-char {
+  display: inline-block;
+  transition: transform 0.3s var(--nvx-ease-out-back);
+}
+
+.nvx-split-char:hover {
+  -webkit-transform: scale(1.2) translateY(-2px);
+  transform: scale(1.2) translateY(-2px);
+  color: var(--nvx-primary);
+}
+
+/**
+ * Typing Effect
+ * @requires JavaScript: Manages typing animation
+ */
+.nvx-typing {
+  display: inline-block;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid var(--nvx-primary);
+  -webkit-animation: nvx-cursor-blink 0.8s step-end infinite;
+  animation: nvx-cursor-blink 0.8s step-end infinite;
+}
+
+@-webkit-keyframes nvx-cursor-blink {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--nvx-primary); }
+}
+
+@keyframes nvx-cursor-blink {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--nvx-primary); }
+}
+
+/**
+ * Text Glitch Effect
+ */
+.nvx-text-glitch {
+  position: relative;
+  color: var(--nvx-text);
+  display: inline-block;
+}
+
+.nvx-text-glitch::before,
+.nvx-text-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--nvx-bg);
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.nvx-text-glitch:hover::before {
+  left: 2px;
+  text-shadow: -2px 0 rgba(var(--nvx-danger-rgb), 0.7);
+  clip: rect(24px, 550px, 90px, 0);
+  -webkit-animation: nvx-glitch-anim-1 0.4s infinite linear alternate-reverse;
+  animation: nvx-glitch-anim-1 0.4s infinite linear alternate-reverse;
+}
+
+.nvx-text-glitch:hover::after {
+  left: -2px;
+  text-shadow: 2px 0 rgba(var(--nvx-primary-rgb), 0.7);
+  clip: rect(85px, 550px, 140px, 0);
+  -webkit-animation: nvx-glitch-anim-2 0.4s infinite linear alternate-reverse;
+  animation: nvx-glitch-anim-2 0.4s infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes nvx-glitch-anim-1 {
+  0% { clip: rect(12px, 9999px, 94px, 0); }
+  20% { clip: rect(42px, 9999px, 53px, 0); }
+  40% { clip: rect(73px, 9999px, 31px, 0); }
+  60% { clip: rect(25px, 9999px, 86px, 0); }
+  80% { clip: rect(91px, 9999px, 18px, 0); }
+  100% { clip: rect(56px, 9999px, 68px, 0); }
+}
+
+@keyframes nvx-glitch-anim-1 {
+  0% { clip: rect(12px, 9999px, 94px, 0); }
+  20% { clip: rect(42px, 9999px, 53px, 0); }
+  40% { clip: rect(73px, 9999px, 31px, 0); }
+  60% { clip: rect(25px, 9999px, 86px, 0); }
+  80% { clip: rect(91px, 9999px, 18px, 0); }
+  100% { clip: rect(56px, 9999px, 68px, 0); }
+}
+
+@-webkit-keyframes nvx-glitch-anim-2 {
+  0% { clip: rect(67px, 9999px, 14px, 0); }
+  20% { clip: rect(81px, 9999px, 47px, 0); }
+  40% { clip: rect(29px, 9999px, 95px, 0); }
+  60% { clip: rect(13px, 9999px, 71px, 0); }
+  80% { clip: rect(56px, 9999px, 22px, 0); }
+  100% { clip: rect(44px, 9999px, 84px, 0); }
+}
+
+@keyframes nvx-glitch-anim-2 {
+  0% { clip: rect(67px, 9999px, 14px, 0); }
+  20% { clip: rect(81px, 9999px, 47px, 0); }
+  40% { clip: rect(29px, 9999px, 95px, 0); }
+  60% { clip: rect(13px, 9999px, 71px, 0); }
+  80% { clip: rect(56px, 9999px, 22px, 0); }
+  100% { clip: rect(44px, 9999px, 84px, 0); }
+}
+
+/*======================================*/
+/* 23. DEVICE MOTION INTERACTIONS */
+/*======================================*/
+
+/**
+ * Gyroscope Tilt
+ * @requires JavaScript: DeviceOrientation API
+ */
+.nvx-gyro-tilt {
+  transition: transform 0.2s ease-out;
+  -webkit-transform: 
+    rotateX(calc(var(--nvx-gyro-beta, 0) * 0.5deg))
+    rotateY(calc(var(--nvx-gyro-gamma, 0) * 0.5deg));
+  transform: 
+    rotateX(calc(var(--nvx-gyro-beta, 0) * 0.5deg))
+    rotateY(calc(var(--nvx-gyro-gamma, 0) * 0.5deg));
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.nvx-gyro-tilt-content {
+  -webkit-transform: translateZ(10px);
+  transform: translateZ(10px);
+}
+
+/**
+ * Shake Detection Feedback
+ */
+.nvx-shake {
+  transition: all 0.3s ease;
+}
+
+.nvx-shake[data-shaking="true"] {
+  -webkit-animation: nvx-shake-animation 0.5s var(--nvx-ease-elastic);
+  animation: nvx-shake-animation 0.5s var(--nvx-ease-elastic);
+}
+
+@-webkit-keyframes nvx-shake-animation {
+  0%, 100% { -webkit-transform: translateX(0); transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { -webkit-transform: translateX(-5px); transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { -webkit-transform: translateX(5px); transform: translateX(5px); }
+}
+
+@keyframes nvx-shake-animation {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/*======================================*/
+/* 24. THEME TRANSITION SYSTEM */
+/*======================================*/
+
+.nvx-theme-transition {
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.nvx-color-scheme-aware {
+  color-scheme: light dark;
+}
+
+/* Smooth theme toggle animation */
+.nvx-theme-toggle {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border-radius: var(--nvx-radius-full);
+  background: var(--nvx-bg-tertiary);
+  cursor: pointer;
+  border: 1px solid var(--nvx-border);
+}
+
+.nvx-theme-toggle::before {
+  content: '☀️';
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+  background: var(--nvx-bg-card);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: transform 0.3s var(--nvx-ease-out-back);
+  box-shadow: var(--nvx-shadow-sm);
+}
+
+[data-theme="dark"] .nvx-theme-toggle::before {
+  content: '';
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+/*======================================*/
+/* 25. SMART MODAL SYSTEM */
+/*======================================*/
+
+.nvx-modal-smart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--nvx-z-modal);
+}
+
+.nvx-modal-smart[data-visible="true"] {
+  display: flex;
+}
+
+.nvx-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nvx-modal-smart[data-visible="true"] .nvx-modal-backdrop {
+  opacity: 1;
+}
+
+.nvx-modal-content {
+  position: relative;
+  background: var(--nvx-bg-card);
+  border-radius: var(--nvx-radius-xl);
+  padding: var(--nvx-space-8);
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  box-shadow: var(--nvx-shadow-2xl);
+  -webkit-transform: scale(0.9) translateY(20px);
+  transform: scale(0.9) translateY(20px);
+  opacity: 0;
+  transition: all 0.3s var(--nvx-ease-out-back);
+  z-index: 1;
+}
+
+.nvx-modal-smart[data-visible="true"] .nvx-modal-content {
+  -webkit-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Modal sizes */
+.nvx-modal-smart[data-size="sm"] .nvx-modal-content {
+  max-width: 400px;
+}
+
+.nvx-modal-smart[data-size="md"] .nvx-modal-content {
+  max-width: 600px;
+}
+
+.nvx-modal-smart[data-size="lg"] .nvx-modal-content {
+  max-width: 800px;
+}
+
+.nvx-modal-smart[data-size="xl"] .nvx-modal-content {
+  max-width: 1100px;
+}
+
+.nvx-modal-smart[data-size="full"] .nvx-modal-content {
+  max-width: calc(100% - 40px);
+  min-height: calc(100% - 40px);
+}
+
+/* Modal animations */
+.nvx-modal-smart[data-animation="slide-up"] .nvx-modal-content {
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+}
+
+.nvx-modal-smart[data-animation="slide-down"] .nvx-modal-content {
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
+}
+
+.nvx-modal-smart[data-animation="slide-left"] .nvx-modal-content {
+  -webkit-transform: translateX(50px);
+  transform: translateX(50px);
+}
+
+.nvx-modal-smart[data-animation="slide-right"] .nvx-modal-content {
+  -webkit-transform: translateX(-50px);
+  transform: translateX(-50px);
+}
+
+.nvx-modal-smart[data-animation="zoom"] .nvx-modal-content {
+  -webkit-transform: scale(0.7);
+  transform: scale(0.7);
+}
+
+.nvx-modal-smart[data-animation="rotate"] .nvx-modal-content {
+  -webkit-transform: rotate(-10deg) scale(0.8);
+  transform: rotate(-10deg) scale(0.8);
+}
+
+.nvx-modal-close {
+  position: absolute;
+  top: var(--nvx-space-4);
+  right: var(--nvx-space-4);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--nvx-radius-full);
+  background: var(--nvx-bg-tertiary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.nvx-modal-close:hover {
+  background: var(--nvx-danger);
+  color: white;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* Add this to your documentation */
+/**
+ * JavaScript Integration Examples:
+ * 
+ * // Magnetic Button
+ * class NVXMagnetic {
+ *   constructor(element) {
+ *     this.element = element;
+ *     this.strength = element.dataset.magneticStrength || 10;
+ *     this.init();
+ *   }
+ *   
+ *   init() {
+ *     this.element.addEventListener('mousemove', (e) => {
+ *       const rect = this.element.getBoundingClientRect();
+ *       const x = e.clientX - rect.left - rect.width / 2;
+ *       const y = e.clientY - rect.top - rect.height / 2;
+ *       
+ *       this.element.style.setProperty('--nvx-magnetic-x', x * 0.2);
+ *       this.element.style.setProperty('--nvx-magnetic-y', y * 0.2);
+ *     });
+ *     
+ *     this.element.addEventListener('mouseleave', () => {
+ *       this.element.style.setProperty('--nvx-magnetic-x', '0');
+ *       this.element.style.setProperty('--nvx-magnetic-y', '0');
+ *     });
+ *   }
+ * }
+ * 
+ * // Initialize all components
+ * document.addEventListener('DOMContentLoaded', () => {
+ *   // Magnetic buttons
+ *   document.querySelectorAll('[data-magnetic]').forEach(el => new NVXMagnetic(el));
+ *   
+ *   // Tilt cards
+ *   document.querySelectorAll('[data-tilt]').forEach(el => new NVXTilt(el));
+ *   
+ *   // Reveal animations
+ *   const observer = new IntersectionObserver((entries) => {
+ *     entries.forEach(entry => {
+ *       if (entry.isIntersecting) {
+ *         entry.target.setAttribute('data-revealed', 'true');
+ *       }
+ *     });
+ *   }, { threshold: 0.2 });
+ *   
+ *   document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+ * });
+ */
+
+/* Add at the end of your file */
+
+/*======================================*/
+/* 26. RESPONSIVE UTILITIES */
+/*======================================*/
+
+/* Container queries for cards */
+@supports (container-type: inline-size) {
+  .nvx-card-container {
+    container-type: inline-size;
+    container-name: card;
+  }
+  
+  @container card (min-width: 400px) {
+    .nvx-card-title {
+      font-size: 1.5rem;
+    }
+    
+    .nvx-card-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--nvx-space-4);
+    }
+  }
+  
+  @container card (min-width: 600px) {
+    .nvx-card {
+      display: flex;
+      gap: var(--nvx-space-6);
+    }
+    
+    .nvx-card-image {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+/* Dynamic viewport units */
+.nvx-full-height {
+  height: 100vh;
+  height: 100dvh; /* Dynamic viewport height */
+}
+
+.nvx-full-width {
+  width: 100vw;
+  width: 100dvw; /* Dynamic viewport width */
+}
+
+/* Safe area insets for notched devices */
+.nvx-safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.nvx-safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.nvx-safe-left {
+  padding-left: env(safe-area-inset-left);
+}
+
+.nvx-safe-right {
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Responsive typography */
+.nvx-text-responsive {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  line-height: clamp(1.4, 2.5vw, 1.6);
+}
+
+/* Aspect ratio utilities */
+.nvx-aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.nvx-aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.nvx-aspect-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+/*======================================*/
+/* 27. PERFORMANCE MONITORING */
+/*======================================*/
+
+/* Will-change hints for better performance */
+.nvx-will-transform {
+  will-change: transform;
+}
+
+.nvx-will-opacity {
+  will-change: opacity;
+}
+
+.nvx-will-filter {
+  will-change: filter, backdrop-filter;
+}
+
+/* Containment for better rendering */
+.nvx-contain-layout {
+  contain: layout;
+}
+
+.nvx-contain-paint {
+  contain: paint;
+}
+
+.nvx-contain-size {
+  contain: size;
+}
+
+.nvx-contain-strict {
+  contain: strict;
+}
+
+.nvx-contain-content {
+  contain: content;
+}
+
+/* GPU layer promotion */
+.nvx-gpu-layer {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
+}
+/*======================================*/
+/* NEVOX ADVANCED INTERACTIONS v4.1 */
+/* Enterprise-Grade • Production-Ready • Fully Accessible */
+/*======================================*/
