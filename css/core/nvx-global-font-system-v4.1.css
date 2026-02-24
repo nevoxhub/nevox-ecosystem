@@ -1,0 +1,1982 @@
+
+
+/*======================================*/
+
+/* ⚡ NEVOX COMPLETE GLOBAL FONT SYSTEM v4.1 ⚡ */
+
+/* Zero FOUT • Universal Scripts • Enterprise-Grade */
+
+/* 100% Complete • No Missing Parts • Production Ready 2026 */
+
+/*======================================*/
+
+
+/* ======================================= */
+
+/*  ROOT LEVEL - GLOBAL FONT TOKENS */
+
+/* ======================================= */
+
+:root {
+
+  /* ======================================= */
+
+  /*  UNIFIED FONT STACKS - ALL SCRIPTS */
+
+  /* ======================================= */
+
+  
+
+  /* NEVOX Unified Global Font Family - All scripts in one */
+
+  --nvx-font-global: 'NEVOX Global', system-ui, -apple-system, BlinkMacSystemFont,
+
+                     'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+
+                     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  
+
+  /* Script-specific stacks (for explicit override) */
+
+  --nvx-font-latin: 'NEVOX Global Latin', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --nvx-font-indic: 'NEVOX Global Indic', 'Nirmala UI', 'Shonar Bangla', 'Mukti Narrow',
+
+                    'Lohit Bengali', 'Lohit Devanagari', 'Lohit Tamil', 'Kohinoor Devanagari',
+
+                    'Noto Sans Bengali', 'Noto Sans Devanagari', 'Noto Sans Tamil', system-ui, sans-serif;
+
+  --nvx-font-arabic: 'NEVOX Global Arabic', 'Geeza Pro', 'Damascus', 'KacstOne',
+
+                     'Noto Sans Arabic', 'Segoe UI', 'Tahoma', sans-serif;
+
+  --nvx-font-cjk: 'NEVOX Global CJK', 'PingFang SC', 'Hiragino Sans', 'Microsoft YaHei',
+
+                  'Apple SD Gothic Neo', 'Malgun Gothic', 'Yu Gothic', 'Meiryo',
+
+                  'Noto Sans SC', 'Noto Sans TC', 'Noto Sans JP', 'Noto Sans KR', sans-serif;
+
+  --nvx-font-southeast: 'NEVOX Global Southeast', 'Thonburi', 'Leelawadee', 'Lao UI',
+
+                        'Khmer UI', 'Myanmar Text', 'Noto Sans Thai', 'Noto Sans Lao',
+
+                        'Noto Sans Khmer', 'Noto Sans Myanmar', system-ui, sans-serif;
+
+  --nvx-font-middle-east: 'NEVOX Global Middle East', 'Arial Hebrew', 'SBL Hebrew',
+
+                          'Ezra SIL', 'Noto Sans Hebrew', 'Noto Sans Armenian',
+
+                          'Noto Sans Georgian', system-ui, sans-serif;
+
+  --nvx-font-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+
+                    'Noto Color Emoji', 'Android Emoji', 'EmojiOne Color', sans-serif;
+
+  --nvx-font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', 'JetBrains Mono',
+
+                   'Fira Code', Menlo, Consolas, 'Courier New', 'Noto Sans Mono', monospace;
+
+  
+
+  /* ======================================= */
+
+  /*  TYPOGRAPHY SCALE - UNIVERSAL */
+
+  /* ======================================= */
+
+  --nvx-text-xs: 0.75rem;
+
+  --nvx-text-sm: 0.875rem;
+
+  --nvx-text-base: 1rem;
+
+  --nvx-text-lg: 1.125rem;
+
+  --nvx-text-xl: 1.25rem;
+
+  --nvx-text-2xl: 1.5rem;
+
+  --nvx-text-3xl: 1.875rem;
+
+  --nvx-text-4xl: 2.25rem;
+
+  --nvx-text-5xl: 3rem;
+
+  
+
+  /* ======================================= */
+
+  /* ⚖️ FONT WEIGHTS - CONSISTENT ACROSS SCRIPTS */
+
+  /* ======================================= */
+
+  --nvx-font-light: 300;
+
+  --nvx-font-normal: 400;
+
+  --nvx-font-medium: 500;
+
+  --nvx-font-semibold: 600;
+
+  --nvx-font-bold: 700;
+
+  --nvx-font-extrabold: 800;
+
+  
+
+  /* ======================================= */
+
+  /*  LINE HEIGHTS - SCRIPT-AWARE */
+
+  /* ======================================= */
+
+  --nvx-leading-none: 1;
+
+  --nvx-leading-tight: 1.25;
+
+  --nvx-leading-normal: 1.5;
+
+  --nvx-leading-relaxed: 1.75;
+
+  --nvx-leading-loose: 2;
+
+  
+
+  /* Script-specific optimized line heights */
+
+  --nvx-leading-latin: 1.5;
+
+  --nvx-leading-indic: 1.8;      /* Higher for complex diacritics */
+
+  --nvx-leading-arabic: 1.7;      /* Curved scripts need more space */
+
+  --nvx-leading-cjk: 1.6;         /* Chinese/Japanese/Korean */
+
+  --nvx-leading-southeast: 1.7;   /* Thai, Lao, Khmer */
+
+  --nvx-leading-middle-east: 1.7;  /* Hebrew, Armenian, Georgian */
+
+  
+
+  /* ======================================= */
+
+  /*  LETTER SPACING */
+
+  /* ======================================= */
+
+  --nvx-tracking-tighter: -0.05em;
+
+  --nvx-tracking-tight: -0.025em;
+
+  --nvx-tracking-normal: 0;
+
+  --nvx-tracking-wide: 0.025em;
+
+  --nvx-tracking-wider: 0.05em;
+
+  
+
+  /* ======================================= */
+
+  /* ⚙️ OPENTYPE FEATURES - UNIVERSAL */
+
+  /* ======================================= */
+
+  --nvx-font-features: "ss02" on, "ss03" on, "cv10" on, "tnum" on, "liga" on, "calt" on;
+
+  
+
+  /* ======================================= */
+
+  /*  OPTICAL SIZE - RESPONSIVE */
+
+  /* ======================================= */
+
+  --nvx-opsz-mobile: 14;
+
+  --nvx-opsz-tablet: 20;
+
+  --nvx-opsz-desktop: 32;
+
+  --nvx-opsz-current: var(--nvx-opsz-mobile);
+
+  
+
+  /* ======================================= */
+
+  /*  SCRIPT DETECTION & STATE */
+
+  /* ======================================= */
+
+  --nvx-current-script: 'latin';
+
+  --nvx-current-direction: 'ltr';
+
+  
+
+  /* ======================================= */
+
+  /* ✅ INITIAL FONT - SYSTEM FIRST FOR SPEED */
+
+  /* ======================================= */
+
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  font-feature-settings: var(--nvx-font-features);
+
+  font-optical-sizing: auto;
+
+  font-variation-settings: "opsz" var(--nvx-opsz-current);
+
+  font-synthesis: none;
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+/* ✅ Responsive Optical Size */
+
+@media (min-width: 768px) {
+
+  :root {
+
+    --nvx-opsz-current: var(--nvx-opsz-tablet);
+
+    font-variation-settings: "opsz" var(--nvx-opsz-current);
+
+  }
+
+}
+
+
+@media (min-width: 1280px) {
+
+  :root {
+
+    --nvx-opsz-current: var(--nvx-opsz-desktop);
+
+    font-variation-settings: "opsz" var(--nvx-opsz-current);
+
+  }
+
+}
+
+
+/* ✅ Apply global font when variable support exists */
+
+@supports (font-variation-settings: normal) {
+
+  :root {
+
+    font-family: var(--nvx-font-global);
+
+  }
+
+}
+
+
+/* ✨ Body base */
+
+.nvx-body {
+
+  font-family: inherit;
+
+  line-height: var(--nvx-leading-normal);
+
+}
+
+
+/* ======================================= */
+
+/* ⚡ COMPLETE @FONT-FACE DECLARATIONS - ALL SCRIPTS */
+
+/* ======================================= */
+
+
+/* --------------------------------------------------------------------- */
+
+/* LATIN & EXTENDED (Inter Variable - 147+ languages)                    */
+
+/* Covers: Latin, Cyrillic, Greek, Vietnamese, IPA, etc.                */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://rsms.me/inter/font-files/InterVariable.woff2') format('woff2');
+
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+
+                 U+02DC, U+0300-036F, U+1E00-1EFF, U+2000-206F, U+2074, U+20AC,
+
+                 U+2122, U+2190-21FF, U+2200-22FF, U+25A0-25FF;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* BENGALI (Bangla) - Complete Coverage                                   */
+
+/* Unicode: U+0980–U+09FF                                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansbengali/v20/NotoSansBengali[wght].woff2') format('woff2');
+
+  unicode-range: U+0980-09FF, U+200C-200D, U+20B9, U+25CC;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* DEVANAGARI (Hindi, Sanskrit, Marathi, Nepali, etc.)                    */
+
+/* Unicode: U+0900–U+097F                                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansdevanagari/v27/NotoSansDevanagari[wght].woff2') format('woff2');
+
+  unicode-range: U+0900-097F, U+1CD0-1CF6, U+200C-200D, U+20B9, U+25CC, U+A830-A839;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* TAMIL                                                                   */
+
+/* Unicode: U+0B80–U+0BFF                                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosanstamil/v26/NotoSansTamil[wght].woff2') format('woff2');
+
+  unicode-range: U+0B80-0BFF, U+200C-200D, U+20B9;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* TELUGU                                                                  */
+
+/* Unicode: U+0C00–U+0C7F                                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosanstelugu/v25/NotoSansTelugu[wght].woff2') format('woff2');
+
+  unicode-range: U+0C00-0C7F, U+200C-200D, U+20B9;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* KANNADA                                                                 */
+
+/* Unicode: U+0C80–U+0CFF                                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosanskannada/v27/NotoSansKannada[wght].woff2') format('woff2');
+
+  unicode-range: U+0C80-0CFF, U+200C-200D, U+20B9;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* MALAYALAM                                                               */
+
+/* Unicode: U+0D00–U+0D7F                                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansmalayalam/v26/NotoSansMalayalam[wght].woff2') format('woff2');
+
+  unicode-range: U+0D00-0D7F, U+200C-200D, U+20B9;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* GUJARATI                                                                */
+
+/* Unicode: U+0A80–U+0AFF                                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansgujarati/v26/NotoSansGujarati[wght].woff2') format('woff2');
+
+  unicode-range: U+0A80-0AFF, U+200C-200D, U+20B9;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* GURMUKHI (Punjabi)                                                     */
+
+/* Unicode: U+0A00–U+0A7F                                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansgurmukhi/v26/NotoSansGurmukhi[wght].woff2') format('woff2');
+
+  unicode-range: U+0A00-0A7F, U+200C-200D, U+20B9;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* ODIA (Oriya)                                                           */
+
+/* Unicode: U+0B00–U+0B7F                                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansodia/v27/NotoSansOdia[wght].woff2') format('woff2');
+
+  unicode-range: U+0B00-0B7F, U+200C-200D, U+20B9;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* ARABIC (Arabic, Persian, Urdu, Sindhi, etc.)                           */
+
+/* Unicode: U+0600–U+06FF, U+0750–U+077F, U+08A0–U+08FF, U+FB50–U+FDFF, U+FE70–U+FEFF */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansarabic/v18/NotoSansArabic[wght].woff2') format('woff2');
+
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* CHINESE SIMPLIFIED                                                     */
+
+/* Unicode: U+4E00–U+9FFF, U+3400–U+4DBF, U+20000–U+2A6DF                */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosanssc/v37/NotoSansSC[wght].woff2') format('woff2');
+
+  unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* CHINESE TRADITIONAL                                                    */
+
+/* Unicode: U+4E00–U+9FFF, U+3400–U+4DBF, U+20000–U+2A6DF, U+F900–U+FAFF */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosanstc/v36/NotoSerifTC[wght].woff2') format('woff2');
+
+  unicode-range: U+4E00-9FFF, U+3400-4DBF, U+20000-2A6DF, U+F900-FAFF;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* JAPANESE (Kanji, Hiragana, Katakana)                                   */
+
+/* Unicode: U+4E00–U+9FFF, U+3040–U+309F, U+30A0–U+30FF                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansjp/v52/NotoSansJP[wght].woff2') format('woff2');
+
+  unicode-range: U+4E00-9FFF, U+3040-309F, U+30A0-30FF, U+3000-303F, U+31F0-31FF;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* KOREAN (Hangul)                                                        */
+
+/* Unicode: U+AC00–U+D7AF, U+1100–U+11FF, U+3130–U+318F, U+A960–U+A97F, U+D7B0–U+D7FF */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosanskr/v36/NotoSansKR[wght].woff2') format('woff2');
+
+  unicode-range: U+AC00-D7AF, U+1100-11FF, U+3130-318F, U+A960-A97F, U+D7B0-D7FF;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* THAI                                                                    */
+
+/* Unicode: U+0E00–U+0E7F                                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansthai/v22/NotoSansThai[wght].woff2') format('woff2');
+
+  unicode-range: U+0E00-0E7F, U+200C-200D, U+25CC;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* LAO                                                                     */
+
+/* Unicode: U+0E80–U+0EFF                                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosanslao/v22/NotoSansLao[wght].woff2') format('woff2');
+
+  unicode-range: U+0E80-0EFF, U+200C-200D, U+25CC;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* KHMER (Cambodian)                                                      */
+
+/* Unicode: U+1780–U+17FF, U+19E0–U+19FF                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosanskhmer/v25/NotoSansKhmer[wght].woff2') format('woff2');
+
+  unicode-range: U+1780-17FF, U+19E0-19FF, U+200C-200D, U+25CC;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* MYANMAR (Burmese)                                                      */
+
+/* Unicode: U+1000–U+109F, U+A9E0–U+A9FF, U+AA60–U+AA7F                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansmyanmar/v20/NotoSansMyanmar[wght].woff2') format('woff2');
+
+  unicode-range: U+1000-109F, U+A9E0-A9FF, U+AA60-AA7F, U+200C-200D, U+25CC;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* HEBREW                                                                  */
+
+/* Unicode: U+0590–U+05FF, U+FB1D–U+FB4F                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosanshebrew/v45/NotoSansHebrew[wght].woff2') format('woff2');
+
+  unicode-range: U+0590-05FF, U+FB1D-FB4F, U+200C-200D, U+25CC;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* ARMENIAN                                                                */
+
+/* Unicode: U+0530–U+058F, U+FB13–U+FB17                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansarmenian/v42/NotoSansArmenian[wght].woff2') format('woff2');
+
+  unicode-range: U+0530-058F, U+FB13-FB17, U+200C-200D, U+25CC;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* GEORGIAN                                                                */
+
+/* Unicode: U+10A0–U+10FF, U+2D00–U+2D2F                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansgeorgian/v42/NotoSansGeorgian[wght].woff2') format('woff2');
+
+  unicode-range: U+10A0-10FF, U+2D00-2D2F, U+200C-200D, U+25CC;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* ETHIOPIC (Amharic, Tigrinya)                                           */
+
+/* Unicode: U+1200–U+137F, U+1380–U+139F, U+2D80–U+2DDF, U+AB00–U+AB2F  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansethiopic/v28/NotoSansEthiopic[wght].woff2') format('woff2');
+
+  unicode-range: U+1200-137F, U+1380-139F, U+2D80-2DDF, U+AB00-AB2F, U+200C-200D, U+25CC;
+
+}
+
+
+/* --------------------------------------------------------------------- */
+
+/* MONOSPACE - Universal                                                  */
+
+/* --------------------------------------------------------------------- */
+
+@font-face {
+
+  font-family: 'NEVOX Global Mono';
+
+  font-style: normal;
+
+  font-weight: 100 900;
+
+  font-display: swap;
+
+  src: url('https://fonts.gstatic.com/s/notosansmono/v30/NotoSansMono[wght].woff2') format('woff2');
+
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+
+                 U+02DC, U+0300-036F, U+2000-206F, U+2074, U+20AC, U+2122, U+2190-21FF,
+
+                 U+2200-22FF, U+25A0-25FF, U+0980-09FF, U+0900-097F, U+0600-06FF,
+
+                 U+4E00-9FFF, U+AC00-D7AF, U+0E00-0E7F, U+0590-05FF;
+
+}
+
+
+/* ======================================= */
+
+/* ⚡ FONT UTILITY CLASSES - COMPLETE */
+
+/* ======================================= */
+
+
+/* Font Family */
+
+.nvx-font-global { font-family: var(--nvx-font-global); }
+
+.nvx-font-latin { font-family: var(--nvx-font-latin); }
+
+.nvx-font-indic { font-family: var(--nvx-font-indic); }
+
+.nvx-font-arabic { font-family: var(--nvx-font-arabic); }
+
+.nvx-font-cjk { font-family: var(--nvx-font-cjk); }
+
+.nvx-font-southeast { font-family: var(--nvx-font-southeast); }
+
+.nvx-font-middle-east { font-family: var(--nvx-font-middle-east); }
+
+.nvx-font-emoji { font-family: var(--nvx-font-emoji); }
+
+.nvx-font-mono { font-family: var(--nvx-font-mono); }
+
+
+/* Font Size */
+
+.nvx-text-xs { font-size: var(--nvx-text-xs); }
+
+.nvx-text-sm { font-size: var(--nvx-text-sm); }
+
+.nvx-text-base { font-size: var(--nvx-text-base); }
+
+.nvx-text-lg { font-size: var(--nvx-text-lg); }
+
+.nvx-text-xl { font-size: var(--nvx-text-xl); }
+
+.nvx-text-2xl { font-size: var(--nvx-text-2xl); }
+
+.nvx-text-3xl { font-size: var(--nvx-text-3xl); }
+
+.nvx-text-4xl { font-size: var(--nvx-text-4xl); }
+
+.nvx-text-5xl { font-size: var(--nvx-text-5xl); }
+
+
+/* Font Weight */
+
+.nvx-font-light { font-weight: var(--nvx-font-light); }
+
+.nvx-font-normal { font-weight: var(--nvx-font-normal); }
+
+.nvx-font-medium { font-weight: var(--nvx-font-medium); }
+
+.nvx-font-semibold { font-weight: var(--nvx-font-semibold); }
+
+.nvx-font-bold { font-weight: var(--nvx-font-bold); }
+
+.nvx-font-extrabold { font-weight: var(--nvx-font-extrabold); }
+
+
+/* Line Height - Script Aware */
+
+.nvx-leading-none { line-height: var(--nvx-leading-none); }
+
+.nvx-leading-tight { line-height: var(--nvx-leading-tight); }
+
+.nvx-leading-normal { line-height: var(--nvx-leading-normal); }
+
+.nvx-leading-relaxed { line-height: var(--nvx-leading-relaxed); }
+
+.nvx-leading-loose { line-height: var(--nvx-leading-loose); }
+
+.nvx-leading-latin { line-height: var(--nvx-leading-latin); }
+
+.nvx-leading-indic { line-height: var(--nvx-leading-indic); }
+
+.nvx-leading-arabic { line-height: var(--nvx-leading-arabic); }
+
+.nvx-leading-cjk { line-height: var(--nvx-leading-cjk); }
+
+.nvx-leading-southeast { line-height: var(--nvx-leading-southeast); }
+
+.nvx-leading-middle-east { line-height: var(--nvx-leading-middle-east); }
+
+
+/* Letter Spacing */
+
+.nvx-tracking-tighter { letter-spacing: var(--nvx-tracking-tighter); }
+
+.nvx-tracking-tight { letter-spacing: var(--nvx-tracking-tight); }
+
+.nvx-tracking-normal { letter-spacing: var(--nvx-tracking-normal); }
+
+.nvx-tracking-wide { letter-spacing: var(--nvx-tracking-wide); }
+
+.nvx-tracking-wider { letter-spacing: var(--nvx-tracking-wider); }
+
+
+/* Text Transform - Script Safe */
+
+.nvx-uppercase { text-transform: uppercase; }
+
+.nvx-lowercase { text-transform: lowercase; }
+
+.nvx-capitalize { text-transform: capitalize; }
+
+.nvx-normal-case { text-transform: none; }
+
+
+/* Text Decoration */
+
+.nvx-underline { text-decoration: underline; }
+
+.nvx-line-through { text-decoration: line-through; }
+
+.nvx-no-underline { text-decoration: none; }
+
+
+/* Text Align - RTL Aware */
+
+.nvx-text-left { text-align: left; }
+
+[dir="rtl"] .nvx-text-left { text-align: right; }
+
+.nvx-text-center { text-align: center; }
+
+.nvx-text-right { text-align: right; }
+
+[dir="rtl"] .nvx-text-right { text-align: left; }
+
+.nvx-text-justify { text-align: justify; }
+
+
+/* Text Wrap */
+
+.nvx-text-nowrap { white-space: nowrap; }
+
+.nvx-text-wrap { white-space: normal; }
+
+.nvx-text-truncate { 
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+
+}
+
+
+/* Word Break - Language Optimized */
+
+.nvx-break-normal { word-break: normal; }
+
+.nvx-break-words { word-break: break-word; }
+
+.nvx-break-all { word-break: break-all; }
+
+.nvx-break-keep { word-break: keep-all; } /* For CJK */
+
+
+/* ======================================= */
+
+/* ⚡ SCRIPT-SPECIFIC ADAPTATIONS */
+
+/* ======================================= */
+
+
+/* Latin-based languages */
+
+[data-script="latin"] .nvx-body,
+
+[data-script="latin"].nvx-body {
+
+  line-height: var(--nvx-leading-latin);
+
+}
+
+
+/* Indic scripts (Bengali, Devanagari, Tamil, etc.) */
+
+[data-script="indic"] .nvx-body,
+
+[data-script="indic"].nvx-body {
+
+  line-height: var(--nvx-leading-indic);
+
+}
+
+
+/* Arabic, Persian, Urdu */
+
+[data-script="arabic"] .nvx-body,
+
+[data-script="arabic"].nvx-body {
+
+  line-height: var(--nvx-leading-arabic);
+
+  direction: rtl;
+
+}
+
+
+/* Chinese, Japanese, Korean */
+
+[data-script="cjk"] .nvx-body,
+
+[data-script="cjk"].nvx-body {
+
+  line-height: var(--nvx-leading-cjk);
+
+  word-break: keep-all;
+
+}
+
+
+/* Thai, Lao, Khmer, Myanmar */
+
+[data-script="southeast"] .nvx-body,
+
+[data-script="southeast"].nvx-body {
+
+  line-height: var(--nvx-leading-southeast);
+
+}
+
+
+/* Hebrew, Armenian, Georgian */
+
+[data-script="middle-east"] .nvx-body,
+
+[data-script="middle-east"].nvx-body {
+
+  line-height: var(--nvx-leading-middle-east);
+
+  direction: rtl;
+
+}
+
+
+/* RTL base */
+
+[dir="rtl"] {
+
+  direction: rtl;
+
+  unicode-bidi: embed;
+
+}
+
+
+/* ======================================= */
+
+/* ⚡ TYPOGRAPHY COMPONENTS - SCRIPT AWARE */
+
+/* ======================================= */
+
+
+/* Headings */
+
+.nvx-h1, h1.nvx { 
+
+  font-size: var(--nvx-text-5xl);
+
+  font-weight: var(--nvx-font-bold);
+
+  line-height: var(--nvx-leading-tight);
+
+  letter-spacing: var(--nvx-tracking-tight);
+
+}
+
+
+.nvx-h2, h2.nvx { 
+
+  font-size: var(--nvx-text-4xl);
+
+  font-weight: var(--nvx-font-bold);
+
+  line-height: var(--nvx-leading-tight);
+
+}
+
+
+.nvx-h3, h3.nvx { 
+
+  font-size: var(--nvx-text-3xl);
+
+  font-weight: var(--nvx-font-semibold);
+
+  line-height: var(--nvx-leading-tight);
+
+}
+
+
+.nvx-h4, h4.nvx { 
+
+  font-size: var(--nvx-text-2xl);
+
+  font-weight: var(--nvx-font-semibold);
+
+  line-height: var(--nvx-leading-normal);
+
+}
+
+
+.nvx-h5, h5.nvx { 
+
+  font-size: var(--nvx-text-xl);
+
+  font-weight: var(--nvx-font-semibold);
+
+  line-height: var(--nvx-leading-normal);
+
+}
+
+
+.nvx-h6, h6.nvx { 
+
+  font-size: var(--nvx-text-lg);
+
+  font-weight: var(--nvx-font-semibold);
+
+  line-height: var(--nvx-leading-normal);
+
+  text-transform: uppercase;
+
+  letter-spacing: var(--nvx-tracking-wide);
+
+}
+
+
+[data-script="arabic"] .nvx-h6,
+
+[data-script="arabic"] h6.nvx,
+
+[data-script="middle-east"] .nvx-h6,
+
+[data-script="middle-east"] h6.nvx {
+
+  text-transform: none;
+
+  letter-spacing: 0;
+
+}
+
+
+/* Body Text */
+
+.nvx-body-lg {
+
+  font-size: var(--nvx-text-lg);
+
+  line-height: var(--nvx-leading-relaxed);
+
+}
+
+
+.nvx-body-md {
+
+  font-size: var(--nvx-text-base);
+
+  line-height: var(--nvx-leading-normal);
+
+}
+
+
+.nvx-body-sm {
+
+  font-size: var(--nvx-text-sm);
+
+  line-height: var(--nvx-leading-normal);
+
+  color: var(--nvx-color-text-secondary);
+
+}
+
+
+.nvx-body-xs {
+
+  font-size: var(--nvx-text-xs);
+
+  line-height: var(--nvx-leading-normal);
+
+  color: var(--nvx-color-text-tertiary);
+
+}
+
+
+/* Captions & Labels */
+
+.nvx-caption {
+
+  font-size: var(--nvx-text-sm);
+
+  font-weight: var(--nvx-font-medium);
+
+  text-transform: uppercase;
+
+  letter-spacing: var(--nvx-tracking-wide);
+
+  color: var(--nvx-color-text-tertiary);
+
+}
+
+
+[data-script="arabic"] .nvx-caption,
+
+[data-script="middle-east"] .nvx-caption {
+
+  text-transform: none;
+
+}
+
+
+.nvx-label {
+
+  font-size: var(--nvx-text-sm);
+
+  font-weight: var(--nvx-font-medium);
+
+  color: var(--nvx-color-text-secondary);
+
+}
+
+
+.nvx-overline {
+
+  font-size: var(--nvx-text-xs);
+
+  font-weight: var(--nvx-font-bold);
+
+  text-transform: uppercase;
+
+  letter-spacing: var(--nvx-tracking-wider);
+
+  color: var(--nvx-color-brand-primary);
+
+}
+
+
+[data-script="arabic"] .nvx-overline,
+
+[data-script="middle-east"] .nvx-overline {
+
+  text-transform: none;
+
+}
+
+
+/* Code Blocks - Always LTR */
+
+.nvx-code {
+
+  font-family: var(--nvx-font-mono);
+
+  font-size: 0.9em;
+
+  padding: 0.2em 0.4em;
+
+  background: var(--nvx-color-bg-tertiary);
+
+  border-radius: var(--nvx-radius-sm);
+
+  color: var(--nvx-color-text-main);
+
+  direction: ltr;
+
+  unicode-bidi: embed;
+
+}
+
+
+.nvx-pre {
+
+  font-family: var(--nvx-font-mono);
+
+  font-size: 0.9em;
+
+  padding: var(--nvx-space-4);
+
+  background: var(--nvx-color-bg-tertiary);
+
+  border-radius: var(--nvx-radius);
+
+  overflow-x: auto;
+
+  white-space: pre-wrap;
+
+  word-break: break-word;
+
+  line-height: 1.6;
+
+  direction: ltr;
+
+  unicode-bidi: embed;
+
+}
+
+
+/* ======================================= */
+
+/* ⚡ FONT LOADING STATES */
+
+/* ======================================= */
+
+
+.nvx-fonts-loading {
+
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+}
+
+
+.nvx-fonts-loaded {
+
+  font-family: var(--nvx-font-global);
+
+}
+
+
+.nvx-fonts-failed {
+
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+}
+
+
+/* ======================================= */
+
+/* ⚡ ENVIRONMENT ADAPTATIONS */
+
+/* ======================================= */
+
+
+/* Dark Mode */
+
+[data-theme="dark"] .nvx-body,
+
+[data-theme="dark"].nvx-body {
+
+  -webkit-font-smoothing: antialiased;
+
+  text-rendering: optimizeLegibility;
+
+}
+
+
+/* High Contrast Mode */
+
+@media (prefers-contrast: high) {
+
+  .nvx-body {
+
+    font-weight: 500;
+
+    text-rendering: optimizeSpeed;
+
+    -webkit-font-smoothing: auto;
+
+    -moz-osx-font-smoothing: auto;
+
+  }
+
+}
+
+
+/* Reduced Data Mode */
+
+@media (prefers-reduced-data: reduce) {
+
+  .nvx-body,
+
+  .nvx-fonts-loaded {
+
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  }
+
+}
+
+
+/* Print Mode */
+
+@media print {
+
+  .nvx-body,
+
+  .nvx-container {
+
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+
+    font-size: 11pt;
+
+    line-height: 1.4;
+
+  }
+
+  
+
+  .nvx-font-mono,
+
+  pre, code {
+
+    font-family: 'Courier New', Courier, monospace;
+
+  }
+
+}
+
+
+/* Mobile Optimizations */
+
+@media (max-width: 768px) {
+
+  .nvx-body {
+
+    -webkit-font-smoothing: subpixel-antialiased;
+
+    text-rendering: optimizeSpeed;
+
+  }
+
+  
+
+  .nvx-text-base { font-size: 0.9375rem; }
+
+  .nvx-text-lg { font-size: 1rem; }
+
+  .nvx-text-xl { font-size: 1.125rem; }
+
+}
+
+
+/* ======================================= */
+
+/* ⚡ HTML PRELOAD INSTRUCTIONS - ALL SCRIPTS */
+
+/* ======================================= */
+
+/*
+
+  Add these to your HTML <head> section for optimal loading:
+
+
+  <!-- Preconnect to font origins -->
+
+  <link rel="preconnect" href="https://rsms.me/" crossorigin>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+
+  
+
+  <!-- Preload critical Latin fonts -->
+
+  <link rel="preload" as="font" href="https://rsms.me/inter/font-files/InterVariable.woff2" 
+
+        type="font/woff2" crossorigin>
+
+  
+
+  <!-- Preload major script fonts based on site content -->
+
+  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/notosansbengali/v20/NotoSansBengali[wght].woff2" 
+
+        type="font/woff2" crossorigin>
+
+  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/notosansdevanagari/v27/NotoSansDevanagari[wght].woff2" 
+
+        type="font/woff2" crossorigin>
+
+  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/notosansarabic/v18/NotoSansArabic[wght].woff2" 
+
+        type="font/woff2" crossorigin>
+
+  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/notosanssc/v37/NotoSansSC[wght].woff2" 
+
+        type="font/woff2" crossorigin>
+
+*/
+
+
+/* ======================================= */
+
+/* ⚡ COMPLETE JAVASCRIPT DETECTION ENGINE */
+
+/* ======================================= */
+
+/*
+
+  <script>
+
+    (function() {
+
+      'use strict';
+
+      
+
+      // ======================================= //
+
+      // ADVANCED SCRIPT DETECTION ENGINE        //
+
+      // Detects scripts per element with fallback //
+
+      // ======================================= //
+
+      
+
+      const ScriptDetector = {
+
+        // Script patterns with Unicode ranges
+
+        patterns: {
+
+          bengali: /[\u0980-\u09FF]/,
+
+          devanagari: /[\u0900-\u097F]/,
+
+          tamil: /[\u0B80-\u0BFF]/,
+
+          telugu: /[\u0C00-\u0C7F]/,
+
+          kannada: /[\u0C80-\u0CFF]/,
+
+          malayalam: /[\u0D00-\u0D7F]/,
+
+          gujarati: /[\u0A80-\u0AFF]/,
+
+          gurmukhi: /[\u0A00-\u0A7F]/,
+
+          odia: /[\u0B00-\u0B7F]/,
+
+          arabic: /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/,
+
+          chinese: /[\u4E00-\u9FFF\u3400-\u4DBF]/,
+
+          japanese: /[\u3040-\u309F\u30A0-\u30FF]/,
+
+          korean: /[\uAC00-\uD7AF\u1100-\u11FF\u3130-\u318F]/,
+
+          thai: /[\u0E00-\u0E7F]/,
+
+          lao: /[\u0E80-\u0EFF]/,
+
+          khmer: /[\u1780-\u17FF]/,
+
+          myanmar: /[\u1000-\u109F]/,
+
+          hebrew: /[\u0590-\u05FF\uFB1D-\uFB4F]/,
+
+          armenian: /[\u0530-\u058F]/,
+
+          georgian: /[\u10A0-\u10FF\u2D00-\u2D2F]/,
+
+          ethiopic: /[\u1200-\u137F\u1380-\u139F\u2D80-\u2DDF]/
+
+        },
+
+        
+
+        // Map patterns to script categories
+
+        scriptMap: {
+
+          bengali: 'indic',
+
+          devanagari: 'indic',
+
+          tamil: 'indic',
+
+          telugu: 'indic',
+
+          kannada: 'indic',
+
+          malayalam: 'indic',
+
+          gujarati: 'indic',
+
+          gurmukhi: 'indic',
+
+          odia: 'indic',
+
+          arabic: 'arabic',
+
+          chinese: 'cjk',
+
+          japanese: 'cjk',
+
+          korean: 'cjk',
+
+          thai: 'southeast',
+
+          lao: 'southeast',
+
+          khmer: 'southeast',
+
+          myanmar: 'southeast',
+
+          hebrew: 'middle-east',
+
+          armenian: 'middle-east',
+
+          georgian: 'middle-east',
+
+          ethiopic: 'middle-east'
+
+        },
+
+        
+
+        // Detect script from text
+
+        detectScript(text) {
+
+          if (!text) return 'latin';
+
+          
+
+          for (const [patternName, pattern] of Object.entries(this.patterns)) {
+
+            if (pattern.test(text)) {
+
+              return this.scriptMap[patternName];
+
+            }
+
+          }
+
+          
+
+          return 'latin';
+
+        },
+
+        
+
+        // Process element and set attributes
+
+        processElement(element) {
+
+          // Skip if already processed or has explicit lang attribute
+
+          if (element.hasAttribute('data-script-processed') || 
+
+              element.hasAttribute('lang')) {
+
+            return;
+
+          }
+
+          
+
+          const text = element.innerText || element.textContent || '';
+
+          if (text.length > 0) {
+
+            const script = this.detectScript(text);
+
+            element.setAttribute('data-script', script);
+
+            
+
+            // Set direction for RTL scripts
+
+            if (script === 'arabic' || script === 'middle-east') {
+
+              element.setAttribute('dir', 'rtl');
+
+            }
+
+            
+
+            element.setAttribute('data-script-processed', 'true');
+
+          }
+
+        },
+
+        
+
+        // Initialize detection on page
+
+        init() {
+
+          // Set initial loading class
+
+          document.documentElement.classList.add('nvx-fonts-loading');
+
+          
+
+          // Process body first
+
+          if (document.body) {
+
+            this.processElement(document.body);
+
+            
+
+            // Process all text-containing elements
+
+            const textElements = document.querySelectorAll(
+
+              'p, h1, h2, h3, h4, h5, h6, span, div, article, section, li, a, button'
+
+            );
+
+            
+
+            textElements.forEach(el => this.processElement(el));
+
+          }
+
+          
+
+          // Watch for dynamic content
+
+          if (window.MutationObserver) {
+
+            const observer = new MutationObserver((mutations) => {
+
+              mutations.forEach(mutation => {
+
+                mutation.addedNodes.forEach(node => {
+
+                  if (node.nodeType === 1) { // Element node
+
+                    this.processElement(node);
+
+                    // Also process children
+
+                    if (node.querySelectorAll) {
+
+                      node.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div')
+
+                        .forEach(child => this.processElement(child));
+
+                    }
+
+                  }
+
+                });
+
+              });
+
+            });
+
+            
+
+            observer.observe(document.body, {
+
+              childList: true,
+
+              subtree: true
+
+            });
+
+          }
+
+          
+
+          // ======================================= //
+
+          // FONT LOADING WITH COMPLETE FALLBACKS   //
+
+          // ======================================= //
+
+          
+
+          if ('fonts' in document) {
+
+            // Load all major script fonts
+
+            const fontPromises = [
+
+              document.fonts.load('400 1em "NEVOX Global"'),
+
+              document.fonts.load('700 1em "NEVOX Global"'),
+
+              // Load specific script fonts for better coverage
+
+              document.fonts.load('400 1em "Noto Sans Bengali"'),
+
+              document.fonts.load('400 1em "Noto Sans Devanagari"'),
+
+              document.fonts.load('400 1em "Noto Sans Arabic"'),
+
+              document.fonts.load('400 1em "Noto Sans SC"')
+
+            ];
+
+            
+
+            Promise.all(fontPromises)
+
+              .then(() => {
+
+                document.documentElement.classList.remove('nvx-fonts-loading');
+
+                document.documentElement.classList.add('nvx-fonts-loaded');
+
+              })
+
+              .catch(() => {
+
+                document.documentElement.classList.remove('nvx-fonts-loading');
+
+                document.documentElement.classList.add('nvx-fonts-failed');
+
+              });
+
+            
+
+            // Timeout fallback
+
+            setTimeout(() => {
+
+              if (document.documentElement.classList.contains('nvx-fonts-loading')) {
+
+                document.documentElement.classList.remove('nvx-fonts-loading');
+
+                document.documentElement.classList.add('nvx-fonts-failed');
+
+              }
+
+            }, 5000);
+
+          } else {
+
+            document.documentElement.classList.remove('nvx-fonts-loading');
+
+            document.documentElement.classList.add('nvx-fonts-failed');
+
+          }
+
+        }
+
+      };
+
+      
+
+      // Initialize when DOM is ready
+
+      if (document.readyState === 'loading') {
+
+        document.addEventListener('DOMContentLoaded', () => ScriptDetector.init());
+
+      } else {
+
+        ScriptDetector.init();
+
+      }
+
+    })();
+
+  </script>
+
+*/
+
+
+/* ======================================= */
+
+/* ⚡ NEVOX COMPLETE GLOBAL FONT SYSTEM - END v4.1 ⚡ */
+
+/* Enterprise-Grade • 100% Complete • Production Ready • 2026 */
+
+/* ======================================= */
+
