@@ -1,0 +1,5349 @@
+/*======================================*/
+
+/* ⚡ NEVOX PUSH NOTIFICATION SYSTEM v4.1 ⚡ */
+
+/* ENTERPRISE-GRADE • PRODUCTION-READY */
+
+/* OPTIMIZED FOR 2025-2026 WITH ALL FIXES APPLIED */
+
+/*======================================*/
+
+
+/*======================================*/
+
+/* 141. NOTIFICATION DESIGN TOKENS */
+
+/*======================================*/
+
+:root {
+
+  /* CORE NVX VARIABLE FALLBACKS */
+
+  --nvx-space-1: 0.25rem;
+
+  --nvx-space-2: 0.5rem;
+
+  --nvx-space-3: 0.75rem;
+
+  --nvx-space-4: 1rem;
+
+  --nvx-space-5: 1.25rem;
+
+  --nvx-space-6: 1.5rem;
+
+  --nvx-space-8: 2rem;
+
+  --nvx-space-10: 2.5rem;
+
+  --nvx-space-12: 3rem;
+
+  
+
+  --nvx-radius-sm: 0.5rem;
+
+  --nvx-radius-md: 0.75rem;
+
+  --nvx-radius: 0.75rem;
+
+  --nvx-radius-lg: 1rem;
+
+  --nvx-radius-xl: 1.5rem;
+
+  --nvx-radius-2xl: 2rem;
+
+  --nvx-radius-full: 9999px;
+
+  
+
+  --nvx-text-xs: 0.75rem;
+
+  --nvx-text-sm: 0.875rem;
+
+  --nvx-text-base: 1rem;
+
+  --nvx-text-lg: 1.125rem;
+
+  --nvx-text-xl: 1.25rem;
+
+  --nvx-text-2xl: 1.5rem;
+
+  --nvx-text-2xs: 0.625rem;
+
+  
+
+  --nvx-leading-tight: 1.4;
+
+  --nvx-leading-normal: 1.5;
+
+  --nvx-leading-relaxed: 1.75;
+
+  
+
+  --nvx-font-light: 300;
+
+  --nvx-font-normal: 400;
+
+  --nvx-font-medium: 500;
+
+  --nvx-font-semibold: 600;
+
+  --nvx-font-bold: 700;
+
+  --nvx-font-extrabold: 800;
+
+  
+
+  --nvx-duration-fast: 150ms;
+
+  --nvx-duration-medium: 300ms;
+
+  --nvx-duration-slow: 500ms;
+
+  --nvx-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --nvx-ease-in: cubic-bezier(0.4, 0, 1, 1);
+
+  --nvx-ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  --nvx-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  
+
+  --nvx-primary-50: #eff6ff;
+
+  --nvx-primary-100: #dbeafe;
+
+  --nvx-primary-200: #bfdbfe;
+
+  --nvx-primary-300: #93c5fd;
+
+  --nvx-primary-400: #60a5fa;
+
+  --nvx-primary-500: #3b82f6;
+
+  --nvx-primary-600: #2563eb;
+
+  --nvx-primary-700: #1d4ed8;
+
+  --nvx-primary-800: #1e40af;
+
+  --nvx-primary-900: #1e3a8a;
+
+  
+
+  --nvx-secondary-500: #8b5cf6;
+
+  --nvx-secondary-600: #7c3aed;
+
+  --nvx-success-500: #10b981;
+
+  --nvx-success-600: #059669;
+
+  --nvx-warning-500: #f59e0b;
+
+  --nvx-warning-600: #d97706;
+
+  --nvx-danger-500: #ef4444;
+
+  --nvx-danger-600: #dc2626;
+
+  --nvx-info-500: #06b6d4;
+
+  --nvx-info-600: #0891b2;
+
+  
+
+  --nvx-gray-50: #f9fafb;
+
+  --nvx-gray-100: #f3f4f6;
+
+  --nvx-gray-200: #e5e7eb;
+
+  --nvx-gray-300: #d1d5db;
+
+  --nvx-gray-400: #9ca3af;
+
+  --nvx-gray-500: #6b7280;
+
+  --nvx-gray-600: #4b5563;
+
+  --nvx-gray-700: #374151;
+
+  --nvx-gray-800: #1f2937;
+
+  --nvx-gray-900: #111827;
+
+  
+
+  --nvx-bg-card: #ffffff;
+
+  --nvx-color-text-main: #0f172a;
+
+  --nvx-color-text-main-dark: #f8fafc;
+
+  
+
+  /* Z-INDEX SCALE */
+
+  /* 
+
+  Z-INDEX SCALE:
+
+  --nvx-z-notif-badge: 1070 (Badges, dots)
+
+  --nvx-z-notif-banner: 1080 (Banner notifications)
+
+  --nvx-z-notif-overlay: 1085 (Backdrop overlays)
+
+  --nvx-z-notif: 1090 (Centers, modals)
+
+  --nvx-z-notif-toast: 1100 (Toast notifications - highest)
+
+  */
+
+  
+
+  /* CORE TOKENS */
+
+  --nvx-notif-max-width: 380px;
+
+  --nvx-notif-min-width: 280px;
+
+  --nvx-notif-min-height: 64px;
+
+  --nvx-notif-border-radius: var(--nvx-radius-lg, 1rem);
+
+  --nvx-notif-border-radius-compact: var(--nvx-radius, 0.75rem);
+
+  --nvx-notif-border-radius-banner: 0;
+
+  --nvx-notif-spacing: var(--nvx-space-4, 1rem);
+
+  --nvx-notif-spacing-compact: var(--nvx-space-3, 0.75rem);
+
+  --nvx-notif-spacing-banner: var(--nvx-space-5, 1.25rem);
+
+  
+
+  /* ANIMATION DURATIONS */
+
+  --nvx-notif-duration-enter: 300ms;
+
+  --nvx-notif-duration-exit: 250ms;
+
+  --nvx-notif-duration-slide: 400ms;
+
+  --nvx-notif-duration-progress: 5s;
+
+  --nvx-notif-duration-auto-dismiss: 5s;
+
+  --nvx-notif-duration-high-attention: 12s;
+
+  --nvx-notif-duration-wave: 1.6s;
+
+  --nvx-notif-pulse-iteration: 3;
+
+  
+
+  /* ANIMATION CURVES */
+
+  --nvx-notif-ease-enter: cubic-bezier(0.21, 1.11, 0.36, 1);
+
+  --nvx-notif-ease-exit: cubic-bezier(0.4, 0, 0.68, 0.06);
+
+  --nvx-notif-ease-slide: cubic-bezier(0.2, 0, 0, 1);
+
+  --nvx-notif-ease-bounce: var(--nvx-ease-bounce, cubic-bezier(0.68, -0.55, 0.265, 1.55));
+
+  
+
+  /* Z-INDEX LAYERS */
+
+  --nvx-z-notif: 1090;
+
+  --nvx-z-notif-toast: 1100;
+
+  --nvx-z-notif-banner: 1080;
+
+  --nvx-z-notif-badge: 1070;
+
+  --nvx-z-notif-overlay: 1085;
+
+  
+
+  /* COLORS - BRANDED VARIANTS */
+
+  --nvx-notif-primary: var(--nvx-primary-500, #3b82f6);
+
+  --nvx-notif-secondary: var(--nvx-secondary-500, #8b5cf6);
+
+  --nvx-notif-success: var(--nvx-success-500, #10b981);
+
+  --nvx-notif-warning: var(--nvx-warning-500, #f59e0b);
+
+  --nvx-notif-danger: var(--nvx-danger-500, #ef4444);
+
+  --nvx-notif-info: var(--nvx-info-500, #06b6d4);
+
+  --nvx-notif-dark: var(--nvx-gray-900, #111827);
+
+  --nvx-notif-light: var(--nvx-gray-50, #f9fafb);
+
+  
+
+  /* BACKGROUND VARIANTS */
+
+  --nvx-notif-bg-primary: linear-gradient(135deg, var(--nvx-primary-500), var(--nvx-primary-600));
+
+  --nvx-notif-bg-secondary: linear-gradient(135deg, var(--nvx-secondary-500), var(--nvx-secondary-600));
+
+  --nvx-notif-bg-success: linear-gradient(135deg, var(--nvx-success-500), var(--nvx-success-600));
+
+  --nvx-notif-bg-warning: linear-gradient(135deg, var(--nvx-warning-500), var(--nvx-warning-600));
+
+  --nvx-notif-bg-danger: linear-gradient(135deg, var(--nvx-danger-500), var(--nvx-danger-600));
+
+  --nvx-notif-bg-info: linear-gradient(135deg, var(--nvx-info-500), var(--nvx-info-600));
+
+  --nvx-notif-bg-dark: linear-gradient(135deg, var(--nvx-gray-800), var(--nvx-gray-900));
+
+  --nvx-notif-bg-light: linear-gradient(135deg, var(--nvx-gray-50), var(--nvx-gray-100));
+
+  
+
+  /* GLASS VARIANTS - CONSOLIDATED */
+
+  --nvx-notif-glass-bg: rgba(255, 255, 255, 0.95);
+
+  --nvx-notif-glass-bg-light: rgba(255, 255, 255, 0.95);
+
+  --nvx-notif-glass-bg-dark: rgba(30, 41, 59, 0.95);
+
+  --nvx-notif-glass-border: rgba(255, 255, 255, 0.2);
+
+  --nvx-notif-glass-border-dark: rgba(255, 255, 255, 0.1);
+
+  --nvx-notif-glass-blur: blur(20px);
+
+  --nvx-notif-glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+
+  
+
+  /* SHADOW SYSTEM */
+
+  --nvx-notif-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+
+  --nvx-notif-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.06);
+
+  --nvx-notif-shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.16), 0 4px 8px rgba(0, 0, 0, 0.08);
+
+  --nvx-notif-shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.2), 0 6px 12px rgba(0, 0, 0, 0.1);
+
+  
+
+  /* PROGRESS BAR */
+
+  --nvx-notif-progress-height: 4px;
+
+  --nvx-notif-progress-radius: 2px;
+
+  --nvx-notif-progress-bg: rgba(0, 0, 0, 0.1);
+
+  --nvx-notif-progress-fill: currentColor;
+
+  --nvx-notif-progress-opacity: 0.6;
+
+  
+
+  /* BADGE SYSTEM */
+
+  --nvx-notif-badge-size: 20px;
+
+  --nvx-notif-badge-dot-size: 10px;
+
+  
+
+  /* ICON SIZES */
+
+  --nvx-notif-icon-size: 24px;
+
+  --nvx-notif-icon-size-sm: 20px;
+
+  --nvx-notif-icon-size-lg: 32px;
+
+  --nvx-notif-icon-size-xl: 40px;
+
+  
+
+  /* ACTION BUTTONS */
+
+  --nvx-notif-btn-height: 36px;
+
+  --nvx-notif-btn-padding: 0 var(--nvx-space-3, 0.75rem);
+
+  --nvx-notif-btn-radius: var(--nvx-radius-sm, 0.5rem);
+
+  --nvx-notif-btn-font-size: var(--nvx-text-sm, 0.875rem);
+
+  --nvx-notif-btn-touch-size: 44px;
+
+  
+
+  /* COUNT ANIMATIONS */
+
+  --nvx-notif-count-min-width: 24px;
+
+  --nvx-notif-count-height: 24px;
+
+  --nvx-notif-count-radius: 12px;
+
+  --nvx-notif-count-bg: var(--nvx-danger-500, #ef4444);
+
+  
+
+  /* STACKING */
+
+  --nvx-notif-stack-gap: var(--nvx-space-2, 0.5rem);
+
+  --nvx-notif-stack-max: 5;
+
+  
+
+  /* POSITION OFFSETS */
+
+  --nvx-notif-offset: var(--nvx-space-4, 1rem);
+
+  --nvx-notif-offset-mobile: var(--nvx-space-3, 0.75rem);
+
+  --nvx-notif-offset-safe-top: env(safe-area-inset-top, var(--nvx-notif-offset));
+
+  --nvx-notif-offset-safe-right: env(safe-area-inset-right, var(--nvx-notif-offset));
+
+  --nvx-notif-offset-safe-bottom: env(safe-area-inset-bottom, var(--nvx-notif-offset));
+
+  --nvx-notif-offset-safe-left: env(safe-area-inset-left, var(--nvx-notif-offset));
+
+  
+
+  /* SOUND WAVEFORM ANIMATION */
+
+  --nvx-notif-wave-color: var(--nvx-primary-400, #60a5fa);
+
+  --nvx-notif-wave-size: 40px;
+
+  --nvx-notif-wave-duration: 1.6s;
+
+  
+
+  /* RTL SUPPORT */
+
+  --nvx-dir: ltr;
+
+  --nvx-translate-start: -100%;
+
+  --nvx-translate-end: 100%;
+
+  --nvx-origin-start: left;
+
+  --nvx-origin-end: right;
+
+  
+
+  /* TEXT COLORS */
+
+  --nvx-notif-text-main: var(--nvx-color-text-main, #0f172a);
+
+  --nvx-notif-text-main-dark: var(--nvx-color-text-main-dark, #f8fafc);
+
+  
+
+  /* VIEW TRANSITION SUPPORT */
+
+  --nvx-notif-transition-name: notification-transition;
+
+  
+
+  /* DATA ATTRIBUTE SUPPORT */
+
+  --nvx-notif-priority-high-duration: 12s;
+
+  --nvx-notif-read-opacity: 0.8;
+
+  
+
+  /* CIRCULAR PROGRESS */
+
+  --nvx-notif-circular-circumference: 126;
+
+  --nvx-progress: 0;
+
+  
+
+  /* PREFERS REDUCED DATA */
+
+  --nvx-notif-reduced-data-blur: 0;
+
+}
+
+
+/* RTL DIRECTION SUPPORT */
+
+[dir="rtl"] {
+
+  --nvx-dir: rtl;
+
+  --nvx-translate-start: 100%;
+
+  --nvx-translate-end: -100%;
+
+  --nvx-origin-start: right;
+
+  --nvx-origin-end: left;
+
+}
+
+
+/* COLOR-SCHEME SUPPORT */
+
+:root {
+
+  color-scheme: light dark;
+
+}
+
+
+/* ACCENT COLOR FOR NATIVE ELEMENTS */
+
+:root {
+
+  accent-color: var(--nvx-primary-500, #3b82f6);
+
+}
+
+
+/* PREFERS COLOR SCHEME FALLBACK */
+
+@media (prefers-color-scheme: dark) {
+
+  :root:not([data-theme]) .nvx-notif-item {
+
+    --nvx-notif-glass-bg: var(--nvx-notif-glass-bg-dark);
+
+    color: var(--nvx-notif-text-main-dark);
+
+  }
+
+}
+
+
+/* PREFERS REDUCED DATA */
+
+@media (prefers-reduced-data: reduce) {
+
+  :root {
+
+    --nvx-notif-glass-blur: blur(var(--nvx-notif-reduced-data-blur, 0));
+
+  }
+
+  
+
+  .nvx-notif-sound-wave,
+
+  .nvx-notif-sound-indicator {
+
+    display: none;
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 142. DARK THEME NOTIFICATION TOKENS */
+
+/*======================================*/
+
+[data-theme="dark"] {
+
+  --nvx-notif-glass-bg: var(--nvx-notif-glass-bg-dark, rgba(30, 41, 59, 0.95));
+
+  --nvx-notif-glass-border: var(--nvx-notif-glass-border-dark, rgba(255, 255, 255, 0.1));
+
+  --nvx-notif-progress-bg: rgba(255, 255, 255, 0.15);
+
+  --nvx-notif-text-main: var(--nvx-notif-text-main-dark, #f8fafc);
+
+  --nvx-bg-card: #1e293b;
+
+  
+
+  /* ADAPTIVE GRADIENTS */
+
+  --nvx-notif-bg-primary: linear-gradient(135deg, var(--nvx-primary-600), var(--nvx-primary-700));
+
+  --nvx-notif-bg-secondary: linear-gradient(135deg, var(--nvx-secondary-600), var(--nvx-secondary-700));
+
+  --nvx-notif-bg-success: linear-gradient(135deg, var(--nvx-success-600), var(--nvx-success-700));
+
+  --nvx-notif-bg-warning: linear-gradient(135deg, var(--nvx-warning-600), var(--nvx-warning-700));
+
+  --nvx-notif-bg-danger: linear-gradient(135deg, var(--nvx-danger-600), var(--nvx-danger-700));
+
+  --nvx-notif-bg-info: linear-gradient(135deg, var(--nvx-info-600), var(--nvx-info-700));
+
+  --nvx-notif-bg-dark: linear-gradient(135deg, var(--nvx-gray-900), #000000);
+
+}
+
+
+/*======================================*/
+
+/* 143. HIGH CONTRAST MODE */
+
+/*======================================*/
+
+@media (prefers-contrast: high) {
+
+  :root {
+
+    --nvx-notif-shadow-sm: 0 0 0 1px currentColor;
+
+    --nvx-notif-shadow-md: 0 0 0 2px currentColor;
+
+    --nvx-notif-shadow-lg: 0 0 0 3px currentColor;
+
+    --nvx-notif-progress-bg: currentColor;
+
+    --nvx-notif-progress-opacity: 0.3;
+
+  }
+
+  
+
+  [data-theme="dark"] {
+
+    --nvx-notif-progress-bg: #ffffff;
+
+  }
+
+  
+
+  /* Force solid backgrounds for glass variants */
+
+  .nvx-notif-glass,
+
+  .nvx-notif-glass-primary,
+
+  .nvx-notif-glass-secondary,
+
+  .nvx-notif-glass-success,
+
+  .nvx-notif-glass-warning,
+
+  .nvx-notif-glass-danger,
+
+  .nvx-notif-glass-info {
+
+    background: white !important;
+
+    backdrop-filter: none !important;
+
+    -webkit-backdrop-filter: none !important;
+
+    border: 2px solid currentColor !important;
+
+  }
+
+  
+
+  [data-theme="dark"] .nvx-notif-glass,
+
+  [data-theme="dark"] .nvx-notif-glass-primary,
+
+  [data-theme="dark"] .nvx-notif-glass-secondary,
+
+  [data-theme="dark"] .nvx-notif-glass-success,
+
+  [data-theme="dark"] .nvx-notif-glass-warning,
+
+  [data-theme="dark"] .nvx-notif-glass-danger,
+
+  [data-theme="dark"] .nvx-notif-glass-info {
+
+    background: black !important;
+
+  }
+
+  
+
+  /* Enhanced focus for high contrast */
+
+  .nvx-notif-item:focus-visible,
+
+  .nvx-notif-action-btn:focus-visible,
+
+  .nvx-notif-close:focus-visible,
+
+  .nvx-notif-center-item:focus-visible,
+
+  .nvx-notif-list-item:focus-visible {
+
+    outline: 3px solid currentColor !important;
+
+    outline-offset: 3px !important;
+
+  }
+
+}
+
+
+@media (prefers-contrast: more) {
+
+  .nvx-notif-item:focus-visible,
+
+  .nvx-notif-action-btn:focus-visible,
+
+  .nvx-notif-close:focus-visible,
+
+  .nvx-notif-center-item:focus-visible,
+
+  .nvx-notif-list-item:focus-visible {
+
+    outline: 4px solid currentColor;
+
+    outline-offset: 4px;
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 144. NOTIFICATION CONTAINER SYSTEM */
+
+/*======================================*/
+
+
+/* BASE CONTAINER */
+
+.nvx-notif-container {
+
+  position: fixed;
+
+  z-index: var(--nvx-z-notif-toast, 1100);
+
+  pointer-events: none;
+
+  max-width: var(--nvx-notif-max-width, 380px);
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--nvx-notif-stack-gap, 0.5rem);
+
+  transition: all var(--nvx-notif-duration-slide, 400ms) var(--nvx-notif-ease-slide);
+
+  will-change: transform, opacity;
+
+  contain: layout paint style;
+
+}
+
+
+/* CONTAINER POSITIONS - WITH LOGICAL PROPERTIES AND SAFE AREA FIX */
+
+.nvx-notif-container-top-left {
+
+  inset-block-start: var(--nvx-notif-offset-safe-top, 1rem);
+
+  inset-inline-start: var(--nvx-notif-offset-safe-left, 1rem);
+
+}
+
+
+.nvx-notif-container-top-right {
+
+  inset-block-start: var(--nvx-notif-offset-safe-top, 1rem);
+
+  inset-inline-end: var(--nvx-notif-offset-safe-right, 1rem);
+
+}
+
+
+.nvx-notif-container-top-center {
+
+  inset-block-start: var(--nvx-notif-offset-safe-top, 1rem);
+
+  inset-inline-start: 50%;
+
+  transform: translateX(-50%);
+
+}
+
+
+[dir="rtl"] .nvx-notif-container-top-center {
+
+  transform: translateX(50%);
+
+}
+
+
+.nvx-notif-container-bottom-left {
+
+  inset-block-end: var(--nvx-notif-offset-safe-bottom, 1rem);
+
+  inset-inline-start: var(--nvx-notif-offset-safe-left, 1rem);
+
+  flex-direction: column-reverse;
+
+}
+
+
+.nvx-notif-container-bottom-right {
+
+  inset-block-end: var(--nvx-notif-offset-safe-bottom, 1rem);
+
+  inset-inline-end: var(--nvx-notif-offset-safe-right, 1rem);
+
+  flex-direction: column-reverse;
+
+}
+
+
+.nvx-notif-container-bottom-center {
+
+  inset-block-end: var(--nvx-notif-offset-safe-bottom, 1rem);
+
+  inset-inline-start: 50%;
+
+  transform: translateX(-50%);
+
+  flex-direction: column-reverse;
+
+}
+
+
+[dir="rtl"] .nvx-notif-container-bottom-center {
+
+  transform: translateX(50%);
+
+}
+
+
+/* STACKING BEHAVIOR */
+
+.nvx-notif-container-stack .nvx-notif-item {
+
+  transition: transform var(--nvx-notif-duration-slide, 400ms) var(--nvx-notif-ease-slide);
+
+  transform-origin: center;
+
+}
+
+
+/* MOBILE ADAPTIVE CONTAINER WITH SAFE AREA FIX */
+
+@media (max-width: 768px) {
+
+  .nvx-notif-container {
+
+    max-width: calc(100vw - var(--nvx-notif-offset-mobile, 0.75rem) * 2);
+
+    inset-inline-start: var(--nvx-notif-offset-mobile, 0.75rem);
+
+    inset-inline-end: var(--nvx-notif-offset-mobile, 0.75rem);
+
+    width: auto;
+
+  }
+
+  
+
+  .nvx-notif-container-top-left,
+
+  .nvx-notif-container-top-right,
+
+  .nvx-notif-container-top-center {
+
+    inset-block-start: max(var(--nvx-notif-offset-mobile, 0.75rem), env(safe-area-inset-top, 0.75rem));
+
+    transform: none;
+
+  }
+
+  
+
+  .nvx-notif-container-bottom-left,
+
+  .nvx-notif-container-bottom-right,
+
+  .nvx-notif-container-bottom-center {
+
+    inset-block-end: max(var(--nvx-notif-offset-mobile, 0.75rem), env(safe-area-inset-bottom, 0.75rem));
+
+    transform: none;
+
+  }
+
+  
+
+  .nvx-notif-container-top-center,
+
+  .nvx-notif-container-bottom-center {
+
+    inset-inline-start: var(--nvx-notif-offset-mobile, 0.75rem);
+
+    inset-inline-end: var(--nvx-notif-offset-mobile, 0.75rem);
+
+    width: auto;
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 145. NOTIFICATION ITEM BASE STYLES */
+
+/*======================================*/
+
+
+.nvx-notif-item {
+
+  position: relative;
+
+  pointer-events: auto;
+
+  min-width: var(--nvx-notif-min-width, 280px);
+
+  min-height: var(--nvx-notif-min-height, 64px);
+
+  border-radius: var(--nvx-notif-border-radius, 1rem);
+
+  background: var(--nvx-notif-glass-bg, var(--nvx-notif-glass-bg-light));
+
+  -webkit-backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  border: 1px solid var(--nvx-notif-glass-border, rgba(255,255,255,0.2));
+
+  box-shadow: var(--nvx-notif-shadow-lg, 0 16px 40px rgba(0,0,0,0.16));
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  transition: all var(--nvx-notif-duration-enter, 300ms) var(--nvx-notif-ease-enter);
+
+  margin-block-end: var(--nvx-notif-stack-gap, 0.5rem);
+
+  transform-origin: center;
+
+  will-change: transform, opacity, height;
+
+  contain: layout paint style;
+
+  color: var(--nvx-notif-text-main, #0f172a);
+
+  container-type: inline-size;
+
+  container-name: notification;
+
+  
+
+  /* Safari performance fix */
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+  
+
+  /* View Transition Support */
+
+  view-transition-name: var(--nvx-notif-transition-name, notification-transition);
+
+}
+
+
+/* Safari 14 specific fix - UPDATED */
+
+@supports (-webkit-backdrop-filter: blur(20px)) {
+
+  @media not all and (mask-image: none) {
+
+    .nvx-notif-item {
+
+      -webkit-mask-image: none;
+
+      transform: translate3d(0, 0, 0);
+
+    }
+
+  }
+
+}
+
+
+[data-theme="dark"] .nvx-notif-item {
+
+  background: var(--nvx-notif-glass-bg, var(--nvx-notif-glass-bg-dark));
+
+  color: var(--nvx-notif-text-main-dark, #f8fafc);
+
+  border-color: var(--nvx-notif-glass-border-dark, rgba(255,255,255,0.1));
+
+}
+
+
+/* Focus styles for keyboard navigation */
+
+.nvx-notif-item:focus-visible {
+
+  outline: 3px solid var(--nvx-primary-500, #3b82f6);
+
+  outline-offset: 2px;
+
+  outline-style: solid;
+
+}
+
+
+/* DATA ATTRIBUTE SUPPORT FOR JS INTEGRATION */
+
+.nvx-notif-item[data-priority="high"] {
+
+  --nvx-notif-duration-auto-dismiss: var(--nvx-notif-priority-high-duration, 12s);
+
+  border-inline-start-width: 4px;
+
+  border-inline-start-style: solid;
+
+  border-inline-start-color: var(--nvx-danger-500, #ef4444);
+
+}
+
+
+.nvx-notif-item[data-read="true"] {
+
+  opacity: var(--nvx-notif-read-opacity, 0.8);
+
+}
+
+
+/* ENTER ANIMATIONS - WITH RTL SUPPORT */
+
+.nvx-notif-enter-from-top {
+
+  animation: nvx-notif-slide-in-top var(--nvx-notif-duration-enter, 300ms) var(--nvx-notif-ease-enter) forwards;
+
+}
+
+
+.nvx-notif-enter-from-bottom {
+
+  animation: nvx-notif-slide-in-bottom var(--nvx-notif-duration-enter, 300ms) var(--nvx-notif-ease-enter) forwards;
+
+}
+
+
+.nvx-notif-enter-from-left {
+
+  animation: nvx-notif-slide-in-left var(--nvx-notif-duration-enter, 300ms) var(--nvx-notif-ease-enter) forwards;
+
+}
+
+
+[dir="rtl"] .nvx-notif-enter-from-left {
+
+  animation-name: nvx-notif-slide-in-right;
+
+}
+
+
+.nvx-notif-enter-from-right {
+
+  animation: nvx-notif-slide-in-right var(--nvx-notif-duration-enter, 300ms) var(--nvx-notif-ease-enter) forwards;
+
+}
+
+
+[dir="rtl"] .nvx-notif-enter-from-right {
+
+  animation-name: nvx-notif-slide-in-left;
+
+}
+
+
+.nvx-notif-enter-from-center {
+
+  animation: nvx-notif-scale-in var(--nvx-notif-duration-enter, 300ms) var(--nvx-notif-ease-enter) forwards;
+
+}
+
+
+/* EXIT ANIMATIONS - WITHOUT VISIBILITY HIDDEN (JS handles removal) */
+
+.nvx-notif-exit-to-top {
+
+  animation: nvx-notif-slide-out-top var(--nvx-notif-duration-exit, 250ms) var(--nvx-notif-ease-exit) forwards;
+
+}
+
+
+.nvx-notif-exit-to-bottom {
+
+  animation: nvx-notif-slide-out-bottom var(--nvx-notif-duration-exit, 250ms) var(--nvx-notif-ease-exit) forwards;
+
+}
+
+
+.nvx-notif-exit-to-left {
+
+  animation: nvx-notif-slide-out-left var(--nvx-notif-duration-exit, 250ms) var(--nvx-notif-ease-exit) forwards;
+
+}
+
+
+[dir="rtl"] .nvx-notif-exit-to-left {
+
+  animation-name: nvx-notif-slide-out-right;
+
+}
+
+
+.nvx-notif-exit-to-right {
+
+  animation: nvx-notif-slide-out-right var(--nvx-notif-duration-exit, 250ms) var(--nvx-notif-ease-exit) forwards;
+
+}
+
+
+[dir="rtl"] .nvx-notif-exit-to-right {
+
+  animation-name: nvx-notif-slide-out-left;
+
+}
+
+
+.nvx-notif-exit-scale {
+
+  animation: nvx-notif-scale-out var(--nvx-notif-duration-exit, 250ms) var(--nvx-notif-ease-exit) forwards;
+
+}
+
+
+/* ATTENTION LEVELS - WITH LIMITED ITERATIONS */
+
+.nvx-notif-high-attention {
+
+  --nvx-notif-duration-auto-dismiss: var(--nvx-notif-duration-high-attention, 12s);
+
+  animation: nvx-notif-pulse-border 2s var(--nvx-notif-pulse-iteration, 3);
+
+}
+
+
+@keyframes nvx-notif-pulse-border {
+
+  0%, 100% {
+
+    box-shadow: 0 0 0 0 var(--nvx-primary-500, #3b82f6);
+
+  }
+
+  50% {
+
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+
+  }
+
+}
+
+
+/* UTILITY CLASSES FOR PROGRAMMATIC CONTROL */
+
+.nvx-notif-hidden {
+
+  display: none !important;
+
+}
+
+
+.nvx-notif-paused {
+
+  animation-play-state: paused !important;
+
+}
+
+
+/*======================================*/
+
+/* 146. ANIMATION KEYFRAMES - WITHOUT VISIBILITY HIDDEN */
+
+/*======================================*/
+
+
+@keyframes nvx-notif-slide-in-top {
+
+  0% {
+
+    opacity: 0;
+
+    transform: translateY(-100%) scale(0.8);
+
+  }
+
+  70% {
+
+    transform: translateY(10%) scale(1.02);
+
+  }
+
+  100% {
+
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+
+  }
+
+}
+
+
+@keyframes nvx-notif-slide-in-bottom {
+
+  0% {
+
+    opacity: 0;
+
+    transform: translateY(100%) scale(0.8);
+
+  }
+
+  70% {
+
+    transform: translateY(-10%) scale(1.02);
+
+  }
+
+  100% {
+
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+
+  }
+
+}
+
+
+@keyframes nvx-notif-slide-in-left {
+
+  0% {
+
+    opacity: 0;
+
+    transform: translateX(var(--nvx-translate-start, -100%)) scale(0.8);
+
+  }
+
+  70% {
+
+    transform: translateX(calc(var(--nvx-translate-start, -100%) * -0.1)) scale(1.02);
+
+  }
+
+  100% {
+
+    opacity: 1;
+
+    transform: translateX(0) scale(1);
+
+  }
+
+}
+
+
+@keyframes nvx-notif-slide-in-right {
+
+  0% {
+
+    opacity: 0;
+
+    transform: translateX(var(--nvx-translate-end, 100%)) scale(0.8);
+
+  }
+
+  70% {
+
+    transform: translateX(calc(var(--nvx-translate-end, 100%) * -0.1)) scale(1.02);
+
+  }
+
+  100% {
+
+    opacity: 1;
+
+    transform: translateX(0) scale(1);
+
+  }
+
+}
+
+
+@keyframes nvx-notif-scale-in {
+
+  0% {
+
+    opacity: 0;
+
+    transform: scale(0.6);
+
+  }
+
+  70% {
+
+    transform: scale(1.05);
+
+  }
+
+  100% {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+  }
+
+}
+
+
+@keyframes nvx-notif-slide-out-top {
+
+  0% {
+
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform: translateY(-100%) scale(0.8);
+
+  }
+
+}
+
+
+@keyframes nvx-notif-slide-out-bottom {
+
+  0% {
+
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform: translateY(100%) scale(0.8);
+
+  }
+
+}
+
+
+@keyframes nvx-notif-slide-out-left {
+
+  0% {
+
+    opacity: 1;
+
+    transform: translateX(0) scale(1);
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform: translateX(var(--nvx-translate-start, -100%)) scale(0.8);
+
+  }
+
+}
+
+
+@keyframes nvx-notif-slide-out-right {
+
+  0% {
+
+    opacity: 1;
+
+    transform: translateX(0) scale(1);
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform: translateX(var(--nvx-translate-end, 100%)) scale(0.8);
+
+  }
+
+}
+
+
+@keyframes nvx-notif-scale-out {
+
+  0% {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+  }
+
+  100% {
+
+    opacity: 0;
+
+    transform: scale(0.6);
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 147. NOTIFICATION CONTENT LAYOUT */
+
+/*======================================*/
+
+
+.nvx-notif-content {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: var(--nvx-notif-spacing, 1rem);
+
+  padding: var(--nvx-notif-spacing, 1rem);
+
+  flex: 1;
+
+}
+
+
+/* CONTAINER QUERY FOR RESPONSIVE ADAPTATION */
+
+@container notification (max-width: 340px) {
+
+  .nvx-notif-content {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: var(--nvx-notif-spacing-compact, 0.75rem);
+
+  }
+
+  
+
+  .nvx-notif-icon {
+
+    margin-block-end: var(--nvx-space-1, 0.25rem);
+
+  }
+
+  
+
+  .nvx-notif-actions {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    width: 100%;
+
+  }
+
+  
+
+  .nvx-notif-action-btn {
+
+    width: 100%;
+
+  }
+
+}
+
+
+@container notification (max-width: 240px) {
+
+  .nvx-notif-title {
+
+    font-size: var(--nvx-text-xs, 0.75rem);
+
+  }
+
+  
+
+  .nvx-notif-avatar {
+
+    width: 28px;
+
+    height: 28px;
+
+  }
+
+  
+
+  .nvx-notif-timestamp {
+
+    display: none;
+
+  }
+
+}
+
+
+/* FALLBACK FOR BROWSERS WITHOUT CONTAINER QUERIES */
+
+@supports not (container-type: inline-size) {
+
+  @media (max-width: 340px) {
+
+    .nvx-notif-content {
+
+      flex-direction: column;
+
+      align-items: flex-start;
+
+      gap: var(--nvx-notif-spacing-compact, 0.75rem);
+
+    }
+
+    
+
+    .nvx-notif-icon {
+
+      margin-block-end: var(--nvx-space-1, 0.25rem);
+
+    }
+
+    
+
+    .nvx-notif-actions {
+
+      flex-direction: column;
+
+      align-items: stretch;
+
+      width: 100%;
+
+    }
+
+    
+
+    .nvx-notif-action-btn {
+
+      width: 100%;
+
+    }
+
+  }
+
+  
+
+  @media (max-width: 240px) {
+
+    .nvx-notif-title {
+
+      font-size: var(--nvx-text-xs, 0.75rem);
+
+    }
+
+    
+
+    .nvx-notif-avatar {
+
+      width: 28px;
+
+      height: 28px;
+
+    }
+
+    
+
+    .nvx-notif-timestamp {
+
+      display: none;
+
+    }
+
+  }
+
+}
+
+
+/* COMPACT VARIANT */
+
+.nvx-notif-compact .nvx-notif-content {
+
+  padding: var(--nvx-notif-spacing-compact, 0.75rem);
+
+  gap: var(--nvx-notif-spacing-compact, 0.75rem);
+
+}
+
+
+/* BANNER VARIANT */
+
+.nvx-notif-banner {
+
+  border-radius: var(--nvx-notif-border-radius-banner, 0);
+
+  max-width: 100%;
+
+  width: 100%;
+
+}
+
+
+.nvx-notif-banner .nvx-notif-content {
+
+  padding: var(--nvx-notif-spacing-banner, 1.25rem);
+
+}
+
+
+/* ICON SECTION */
+
+.nvx-notif-icon {
+
+  flex-shrink: 0;
+
+  width: var(--nvx-notif-icon-size, 24px);
+
+  height: var(--nvx-notif-icon-size, 24px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: var(--nvx-notif-icon-size, 24px);
+
+  border-radius: var(--nvx-radius-md, 0.75rem);
+
+  color: currentColor;
+
+}
+
+
+.nvx-notif-icon-sm {
+
+  width: var(--nvx-notif-icon-size-sm, 20px);
+
+  height: var(--nvx-notif-icon-size-sm, 20px);
+
+  font-size: var(--nvx-notif-icon-size-sm, 20px);
+
+}
+
+
+.nvx-notif-icon-lg {
+
+  width: var(--nvx-notif-icon-size-lg, 32px);
+
+  height: var(--nvx-notif-icon-size-lg, 32px);
+
+  font-size: var(--nvx-notif-icon-size-lg, 32px);
+
+}
+
+
+.nvx-notif-icon-xl {
+
+  width: var(--nvx-notif-icon-size-xl, 40px);
+
+  height: var(--nvx-notif-icon-size-xl, 40px);
+
+  font-size: var(--nvx-notif-icon-size-xl, 40px);
+
+}
+
+
+/* AVATAR STYLE ICON */
+
+.nvx-notif-avatar {
+
+  width: 44px;
+
+  height: 44px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  border: 2px solid var(--nvx-primary-400, #60a5fa);
+
+  flex-shrink: 0;
+
+}
+
+
+.nvx-notif-avatar img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+}
+
+
+/* TEXT CONTENT */
+
+.nvx-notif-text-content {
+
+  flex: 1;
+
+  min-width: 0;
+
+}
+
+
+.nvx-notif-title {
+
+  font-weight: var(--nvx-font-semibold, 600);
+
+  font-size: var(--nvx-text-base, 1rem);
+
+  line-height: var(--nvx-leading-tight, 1.4);
+
+  margin-block-end: var(--nvx-space-1, 0.25rem);
+
+  color: inherit;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--nvx-space-2, 0.5rem);
+
+  flex-wrap: wrap;
+
+  text-wrap: balance;
+
+}
+
+
+.nvx-notif-message {
+
+  all: unset;
+
+  display: block;
+
+  font-size: var(--nvx-text-sm, 0.875rem);
+
+  line-height: var(--nvx-leading-normal, 1.5);
+
+  color: inherit;
+
+  opacity: 0.9;
+
+  word-wrap: break-word;
+
+}
+
+
+/* TITLE BADGE */
+
+.nvx-notif-title-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: var(--nvx-space-1, 0.25rem) var(--nvx-space-2, 0.5rem);
+
+  font-size: var(--nvx-text-xs, 0.75rem);
+
+  font-weight: var(--nvx-font-bold, 700);
+
+  background: var(--nvx-primary-500, #3b82f6);
+
+  color: #fff;
+
+  border-radius: var(--nvx-radius-sm, 0.5rem);
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+
+  white-space: nowrap;
+
+}
+
+
+/* TIMESTAMP */
+
+.nvx-notif-timestamp {
+
+  font-size: var(--nvx-text-xs, 0.75rem);
+
+  opacity: 0.7;
+
+  margin-block-start: var(--nvx-space-1, 0.25rem);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--nvx-space-2, 0.5rem);
+
+}
+
+
+.nvx-notif-timestamp i {
+
+  font-size: 12px;
+
+}
+
+
+/*======================================*/
+
+/* 148. NOTIFICATION ACTIONS */
+
+/*======================================*/
+
+
+.nvx-notif-actions {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--nvx-space-2, 0.5rem);
+
+  margin-block-start: var(--nvx-space-3, 0.75rem);
+
+  flex-wrap: wrap;
+
+}
+
+
+.nvx-notif-action-btn {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: var(--nvx-space-2, 0.5rem);
+
+  height: var(--nvx-notif-btn-height, 36px);
+
+  padding: var(--nvx-notif-btn-padding, 0 0.75rem);
+
+  border-radius: var(--nvx-notif-btn-radius, 0.5rem);
+
+  font-size: var(--nvx-notif-btn-font-size, 0.875rem);
+
+  font-weight: var(--nvx-font-medium, 500);
+
+  border: 1px solid transparent;
+
+  background: transparent;
+
+  color: inherit;
+
+  cursor: pointer;
+
+  transition: all var(--nvx-duration-fast, 150ms) var(--nvx-ease-standard);
+
+  white-space: nowrap;
+
+  border-color: currentColor;
+
+  opacity: 0.8;
+
+}
+
+
+.nvx-notif-action-btn:hover {
+
+  opacity: 1;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  transform: translateY(-1px);
+
+}
+
+
+.nvx-notif-action-btn:active {
+
+  transform: translateY(0);
+
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+
+  .nvx-notif-action-btn:active {
+
+    opacity: 0.7;
+
+    transition: opacity 0.05s;
+
+    transform: scale(0.98);
+
+  }
+
+}
+
+
+.nvx-notif-action-btn:focus-visible {
+
+  outline: 3px solid var(--nvx-primary-500, #3b82f6);
+
+  outline-offset: 2px;
+
+  outline-style: solid;
+
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+
+}
+
+
+.nvx-notif-action-btn-primary {
+
+  background: var(--nvx-primary-500, #3b82f6);
+
+  border-color: var(--nvx-primary-500, #3b82f6);
+
+  color: #fff;
+
+  opacity: 1;
+
+}
+
+
+.nvx-notif-action-btn-primary:hover {
+
+  background: var(--nvx-primary-600, #2563eb);
+
+  border-color: var(--nvx-primary-600, #2563eb);
+
+}
+
+
+.nvx-notif-action-btn-secondary {
+
+  background: transparent;
+
+  border-color: currentColor;
+
+}
+
+
+/* CLOSE BUTTON - WITH TOUCH SIZE FIX */
+
+.nvx-notif-close {
+
+  position: absolute;
+
+  inset-block-start: var(--nvx-space-3, 0.75rem);
+
+  inset-inline-end: var(--nvx-space-3, 0.75rem);
+
+  width: 28px;
+
+  height: 28px;
+
+  border-radius: var(--nvx-radius-sm, 0.5rem);
+
+  background: transparent;
+
+  border: none;
+
+  color: inherit;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all var(--nvx-duration-fast, 150ms) var(--nvx-ease-standard);
+
+  opacity: 0.6;
+
+  padding: 0;
+
+  font-size: 16px;
+
+}
+
+
+.nvx-notif-close:hover {
+
+  opacity: 1;
+
+  background: rgba(0, 0, 0, 0.1);
+
+  transform: scale(1.1);
+
+}
+
+
+.nvx-notif-close:focus-visible {
+
+  outline: 3px solid var(--nvx-primary-500, #3b82f6);
+
+  outline-offset: 2px;
+
+  outline-style: solid;
+
+}
+
+
+[data-theme="dark"] .nvx-notif-close:hover {
+
+  background: rgba(255, 255, 255, 0.1);
+
+}
+
+
+/* Touch device close button fix */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .nvx-notif-close {
+
+    width: var(--nvx-notif-btn-touch-size, 44px);
+
+    height: var(--nvx-notif-btn-touch-size, 44px);
+
+    font-size: 20px;
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 149. NOTIFICATION VARIANTS */
+
+/*======================================*/
+
+
+/* SOLID VARIANTS */
+
+.nvx-notif-solid-primary {
+
+  background: var(--nvx-notif-bg-primary, linear-gradient(135deg, #3b82f6, #2563eb));
+
+  border-color: transparent;
+
+  color: #fff;
+
+}
+
+
+.nvx-notif-solid-secondary {
+
+  background: var(--nvx-notif-bg-secondary, linear-gradient(135deg, #8b5cf6, #7c3aed));
+
+  border-color: transparent;
+
+  color: #fff;
+
+}
+
+
+.nvx-notif-solid-success {
+
+  background: var(--nvx-notif-bg-success, linear-gradient(135deg, #10b981, #059669));
+
+  border-color: transparent;
+
+  color: #fff;
+
+}
+
+
+.nvx-notif-solid-warning {
+
+  background: var(--nvx-notif-bg-warning, linear-gradient(135deg, #f59e0b, #d97706));
+
+  border-color: transparent;
+
+  color: #fff;
+
+}
+
+
+.nvx-notif-solid-danger {
+
+  background: var(--nvx-notif-bg-danger, linear-gradient(135deg, #ef4444, #dc2626));
+
+  border-color: transparent;
+
+  color: #fff;
+
+}
+
+
+.nvx-notif-solid-info {
+
+  background: var(--nvx-notif-bg-info, linear-gradient(135deg, #06b6d4, #0891b2));
+
+  border-color: transparent;
+
+  color: #fff;
+
+}
+
+
+.nvx-notif-solid-dark {
+
+  background: var(--nvx-notif-bg-dark, linear-gradient(135deg, #1f2937, #111827));
+
+  border-color: transparent;
+
+  color: #fff;
+
+}
+
+
+.nvx-notif-solid-light {
+
+  background: var(--nvx-notif-bg-light, linear-gradient(135deg, #f9fafb, #f3f4f6));
+
+  border-color: var(--nvx-gray-200, #e5e7eb);
+
+  color: #111827;
+
+}
+
+
+/* OUTLINE VARIANTS */
+
+.nvx-notif-outline-primary {
+
+  background: transparent;
+
+  border: 2px solid var(--nvx-primary-500, #3b82f6);
+
+  color: var(--nvx-primary-500, #3b82f6);
+
+}
+
+
+.nvx-notif-outline-secondary {
+
+  background: transparent;
+
+  border: 2px solid var(--nvx-secondary-500, #8b5cf6);
+
+  color: var(--nvx-secondary-500, #8b5cf6);
+
+}
+
+
+.nvx-notif-outline-success {
+
+  background: transparent;
+
+  border: 2px solid var(--nvx-success-500, #10b981);
+
+  color: var(--nvx-success-500, #10b981);
+
+}
+
+
+.nvx-notif-outline-warning {
+
+  background: transparent;
+
+  border: 2px solid var(--nvx-warning-500, #f59e0b);
+
+  color: var(--nvx-warning-500, #f59e0b);
+
+}
+
+
+.nvx-notif-outline-danger {
+
+  background: transparent;
+
+  border: 2px solid var(--nvx-danger-500, #ef4444);
+
+  color: var(--nvx-danger-500, #ef4444);
+
+}
+
+
+.nvx-notif-outline-info {
+
+  background: transparent;
+
+  border: 2px solid var(--nvx-info-500, #06b6d4);
+
+  color: var(--nvx-info-500, #06b6d4);
+
+}
+
+
+/* GLASS VARIANTS */
+
+.nvx-notif-glass {
+
+  background: var(--nvx-notif-glass-bg, var(--nvx-notif-glass-bg-light));
+
+  -webkit-backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  border: 1px solid var(--nvx-notif-glass-border, rgba(255,255,255,0.2));
+
+  box-shadow: var(--nvx-notif-shadow-lg, 0 16px 40px rgba(0,0,0,0.16));
+
+  color: inherit;
+
+  
+
+  /* Safari performance fix */
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+}
+
+
+/* Firefox gradient fallback - UPDATED */
+
+@supports not (background: linear-gradient(135deg, red, blue)) {
+
+  .nvx-notif-solid-primary {
+
+    background: var(--nvx-primary-500, #3b82f6);
+
+  }
+
+  
+
+  .nvx-notif-solid-secondary {
+
+    background: var(--nvx-secondary-500, #8b5cf6);
+
+  }
+
+  
+
+  .nvx-notif-solid-success {
+
+    background: var(--nvx-success-500, #10b981);
+
+  }
+
+  
+
+  .nvx-notif-solid-warning {
+
+    background: var(--nvx-warning-500, #f59e0b);
+
+  }
+
+  
+
+  .nvx-notif-solid-danger {
+
+    background: var(--nvx-danger-500, #ef4444);
+
+  }
+
+  
+
+  .nvx-notif-solid-info {
+
+    background: var(--nvx-info-500, #06b6d4);
+
+  }
+
+  
+
+  .nvx-notif-solid-dark {
+
+    background: var(--nvx-gray-800, #1f2937);
+
+  }
+
+  
+
+  .nvx-notif-solid-light {
+
+    background: var(--nvx-gray-100, #f3f4f6);
+
+  }
+
+}
+
+
+.nvx-notif-glass-primary {
+
+  background: linear-gradient(135deg, rgba(59,130,246,0.2), rgba(59,130,246,0.1));
+
+  -webkit-backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  border: 1px solid rgba(59,130,246,0.3);
+
+  color: var(--nvx-primary-500, #3b82f6);
+
+  
+
+  /* Safari performance fix */
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+}
+
+
+.nvx-notif-glass-secondary {
+
+  background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(139,92,246,0.1));
+
+  -webkit-backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  border: 1px solid rgba(139,92,246,0.3);
+
+  color: var(--nvx-secondary-500, #8b5cf6);
+
+  
+
+  /* Safari performance fix */
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+}
+
+
+.nvx-notif-glass-success {
+
+  background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(16,185,129,0.1));
+
+  -webkit-backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  border: 1px solid rgba(16,185,129,0.3);
+
+  color: var(--nvx-success-500, #10b981);
+
+  
+
+  /* Safari performance fix */
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+}
+
+
+.nvx-notif-glass-warning {
+
+  background: linear-gradient(135deg, rgba(245,158,11,0.2), rgba(245,158,11,0.1));
+
+  -webkit-backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  border: 1px solid rgba(245,158,11,0.3);
+
+  color: var(--nvx-warning-500, #f59e0b);
+
+  
+
+  /* Safari performance fix */
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+}
+
+
+.nvx-notif-glass-danger {
+
+  background: linear-gradient(135deg, rgba(239,68,68,0.2), rgba(239,68,68,0.1));
+
+  -webkit-backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  border: 1px solid rgba(239,68,68,0.3);
+
+  color: var(--nvx-danger-500, #ef4444);
+
+  
+
+  /* Safari performance fix */
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+}
+
+
+.nvx-notif-glass-info {
+
+  background: linear-gradient(135deg, rgba(6,182,212,0.2), rgba(6,182,212,0.1));
+
+  -webkit-backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  border: 1px solid rgba(6,182,212,0.3);
+
+  color: var(--nvx-info-500, #06b6d4);
+
+  
+
+  /* Safari performance fix */
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+}
+
+
+/* FALLBACK FOR NO BACKDROP-FILTER SUPPORT */
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+
+  .nvx-notif-glass,
+
+  .nvx-notif-glass-primary,
+
+  .nvx-notif-glass-secondary,
+
+  .nvx-notif-glass-success,
+
+  .nvx-notif-glass-warning,
+
+  .nvx-notif-glass-danger,
+
+  .nvx-notif-glass-info {
+
+    background: var(--nvx-notif-glass-bg-light, #ffffff);
+
+    -webkit-backdrop-filter: none;
+
+    backdrop-filter: none;
+
+  }
+
+  
+
+  [data-theme="dark"] .nvx-notif-glass,
+
+  [data-theme="dark"] .nvx-notif-glass-primary,
+
+  [data-theme="dark"] .nvx-notif-glass-secondary,
+
+  [data-theme="dark"] .nvx-notif-glass-success,
+
+  [data-theme="dark"] .nvx-notif-glass-warning,
+
+  [data-theme="dark"] .nvx-notif-glass-danger,
+
+  [data-theme="dark"] .nvx-notif-glass-info {
+
+    background: var(--nvx-notif-glass-bg-dark, #1e293b);
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 150. PROGRESS BAR SYSTEM */
+
+/*======================================*/
+
+
+.nvx-notif-progress {
+
+  position: relative;
+
+  width: 100%;
+
+  height: var(--nvx-notif-progress-height, 4px);
+
+  background: var(--nvx-notif-progress-bg, rgba(0,0,0,0.1));
+
+  border-radius: var(--nvx-notif-progress-radius, 2px);
+
+  overflow: hidden;
+
+  margin-block-start: auto;
+
+  accent-color: var(--nvx-primary-500, #3b82f6);
+
+}
+
+
+.nvx-notif-progress-bar {
+
+  position: absolute;
+
+  inset-block-start: 0;
+
+  inset-inline-start: 0;
+
+  height: 100%;
+
+  width: 100%;
+
+  background: var(--nvx-notif-progress-fill, currentColor);
+
+  opacity: var(--nvx-notif-progress-opacity, 0.6);
+
+  transform-origin: var(--nvx-origin-start, left);
+
+  transform: scaleX(1);
+
+  transition: transform linear;
+
+  will-change: transform;
+
+}
+
+
+[dir="rtl"] .nvx-notif-progress-bar {
+
+  transform-origin: var(--nvx-origin-start, right);
+
+}
+
+
+.nvx-notif-progress-active .nvx-notif-progress-bar {
+
+  animation: nvx-notif-progress-animation var(--nvx-notif-duration-progress, 5s) linear forwards;
+
+}
+
+
+.nvx-notif-progress-paused .nvx-notif-progress-bar {
+
+  animation-play-state: paused;
+
+}
+
+
+@keyframes nvx-notif-progress-animation {
+
+  0% {
+
+    transform: scaleX(1);
+
+  }
+
+  100% {
+
+    transform: scaleX(0);
+
+  }
+
+}
+
+
+/* CIRCULAR PROGRESS - FIXED CALCULATION */
+
+.nvx-notif-circular-progress {
+
+  position: relative;
+
+  width: 44px;
+
+  height: 44px;
+
+  flex-shrink: 0;
+
+}
+
+
+.nvx-notif-circular-progress svg {
+
+  width: 100%;
+
+  height: 100%;
+
+  transform: rotate(-90deg);
+
+}
+
+
+[dir="rtl"] .nvx-notif-circular-progress svg {
+
+  transform: rotate(90deg);
+
+}
+
+
+.nvx-notif-circular-bg {
+
+  fill: none;
+
+  stroke: var(--nvx-notif-progress-bg, rgba(0,0,0,0.1));
+
+  stroke-width: 4;
+
+}
+
+
+.nvx-notif-circular-fill {
+
+  fill: none;
+
+  stroke: currentColor;
+
+  stroke-width: 4;
+
+  stroke-linecap: round;
+
+  stroke-dasharray: var(--nvx-notif-circular-circumference, 126);
+
+  stroke-dashoffset: var(--nvx-notif-circular-circumference, 126);
+
+  transition: stroke-dashoffset var(--nvx-duration-medium, 300ms) linear;
+
+}
+
+
+/* When progress is set via JS, update stroke-dashoffset */
+
+.nvx-notif-circular-progress[data-progress] .nvx-notif-circular-fill {
+
+  stroke-dashoffset: calc(var(--nvx-notif-circular-circumference, 126) - (var(--nvx-notif-circular-circumference, 126) * var(--nvx-progress, 0) / 100));
+
+}
+
+
+.nvx-notif-circular-text {
+
+  position: absolute;
+
+  inset-block-start: 50%;
+
+  inset-inline-start: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: var(--nvx-text-xs, 0.75rem);
+
+  font-weight: var(--nvx-font-bold, 700);
+
+}
+
+
+[dir="rtl"] .nvx-notif-circular-text {
+
+  transform: translate(50%, -50%);
+
+}
+
+
+/*======================================*/
+
+/* 151. NOTIFICATION BADGE SYSTEM */
+
+/*======================================*/
+
+
+.nvx-notif-badge-container {
+
+  position: relative;
+
+  display: inline-flex;
+
+  cursor: pointer;
+
+}
+
+
+.nvx-notif-badge {
+
+  position: absolute;
+
+  inset-block-start: -8px;
+
+  inset-inline-end: -8px;
+
+  min-width: var(--nvx-notif-badge-size, 20px);
+
+  height: var(--nvx-notif-badge-size, 20px);
+
+  padding: 0 var(--nvx-space-1, 0.25rem);
+
+  border-radius: var(--nvx-notif-badge-size, 20px);
+
+  background: var(--nvx-notif-count-bg, #ef4444);
+
+  color: #fff;
+
+  font-size: var(--nvx-text-xs, 0.75rem);
+
+  font-weight: var(--nvx-font-bold, 700);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  line-height: 1;
+
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+
+  transition: all var(--nvx-duration-fast, 150ms) var(--nvx-ease-standard);
+
+  z-index: var(--nvx-z-notif-badge, 1070);
+
+  pointer-events: none;
+
+  white-space: nowrap;
+
+}
+
+
+.nvx-notif-badge:focus-visible {
+
+  outline: 3px solid var(--nvx-primary-500, #3b82f6);
+
+  outline-offset: 2px;
+
+}
+
+
+.nvx-notif-badge-dot {
+
+  position: absolute;
+
+  inset-block-start: -4px;
+
+  inset-inline-end: -4px;
+
+  width: var(--nvx-notif-badge-dot-size, 10px);
+
+  height: var(--nvx-notif-badge-dot-size, 10px);
+
+  border-radius: 50%;
+
+  background: var(--nvx-notif-count-bg, #ef4444);
+
+  border: 2px solid var(--nvx-bg-card, #ffffff);
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.nvx-notif-badge-pulse {
+
+  animation: nvx-notif-badge-pulse 2s infinite;
+
+}
+
+
+@keyframes nvx-notif-badge-pulse {
+
+  0%, 100% {
+
+    transform: scale(1);
+
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+
+  }
+
+  50% {
+
+    transform: scale(1.2);
+
+    box-shadow: 0 4px 16px rgba(239, 68, 68, 0.5);
+
+  }
+
+}
+
+
+.nvx-notif-badge-blink {
+
+  animation: nvx-notif-badge-blink 1s infinite;
+
+}
+
+
+@keyframes nvx-notif-badge-blink {
+
+  0%, 50%, 100% {
+
+    opacity: 1;
+
+  }
+
+  25%, 75% {
+
+    opacity: 0.3;
+
+  }
+
+}
+
+
+.nvx-notif-badge-count-updated {
+
+  animation: nvx-notif-count-update 0.4s ease;
+
+}
+
+
+@keyframes nvx-notif-count-update {
+
+  0%, 100% {
+
+    transform: scale(1);
+
+  }
+
+  50% {
+
+    transform: scale(1.5);
+
+  }
+
+}
+
+
+/* POSITION VARIANTS - WITH LOGICAL PROPERTIES */
+
+.nvx-notif-badge-top-left {
+
+  inset-block-start: -8px;
+
+  inset-inline-start: -8px;
+
+  inset-inline-end: auto;
+
+}
+
+
+.nvx-notif-badge-bottom-right {
+
+  inset-block-end: -8px;
+
+  inset-inline-end: -8px;
+
+  inset-block-start: auto;
+
+}
+
+
+.nvx-notif-badge-bottom-left {
+
+  inset-block-end: -8px;
+
+  inset-inline-start: -8px;
+
+  inset-block-start: auto;
+
+  inset-inline-end: auto;
+
+}
+
+
+/*======================================*/
+
+/* 152. SOUND WAVEFORM ANIMATION */
+
+/*======================================*/
+
+
+.nvx-notif-sound-wave {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 2px;
+
+  height: var(--nvx-notif-wave-size, 40px);
+
+  margin: var(--nvx-space-2, 0.5rem) 0;
+
+  justify-content: center;
+
+}
+
+
+.nvx-notif-wave-bar {
+
+  width: 4px;
+
+  height: 100%;
+
+  background: var(--nvx-notif-wave-color, #60a5fa);
+
+  border-radius: 2px;
+
+  animation: nvx-notif-wave-animation var(--nvx-notif-wave-duration, 1.6s) ease-in-out infinite;
+
+  will-change: transform;
+
+}
+
+
+.nvx-notif-wave-bar:nth-child(1) { animation-delay: 0s; }
+
+.nvx-notif-wave-bar:nth-child(2) { animation-delay: 0.2s; }
+
+.nvx-notif-wave-bar:nth-child(3) { animation-delay: 0.4s; }
+
+.nvx-notif-wave-bar:nth-child(4) { animation-delay: 0.6s; }
+
+.nvx-notif-wave-bar:nth-child(5) { animation-delay: 0.8s; }
+
+
+@keyframes nvx-notif-wave-animation {
+
+  0%, 40%, 100% {
+
+    transform: scaleY(0.3);
+
+  }
+
+  20% {
+
+    transform: scaleY(1);
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 153. NOTIFICATION OVERLAY & BACKDROP */
+
+/*======================================*/
+
+
+.nvx-notif-overlay {
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  -webkit-backdrop-filter: blur(4px);
+
+  backdrop-filter: blur(4px);
+
+  z-index: var(--nvx-z-notif-overlay, 1085);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: opacity var(--nvx-duration-medium, 300ms) var(--nvx-ease-standard),
+
+              visibility var(--nvx-duration-medium, 300ms) var(--nvx-ease-standard);
+
+  pointer-events: none;
+
+  
+
+  /* Safari performance fix */
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+}
+
+
+.nvx-notif-overlay.active {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+
+}
+
+
+/* FALLBACK FOR NO BACKDROP-FILTER */
+
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+
+  .nvx-notif-overlay {
+
+    -webkit-backdrop-filter: none;
+
+    backdrop-filter: none;
+
+    background: rgba(0, 0, 0, 0.7);
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 154. NOTIFICATION SECTIONS */
+
+/*======================================*/
+
+
+/* NOTIFICATION CENTER - WITH POPOVER API SUPPORT */
+
+.nvx-notif-center {
+
+  position: fixed;
+
+  inset-block-start: 50%;
+
+  inset-inline-start: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 90%;
+
+  max-width: 500px;
+
+  max-height: 80vh;
+
+  background: var(--nvx-notif-glass-bg, var(--nvx-notif-glass-bg-light));
+
+  -webkit-backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  border: 1px solid var(--nvx-notif-glass-border, rgba(255,255,255,0.2));
+
+  border-radius: var(--nvx-radius-2xl, 2rem);
+
+  box-shadow: var(--nvx-notif-shadow-xl, 0 24px 60px rgba(0,0,0,0.2));
+
+  z-index: var(--nvx-z-notif, 1090);
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: opacity var(--nvx-duration-medium, 300ms) var(--nvx-ease-standard),
+
+              visibility var(--nvx-duration-medium, 300ms) var(--nvx-ease-standard),
+
+              transform var(--nvx-duration-medium, 300ms) var(--nvx-ease-bounce);
+
+  transform: translate(-50%, -50%) scale(0.9);
+
+  contain: layout paint style;
+
+  
+
+  /* Safari performance fix */
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+}
+
+
+[dir="rtl"] .nvx-notif-center {
+
+  transform: translate(50%, -50%);
+
+}
+
+
+.nvx-notif-center.active {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translate(-50%, -50%) scale(1);
+
+}
+
+
+[dir="rtl"] .nvx-notif-center.active {
+
+  transform: translate(50%, -50%) scale(1);
+
+}
+
+
+/* POPOVER API SUPPORT - ENHANCED */
+
+@supports (anchor-name: --anchor) {
+
+  .nvx-notif-center[popover] {
+
+    position-anchor: --notification-anchor;
+
+    position-try-fallbacks: flip-block, flip-inline;
+
+    z-index: var(--nvx-z-notif, 1090);
+
+  }
+
+}
+
+
+.nvx-notif-center[popover] {
+
+  position: fixed;
+
+  margin: 0;
+
+  border: none;
+
+  padding: 0;
+
+  background: none;
+
+  overflow: visible;
+
+}
+
+
+.nvx-notif-center[popover]:popover-open {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translate(-50%, -50%) scale(1);
+
+}
+
+
+[dir="rtl"] .nvx-notif-center[popover]:popover-open {
+
+  transform: translate(50%, -50%) scale(1);
+
+}
+
+
+.nvx-notif-center-header {
+
+  padding: var(--nvx-notif-spacing, 1rem) var(--nvx-notif-spacing, 1rem) var(--nvx-space-2, 0.5rem);
+
+  border-block-end: 1px solid var(--nvx-notif-glass-border, rgba(255,255,255,0.1));
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+}
+
+
+.nvx-notif-center-title {
+
+  font-size: var(--nvx-text-xl, 1.25rem);
+
+  font-weight: var(--nvx-font-bold, 700);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--nvx-space-2, 0.5rem);
+
+}
+
+
+.nvx-notif-center-actions {
+
+  display: flex;
+
+  gap: var(--nvx-space-2, 0.5rem);
+
+}
+
+
+.nvx-notif-center-content {
+
+  flex: 1;
+
+  overflow-y: auto;
+
+  padding: var(--nvx-notif-spacing, 1rem);
+
+  scrollbar-width: thin;
+
+  scrollbar-color: var(--nvx-primary-400, #60a5fa) transparent;
+
+}
+
+
+.nvx-notif-center-content::-webkit-scrollbar {
+
+  width: 6px;
+
+}
+
+
+.nvx-notif-center-content::-webkit-scrollbar-thumb {
+
+  background: var(--nvx-primary-400, #60a5fa);
+
+  border-radius: 3px;
+
+}
+
+
+.nvx-notif-center-item {
+
+  padding: var(--nvx-notif-spacing, 1rem);
+
+  margin-block-end: var(--nvx-space-2, 0.5rem);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border-radius: var(--nvx-radius-lg, 1rem);
+
+  border: 1px solid var(--nvx-notif-glass-border, rgba(255,255,255,0.1));
+
+  transition: all var(--nvx-duration-fast, 150ms) var(--nvx-ease-standard);
+
+  cursor: pointer;
+
+}
+
+
+.nvx-notif-center-item:hover {
+
+  background: rgba(255, 255, 255, 0.1);
+
+  transform: translateX(4px);
+
+}
+
+
+[dir="rtl"] .nvx-notif-center-item:hover {
+
+  transform: translateX(-4px);
+
+}
+
+
+.nvx-notif-center-item:focus-visible {
+
+  outline: 3px solid var(--nvx-primary-500, #3b82f6);
+
+  outline-offset: 2px;
+
+  outline-style: solid;
+
+}
+
+
+.nvx-notif-center-item.unread {
+
+  border-inline-start: 4px solid var(--nvx-primary-500, #3b82f6);
+
+  background: rgba(59, 130, 246, 0.05);
+
+}
+
+
+.nvx-notif-center-footer {
+
+  padding: var(--nvx-space-3, 0.75rem) var(--nvx-notif-spacing, 1rem);
+
+  border-block-start: 1px solid var(--nvx-notif-glass-border, rgba(255,255,255,0.1));
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+}
+
+
+/* NOTIFICATION LIST (SIDEBAR) */
+
+.nvx-notif-list {
+
+  max-height: 400px;
+
+  overflow-y: auto;
+
+  padding-inline-end: var(--nvx-space-2, 0.5rem);
+
+}
+
+
+.nvx-notif-list-item {
+
+  padding: var(--nvx-space-3, 0.75rem);
+
+  margin-block-end: var(--nvx-space-2, 0.5rem);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border-radius: var(--nvx-radius-md, 0.75rem);
+
+  border: 1px solid var(--nvx-notif-glass-border, rgba(255,255,255,0.1));
+
+  transition: all var(--nvx-duration-fast, 150ms) var(--nvx-ease-standard);
+
+  cursor: pointer;
+
+  display: flex;
+
+  gap: var(--nvx-space-3, 0.75rem);
+
+  align-items: flex-start;
+
+}
+
+
+.nvx-notif-list-item:hover {
+
+  background: rgba(255, 255, 255, 0.1);
+
+}
+
+
+.nvx-notif-list-item:focus-visible {
+
+  outline: 3px solid var(--nvx-primary-500, #3b82f6);
+
+  outline-offset: 2px;
+
+  outline-style: solid;
+
+}
+
+
+.nvx-notif-list-item.unread {
+
+  background: rgba(59, 130, 246, 0.05);
+
+}
+
+
+.nvx-notif-list-avatar {
+
+  width: 40px;
+
+  height: 40px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  flex-shrink: 0;
+
+}
+
+
+.nvx-notif-list-avatar img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+}
+
+
+.nvx-notif-list-content {
+
+  flex: 1;
+
+}
+
+
+.nvx-notif-list-title {
+
+  font-weight: var(--nvx-font-semibold, 600);
+
+  font-size: var(--nvx-text-sm, 0.875rem);
+
+  margin-block-end: var(--nvx-space-1, 0.25rem);
+
+}
+
+
+.nvx-notif-list-message {
+
+  font-size: var(--nvx-text-xs, 0.75rem);
+
+  opacity: 0.8;
+
+  line-height: 1.4;
+
+}
+
+
+.nvx-notif-list-time {
+
+  font-size: var(--nvx-text-2xs, 0.625rem);
+
+  opacity: 0.6;
+
+  margin-block-start: var(--nvx-space-1, 0.25rem);
+
+}
+
+
+.nvx-notif-list-badge {
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: var(--nvx-primary-500, #3b82f6);
+
+  flex-shrink: 0;
+
+  margin-block-start: 6px;
+
+}
+
+
+/*======================================*/
+
+/* 155. GROUPED NOTIFICATIONS */
+
+/*======================================*/
+
+
+.nvx-notif-group {
+
+  margin-block-end: var(--nvx-notif-spacing, 1rem);
+
+}
+
+
+.nvx-notif-group-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: var(--nvx-space-2, 0.5rem) 0;
+
+  margin-block-end: var(--nvx-space-2, 0.5rem);
+
+  border-block-end: 1px solid var(--nvx-notif-glass-border, rgba(255,255,255,0.1));
+
+  font-weight: var(--nvx-font-semibold, 600);
+
+  font-size: var(--nvx-text-sm, 0.875rem);
+
+}
+
+
+.nvx-notif-group-items {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--nvx-space-2, 0.5rem);
+
+}
+
+
+.nvx-notif-group-item {
+
+  position: relative;
+
+  padding-inline-start: var(--nvx-space-4, 1rem);
+
+}
+
+
+.nvx-notif-group-item::before {
+
+  content: '';
+
+  position: absolute;
+
+  inset-inline-start: 0;
+
+  inset-block-start: 50%;
+
+  transform: translateY(-50%);
+
+  width: 4px;
+
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: currentColor;
+
+  opacity: 0.5;
+
+}
+
+
+/*======================================*/
+
+/* 156. NOTIFICATION SOUND INDICATOR */
+
+/*======================================*/
+
+
+.nvx-notif-sound-indicator {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--nvx-space-1, 0.25rem);
+
+  margin-inline-start: var(--nvx-space-2, 0.5rem);
+
+  opacity: 0.7;
+
+}
+
+
+.nvx-notif-sound-wave-small {
+
+  width: 2px;
+
+  height: 12px;
+
+  background: currentColor;
+
+  border-radius: 1px;
+
+  animation: nvx-notif-wave-small var(--nvx-notif-wave-duration, 1.6s) ease-in-out infinite;
+
+  will-change: transform;
+
+}
+
+
+.nvx-notif-sound-wave-small:nth-child(1) { animation-delay: 0s; height: 8px; }
+
+.nvx-notif-sound-wave-small:nth-child(2) { animation-delay: 0.2s; height: 12px; }
+
+.nvx-notif-sound-wave-small:nth-child(3) { animation-delay: 0.4s; height: 10px; }
+
+.nvx-notif-sound-wave-small:nth-child(4) { animation-delay: 0.6s; height: 14px; }
+
+.nvx-notif-sound-wave-small:nth-child(5) { animation-delay: 0.8s; height: 8px; }
+
+
+@keyframes nvx-notif-wave-small {
+
+  0%, 40%, 100% {
+
+    transform: scaleY(0.5);
+
+  }
+
+  20% {
+
+    transform: scaleY(1.2);
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 157. NOTIFICATION PREFERENCES PANEL */
+
+/*======================================*/
+
+
+.nvx-notif-preferences {
+
+  padding: var(--nvx-notif-spacing, 1rem);
+
+  background: var(--nvx-notif-glass-bg, var(--nvx-notif-glass-bg-light));
+
+  -webkit-backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  border: 1px solid var(--nvx-notif-glass-border, rgba(255,255,255,0.2));
+
+  border-radius: var(--nvx-radius-xl, 1.5rem);
+
+  max-width: 400px;
+
+  width: 100%;
+
+  
+
+  /* Safari performance fix */
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+}
+
+
+.nvx-notif-pref-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-block-end: var(--nvx-notif-spacing, 1rem);
+
+  padding-block-end: var(--nvx-space-3, 0.75rem);
+
+  border-block-end: 1px solid var(--nvx-notif-glass-border, rgba(255,255,255,0.1));
+
+}
+
+
+.nvx-notif-pref-title {
+
+  font-size: var(--nvx-text-lg, 1.125rem);
+
+  font-weight: var(--nvx-font-bold, 700);
+
+}
+
+
+.nvx-notif-pref-close {
+
+  width: 36px;
+
+  height: 36px;
+
+  border-radius: var(--nvx-radius-md, 0.75rem);
+
+  background: transparent;
+
+  border: 1px solid currentColor;
+
+  color: inherit;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  opacity: 0.7;
+
+  transition: all var(--nvx-duration-fast, 150ms) var(--nvx-ease-standard);
+
+}
+
+
+.nvx-notif-pref-close:hover {
+
+  opacity: 1;
+
+  background: rgba(255, 255, 255, 0.1);
+
+}
+
+
+.nvx-notif-pref-close:focus-visible {
+
+  outline: 3px solid var(--nvx-primary-500, #3b82f6);
+
+  outline-offset: 2px;
+
+  outline-style: solid;
+
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+
+  .nvx-notif-pref-close {
+
+    width: var(--nvx-notif-btn-touch-size, 44px);
+
+    height: var(--nvx-notif-btn-touch-size, 44px);
+
+  }
+
+}
+
+
+.nvx-notif-pref-group {
+
+  margin-block-end: var(--nvx-notif-spacing, 1rem);
+
+}
+
+
+.nvx-notif-pref-label {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: var(--nvx-space-2, 0.5rem) 0;
+
+  cursor: pointer;
+
+}
+
+
+.nvx-notif-pref-text {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--nvx-space-2, 0.5rem);
+
+  font-size: var(--nvx-text-sm, 0.875rem);
+
+}
+
+
+.nvx-notif-pref-toggle {
+
+  position: relative;
+
+  width: 44px;
+
+  height: 24px;
+
+  border-radius: 12px;
+
+  background: var(--nvx-gray-300, #d1d5db);
+
+  transition: all var(--nvx-duration-fast, 150ms) var(--nvx-ease-standard);
+
+  accent-color: var(--nvx-primary-500, #3b82f6);
+
+}
+
+
+.nvx-notif-pref-toggle::after {
+
+  content: '';
+
+  position: absolute;
+
+  inset-block-start: 2px;
+
+  inset-inline-start: 2px;
+
+  width: 20px;
+
+  height: 20px;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  transition: transform var(--nvx-duration-fast, 150ms) var(--nvx-ease-standard);
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.nvx-notif-pref-toggle.active {
+
+  background: var(--nvx-primary-500, #3b82f6);
+
+}
+
+
+.nvx-notif-pref-toggle.active::after {
+
+  transform: translateX(20px);
+
+}
+
+
+[dir="rtl"] .nvx-notif-pref-toggle.active::after {
+
+  transform: translateX(-20px);
+
+}
+
+
+.nvx-notif-pref-select {
+
+  width: 100%;
+
+  padding: var(--nvx-space-2, 0.5rem) var(--nvx-space-3, 0.75rem);
+
+  border-radius: var(--nvx-radius-md, 0.75rem);
+
+  border: 1px solid var(--nvx-notif-glass-border, rgba(255,255,255,0.2));
+
+  background: transparent;
+
+  color: inherit;
+
+  font-size: var(--nvx-text-sm, 0.875rem);
+
+  margin-block-start: var(--nvx-space-1, 0.25rem);
+
+  cursor: pointer;
+
+  accent-color: var(--nvx-primary-500, #3b82f6);
+
+}
+
+
+.nvx-notif-pref-select:focus-visible {
+
+  outline: 2px solid var(--nvx-primary-500, #3b82f6);
+
+  outline-offset: 2px;
+
+}
+
+
+.nvx-notif-pref-actions {
+
+  display: flex;
+
+  gap: var(--nvx-space-3, 0.75rem);
+
+  margin-block-start: var(--nvx-notif-spacing, 1rem);
+
+  padding-block-start: var(--nvx-space-3, 0.75rem);
+
+  border-block-start: 1px solid var(--nvx-notif-glass-border, rgba(255,255,255,0.1));
+
+}
+
+
+.nvx-notif-pref-btn {
+
+  flex: 1;
+
+  padding: var(--nvx-space-2, 0.5rem) var(--nvx-space-3, 0.75rem);
+
+  border-radius: var(--nvx-radius-md, 0.75rem);
+
+  background: transparent;
+
+  border: 1px solid currentColor;
+
+  color: inherit;
+
+  font-weight: var(--nvx-font-medium, 500);
+
+  cursor: pointer;
+
+  transition: all var(--nvx-duration-fast, 150ms) var(--nvx-ease-standard);
+
+  text-align: center;
+
+}
+
+
+.nvx-notif-pref-btn:hover {
+
+  background: rgba(255, 255, 255, 0.1);
+
+}
+
+
+.nvx-notif-pref-btn:focus-visible {
+
+  outline: 3px solid var(--nvx-primary-500, #3b82f6);
+
+  outline-offset: 2px;
+
+  outline-style: solid;
+
+}
+
+
+.nvx-notif-pref-btn-primary {
+
+  background: var(--nvx-primary-500, #3b82f6);
+
+  border-color: var(--nvx-primary-500, #3b82f6);
+
+  color: #fff;
+
+}
+
+
+.nvx-notif-pref-btn-primary:hover {
+
+  background: var(--nvx-primary-600, #2563eb);
+
+  border-color: var(--nvx-primary-600, #2563eb);
+
+}
+
+
+/*======================================*/
+
+/* 158. PUSH NOTIFICATION PERMISSION PROMPT */
+
+/*======================================*/
+
+
+.nvx-notif-permission {
+
+  position: fixed;
+
+  inset-block-end: max(var(--nvx-notif-offset-safe-bottom, 1rem), env(safe-area-inset-bottom, 1rem));
+
+  inset-inline-start: 50%;
+
+  transform: translateX(-50%);
+
+  width: 90%;
+
+  max-width: 400px;
+
+  background: var(--nvx-notif-glass-bg, var(--nvx-notif-glass-bg-light));
+
+  -webkit-backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  backdrop-filter: var(--nvx-notif-glass-blur, blur(20px));
+
+  border: 1px solid var(--nvx-notif-glass-border, rgba(255,255,255,0.2));
+
+  border-radius: var(--nvx-radius-xl, 1.5rem);
+
+  box-shadow: var(--nvx-notif-shadow-xl, 0 24px 60px rgba(0,0,0,0.2));
+
+  padding: var(--nvx-notif-spacing, 1rem);
+
+  z-index: var(--nvx-z-notif, 1090);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: var(--nvx-space-3, 0.75rem);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: opacity var(--nvx-duration-medium, 300ms) var(--nvx-ease-standard),
+
+              visibility var(--nvx-duration-medium, 300ms) var(--nvx-ease-standard),
+
+              transform var(--nvx-duration-medium, 300ms) var(--nvx-ease-bounce);
+
+  transform: translateX(-50%) translateY(20px);
+
+  contain: layout paint style;
+
+  
+
+  /* Safari performance fix */
+
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+
+}
+
+
+[dir="rtl"] .nvx-notif-permission {
+
+  transform: translateX(50%);
+
+}
+
+
+.nvx-notif-permission.active {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateX(-50%) translateY(0);
+
+}
+
+
+[dir="rtl"] .nvx-notif-permission.active {
+
+  transform: translateX(50%) translateY(0);
+
+}
+
+
+.nvx-notif-permission-header {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: var(--nvx-space-3, 0.75rem);
+
+}
+
+
+.nvx-notif-permission-icon {
+
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, var(--nvx-primary-500, #3b82f6), var(--nvx-secondary-500, #8b5cf6));
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #fff;
+
+  font-size: 24px;
+
+  flex-shrink: 0;
+
+}
+
+
+.nvx-notif-permission-title {
+
+  font-size: var(--nvx-text-lg, 1.125rem);
+
+  font-weight: var(--nvx-font-bold, 700);
+
+  margin-block-end: var(--nvx-space-1, 0.25rem);
+
+}
+
+
+.nvx-notif-permission-desc {
+
+  font-size: var(--nvx-text-sm, 0.875rem);
+
+  opacity: 0.8;
+
+}
+
+
+.nvx-notif-permission-actions {
+
+  display: flex;
+
+  gap: var(--nvx-space-3, 0.75rem);
+
+  margin-block-start: var(--nvx-space-2, 0.5rem);
+
+}
+
+
+.nvx-notif-permission-btn {
+
+  flex: 1;
+
+  padding: var(--nvx-space-3, 0.75rem);
+
+  border-radius: var(--nvx-radius-md, 0.75rem);
+
+  font-weight: var(--nvx-font-semibold, 600);
+
+  cursor: pointer;
+
+  transition: all var(--nvx-duration-fast, 150ms) var(--nvx-ease-standard);
+
+  text-align: center;
+
+  border: none;
+
+  font-size: var(--nvx-text-sm, 0.875rem);
+
+}
+
+
+.nvx-notif-permission-btn:focus-visible {
+
+  outline: 3px solid var(--nvx-primary-500, #3b82f6);
+
+  outline-offset: 2px;
+
+  outline-style: solid;
+
+}
+
+
+.nvx-notif-permission-btn-allow {
+
+  background: var(--nvx-primary-500, #3b82f6);
+
+  color: #fff;
+
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+
+}
+
+
+.nvx-notif-permission-btn-allow:hover {
+
+  background: var(--nvx-primary-600, #2563eb);
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+
+}
+
+
+.nvx-notif-permission-btn-deny {
+
+  background: transparent;
+
+  color: inherit;
+
+  border: 1px solid currentColor;
+
+}
+
+
+.nvx-notif-permission-btn-deny:hover {
+
+  background: rgba(0, 0, 0, 0.05);
+
+}
+
+
+[data-theme="dark"] .nvx-notif-permission-btn-deny:hover {
+
+  background: rgba(255, 255, 255, 0.1);
+
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+
+  .nvx-notif-permission-btn {
+
+    min-height: var(--nvx-notif-btn-touch-size, 44px);
+
+  }
+
+  
+
+  .nvx-notif-permission-btn-allow:active {
+
+    transform: scale(0.98);
+
+    transition: transform 0.05s;
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 159. NOTIFICATION STACK COUNTER */
+
+/*======================================*/
+
+
+.nvx-notif-stack-counter {
+
+  position: absolute;
+
+  inset-block-end: 100%;
+
+  inset-inline-end: 0;
+
+  background: var(--nvx-primary-500, #3b82f6);
+
+  color: #fff;
+
+  font-size: var(--nvx-text-xs, 0.75rem);
+
+  font-weight: var(--nvx-font-bold, 700);
+
+  padding: var(--nvx-space-1, 0.25rem) var(--nvx-space-2, 0.5rem);
+
+  border-radius: 12px;
+
+  margin-block-end: var(--nvx-space-1, 0.25rem);
+
+  white-space: nowrap;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+  pointer-events: none;
+
+  z-index: calc(var(--nvx-z-notif, 1090) + 1);
+
+  animation: nvx-notif-stack-appear 0.3s ease;
+
+}
+
+
+@keyframes nvx-notif-stack-appear {
+
+  0% {
+
+    opacity: 0;
+
+    transform: scale(0.8);
+
+  }
+
+  100% {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+  }
+
+}
+
+
+.nvx-notif-stack-counter::after {
+
+  content: '';
+
+  position: absolute;
+
+  inset-block-start: 100%;
+
+  inset-inline-end: 12px;
+
+  width: 0;
+
+  height: 0;
+
+  border-inline-start: 6px solid transparent;
+
+  border-inline-end: 6px solid transparent;
+
+  border-block-start: 6px solid var(--nvx-primary-500, #3b82f6);
+
+}
+
+
+[dir="rtl"] .nvx-notif-stack-counter::after {
+
+  inset-inline-end: auto;
+
+  inset-inline-start: 12px;
+
+}
+
+
+/*======================================*/
+
+/* 160. NOTIFICATION LOADING STATES */
+
+/*======================================*/
+
+
+.nvx-notif-loading {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: var(--nvx-notif-spacing, 1rem);
+
+  gap: var(--nvx-space-2, 0.5rem);
+
+  color: inherit;
+
+  opacity: 0.7;
+
+}
+
+
+.nvx-notif-loading-spinner {
+
+  width: 24px;
+
+  height: 24px;
+
+  border: 2px solid currentColor;
+
+  border-block-start-color: transparent;
+
+  border-inline-start-color: transparent;
+
+  border-radius: 50%;
+
+  animation: nvx-notif-spin 0.8s linear infinite;
+
+  will-change: transform;
+
+}
+
+
+@keyframes nvx-notif-spin {
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+
+}
+
+
+.nvx-notif-loading-dots {
+
+  display: flex;
+
+  gap: 4px;
+
+}
+
+
+.nvx-notif-loading-dot {
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: currentColor;
+
+  animation: nvx-notif-dot-pulse 1.2s ease-in-out infinite;
+
+  will-change: transform;
+
+}
+
+
+.nvx-notif-loading-dot:nth-child(1) { animation-delay: 0s; }
+
+.nvx-notif-loading-dot:nth-child(2) { animation-delay: 0.2s; }
+
+.nvx-notif-loading-dot:nth-child(3) { animation-delay: 0.4s; }
+
+
+@keyframes nvx-notif-dot-pulse {
+
+  0%, 60%, 100% {
+
+    transform: scale(1);
+
+    opacity: 0.6;
+
+  }
+
+  30% {
+
+    transform: scale(1.3);
+
+    opacity: 1;
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 161. NOTIFICATION EMPTY STATE */
+
+/*======================================*/
+
+
+.nvx-notif-empty {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: var(--nvx-notif-spacing, 1rem) var(--nvx-notif-spacing, 1rem) calc(var(--nvx-notif-spacing, 1rem) * 2);
+
+  text-align: center;
+
+  opacity: 0.7;
+
+}
+
+
+.nvx-notif-empty-icon {
+
+  font-size: 48px;
+
+  margin-block-end: var(--nvx-notif-spacing, 1rem);
+
+  opacity: 0.5;
+
+}
+
+
+.nvx-notif-empty-title {
+
+  font-size: var(--nvx-text-lg, 1.125rem);
+
+  font-weight: var(--nvx-font-bold, 700);
+
+  margin-block-end: var(--nvx-space-2, 0.5rem);
+
+}
+
+
+.nvx-notif-empty-message {
+
+  font-size: var(--nvx-text-sm, 0.875rem);
+
+  max-width: 300px;
+
+}
+
+
+/*======================================*/
+
+/* 162. NOTIFICATION RESPONSIVE ADAPTATIONS */
+
+/*======================================*/
+
+
+@media (max-width: 1024px) {
+
+  :root {
+
+    --nvx-notif-max-width: 360px;
+
+    --nvx-notif-min-width: 260px;
+
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  :root {
+
+    --nvx-notif-max-width: 100%;
+
+    --nvx-notif-offset: var(--nvx-space-3, 0.75rem);
+
+    --nvx-notif-border-radius: var(--nvx-radius-lg, 1rem);
+
+  }
+
+  
+
+  .nvx-notif-item {
+
+    min-width: auto;
+
+    width: 100%;
+
+  }
+
+  
+
+  .nvx-notif-actions {
+
+    flex-wrap: wrap;
+
+  }
+
+  
+
+  .nvx-notif-action-btn {
+
+    flex: 1;
+
+    min-width: 80px;
+
+  }
+
+  
+
+  .nvx-notif-center {
+
+    width: 95%;
+
+    max-height: 90vh;
+
+  }
+
+  
+
+  .nvx-notif-permission {
+
+    width: 95%;
+
+  }
+
+  
+
+  .nvx-notif-permission-actions {
+
+    flex-direction: column;
+
+  }
+
+  
+
+  .nvx-notif-permission-btn {
+
+    width: 100%;
+
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  :root {
+
+    --nvx-notif-spacing: var(--nvx-space-3, 0.75rem);
+
+    --nvx-notif-spacing-compact: var(--nvx-space-2, 0.5rem);
+
+    --nvx-notif-spacing-banner: var(--nvx-space-4, 1rem);
+
+  }
+
+  
+
+  .nvx-notif-content {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+  
+
+  .nvx-notif-icon {
+
+    margin-block-end: var(--nvx-space-1, 0.25rem);
+
+  }
+
+  
+
+  .nvx-notif-avatar {
+
+    width: 36px;
+
+    height: 36px;
+
+  }
+
+  
+
+  .nvx-notif-title {
+
+    font-size: var(--nvx-text-sm, 0.875rem);
+
+  }
+
+  
+
+  .nvx-notif-message {
+
+    font-size: var(--nvx-text-xs, 0.75rem);
+
+  }
+
+  
+
+  .nvx-notif-list-item {
+
+    padding: var(--nvx-space-2, 0.5rem);
+
+  }
+
+  
+
+  .nvx-notif-list-avatar {
+
+    width: 32px;
+
+    height: 32px;
+
+  }
+
+}
+
+
+/* LANDSCAPE OPTIMIZATION */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+  .nvx-notif-center {
+
+    max-height: 90vh;
+
+    inset-block-start: 5vh;
+
+    transform: translate(-50%, 0);
+
+  }
+
+  
+
+  [dir="rtl"] .nvx-notif-center {
+
+    transform: translate(50%, 0);
+
+  }
+
+  
+
+  .nvx-notif-center.active {
+
+    transform: translate(-50%, 0) scale(1);
+
+  }
+
+  
+
+  [dir="rtl"] .nvx-notif-center.active {
+
+    transform: translate(50%, 0) scale(1);
+
+  }
+
+  
+
+  .nvx-notif-center-content {
+
+    max-height: 60vh;
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 163. TOUCH DEVICE OPTIMIZATIONS */
+
+/*======================================*/
+
+
+@media (hover: none) and (pointer: coarse) {
+
+  .nvx-notif-action-btn,
+
+  .nvx-notif-permission-btn,
+
+  .nvx-notif-pref-btn {
+
+    min-height: var(--nvx-notif-btn-touch-size, 44px);
+
+    min-width: var(--nvx-notif-btn-touch-size, 44px);
+
+  }
+
+  
+
+  .nvx-notif-close {
+
+    width: var(--nvx-notif-btn-touch-size, 44px);
+
+    height: var(--nvx-notif-btn-touch-size, 44px);
+
+    font-size: 20px;
+
+  }
+
+  
+
+  .nvx-notif-pref-close {
+
+    width: var(--nvx-notif-btn-touch-size, 44px);
+
+    height: var(--nvx-notif-btn-touch-size, 44px);
+
+  }
+
+  
+
+  .nvx-notif-badge {
+
+    min-width: 24px;
+
+    height: 24px;
+
+    font-size: var(--nvx-text-sm, 0.875rem);
+
+  }
+
+  
+
+  .nvx-notif-badge-dot {
+
+    width: 14px;
+
+    height: 14px;
+
+  }
+
+  
+
+  .nvx-notif-item:hover {
+
+    transform: none;
+
+  }
+
+  
+
+  .nvx-notif-center-item:hover {
+
+    transform: none;
+
+  }
+
+  
+
+  .nvx-notif-pref-toggle {
+
+    width: 52px;
+
+    height: 32px;
+
+  }
+
+  
+
+  .nvx-notif-pref-toggle::after {
+
+    width: 28px;
+
+    height: 28px;
+
+  }
+
+  
+
+  .nvx-notif-pref-toggle.active::after {
+
+    transform: translateX(20px);
+
+  }
+
+  
+
+  [dir="rtl"] .nvx-notif-pref-toggle.active::after {
+
+    transform: translateX(-20px);
+
+  }
+
+  
+
+  .nvx-notif-action-btn:active,
+
+  .nvx-notif-close:active,
+
+  .nvx-notif-permission-btn:active {
+
+    transform: scale(0.98);
+
+    transition: transform 0.05s;
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 164. REDUCED MOTION SUPPORT */
+
+/*======================================*/
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+
+  *::before,
+
+  *::after {
+
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+
+  }
+
+  
+
+  .nvx-notif-item,
+
+  .nvx-notif-progress-bar,
+
+  .nvx-notif-badge,
+
+  .nvx-notif-center,
+
+  .nvx-notif-permission,
+
+  .nvx-notif-stack-counter,
+
+  .nvx-notif-loading-spinner,
+
+  .nvx-notif-loading-dot,
+
+  .nvx-notif-wave-bar,
+
+  .nvx-notif-sound-wave-small,
+
+  .nvx-notif-high-attention {
+
+    animation: none !important;
+
+    transition: none !important;
+
+  }
+
+  
+
+  .nvx-notif-progress-active .nvx-notif-progress-bar {
+
+    animation: none;
+
+    transform: scaleX(0);
+
+  }
+
+  
+
+  .nvx-notif-enter-from-top,
+
+  .nvx-notif-enter-from-bottom,
+
+  .nvx-notif-enter-from-left,
+
+  .nvx-notif-enter-from-right,
+
+  .nvx-notif-enter-from-center,
+
+  .nvx-notif-exit-to-top,
+
+  .nvx-notif-exit-to-bottom,
+
+  .nvx-notif-exit-to-left,
+
+  .nvx-notif-exit-to-right,
+
+  .nvx-notif-exit-scale {
+
+    animation: none;
+
+    opacity: 1;
+
+    transform: none;
+
+  }
+
+  
+
+  .nvx-notif-badge-pulse,
+
+  .nvx-notif-badge-blink {
+
+    animation: none;
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 165. PRINT STYLES */
+
+/*======================================*/
+
+
+@media print {
+
+  .nvx-notif-container,
+
+  .nvx-notif-center,
+
+  .nvx-notif-permission,
+
+  .nvx-notif-badge-container,
+
+  .nvx-notif-badge,
+
+  .nvx-notif-badge-dot {
+
+    display: none !important;
+
+  }
+
+  
+
+  /* Preserve important notifications in print */
+
+  .nvx-notif-item[data-print-preserve="true"] {
+
+    display: block !important;
+
+    position: relative;
+
+    box-shadow: none;
+
+    border: 1px solid #000;
+
+    page-break-inside: avoid;
+
+    background: #fff !important;
+
+    color: #000 !important;
+
+    -webkit-print-color-adjust: exact;
+
+    print-color-adjust: exact;
+
+  }
+
+  
+
+  .nvx-notif-item[data-print-preserve="true"] * {
+
+    color: #000 !important;
+
+  }
+
+  
+
+  /* Print history option */
+
+  .nvx-notif-history-print {
+
+    display: block !important;
+
+    break-inside: avoid;
+
+    page-break-inside: avoid;
+
+  }
+
+}
+
+
+/*======================================*/
+
+/* 166. ACCESSIBILITY ENHANCEMENTS */
+
+/*======================================*/
+
+
+.nvx-notif-sr-only {
+
+  position: absolute;
+
+  width: 1px;
+
+  height: 1px;
+
+  padding: 0;
+
+  margin: -1px;
+
+  overflow: hidden;
+
+  clip: rect(0, 0, 0, 0);
+
+  white-space: nowrap;
+
+  border: 0;
+
+}
+
+
+/* Live region support */
+
+.nvx-notif-container[aria-live="polite"] {
+
+  /* Polite notifications - doesn't interrupt screen reader */
+
+}
+
+
+.nvx-notif-container[aria-live="assertive"] {
+
+  /* Important notifications - interrupts screen reader */
+
+}
+
+
+/* DEBUG MODE - FOR DEVELOPMENT ONLY */
+
+.nvx-notif-debug {
+
+  --nvx-debug: true;
+
+  outline: 2px solid red !important;
+
+  position: relative;
+
+}
+
+
+.nvx-notif-debug::before {
+
+  content: " DEBUG";
+
+  position: absolute;
+
+  top: -20px;
+
+  right: 0;
+
+  background: red;
+
+  color: white;
+
+  font-size: 10px;
+
+  padding: 2px 4px;
+
+  border-radius: 4px;
+
+  z-index: 10000;
+
+}
+
+
+/*======================================*/
+
+/* 167. SKELETON LOADER */
+
+/*======================================*/
+
+
+.nvx-notif-skeleton {
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--nvx-notif-glass-bg, var(--nvx-notif-glass-bg-light));
+
+  border-radius: var(--nvx-notif-border-radius, 1rem);
+
+  min-height: var(--nvx-notif-min-height, 64px);
+
+}
+
+
+.nvx-notif-skeleton::after {
+
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255, 255, 255, 0.2),
+
+    transparent
+
+  );
+
+  transform: translateX(-100%);
+
+  animation: nvx-notif-shimmer 1.5s infinite;
+
+}
+
+
+@keyframes nvx-notif-shimmer {
+
+  100% {
+
+    transform: translateX(100%);
+
+  }
+
+}
+
+
+[data-theme="dark"] .nvx-notif-skeleton::after {
+
+  background: linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255, 255, 255, 0.1),
+
+    transparent
+
+  );
+
+}
+
+
+/*======================================*/
+
+/* 168. QUEUE INDICATOR */
+
+/*======================================*/
+
+
+.nvx-notif-queue-indicator {
+
+  position: absolute;
+
+  inset-block-end: -4px;
+
+  inset-inline-end: 0;
+
+  min-width: 16px;
+
+  height: 16px;
+
+  background: var(--nvx-primary-500, #3b82f6);
+
+  border-radius: 50%;
+
+  font-size: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+
+  padding: 0 4px;
+
+  border: 2px solid var(--nvx-bg-card, #ffffff);
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  z-index: calc(var(--nvx-z-notif-badge, 1070) + 1);
+
+  pointer-events: none;
+
+  white-space: nowrap;
+
+}
+
+
+.nvx-notif-queue-indicator[data-count="1"] {
+
+  min-width: 16px;
+
+}
+
+
+.nvx-notif-queue-indicator[data-count="2"] {
+
+  min-width: 20px;
+
+}
+
+
+.nvx-notif-queue-indicator[data-count="3"] {
+
+  min-width: 24px;
+
+}
+
+
+.nvx-notif-queue-indicator[data-count="4"] {
+
+  min-width: 28px;
+
+}
+
+
+.nvx-notif-queue-indicator[data-count="5"],
+
+.nvx-notif-queue-indicator[data-count="5+"] {
+
+  min-width: 32px;
+
+}
+
+
+/*======================================*/
+
+/* 169. CSS LAYERS - PREPARED FOR FUTURE USE */
+
+/*======================================*/
+
+
+@layer nvx-notif-tokens, nvx-notif-core, nvx-notif-components, nvx-notif-utilities;
+
+
+/* 
+
+   Note: CSS Layers are prepared for future implementation.
+
+   To use, move relevant styles into each layer:
+
+   
+
+   @layer nvx-notif-tokens {
+
+     :root { ... }
+
+   }
+
+   
+
+   @layer nvx-notif-core {
+
+     .nvx-notif-item { ... }
+
+     .nvx-notif-content { ... }
+
+   }
+
+   
+
+   @layer nvx-notif-components {
+
+     .nvx-notif-solid-primary { ... }
+
+     .nvx-notif-glass { ... }
+
+   }
+
+   
+
+   @layer nvx-notif-utilities {
+
+     .nvx-notif-hidden { ... }
+
+     .nvx-notif-sr-only { ... }
+
+   }
+
+*/
+
+
+/*======================================*/
+
+/* 170. CUSTOM MEDIA QUERIES - FUTURE READY */
+
+/*======================================*/
+
+
+@custom-media --nvx-motion-ok (prefers-reduced-motion: no-preference);
+
+@custom-media --nvx-motion-reduce (prefers-reduced-motion: reduce);
+
+@custom-media --nvx-contrast-high (prefers-contrast: high);
+
+@custom-media --nvx-contrast-more (prefers-contrast: more);
+
+@custom-media --nvx-data-saver (prefers-reduced-data: reduce);
+
+@custom-media --nvx-touch (hover: none) and (pointer: coarse);
+
+@custom-media --nvx-mouse (hover: hover) and (pointer: fine);
+
+@custom-media --nvx-portrait (orientation: portrait);
+
+@custom-media --nvx-landscape (orientation: landscape);
+
+
+/*======================================*/
+
+/* ⚡ NEVOX PUSH NOTIFICATION SYSTEM v4.1 - COMPLETE ⚡ */
+
+/* ENTERPRISE-GRADE • PRODUCTION-READY • ACCESSIBILITY-FIRST */
+
+/* OPTIMIZED FOR 2025-2026 WITH ALL FIXES APPLIED */
+
+/*======================================*/
+
