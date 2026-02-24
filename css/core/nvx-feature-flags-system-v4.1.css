@@ -1,0 +1,474 @@
+/*============================================*/
+/* ⚡ 200. FEATURE FLAGS SYSTEM v4.1 ⚡        */
+/*============================================*/
+/* REFINED EDITION · MINIMAL & PERFECT        */
+/* OPTIMIZED FOR:                              */
+/* - Tailwind CSS / Framer Motion Compatible   */
+/* - Partial JS Required                       */
+/* - Selective Reduced Motion                  */
+/*============================================*/
+
+/* ==================================== */
+/* LEVEL 0: CASCADE LAYERS              */
+/* ==================================== */
+
+@layer nvx-tokens, nvx-flags, nvx-components, nvx-utilities, nvx-debug, nvx-overrides;
+
+/* ==================================== */
+/* LEVEL 0.5: CUSTOM PROPERTIES         */
+/* ==================================== */
+
+@property --nvx-flag-enabled {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 1;
+}
+
+@property --nvx-flag-disabled {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+/* Firefox fallback */
+@supports not (--nvx-flag-enabled: 1) {
+  :root {
+    --nvx-flag-enabled: 1;
+    --nvx-flag-disabled: 0;
+  }
+}
+
+/* ==================================== */
+/* LEVEL 1: TOKENS LAYER - MINIMAL      */
+/* ==================================== */
+
+@layer nvx-tokens {
+  :root {
+    /*  CORE TOKENS */
+    --nvx-flag-enabled: 1;
+    --nvx-flag-disabled: 0;
+    
+    /*  ROLLOUT TOKENS (for future use) */
+    --nvx-flag-rollout-0: 0;
+    --nvx-flag-rollout-25: 0.25;
+    --nvx-flag-rollout-50: 0.5;
+    --nvx-flag-rollout-75: 0.75;
+    --nvx-flag-rollout-100: 1;
+    
+    /*  SEGMENT TOKENS */
+    --nvx-flag-segment-all: 0;
+    --nvx-flag-segment-authenticated: 1;
+    --nvx-flag-segment-beta: 3;
+    
+    /*  Z-INDEX */
+    --nvx-z-flags: 1200;
+    
+    /* ================================ */
+    /* FEATURE FLAGS - ALL ENABLED      */
+    /* ================================ */
+    
+    /* CORE PLATFORM */
+    --nvx-flag-header: var(--nvx-flag-enabled);
+    --nvx-flag-sidebar: var(--nvx-flag-enabled);
+    --nvx-flag-footer: var(--nvx-flag-enabled);
+    --nvx-flag-navigation: var(--nvx-flag-enabled);
+    
+    /* UI/UX */
+    --nvx-flag-animations: var(--nvx-flag-enabled);
+    --nvx-flag-glass-morphism: var(--nvx-flag-enabled);
+    --nvx-flag-3d-effects: var(--nvx-flag-enabled);
+    --nvx-flag-hover-effects: var(--nvx-flag-enabled);
+    --nvx-flag-parallax: var(--nvx-flag-enabled);
+    --nvx-flag-smooth-scroll: var(--nvx-flag-enabled);
+    
+    /* E-COMMERCE */
+    --nvx-flag-cart: var(--nvx-flag-enabled);
+    --nvx-flag-wishlist: var(--nvx-flag-enabled);
+    --nvx-flag-checkout: var(--nvx-flag-enabled);
+    --nvx-flag-payments: var(--nvx-flag-enabled);
+    --nvx-flag-subscriptions: var(--nvx-flag-enabled);
+    
+    /* SOCIAL */
+    --nvx-flag-notifications: var(--nvx-flag-enabled);
+    --nvx-flag-user-profiles: var(--nvx-flag-enabled);
+    --nvx-flag-messaging: var(--nvx-flag-enabled);
+    --nvx-flag-live-chat: var(--nvx-flag-enabled);
+    
+    /* SECURITY */
+    --nvx-flag-2fa: var(--nvx-flag-enabled);
+    --nvx-flag-captcha: var(--nvx-flag-enabled);
+    --nvx-flag-rate-limiting: var(--nvx-flag-enabled);
+    
+    /* ANALYTICS */
+    --nvx-flag-analytics: var(--nvx-flag-enabled);
+    --nvx-flag-error-tracking: var(--nvx-flag-enabled);
+    --nvx-flag-ab-testing: var(--nvx-flag-enabled);
+    
+    /* BLOG */
+    --nvx-flag-blog-comments: var(--nvx-flag-enabled);
+    --nvx-flag-blog-reactions: var(--nvx-flag-enabled);
+    --nvx-flag-blog-tts: var(--nvx-flag-enabled);
+    
+    /* EXPERIMENTAL */
+    --nvx-flag-ai-features: var(--nvx-flag-enabled);
+    --nvx-flag-webgpu: var(--nvx-flag-enabled);
+    --nvx-flag-webrtc: var(--nvx-flag-enabled);
+  }
+}
+
+/* ==================================== */
+/* LEVEL 2: FLAG CONTROLLERS - COMPLETE */
+/* ==================================== */
+
+@layer nvx-flags {
+  /* ----- CORE PLATFORM ----- */
+  [data-nvx-flag-header="false"] .nvx-header,
+  [data-nvx-flag-header="0"] .nvx-header { display: none; }
+  [data-nvx-flag-header="true"] .nvx-header,
+  [data-nvx-flag-header="1"] .nvx-header { display: flex; }
+
+  [data-nvx-flag-sidebar="false"] .nvx-sidebar,
+  [data-nvx-flag-sidebar="0"] .nvx-sidebar { display: none; }
+  [data-nvx-flag-sidebar="true"] .nvx-sidebar,
+  [data-nvx-flag-sidebar="1"] .nvx-sidebar { display: block; }
+
+  [data-nvx-flag-footer="false"] .nvx-footer,
+  [data-nvx-flag-footer="0"] .nvx-footer { display: none; }
+  [data-nvx-flag-footer="true"] .nvx-footer,
+  [data-nvx-flag-footer="1"] .nvx-footer { display: block; }
+
+  [data-nvx-flag-navigation="false"] .nvx-navigation,
+  [data-nvx-flag-navigation="0"] .nvx-navigation { display: none; }
+  [data-nvx-flag-navigation="true"] .nvx-navigation,
+  [data-nvx-flag-navigation="1"] .nvx-navigation { display: flex; }
+
+  /* ----- UI/UX ----- */
+  [data-nvx-flag-animations="false"] .nvx-animated-element,
+  [data-nvx-flag-animations="0"] .nvx-animated-element { animation: none; transition: none; }
+
+  [data-nvx-flag-glass-morphism="false"] .nvx-glass-effect,
+  [data-nvx-flag-glass-morphism="0"] .nvx-glass-effect { backdrop-filter: none; background: var(--nvx-bg-card); }
+
+  [data-nvx-flag-3d-effects="false"] .nvx-3d-element,
+  [data-nvx-flag-3d-effects="0"] .nvx-3d-element { transform: none; box-shadow: var(--nvx-shadow); }
+
+  [data-nvx-flag-hover-effects="false"] .nvx-hover-effect,
+  [data-nvx-flag-hover-effects="0"] .nvx-hover-effect { transform: none; transition: none; }
+  [data-nvx-flag-hover-effects="false"] .nvx-hover-effect:hover,
+  [data-nvx-flag-hover-effects="0"] .nvx-hover-effect:hover { transform: none; }
+
+  [data-nvx-flag-parallax="false"] .nvx-parallax,
+  [data-nvx-flag-parallax="0"] .nvx-parallax { transform: none; }
+
+  [data-nvx-flag-smooth-scroll="false"] { scroll-behavior: auto; }
+
+  /* ----- E-COMMERCE ----- */
+  [data-nvx-flag-cart="false"] .nvx-cart,
+  [data-nvx-flag-cart="0"] .nvx-cart { display: none; }
+  [data-nvx-flag-cart="true"] .nvx-cart,
+  [data-nvx-flag-cart="1"] .nvx-cart { display: block; }
+
+  [data-nvx-flag-wishlist="false"] .nvx-wishlist,
+  [data-nvx-flag-wishlist="0"] .nvx-wishlist { display: none; }
+  [data-nvx-flag-wishlist="true"] .nvx-wishlist,
+  [data-nvx-flag-wishlist="1"] .nvx-wishlist { display: block; }
+
+  [data-nvx-flag-checkout="false"] .nvx-checkout,
+  [data-nvx-flag-checkout="0"] .nvx-checkout { display: none; }
+  [data-nvx-flag-checkout="true"] .nvx-checkout,
+  [data-nvx-flag-checkout="1"] .nvx-checkout { display: block; }
+
+  [data-nvx-flag-payments="false"] .nvx-payments,
+  [data-nvx-flag-payments="0"] .nvx-payments { display: none; }
+  [data-nvx-flag-payments="true"] .nvx-payments,
+  [data-nvx-flag-payments="1"] .nvx-payments { display: flex; }
+
+  [data-nvx-flag-subscriptions="false"] .nvx-subscriptions,
+  [data-nvx-flag-subscriptions="0"] .nvx-subscriptions { display: none; }
+  [data-nvx-flag-subscriptions="true"] .nvx-subscriptions,
+  [data-nvx-flag-subscriptions="1"] .nvx-subscriptions { display: block; }
+
+  /* ----- SOCIAL ----- */
+  [data-nvx-flag-notifications="false"] .nvx-notifications,
+  [data-nvx-flag-notifications="0"] .nvx-notifications { display: none; }
+  [data-nvx-flag-notifications="true"] .nvx-notifications,
+  [data-nvx-flag-notifications="1"] .nvx-notifications { display: block; }
+
+  [data-nvx-flag-user-profiles="false"] .nvx-user-profiles,
+  [data-nvx-flag-user-profiles="0"] .nvx-user-profiles { display: none; }
+  [data-nvx-flag-user-profiles="true"] .nvx-user-profiles,
+  [data-nvx-flag-user-profiles="1"] .nvx-user-profiles { display: block; }
+
+  [data-nvx-flag-messaging="false"] .nvx-messaging,
+  [data-nvx-flag-messaging="0"] .nvx-messaging { display: none; }
+  [data-nvx-flag-messaging="true"] .nvx-messaging,
+  [data-nvx-flag-messaging="1"] .nvx-messaging { display: flex; }
+
+  [data-nvx-flag-live-chat="false"] .nvx-live-chat,
+  [data-nvx-flag-live-chat="0"] .nvx-live-chat { display: none; }
+  [data-nvx-flag-live-chat="true"] .nvx-live-chat,
+  [data-nvx-flag-live-chat="1"] .nvx-live-chat { display: block; }
+
+  /* ----- SECURITY ----- */
+  [data-nvx-flag-2fa="false"] .nvx-2fa,
+  [data-nvx-flag-2fa="0"] .nvx-2fa { display: none; }
+  [data-nvx-flag-2fa="true"] .nvx-2fa,
+  [data-nvx-flag-2fa="1"] .nvx-2fa { display: block; }
+
+  [data-nvx-flag-captcha="false"] .nvx-captcha,
+  [data-nvx-flag-captcha="0"] .nvx-captcha { display: none; }
+  [data-nvx-flag-captcha="true"] .nvx-captcha,
+  [data-nvx-flag-captcha="1"] .nvx-captcha { display: block; }
+
+  [data-nvx-flag-rate-limiting="false"] .nvx-rate-limit,
+  [data-nvx-flag-rate-limiting="0"] .nvx-rate-limit { display: none; }
+  [data-nvx-flag-rate-limiting="true"] .nvx-rate-limit,
+  [data-nvx-flag-rate-limiting="1"] .nvx-rate-limit { display: block; }
+
+  /* ----- ANALYTICS ----- */
+  [data-nvx-flag-analytics="false"] .nvx-analytics,
+  [data-nvx-flag-analytics="0"] .nvx-analytics { display: none; }
+  [data-nvx-flag-analytics="true"] .nvx-analytics,
+  [data-nvx-flag-analytics="1"] .nvx-analytics { display: block; }
+
+  [data-nvx-flag-error-tracking="false"] .nvx-error-tracking,
+  [data-nvx-flag-error-tracking="0"] .nvx-error-tracking { display: none; }
+  [data-nvx-flag-error-tracking="true"] .nvx-error-tracking,
+  [data-nvx-flag-error-tracking="1"] .nvx-error-tracking { display: block; }
+
+  [data-nvx-flag-ab-testing="false"] .nvx-ab-testing,
+  [data-nvx-flag-ab-testing="0"] .nvx-ab-testing { display: none; }
+  [data-nvx-flag-ab-testing="true"] .nvx-ab-testing,
+  [data-nvx-flag-ab-testing="1"] .nvx-ab-testing { display: block; }
+
+  /* ----- BLOG ----- */
+  [data-nvx-flag-blog-comments="false"] .nvx-blog-comments,
+  [data-nvx-flag-blog-comments="0"] .nvx-blog-comments { display: none; }
+  [data-nvx-flag-blog-comments="true"] .nvx-blog-comments,
+  [data-nvx-flag-blog-comments="1"] .nvx-blog-comments { display: block; }
+
+  [data-nvx-flag-blog-reactions="false"] .nvx-blog-reactions,
+  [data-nvx-flag-blog-reactions="0"] .nvx-blog-reactions { display: none; }
+  [data-nvx-flag-blog-reactions="true"] .nvx-blog-reactions,
+  [data-nvx-flag-blog-reactions="1"] .nvx-blog-reactions { display: flex; }
+
+  [data-nvx-flag-blog-tts="false"] .nvx-blog-tts,
+  [data-nvx-flag-blog-tts="0"] .nvx-blog-tts { display: none; }
+  [data-nvx-flag-blog-tts="true"] .nvx-blog-tts,
+  [data-nvx-flag-blog-tts="1"] .nvx-blog-tts { display: block; }
+
+  /* ----- EXPERIMENTAL ----- */
+  [data-nvx-flag-ai-features="false"] .nvx-ai-feature,
+  [data-nvx-flag-ai-features="0"] .nvx-ai-feature { display: none; }
+  [data-nvx-flag-ai-features="true"] .nvx-ai-feature,
+  [data-nvx-flag-ai-features="1"] .nvx-ai-feature { display: block; }
+
+  [data-nvx-flag-webgpu="false"] .nvx-webgpu,
+  [data-nvx-flag-webgpu="0"] .nvx-webgpu { display: none; }
+  [data-nvx-flag-webgpu="true"] .nvx-webgpu,
+  [data-nvx-flag-webgpu="1"] .nvx-webgpu { display: block; }
+
+  [data-nvx-flag-webrtc="false"] .nvx-webrtc,
+  [data-nvx-flag-webrtc="0"] .nvx-webrtc { display: none; }
+  [data-nvx-flag-webrtc="true"] .nvx-webrtc,
+  [data-nvx-flag-webrtc="1"] .nvx-webrtc { display: block; }
+}
+
+/* ==================================== */
+/* LEVEL 3: FEATURE CLASSES             */
+/* ==================================== */
+
+@layer nvx-components {
+  .nvx-feature {
+    position: relative;
+  }
+
+  .nvx-feature[data-flag-state="enabled"] { display: block; }
+  .nvx-feature[data-flag-state="disabled"] { display: none; }
+
+  /* FEATURE BADGE */
+  .nvx-feature-badge {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: calc(var(--nvx-z-flags, 1200) + 100);
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    color: white;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    pointer-events: none;
+    opacity: 0.9;
+    animation: nvx-feature-pulse 2s infinite;
+  }
+
+  @keyframes nvx-feature-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.05); opacity: 1; }
+  }
+}
+
+/* ==================================== */
+/* LEVEL 4: CONDITIONAL CSS             */
+/* ==================================== */
+
+@layer nvx-components {
+  .nvx-glass-effect[data-glass-enabled="true"] {
+    background: var(--nvx-glass-bg, rgba(255,255,255,0.1));
+    backdrop-filter: var(--nvx-glass-blur, blur(10px));
+  }
+
+  .nvx-animated-element[data-anim-enabled="true"] {
+    transition: all 300ms cubic-bezier(0.4,0,0.2,1);
+    animation: nvx-fade-in 300ms cubic-bezier(0.4,0,0.2,1);
+  }
+
+  @keyframes nvx-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+
+/* ==================================== */
+/* LEVEL 5: REDUCED MOTION - SELECTIVE  */
+/* ==================================== */
+/* OPTIMIZED: Only affects NVX elements, not third-party */
+
+@layer nvx-overrides {
+  @media (prefers-reduced-motion: reduce) {
+    .nvx-feature-badge,
+    .nvx-flag-panel.active,
+    .nvx-flag-console.active,
+    .nvx-flag-toggle,
+    .nvx-animated-element[data-anim-enabled="true"],
+    [class*="nvx-"]:not(.no-reduce) {
+      animation: none !important;
+      transition: none !important;
+    }
+    
+    .nvx-parallax,
+    .nvx-3d-element,
+    .nvx-hover-effect:hover {
+      transform: none !important;
+    }
+    
+    /* Third-party libraries are safe */
+    /* Tailwind animate-* classes are untouched */
+    /* Framer Motion elements are untouched */
+  }
+}
+
+/* ==================================== */
+/* LEVEL 6: DEBUG SYSTEM                */
+/* ==================================== */
+
+@layer nvx-debug {
+  [data-debug="true"] .nvx-feature[data-flag-state] {
+    outline: 2px dashed #f59e0b;
+    position: relative;
+  }
+
+  [data-debug="true"] .nvx-feature[data-flag-state="enabled"]::before {
+    content: "✅ ENABLED: " attr(data-feature);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 10px;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 2px 4px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 10000;
+  }
+
+  [data-debug="true"] .nvx-feature[data-flag-state="disabled"]::before {
+    content: "❌ DISABLED: " attr(data-feature);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 10px;
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+    padding: 2px 4px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 10000;
+  }
+}
+
+/* ==================================== */
+/* LEVEL 7: RESPONSIVE FLAGS            */
+/* ==================================== */
+
+@layer nvx-flags {
+  @media (max-width: 768px) {
+    :root {
+      --nvx-flag-sidebar: var(--nvx-flag-disabled);
+      --nvx-flag-hover-effects: var(--nvx-flag-disabled);
+    }
+    .nvx-flag-panel { width: 95%; padding: 16px; }
+    .nvx-flag-toggle { bottom: 20px; right: 10px; }
+  }
+}
+
+/* ==================================== */
+/* LEVEL 8: DARK THEME                  */
+/* ==================================== */
+
+@layer nvx-tokens {
+  [data-theme="dark"] {
+    --nvx-bg-card: #1e293b;
+    --nvx-border: #334155;
+  }
+}
+
+@layer nvx-components {
+  [data-theme="dark"] .nvx-flag-panel {
+    background: var(--nvx-bg-card);
+    border-color: var(--nvx-border);
+  }
+}
+
+/* ==================================== */
+/* LEVEL 9: FORCE OVERRIDES - EMERGENCY */
+/* ==================================== */
+/* !important ALLOWED - Emergency only */
+
+@layer nvx-overrides {
+  [data-force-flag="header"] .nvx-header { display: flex !important; }
+  [data-force-flag="footer"] .nvx-footer { display: block !important; }
+  [data-force-flag="sidebar"] .nvx-sidebar { display: block !important; }
+  [data-force-flag="navigation"] .nvx-navigation { display: flex !important; }
+  [data-block-flag="animations"] .nvx-animated-element { animation: none !important; transition: none !important; }
+}
+
+/* ==================================== */
+/* LEVEL 10: SYSTEM FOOTER              */
+/* ==================================== */
+
+@layer nvx-utilities {
+  .nvx-flag-system-footer {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--nvx-border, #e2e8f0);
+    font-size: 12px;
+    color: #94a3b8;
+  }
+  .nvx-flag-system-version {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #f1f5f9;
+    border-radius: 9999px;
+    margin: 0 4px;
+    font-family: monospace;
+  }
+}
+
+/*============================================*/
+/* FEATURE FLAGS SYSTEM v4.1- END            */
+/* REFINED EDITION · MINIMAL & PERFECT        */
+/*============================================*/
