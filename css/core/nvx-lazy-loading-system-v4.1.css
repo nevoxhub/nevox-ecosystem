@@ -1,0 +1,2090 @@
+/* =====================================*/
+   ⚡ NEVOX LAZY LOADING SYSTEM v4.1
+   FULLY INTEGRATED WITH NEVOX ECOSYSTEM
+   NATIVE LAZY LOADING • CORE WEB VITALS
+/* =====================================*/
+
+/* =====================================*/
+   NEVOX LAZY LOADING DESIGN TOKENS v4.1
+   Professional Production Grade
+/*======================================*/
+
+:root {
+  /* 🏷️ THEME METADATA - NEVOX PATTERN */
+  --nvx-lazy-name: "NEVOX LAZY LOADING";
+  --nvx-lazy-version: "4.1.0";
+  --nvx-lazy-author: "NEVOX ECOSYSTEM";
+
+  /* 🎨 COLOR TOKENS - TYPE: <color> */
+  --nvx-lazy-50: var(--nvx-primary-50, #eff6ff);
+  --nvx-lazy-100: var(--nvx-primary-100, #dbeafe);
+  --nvx-lazy-200: var(--nvx-primary-200, #bfdbfe);
+  --nvx-lazy-300: var(--nvx-primary-300, #93c5fd);
+  --nvx-lazy-400: var(--nvx-primary-400, #60a5fa);
+  --nvx-lazy-500: var(--nvx-primary-500, #3b82f6);
+  --nvx-lazy-600: var(--nvx-primary-600, #2563eb);
+  --nvx-lazy-700: var(--nvx-primary-700, #1d4ed8);
+  --nvx-lazy-800: var(--nvx-primary-800, #1e40af);
+  --nvx-lazy-900: var(--nvx-primary-900, #1e3a8a);
+  --nvx-lazy-950: var(--nvx-primary-950, #172554);
+
+  /* 🎨 NEUTRAL SCALES - TYPE: <color> */
+  --nvx-lazy-neutral-50: var(--nvx-gray-50, #f9fafb);
+  --nvx-lazy-neutral-100: var(--nvx-gray-100, #f3f4f6);
+  --nvx-lazy-neutral-200: var(--nvx-gray-200, #e5e7eb);
+  --nvx-lazy-neutral-300: var(--nvx-gray-300, #d1d5db);
+  --nvx-lazy-neutral-400: var(--nvx-gray-400, #9ca3af);
+  --nvx-lazy-neutral-500: var(--nvx-gray-500, #6b7280);
+  --nvx-lazy-neutral-600: var(--nvx-gray-600, #4b5563);
+  --nvx-lazy-neutral-700: var(--nvx-gray-700, #374151);
+  --nvx-lazy-neutral-800: var(--nvx-gray-800, #1f2937);
+  --nvx-lazy-neutral-900: var(--nvx-gray-900, #111827);
+  --nvx-lazy-neutral-950: var(--nvx-gray-950, #030712);
+
+  /* 🎨 SEMANTIC COLORS - TYPE: <color> */
+  --nvx-lazy-success: var(--nvx-success-500, #10b981);
+  --nvx-lazy-success-light: var(--nvx-success-400, #34d399);
+  --nvx-lazy-success-dark: var(--nvx-success-600, #059669);
+  
+  --nvx-lazy-warning: var(--nvx-warning-500, #f59e0b);
+  --nvx-lazy-warning-light: var(--nvx-warning-400, #fbbf24);
+  --nvx-lazy-warning-dark: var(--nvx-warning-600, #d97706);
+  
+  --nvx-lazy-danger: var(--nvx-danger-500, #ef4444);
+  --nvx-lazy-danger-light: var(--nvx-danger-400, #f87171);
+  --nvx-lazy-danger-dark: var(--nvx-danger-600, #dc2626);
+  
+  --nvx-lazy-info: var(--nvx-info-500, #06b6d4);
+  --nvx-lazy-info-light: var(--nvx-info-400, #22d3ee);
+  --nvx-lazy-info-dark: var(--nvx-info-600, #0891b2);
+
+  /* 🎯 WEB VITALS COLOR TOKENS - TYPE: <color> */
+  --nvx-lazy-vitals-good: #00ff00;
+  --nvx-lazy-vitals-needs-improvement: #ffaa00;
+  --nvx-lazy-vitals-poor: #ff0000;
+  --nvx-lazy-vitals-good-dark: #00cc00;
+  --nvx-lazy-vitals-needs-improvement-dark: #cc8800;
+  --nvx-lazy-vitals-poor-dark: #cc0000;
+
+  /* 📐 VIEWPORT TOKENS - TYPE: <length> */
+  --nvx-lazy-viewport-dynamic: var(--nvx-viewport-dynamic, 100dvh);
+  --nvx-lazy-viewport-safe: var(--nvx-viewport-safe, 100svh);
+  --nvx-lazy-viewport-max: var(--nvx-viewport-max, 100lvh);
+  --nvx-lazy-safe-top: var(--nvx-safe-area-top, env(safe-area-inset-top, 0px));
+  --nvx-lazy-safe-bottom: var(--nvx-safe-area-bottom, env(safe-area-inset-bottom, 0px));
+  --nvx-lazy-safe-left: var(--nvx-safe-area-left, env(safe-area-inset-left, 0px));
+  --nvx-lazy-safe-right: var(--nvx-safe-area-right, env(safe-area-inset-right, 0px));
+
+  /* 📏 SPACING TOKENS - TYPE: <length> */
+  --nvx-lazy-space-0: var(--nvx-space-0, 0);
+  --nvx-lazy-space-px: var(--nvx-space-px, 1px);
+  --nvx-lazy-space-0-5: var(--nvx-space-0-5, 0.125rem);
+  --nvx-lazy-space-1: var(--nvx-space-1, 0.25rem);
+  --nvx-lazy-space-1-5: var(--nvx-space-1-5, 0.375rem);
+  --nvx-lazy-space-2: var(--nvx-space-2, 0.5rem);
+  --nvx-lazy-space-2-5: var(--nvx-space-2-5, 0.625rem);
+  --nvx-lazy-space-3: var(--nvx-space-3, 0.75rem);
+  --nvx-lazy-space-3-5: var(--nvx-space-3-5, 0.875rem);
+  --nvx-lazy-space-4: var(--nvx-space-4, 1rem);
+  --nvx-lazy-space-5: var(--nvx-space-5, 1.25rem);
+  --nvx-lazy-space-6: var(--nvx-space-6, 1.5rem);
+  --nvx-lazy-space-8: var(--nvx-space-8, 2rem);
+  --nvx-lazy-space-10: var(--nvx-space-10, 2.5rem);
+  --nvx-lazy-space-12: var(--nvx-space-12, 3rem);
+  --nvx-lazy-space-16: var(--nvx-space-16, 4rem);
+  --nvx-lazy-space-20: var(--nvx-space-20, 5rem);
+  --nvx-lazy-space-24: var(--nvx-space-24, 6rem);
+  --nvx-lazy-space-32: var(--nvx-space-32, 8rem);
+  --nvx-lazy-space-40: var(--nvx-space-40, 10rem);
+  --nvx-lazy-space-48: var(--nvx-space-48, 12rem);
+  --nvx-lazy-space-56: var(--nvx-space-56, 14rem);
+  --nvx-lazy-space-64: var(--nvx-space-64, 16rem);
+
+  /* 📐 BORDER RADIUS TOKENS - TYPE: <length> */
+  --nvx-lazy-radius-sm: var(--nvx-radius-sm, 0.5rem);
+  --nvx-lazy-radius: var(--nvx-radius, 0.75rem);
+  --nvx-lazy-radius-md: var(--nvx-radius-md, 1rem);
+  --nvx-lazy-radius-lg: var(--nvx-radius-lg, 1.5rem);
+  --nvx-lazy-radius-xl: var(--nvx-radius-xl, 2rem);
+  --nvx-lazy-radius-2xl: var(--nvx-radius-2xl, 3rem);
+  --nvx-lazy-radius-full: var(--nvx-radius-full, 9999px);
+
+  /* ⚡ MOTION TOKENS - TYPE: <time>, <cubic-bezier> */
+  --nvx-lazy-ease-standard: var(--nvx-ease-standard, cubic-bezier(0.4, 0, 0.2, 1));
+  --nvx-lazy-ease-emphasized: var(--nvx-ease-emphasized, cubic-bezier(0.2, 0, 0, 1));
+  --nvx-lazy-ease-decelerate: var(--nvx-ease-decelerate, cubic-bezier(0, 0, 0.2, 1));
+  --nvx-lazy-ease-accelerate: var(--nvx-ease-accelerate, cubic-bezier(0.4, 0, 1, 1));
+  
+  --nvx-lazy-duration-fast: var(--nvx-duration-fast, 150ms);
+  --nvx-lazy-duration-medium: var(--nvx-duration-medium, 300ms);
+  --nvx-lazy-duration-slow: var(--nvx-duration-slow, 500ms);
+  --nvx-lazy-duration-extra-slow: var(--nvx-duration-extra-slow, 1000ms);
+
+  /* 🌫️ OPACITY TOKENS - TYPE: <number> */
+  --nvx-lazy-opacity-0: var(--nvx-opacity-0, 0);
+  --nvx-lazy-opacity-5: var(--nvx-opacity-5, 0.05);
+  --nvx-lazy-opacity-10: var(--nvx-opacity-10, 0.1);
+  --nvx-lazy-opacity-20: var(--nvx-opacity-20, 0.2);
+  --nvx-lazy-opacity-30: var(--nvx-opacity-30, 0.3);
+  --nvx-lazy-opacity-40: var(--nvx-opacity-40, 0.4);
+  --nvx-lazy-opacity-50: var(--nvx-opacity-50, 0.5);
+  --nvx-lazy-opacity-60: var(--nvx-opacity-60, 0.6);
+  --nvx-lazy-opacity-70: var(--nvx-opacity-70, 0.7);
+  --nvx-lazy-opacity-80: var(--nvx-opacity-80, 0.8);
+  --nvx-lazy-opacity-90: var(--nvx-opacity-90, 0.9);
+  --nvx-lazy-opacity-100: var(--nvx-opacity-100, 1);
+
+  /* 🌓 SHADOW TOKENS - TYPE: <shadow> */
+  --nvx-lazy-shadow-color: var(--nvx-shadow-color-light, rgba(0, 0, 0, 0.12));
+  --nvx-lazy-shadow-xs: var(--nvx-shadow-xs, 0 0 0 1px var(--nvx-lazy-shadow-color, rgba(0, 0, 0, 0.12)));
+  --nvx-lazy-shadow-sm: var(--nvx-shadow-sm, 0 1px 2px 0 var(--nvx-lazy-shadow-color, rgba(0, 0, 0, 0.12)));
+  --nvx-lazy-shadow-base: var(--nvx-shadow-base, 0 4px 6px -1px var(--nvx-lazy-shadow-color, rgba(0, 0, 0, 0.12)));
+  --nvx-lazy-shadow-md: var(--nvx-shadow-md, 0 6px 12px -2px var(--nvx-lazy-shadow-color, rgba(0, 0, 0, 0.12)));
+  --nvx-lazy-shadow-lg: var(--nvx-shadow-lg, 0 10px 15px -3px var(--nvx-lazy-shadow-color, rgba(0, 0, 0, 0.12)));
+  --nvx-lazy-shadow-xl: var(--nvx-shadow-xl, 0 20px 25px -5px var(--nvx-lazy-shadow-color, rgba(0, 0, 0, 0.12)));
+  --nvx-lazy-shadow-2xl: var(--nvx-shadow-2xl, 0 25px 50px -12px var(--nvx-lazy-shadow-color, rgba(0, 0, 0, 0.12)));
+  --nvx-lazy-shadow-inner: var(--nvx-shadow-inner, inset 0 2px 4px 0 var(--nvx-lazy-shadow-color, rgba(0, 0, 0, 0.12)));
+
+  /* 🏔️ ELEVATION SEMANTICS - TYPE: <shadow> */
+  --nvx-lazy-elevation-1: var(--nvx-elevation-1, var(--nvx-lazy-shadow-sm));
+  --nvx-lazy-elevation-2: var(--nvx-elevation-2, var(--nvx-lazy-shadow-base));
+  --nvx-lazy-elevation-3: var(--nvx-elevation-3, var(--nvx-lazy-shadow-md));
+  --nvx-lazy-elevation-4: var(--nvx-elevation-4, var(--nvx-lazy-shadow-lg));
+  --nvx-lazy-elevation-5: var(--nvx-elevation-5, var(--nvx-lazy-shadow-xl));
+  --nvx-lazy-elevation-6: var(--nvx-elevation-6, var(--nvx-lazy-shadow-2xl));
+
+  /* ✨ GLASS EFFECTS TOKENS - TYPE: <color>, <blur> */
+  --nvx-lazy-glass-bg: var(--nvx-glass-bg, rgba(255, 255, 255, 0.1));
+  --nvx-lazy-glass-border: var(--nvx-glass-border, rgba(255, 255, 255, 0.2));
+  --nvx-lazy-glass-bg-dark: var(--nvx-glass-bg-dark, rgba(255, 255, 255, 0.05));
+  --nvx-lazy-glass-border-dark: var(--nvx-glass-border-dark, rgba(255, 255, 255, 0.1));
+  --nvx-lazy-glass-blur: var(--nvx-glass-blur, blur(20px));
+  --nvx-lazy-glass-saturate: var(--nvx-glass-saturate, saturate(180%));
+  --nvx-lazy-backdrop-blur: var(--nvx-backdrop-blur, blur(10px));
+
+  /* 🔤 TYPOGRAPHY TOKENS - TYPE: <length>, <number>, <string> */
+  --nvx-lazy-text-xs: var(--nvx-text-xs, 0.75rem);
+  --nvx-lazy-text-sm: var(--nvx-text-sm, 0.875rem);
+  --nvx-lazy-text-base: var(--nvx-text-base, 1rem);
+  --nvx-lazy-text-lg: var(--nvx-text-lg, 1.125rem);
+  --nvx-lazy-text-xl: var(--nvx-text-xl, 1.25rem);
+  --nvx-lazy-text-2xl: var(--nvx-text-2xl, 1.5rem);
+  --nvx-lazy-text-3xl: var(--nvx-text-3xl, 1.875rem);
+  --nvx-lazy-text-4xl: var(--nvx-text-4xl, 2.25rem);
+  --nvx-lazy-text-5xl: var(--nvx-text-5xl, 3rem);
+  --nvx-lazy-text-6xl: var(--nvx-text-6xl, 3.75rem);
+  --nvx-lazy-text-7xl: var(--nvx-text-7xl, 4.5rem);
+  --nvx-lazy-text-8xl: var(--nvx-text-8xl, 6rem);
+
+  --nvx-lazy-font-light: var(--nvx-font-light, 300);
+  --nvx-lazy-font-normal: var(--nvx-font-normal, 400);
+  --nvx-lazy-font-medium: var(--nvx-font-medium, 500);
+  --nvx-lazy-font-semibold: var(--nvx-font-semibold, 600);
+  --nvx-lazy-font-bold: var(--nvx-font-bold, 700);
+  --nvx-lazy-font-extrabold: var(--nvx-font-extrabold, 800);
+
+  --nvx-lazy-leading-tight: var(--nvx-leading-tight, 1.25);
+  --nvx-lazy-leading-normal: var(--nvx-leading-normal, 1.5);
+  --nvx-lazy-leading-relaxed: var(--nvx-leading-relaxed, 1.75);
+  --nvx-lazy-leading-loose: var(--nvx-leading-loose, 2);
+
+  --nvx-lazy-tracking-tight: var(--nvx-tracking-tight, -0.025em);
+  --nvx-lazy-tracking-normal: var(--nvx-tracking-normal, 0);
+  --nvx-lazy-tracking-wide: var(--nvx-tracking-wide, 0.025em);
+
+  /* 🔧 FONT FAMILY TOKENS - TYPE: <string> */
+  --nvx-lazy-font-sans: var(--nvx-font-sans, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif);
+  --nvx-lazy-font-mono: var(--nvx-font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace);
+
+  /* 🎯 Z-INDEX TOKENS - TYPE: <integer> */
+  --nvx-lazy-z-base: var(--nvx-z-base, 1);
+  --nvx-lazy-z-overlay: var(--nvx-z-modal-backdrop, 1040);
+  --nvx-lazy-z-modal: var(--nvx-z-modal, 1050);
+  --nvx-lazy-z-popover: var(--nvx-z-popover, 1060);
+  --nvx-lazy-z-tooltip: var(--nvx-z-tooltip, 1070);
+  --nvx-lazy-z-toast: var(--nvx-z-toast, 1080);
+  --nvx-lazy-z-notification: var(--nvx-z-notification, 1090);
+
+  /* ⚙️ LAZY LOADING CONFIGURATION */
+  --nvx-lazy-blur: 20px;
+  --nvx-lazy-scale: 0.95;
+  --nvx-lazy-opacity: var(--nvx-opacity-60, 0.6);
+  --nvx-lazy-timeout: 10000ms;
+  --nvx-lazy-retry-delay: 1000ms;
+  --nvx-lazy-max-retries: 3;
+  --nvx-lazy-backoff-multiplier: 1.5;
+  
+  /* 📏 SIZE VARIANTS - TYPE: <length> */
+  --nvx-lazy-size-sm: 120px;
+  --nvx-lazy-size-md: 240px;
+  --nvx-lazy-size-lg: 360px;
+  --nvx-lazy-size-xl: 480px;
+  --nvx-lazy-size-2xl: 640px;
+  --nvx-lazy-size-3xl: 800px;
+  
+  /* 📊 CORE WEB VITALS THRESHOLDS - TYPE: <time> */
+  --nvx-lazy-lcp-threshold: 2500ms;
+  --nvx-lazy-fid-threshold: 100ms;
+  --nvx-lazy-cls-threshold: 0.1;
+  --nvx-lazy-fcp-threshold: 1800ms;
+  --nvx-lazy-ttfb-threshold: 600ms;
+  --nvx-lazy-inp-threshold: 200ms;
+  
+  /* 🖼️ IMAGE FORMAT SUPPORT - TYPE: <integer>, <string> */
+  --nvx-lazy-supports-avif: 0;
+  --nvx-lazy-supports-webp: 0;
+  --nvx-lazy-supports-jpeg2000: 0;
+  --nvx-lazy-supports-jpegxr: 0;
+  --nvx-lazy-preferred-format: 'jpg';
+  
+  /* 🚦 NETWORK CONDITIONS - TYPE: <string>, <time>, <number> */
+  --nvx-lazy-network-effective-type: '4g';
+  --nvx-lazy-network-rtt: 100ms;
+  --nvx-lazy-network-downlink: 10;
+  --nvx-lazy-save-data: 0;
+  
+  /* 🎯 DEFAULT ASPECT RATIO - TYPE: <ratio> */
+  --nvx-lazy-default-aspect: 16/9;
+}
+
+/* =====================================*/
+   📐 NEVOX DEVICE VIEWPORT INTEGRATION
+   dvh • svh • lvh • All-Device • Enterprise
+/* =====================================*/
+
+/* MODERN VIEWPORT DETECTION */
+@supports (height: 100dvh) {
+  :root {
+    --nvx-lazy-viewport-dynamic: 100dvh;
+    --nvx-lazy-viewport-safe: 100svh;
+    --nvx-lazy-viewport-max: 100lvh;
+  }
+}
+
+/* ORIENTATION CONTROLS */
+@media (orientation: portrait) {
+  :root {
+    --nvx-lazy-orientation-height: var(--nvx-viewport-portrait, 100dvh);
+    --nvx-lazy-orientation-width: 100vw;
+  }
+}
+
+@media (orientation: landscape) {
+  :root {
+    --nvx-lazy-orientation-height: var(--nvx-viewport-landscape, 100dvh);
+    --nvx-lazy-orientation-width: 100vw;
+  }
+}
+
+/* DEVICE-SCALE ADAPTATION */
+@media (max-height: 500px) {
+  .nvx-lazy {
+    min-height: 120px;
+  }
+}
+
+@media (min-height: 1000px) {
+  .nvx-lazy-xl {
+    min-height: 640px;
+  }
+}
+
+/* FOLDABLE DEVICE SUPPORT */
+@supports (horizontal-viewport-segments: 2) {
+  .nvx-lazy {
+    --nvx-lazy-segment-count: env(horizontal-viewport-segments, 1);
+    --nvx-lazy-segment-width: calc(100vw / var(--nvx-lazy-segment-count));
+  }
+}
+
+@supports (vertical-viewport-segments: 2) {
+  .nvx-lazy {
+    --nvx-lazy-segment-count: env(vertical-viewport-segments, 1);
+    --nvx-lazy-segment-height: calc(100dvh / var(--nvx-lazy-segment-count));
+  }
+}
+
+/* =====================================*/
+   🎯 BASE LAZY LOADING - NEVOX STYLE
+/* =====================================*/
+
+.nvx-lazy {
+  /* Position & Display */
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: var(--nvx-lazy-size-md, 240px);
+  
+  /* Background */
+  background-color: var(--nvx-lazy-neutral-100);
+  
+  /* Border & Radius */
+  border-radius: var(--nvx-lazy-radius-lg);
+  overflow: hidden;
+  
+  /* Performance - Optimized */
+  contain: strict;
+  content-visibility: auto;
+  contain-intrinsic-size: auto var(--nvx-lazy-size-md, 240px);
+  isolation: isolate;
+  
+  /* GPU Acceleration */
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  
+  /* Transition */
+  transition: background-color var(--nvx-lazy-duration-medium) var(--nvx-lazy-ease-standard),
+              opacity var(--nvx-lazy-duration-medium) var(--nvx-lazy-ease-standard);
+  
+  /* Glass Effect Support */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  
+  /* CLS Prevention - Default Aspect Ratio */
+  aspect-ratio: var(--nvx-lazy-default-aspect);
+  
+  /* Performance Monitoring */
+  --nvx-lazy-load-start: 0;
+  --nvx-lazy-load-end: 0;
+  --nvx-lazy-render-start: 0;
+  --nvx-lazy-render-end: 0;
+}
+
+/* Aspect Ratio from width/height attributes - FIXED (no number type) */
+.nvx-lazy[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* HOVER EFFECT */
+.nvx-lazy:hover {
+  box-shadow: var(--nvx-lazy-shadow-md);
+}
+
+/* FOCUS STATE - Accessibility with fallback */
+.nvx-lazy:focus,
+.nvx-lazy:focus-visible {
+  outline: 3px solid var(--nvx-lazy-500);
+  outline-offset: 3px;
+  border-radius: var(--nvx-lazy-radius-lg);
+}
+
+/* =====================================*/
+   🎯 NATIVE LAZY LOADING ATTRIBUTE SUPPORT
+/* =====================================*/
+
+.nvx-lazy-img[loading="lazy"] {
+  loading: lazy;
+  decoding: async;
+  fetchpriority: low;
+  width: 100%;
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+}
+
+.nvx-lazy-img[loading="eager"] {
+  loading: eager;
+  fetchpriority: high;
+  decoding: sync;
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Priority hints */
+.nvx-lazy-img[importance="high"] {
+  fetchpriority: high;
+}
+
+.nvx-lazy-img[importance="low"] {
+  fetchpriority: low;
+}
+
+.nvx-lazy-img[importance="auto"] {
+  fetchpriority: auto;
+}
+
+/* =====================================*/
+   🎯 IMAGE FORMAT SUPPORT - WITH ENHANCED FALLBACKS
+/* =====================================*/
+
+/* AVIF Support Detection */
+@supports (background-image: -webkit-image-set(url('image.avif') 1x)) or 
+          (background-image: image-set(url('image.avif') 1x)) or
+          (background: -webkit-image-set(url('image.avif') 1x)) {
+  :root {
+    --nvx-lazy-supports-avif: 1;
+    --nvx-lazy-preferred-format: 'avif';
+  }
+}
+
+/* WebP Support Detection - Enhanced fallback */
+@supports (background-image: -webkit-image-set(url('image.webp') 1x)) or 
+          (background-image: image-set(url('image.webp') 1x)) or
+          (background: -webkit-image-set(url('image.webp') 1x)) {
+  :root {
+    --nvx-lazy-supports-webp: 1;
+    --nvx-lazy-preferred-format: 'webp';
+  }
+}
+
+/* JPEG 2000 Support */
+@supports (background-image: -webkit-image-set(url('image.jp2') 1x)) {
+  :root {
+    --nvx-lazy-supports-jpeg2000: 1;
+  }
+}
+
+/* JPEG XR Support */
+@supports (background-image: -webkit-image-set(url('image.jxr') 1x)) {
+  :root {
+    --nvx-lazy-supports-jpegxr: 1;
+  }
+}
+
+/* Picture element support */
+picture.nvx-lazy {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+picture.nvx-lazy source {
+  width: 100%;
+  height: 100%;
+}
+
+/* =====================================*/
+   🎯 CLIENT HINTS SUPPORT - CONSOLIDATED
+/* =====================================*/
+
+/* Width/Height attributes for CLS prevention - CONSOLIDATED (single definition) */
+.nvx-lazy-img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Container queries for responsive images */
+@container (min-width: 300px) {
+  .nvx-lazy-img[width][height] {
+    aspect-ratio: attr(width) / attr(height);
+  }
+}
+
+/* DPR (Device Pixel Ratio) hints */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .nvx-lazy-img[srcset*="2x"] {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) {
+  .nvx-lazy-img[srcset*="3x"] {
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Viewport width based selection */
+@media (max-width: 640px) {
+  .nvx-lazy-img[sizes*="100vw"] {
+    width: 100vw;
+  }
+}
+
+/* =====================================*/
+   🎯 CORE WEB VITALS MONITORING
+/* =====================================*/
+
+/* Performance Timing Container */
+.nvx-lazy-performance {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* LCP - Largest Contentful Paint */
+[data-nvx-lcp] {
+  position: relative;
+}
+
+[data-nvx-lcp]::after {
+  content: 'LCP: ' attr(data-nvx-lcp) 'ms';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 2px 4px;
+  font-size: 9px;
+  font-family: var(--nvx-lazy-font-mono);
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* LCP Status Indicator */
+[data-nvx-lcp].lcp-good::after {
+  background: var(--nvx-lazy-vitals-good-dark, #006600);
+}
+
+[data-nvx-lcp].lcp-needs-improvement::after {
+  background: var(--nvx-lazy-vitals-needs-improvement-dark, #996600);
+}
+
+[data-nvx-lcp].lcp-poor::after {
+  background: var(--nvx-lazy-vitals-poor-dark, #990000);
+}
+
+/* CLS - Cumulative Layout Shift */
+[data-nvx-cls] {
+  position: relative;
+}
+
+[data-nvx-cls]::after {
+  content: 'CLS: ' attr(data-nvx-cls);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--nvx-lazy-vitals-needs-improvement, #ffaa00);
+  padding: 2px 4px;
+  font-size: 9px;
+  font-family: var(--nvx-lazy-font-mono);
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* CLS Status Indicator */
+[data-nvx-cls].cls-good::after {
+  background: var(--nvx-lazy-vitals-good-dark, #006600);
+  color: white;
+}
+
+[data-nvx-cls].cls-poor::after {
+  background: var(--nvx-lazy-vitals-poor-dark, #990000);
+  color: white;
+}
+
+/* FID - First Input Delay */
+[data-nvx-fid]::after {
+  content: 'FID: ' attr(data-nvx-fid) 'ms';
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-family: var(--nvx-lazy-font-mono);
+  z-index: 9999;
+}
+
+/* FCP - First Contentful Paint */
+[data-nvx-fcp]::after {
+  content: 'FCP: ' attr(data-nvx-fcp) 'ms';
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--nvx-lazy-vitals-good, #00ff00);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-family: var(--nvx-lazy-font-mono);
+  z-index: 9999;
+}
+
+/* TTFB - Time to First Byte */
+[data-nvx-ttfb]::after {
+  content: 'TTFB: ' attr(data-nvx-ttfb) 'ms';
+  position: fixed;
+  bottom: 70px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--nvx-lazy-vitals-needs-improvement, #ffaa00);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-family: var(--nvx-lazy-font-mono);
+  z-index: 9999;
+}
+
+/* INP - Interaction to Next Paint */
+[data-nvx-inp]::after {
+  content: 'INP: ' attr(data-nvx-inp) 'ms';
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--nvx-lazy-vitals-poor, #ff0000);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-family: var(--nvx-lazy-font-mono);
+  z-index: 9999;
+}
+
+/* Performance budget indicators */
+.nvx-lazy-performance-budget {
+  display: none;
+}
+
+.nvx-lazy-performance-budget[data-exceeded="true"] {
+  display: block;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #ff0000;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 10000;
+}
+
+/* =====================================*/
+   🎯 NETWORK CONDITIONS MONITORING
+/* =====================================*/
+
+/* Network Information API support */
+@supports (navigator.connection) {
+  .nvx-lazy-network-indicator {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: var(--nvx-lazy-font-mono);
+    z-index: 9999;
+  }
+}
+
+/* Slow network detection */
+.nvx-lazy-network-slow .nvx-lazy {
+  --nvx-lazy-scale: 0.9;
+  --nvx-lazy-blur: 15px;
+  --nvx-lazy-opacity: 0.5;
+}
+
+/* Save-Data mode */
+@media (prefers-reduced-data: reduce) {
+  :root {
+    --nvx-lazy-save-data: 1;
+  }
+  
+  .nvx-lazy-img {
+    image-rendering: pixelated;
+    filter: blur(5px);
+  }
+  
+  .nvx-lazy-placeholder i {
+    font-size: calc(var(--nvx-lazy-text-base) * 2);
+  }
+}
+
+/* 2G/3G/4G/5G conditions */
+.nvx-lazy-network-2g .nvx-lazy {
+  --nvx-lazy-size-sm: 60px;
+  --nvx-lazy-size-md: 120px;
+  --nvx-lazy-size-lg: 180px;
+  --nvx-lazy-size-xl: 240px;
+}
+
+.nvx-lazy-network-3g .nvx-lazy {
+  --nvx-lazy-size-sm: 80px;
+  --nvx-lazy-size-md: 160px;
+  --nvx-lazy-size-lg: 240px;
+  --nvx-lazy-size-xl: 320px;
+}
+
+.nvx-lazy-network-4g .nvx-lazy {
+  --nvx-lazy-size-sm: 120px;
+  --nvx-lazy-size-md: 240px;
+  --nvx-lazy-size-lg: 360px;
+  --nvx-lazy-size-xl: 480px;
+}
+
+/* =====================================*/
+   🎯 LAZY MEDIA ELEMENTS - CONSOLIDATED
+/* =====================================*/
+
+.nvx-lazy-media,
+.nvx-lazy-img,
+.nvx-lazy-bg,
+.nvx-lazy-iframe,
+.nvx-lazy-video,
+.nvx-lazy-picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity var(--nvx-lazy-duration-medium) var(--nvx-lazy-ease-standard),
+              transform var(--nvx-lazy-duration-medium) var(--nvx-lazy-ease-standard),
+              filter var(--nvx-lazy-duration-medium) var(--nvx-lazy-ease-standard);
+  will-change: opacity, transform, filter;
+  pointer-events: none;
+}
+
+.nvx-lazy-img {
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  decoding: async;
+}
+
+.nvx-lazy-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.nvx-lazy-iframe {
+  border: 0;
+}
+
+.nvx-lazy-video {
+  object-fit: cover;
+}
+
+.nvx-lazy-picture {
+  display: contents;
+}
+
+/* LOADED STATE */
+.nvx-lazy-media.loaded,
+.nvx-lazy-img.loaded,
+.nvx-lazy-bg.loaded,
+.nvx-lazy-iframe.loaded,
+.nvx-lazy-video.loaded,
+.nvx-lazy-picture.loaded {
+  opacity: 1;
+  pointer-events: auto;
+  animation: nvx-lazy-reveal var(--nvx-lazy-duration-medium) var(--nvx-lazy-ease-standard);
+}
+
+/* =====================================*/
+   🎯 ASPECT RATIOS - NEVOX PATTERN
+/* =====================================*/
+
+.nvx-lazy[data-aspect="16/9"] { aspect-ratio: 16/9; }
+.nvx-lazy[data-aspect="4/3"] { aspect-ratio: 4/3; }
+.nvx-lazy[data-aspect="1/1"] { aspect-ratio: 1/1; }
+.nvx-lazy[data-aspect="3/4"] { aspect-ratio: 3/4; }
+.nvx-lazy[data-aspect="21/9"] { aspect-ratio: 21/9; }
+.nvx-lazy[data-aspect="9/16"] { aspect-ratio: 9/16; }
+.nvx-lazy[data-aspect="3/1"] { aspect-ratio: 3/1; }
+
+/* LEGACY FALLBACK */
+@supports not (aspect-ratio: 1/1) {
+  .nvx-lazy[data-aspect] {
+    position: relative;
+    height: 0;
+  }
+  
+  .nvx-lazy[data-aspect="16/9"] { padding-bottom: 56.25%; }
+  .nvx-lazy[data-aspect="4/3"] { padding-bottom: 75%; }
+  .nvx-lazy[data-aspect="1/1"] { padding-bottom: 100%; }
+  .nvx-lazy[data-aspect="3/4"] { padding-bottom: 133.33%; }
+  .nvx-lazy[data-aspect="21/9"] { padding-bottom: 42.86%; }
+  .nvx-lazy[data-aspect="9/16"] { padding-bottom: 177.78%; }
+  .nvx-lazy[data-aspect="3/1"] { padding-bottom: 33.33%; }
+}
+
+/* =====================================*/
+   🎯 LOADING STATES - NEVOX SKELETON
+/* =====================================*/
+
+/* BLUR-UP EFFECT */
+.nvx-lazy-blur {
+  filter: blur(var(--nvx-lazy-blur, 20px));
+  transform: scale(var(--nvx-lazy-scale, 0.95));
+  opacity: var(--nvx-lazy-opacity);
+}
+
+.nvx-lazy-blur.loaded {
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* SHIMMER EFFECT */
+.nvx-lazy-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--nvx-lazy-neutral-100) 25%,
+    var(--nvx-lazy-neutral-200) 50%,
+    var(--nvx-lazy-neutral-100) 75%
+  );
+  background-size: 200% 100%;
+  animation: nvx-lazy-shimmer 1.5s infinite;
+  will-change: background-position;
+}
+
+@keyframes nvx-lazy-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* PULSE EFFECT */
+.nvx-lazy-pulse {
+  animation: nvx-lazy-pulse 1.5s var(--nvx-lazy-ease-standard) infinite;
+}
+
+@keyframes nvx-lazy-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: var(--nvx-lazy-opacity-50); }
+}
+
+/* PLACEHOLDER WITH ICON */
+.nvx-lazy-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--nvx-lazy-neutral-500);
+  background: var(--nvx-lazy-neutral-100);
+  text-align: center;
+  padding: var(--nvx-lazy-space-4);
+  font-family: var(--nvx-lazy-font-sans);
+}
+
+.nvx-lazy-placeholder i {
+  font-size: 48px;
+  margin-bottom: var(--nvx-lazy-space-4);
+  color: var(--nvx-lazy-500);
+  animation: nvx-lazy-soft-pulse 2s infinite;
+}
+
+@keyframes nvx-lazy-soft-pulse {
+  0%, 100% { opacity: var(--nvx-lazy-opacity-80); transform: scale(1); }
+  50% { opacity: var(--nvx-lazy-opacity-50); transform: scale(0.98); }
+}
+
+.nvx-lazy-placeholder span {
+  font-size: var(--nvx-lazy-text-sm);
+  font-weight: var(--nvx-lazy-font-medium);
+  letter-spacing: var(--nvx-lazy-tracking-wide);
+}
+
+/* =====================================*/
+   🎯 SIZE VARIANTS - NEVOX SCALE
+/* =====================================*/
+
+.nvx-lazy-sm { min-height: var(--nvx-lazy-size-sm); }
+.nvx-lazy-md { min-height: var(--nvx-lazy-size-md); }
+.nvx-lazy-lg { min-height: var(--nvx-lazy-size-lg); }
+.nvx-lazy-xl { min-height: var(--nvx-lazy-size-xl); }
+.nvx-lazy-2xl { min-height: var(--nvx-lazy-size-2xl); }
+.nvx-lazy-3xl { min-height: var(--nvx-lazy-size-3xl); }
+
+.nvx-lazy-placeholder-sm i { font-size: 32px; }
+.nvx-lazy-placeholder-md i { font-size: 48px; }
+.nvx-lazy-placeholder-lg i { font-size: 64px; }
+.nvx-lazy-placeholder-xl i { font-size: 80px; }
+.nvx-lazy-placeholder-2xl i { font-size: 96px; }
+.nvx-lazy-placeholder-3xl i { font-size: 112px; }
+
+/* =====================================*/
+   🎯 ERROR HANDLING - NEVOX ALERT SYSTEM
+/* =====================================*/
+
+.nvx-lazy-error {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--nvx-lazy-size-md);
+  background: var(--nvx-danger-50);
+  border: 2px dashed var(--nvx-danger-500);
+  border-radius: var(--nvx-lazy-radius-lg);
+  padding: var(--nvx-lazy-space-6);
+  text-align: center;
+  animation: nvx-lazy-error-pulse 2s infinite;
+}
+
+.nvx-lazy-error-icon {
+  font-size: 48px;
+  color: var(--nvx-danger-500);
+  margin-bottom: var(--nvx-lazy-space-4);
+  animation: nvx-lazy-error-shake 0.5s ease-in-out;
+}
+
+.nvx-lazy-error-message {
+  font-size: var(--nvx-lazy-text-base);
+  font-weight: var(--nvx-lazy-font-semibold);
+  color: var(--nvx-danger-700);
+  margin-bottom: var(--nvx-lazy-space-2);
+}
+
+.nvx-lazy-error-details {
+  font-size: var(--nvx-lazy-text-sm);
+  color: var(--nvx-danger-600);
+  margin-bottom: var(--nvx-lazy-space-4);
+  max-width: 80%;
+  word-break: break-word;
+}
+
+.nvx-lazy-error-actions {
+  display: flex;
+  gap: var(--nvx-lazy-space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nvx-lazy-error-retry {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--nvx-lazy-space-2);
+  padding: var(--nvx-lazy-space-3) var(--nvx-lazy-space-6);
+  background: var(--nvx-lazy-500);
+  color: white;
+  border: none;
+  border-radius: var(--nvx-lazy-radius-md);
+  font-size: var(--nvx-lazy-text-sm);
+  font-weight: var(--nvx-lazy-font-semibold);
+  cursor: pointer;
+  transition: all var(--nvx-lazy-duration-fast) var(--nvx-lazy-ease-standard);
+  min-width: 100px;
+  font-family: var(--nvx-lazy-font-sans);
+}
+
+.nvx-lazy-error-retry:hover {
+  background: var(--nvx-lazy-600);
+  transform: translateY(-2px);
+  box-shadow: var(--nvx-lazy-shadow-md);
+}
+
+.nvx-lazy-error-retry:active {
+  transform: translateY(0);
+}
+
+.nvx-lazy-error-retry:focus,
+.nvx-lazy-error-retry:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+
+.nvx-lazy-error-cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--nvx-lazy-space-2);
+  padding: var(--nvx-lazy-space-3) var(--nvx-lazy-space-6);
+  background: transparent;
+  color: var(--nvx-lazy-neutral-600);
+  border: 2px solid var(--nvx-lazy-neutral-300);
+  border-radius: var(--nvx-lazy-radius-md);
+  font-size: var(--nvx-lazy-text-sm);
+  font-weight: var(--nvx-lazy-font-semibold);
+  cursor: pointer;
+  transition: all var(--nvx-lazy-duration-fast) var(--nvx-lazy-ease-standard);
+  font-family: var(--nvx-lazy-font-sans);
+}
+
+.nvx-lazy-error-cancel:hover {
+  background: var(--nvx-lazy-neutral-200);
+  color: var(--nvx-lazy-neutral-700);
+  border-color: var(--nvx-lazy-neutral-400);
+}
+
+/* ERROR VARIANTS */
+.nvx-lazy-error-timeout {
+  background: var(--nvx-warning-50);
+  border-color: var(--nvx-warning-500);
+}
+
+.nvx-lazy-error-timeout .nvx-lazy-error-icon {
+  color: var(--nvx-warning-500);
+}
+
+.nvx-lazy-error-timeout .nvx-lazy-error-message {
+  color: var(--nvx-warning-700);
+}
+
+.nvx-lazy-error-network {
+  background: var(--nvx-danger-50);
+  border-color: var(--nvx-danger-500);
+}
+
+.nvx-lazy-error-404 {
+  background: var(--nvx-secondary-50);
+  border-color: var(--nvx-secondary-500);
+}
+
+.nvx-lazy-error-404 .nvx-lazy-error-icon {
+  color: var(--nvx-secondary-500);
+}
+
+.nvx-lazy-error-format {
+  background: var(--nvx-info-50);
+  border-color: var(--nvx-info-500);
+}
+
+.nvx-lazy-error-format .nvx-lazy-error-icon {
+  color: var(--nvx-info-500);
+}
+
+/* ANIMATIONS */
+@keyframes nvx-lazy-error-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--nvx-danger-200); }
+  50% { box-shadow: 0 0 20px 0 var(--nvx-danger-300); }
+}
+
+@keyframes nvx-lazy-error-shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* =====================================*/
+   🎯 NETWORK STATE - NEVOX TOAST STYLE
+/* =====================================*/
+
+.nvx-lazy-offline {
+  filter: grayscale(0.8);
+  opacity: var(--nvx-lazy-opacity-70);
+  pointer-events: none;
+}
+
+.nvx-lazy-offline::before {
+  content: '📡 অফলাইন';
+  position: absolute;
+  top: var(--nvx-lazy-space-3);
+  right: var(--nvx-lazy-space-3);
+  background: var(--nvx-warning-500);
+  color: black;
+  padding: var(--nvx-lazy-space-1) var(--nvx-lazy-space-3);
+  border-radius: var(--nvx-lazy-radius-sm);
+  font-size: var(--nvx-lazy-text-xs);
+  font-weight: var(--nvx-lazy-font-bold);
+  z-index: var(--nvx-lazy-z-tooltip);
+  box-shadow: var(--nvx-lazy-shadow-sm);
+}
+
+.nvx-lazy-slow-network::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    var(--nvx-warning-500) 0%, 
+    var(--nvx-warning-400) 50%, 
+    var(--nvx-warning-500) 100%
+  );
+  background-size: 200% 100%;
+  animation: nvx-lazy-slow-network 2s linear infinite;
+}
+
+@keyframes nvx-lazy-slow-network {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* =====================================*/
+   🎯 AUTO-RETRY SYSTEM
+/* =====================================*/
+
+.nvx-lazy-retry-indicator {
+  position: absolute;
+  bottom: var(--nvx-lazy-space-3);
+  right: var(--nvx-lazy-space-3);
+  background: var(--nvx-lazy-500);
+  color: white;
+  padding: var(--nvx-lazy-space-1) var(--nvx-lazy-space-2);
+  border-radius: var(--nvx-lazy-radius-sm);
+  font-size: var(--nvx-lazy-text-xs);
+  font-weight: var(--nvx-lazy-font-bold);
+  animation: nvx-lazy-retry-pulse 1s infinite;
+  z-index: var(--nvx-lazy-z-tooltip);
+}
+
+@keyframes nvx-lazy-retry-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+.nvx-lazy-retry-timer {
+  position: absolute;
+  top: var(--nvx-lazy-space-3);
+  left: var(--nvx-lazy-space-3);
+  width: 30px;
+  height: 30px;
+  border-radius: var(--nvx-lazy-radius-full);
+  background: var(--nvx-lazy-500);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--nvx-lazy-text-xs);
+  font-weight: var(--nvx-lazy-font-bold);
+  z-index: var(--nvx-lazy-z-tooltip);
+}
+
+/* =====================================*/
+   🎯 CACHE SYSTEM
+/* =====================================*/
+
+.nvx-lazy-cached::before {
+  content: '💾 Cached';
+  position: absolute;
+  top: var(--nvx-lazy-space-3);
+  left: var(--nvx-lazy-space-3);
+  background: var(--nvx-success-500);
+  color: white;
+  padding: var(--nvx-lazy-space-1) var(--nvx-lazy-space-2);
+  border-radius: var(--nvx-lazy-radius-sm);
+  font-size: var(--nvx-lazy-text-xs);
+  font-weight: var(--nvx-lazy-font-bold);
+  z-index: var(--nvx-lazy-z-tooltip);
+  opacity: 0.8;
+}
+
+.nvx-lazy-cache-refresh {
+  position: absolute;
+  bottom: var(--nvx-lazy-space-3);
+  right: var(--nvx-lazy-space-3);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--nvx-lazy-radius-full);
+  background: var(--nvx-lazy-500);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--nvx-lazy-text-base);
+  z-index: var(--nvx-lazy-z-tooltip);
+  opacity: 0;
+  transition: opacity var(--nvx-lazy-duration-fast) var(--nvx-lazy-ease-standard),
+              transform var(--nvx-lazy-duration-fast) var(--nvx-lazy-ease-standard);
+}
+
+.nvx-lazy-cached:hover .nvx-lazy-cache-refresh {
+  opacity: 1;
+}
+
+.nvx-lazy-cache-refresh:hover {
+  transform: rotate(180deg);
+  background: var(--nvx-lazy-600);
+}
+
+.nvx-lazy-cache-refresh:focus,
+.nvx-lazy-cache-refresh:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+
+/* =====================================*/
+   🎯 ANALYTICS & MONITORING
+/* =====================================*/
+
+[data-nvx-load-time]::after {
+  content: attr(data-nvx-load-time) 'ms';
+  position: absolute;
+  top: var(--nvx-lazy-space-1);
+  right: var(--nvx-lazy-space-1);
+  background: rgba(0, 0, 0, 0.7);
+  color: #00ff00;
+  padding: 2px 4px;
+  border-radius: var(--nvx-lazy-radius-sm);
+  font-size: 9px;
+  font-family: var(--nvx-lazy-font-mono);
+  z-index: var(--nvx-lazy-z-tooltip);
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+[data-nvx-error-count]:not([data-nvx-error-count="0"])::after {
+  content: '⚠️ ' attr(data-nvx-error-count);
+  position: absolute;
+  top: var(--nvx-lazy-space-1);
+  left: var(--nvx-lazy-space-1);
+  background: var(--nvx-danger-500);
+  color: white;
+  padding: 2px 6px;
+  border-radius: var(--nvx-lazy-radius-sm);
+  font-size: var(--nvx-lazy-text-xs);
+  font-weight: var(--nvx-lazy-font-bold);
+  z-index: var(--nvx-lazy-z-tooltip);
+}
+
+[data-nvx-retry-count]:not([data-nvx-retry-count="0"])::after {
+  content: '↻ ' attr(data-nvx-retry-count);
+  position: absolute;
+  bottom: var(--nvx-lazy-space-1);
+  left: var(--nvx-lazy-space-1);
+  background: var(--nvx-warning-500);
+  color: black;
+  padding: 2px 6px;
+  border-radius: var(--nvx-lazy-radius-sm);
+  font-size: var(--nvx-lazy-text-xs);
+  font-weight: var(--nvx-lazy-font-bold);
+  z-index: var(--nvx-lazy-z-tooltip);
+}
+
+[data-nvx-format]::after {
+  content: '📷 ' attr(data-nvx-format);
+  position: absolute;
+  top: var(--nvx-lazy-space-1);
+  right: var(--nvx-lazy-space-1);
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffaa00;
+  padding: 2px 4px;
+  border-radius: var(--nvx-lazy-radius-sm);
+  font-size: 9px;
+  font-family: var(--nvx-lazy-font-mono);
+  z-index: var(--nvx-lazy-z-tooltip);
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* =====================================*/
+   🎯 CONCURRENT LOADING HANDLING
+/* =====================================*/
+
+.nvx-lazy-loading-multiple {
+  position: relative;
+}
+
+.nvx-lazy-loading-multiple::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: var(--nvx-lazy-z-overlay);
+  backdrop-filter: blur(2px);
+}
+
+.nvx-lazy-loading-multiple::after {
+  content: '⏳ Multiple Requests';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--nvx-lazy-500);
+  color: white;
+  padding: var(--nvx-lazy-space-2) var(--nvx-lazy-space-4);
+  border-radius: var(--nvx-lazy-radius-md);
+  font-size: var(--nvx-lazy-text-sm);
+  font-weight: var(--nvx-lazy-font-bold);
+  z-index: var(--nvx-lazy-z-modal);
+  white-space: nowrap;
+  box-shadow: var(--nvx-lazy-shadow-lg);
+}
+
+.nvx-lazy-abort {
+  position: absolute;
+  top: var(--nvx-lazy-space-3);
+  right: var(--nvx-lazy-space-3);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--nvx-lazy-radius-full);
+  background: var(--nvx-danger-500);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--nvx-lazy-text-base);
+  z-index: var(--nvx-lazy-z-modal);
+  transition: all var(--nvx-lazy-duration-fast) var(--nvx-lazy-ease-standard);
+  box-shadow: var(--nvx-lazy-shadow-md);
+}
+
+.nvx-lazy-abort:hover {
+  transform: scale(1.1);
+  background: var(--nvx-danger-600);
+}
+
+.nvx-lazy-abort:focus,
+.nvx-lazy-abort:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+
+/* =====================================*/
+   🎯 PRIORITY QUEUE SYSTEM
+/* =====================================*/
+
+.nvx-lazy-priority-viewport {
+  content-visibility: visible;
+  contain-intrinsic-size: auto;
+  animation: nvx-lazy-priority-fade var(--nvx-lazy-duration-fast) var(--nvx-lazy-ease-standard);
+}
+
+@keyframes nvx-lazy-priority-fade {
+  from { opacity: var(--nvx-lazy-opacity-70); }
+  to { opacity: 1; }
+}
+
+.nvx-lazy-priority-interaction {
+  transform: scale(1.02);
+  transition: transform var(--nvx-lazy-duration-fast) var(--nvx-lazy-ease-standard);
+}
+
+.nvx-lazy-priority-interaction:hover {
+  transform: scale(1.03);
+}
+
+.nvx-lazy-priority-lazy {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 1000px;
+}
+
+.nvx-lazy-priority-immediate {
+  content-visibility: visible;
+  contain: none;
+}
+
+/* =====================================*/
+   🎯 MEMORY MANAGEMENT & CLEANUP
+/* =====================================*/
+
+.nvx-lazy-cleanup {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--nvx-lazy-duration-medium) var(--nvx-lazy-ease-standard);
+}
+
+.nvx-lazy-unload {
+  display: none;
+}
+
+/* =====================================*/
+   🎯 NEVOX COMPONENT INTEGRATION
+/* =====================================*/
+
+/* 🃏 ULTRA CARD INTEGRATION */
+.nvx-ultra-card .nvx-lazy {
+  border-radius: inherit;
+  min-height: 200px;
+  margin: 0;
+  border: none;
+}
+
+/* 🦴 SKELETON INTEGRATION */
+.nvx-skeleton.nvx-lazy {
+  background: linear-gradient(
+    90deg,
+    var(--nvx-lazy-neutral-100) 25%,
+    var(--nvx-lazy-neutral-200) 50%,
+    var(--nvx-lazy-neutral-100) 75%
+  );
+  background-size: 200% 100%;
+  animation: nvx-lazy-shimmer 1.5s infinite;
+}
+
+/* 🔘 BUTTON INTEGRATION */
+.nvx-btn.nvx-lazy {
+  min-height: 44px;
+  border-radius: var(--nvx-lazy-radius-md);
+}
+
+/* 📝 FORM INTEGRATION */
+.nvx-input.nvx-lazy,
+.nvx-select.nvx-lazy,
+.nvx-textarea.nvx-lazy,
+.nvx-form-input.nvx-lazy {
+  min-height: 44px;
+  border-radius: var(--nvx-lazy-radius-md);
+  background-color: var(--nvx-lazy-neutral-100);
+}
+
+/* 👤 PROFILE INTEGRATION */
+.nvx-profile-avatar.nvx-lazy {
+  min-height: 48px;
+  min-width: 48px;
+  border-radius: var(--nvx-lazy-radius-full);
+}
+
+/* 🛒 CART INTEGRATION */
+.nvx-cart-item-img.nvx-lazy {
+  min-height: 50px;
+  min-width: 50px;
+  border-radius: var(--nvx-lazy-radius-md);
+}
+
+/* 📊 WIDGET INTEGRATION */
+.nvx-widget .nvx-lazy {
+  min-height: 120px;
+  border-radius: var(--nvx-lazy-radius-lg);
+  margin-bottom: var(--nvx-lazy-space-4);
+}
+
+/* 📰 POST INTEGRATION */
+.nvx-post .nvx-lazy {
+  border-radius: var(--nvx-lazy-radius-lg);
+  margin-bottom: var(--nvx-lazy-space-6);
+}
+
+/* 🗂️ SIDEBAR INTEGRATION */
+.nvx-sidebar .nvx-lazy {
+  min-height: 100px;
+  border-radius: var(--nvx-lazy-radius-lg);
+  margin-bottom: var(--nvx-lazy-space-4);
+}
+
+/* 📑 PAGINATION INTEGRATION */
+.nvx-pagination-item.nvx-lazy {
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: var(--nvx-lazy-radius-md);
+}
+
+/* 💬 COMMENT INTEGRATION */
+.nvx-comment-item .nvx-lazy {
+  min-height: 40px;
+  min-width: 40px;
+  border-radius: var(--nvx-lazy-radius-full);
+}
+
+/* 🎯 ACCORDION INTEGRATION */
+.nvx-accordion-content .nvx-lazy {
+  min-height: 150px;
+  margin: var(--nvx-lazy-space-4) 0;
+}
+
+/* 📌 TAB INTEGRATION */
+.nvx-tab-pane .nvx-lazy {
+  min-height: 200px;
+  margin: var(--nvx-lazy-space-4) 0;
+}
+
+/* 🏷️ BADGE INTEGRATION */
+.nvx-ultra-badge.nvx-lazy {
+  min-height: 32px;
+  min-width: 60px;
+  border-radius: var(--nvx-lazy-radius-full);
+}
+
+/* =====================================*/
+   🎯 LOGICAL PROPERTIES - RTL SUPPORT
+/* =====================================*/
+
+.nvx-lazy {
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+}
+
+.nvx-lazy-media,
+.nvx-lazy-img,
+.nvx-lazy-bg,
+.nvx-lazy-iframe,
+.nvx-lazy-video,
+.nvx-lazy-picture {
+  inset-inline-start: 0;
+  inset-inline-end: auto;
+}
+
+.nvx-lazy-offline::before {
+  inset-inline-end: var(--nvx-lazy-space-3);
+  inset-inline-start: auto;
+}
+
+.nvx-lazy-retry-timer {
+  inset-inline-start: var(--nvx-lazy-space-3);
+  inset-inline-end: auto;
+}
+
+.nvx-lazy-cached::before {
+  inset-inline-start: var(--nvx-lazy-space-3);
+  inset-inline-end: auto;
+}
+
+.nvx-lazy-cache-refresh {
+  inset-inline-end: var(--nvx-lazy-space-3);
+  inset-inline-start: auto;
+}
+
+.nvx-lazy-abort {
+  inset-inline-end: var(--nvx-lazy-space-3);
+  inset-inline-start: auto;
+}
+
+[data-nvx-load-time]::after {
+  inset-inline-end: var(--nvx-lazy-space-1);
+  inset-inline-start: auto;
+}
+
+[data-nvx-error-count]::after {
+  inset-inline-start: var(--nvx-lazy-space-1);
+  inset-inline-end: auto;
+}
+
+[data-nvx-retry-count]::after {
+  inset-inline-start: var(--nvx-lazy-space-1);
+  inset-inline-end: auto;
+}
+
+/* RTL Specific Overrides */
+[dir="rtl"] .nvx-lazy,
+[dir="rtl"] .nvx-lazy-media,
+[dir="rtl"] .nvx-lazy-img,
+[dir="rtl"] .nvx-lazy-bg,
+[dir="rtl"] .nvx-lazy-iframe,
+[dir="rtl"] .nvx-lazy-video,
+[dir="rtl"] .nvx-lazy-picture {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+[dir="rtl"] .nvx-lazy-offline::before {
+  inset-inline-end: auto;
+  inset-inline-start: var(--nvx-lazy-space-3);
+}
+
+[dir="rtl"] .nvx-lazy-retry-timer {
+  inset-inline-start: auto;
+  inset-inline-end: var(--nvx-lazy-space-3);
+}
+
+[dir="rtl"] .nvx-lazy-cached::before {
+  inset-inline-start: auto;
+  inset-inline-end: var(--nvx-lazy-space-3);
+}
+
+[dir="rtl"] .nvx-lazy-cache-refresh {
+  inset-inline-end: auto;
+  inset-inline-start: var(--nvx-lazy-space-3);
+}
+
+[dir="rtl"] .nvx-lazy-abort {
+  inset-inline-end: auto;
+  inset-inline-start: var(--nvx-lazy-space-3);
+}
+
+[dir="rtl"] [data-nvx-load-time]::after {
+  inset-inline-end: auto;
+  inset-inline-start: var(--nvx-lazy-space-1);
+}
+
+[dir="rtl"] [data-nvx-error-count]::after {
+  inset-inline-start: auto;
+  inset-inline-end: var(--nvx-lazy-space-1);
+}
+
+[dir="rtl"] [data-nvx-retry-count]::after {
+  inset-inline-start: auto;
+  inset-inline-end: var(--nvx-lazy-space-1);
+}
+
+/* =====================================*/
+   🎯 DARK THEME - NEVOX COMPLETE
+/* =====================================*/
+
+[data-theme="dark"] {
+  --nvx-lazy-neutral-50: var(--nvx-gray-900, #111827);
+  --nvx-lazy-neutral-100: var(--nvx-gray-800, #1f2937);
+  --nvx-lazy-neutral-200: var(--nvx-gray-700, #374151);
+  --nvx-lazy-neutral-300: var(--nvx-gray-600, #4b5563);
+  --nvx-lazy-neutral-400: var(--nvx-gray-500, #6b7280);
+  --nvx-lazy-neutral-500: var(--nvx-gray-400, #9ca3af);
+  --nvx-lazy-neutral-600: var(--nvx-gray-300, #d1d5db);
+  --nvx-lazy-neutral-700: var(--nvx-gray-200, #e5e7eb);
+  --nvx-lazy-neutral-800: var(--nvx-gray-100, #f3f4f6);
+  --nvx-lazy-neutral-900: var(--nvx-gray-50, #f9fafb);
+  
+  --nvx-lazy-shadow-color: var(--nvx-shadow-color-dark, rgba(0, 0, 0, 0.4));
+  
+  --nvx-lazy-vitals-good: #00cc00;
+  --nvx-lazy-vitals-needs-improvement: #cc8800;
+  --nvx-lazy-vitals-poor: #cc0000;
+}
+
+[data-theme="dark"] .nvx-lazy {
+  background-color: var(--nvx-lazy-neutral-100);
+}
+
+[data-theme="dark"] .nvx-lazy.nvx-glass {
+  background: var(--nvx-lazy-glass-bg-dark);
+  border-color: var(--nvx-lazy-glass-border-dark);
+}
+
+[data-theme="dark"] .nvx-lazy-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--nvx-lazy-neutral-100) 25%,
+    var(--nvx-lazy-neutral-200) 50%,
+    var(--nvx-lazy-neutral-100) 75%
+  );
+}
+
+[data-theme="dark"] .nvx-lazy-placeholder {
+  background: var(--nvx-lazy-neutral-100);
+  color: var(--nvx-lazy-neutral-500);
+}
+
+[data-theme="dark"] .nvx-lazy-error {
+  background: var(--nvx-danger-950);
+  border-color: var(--nvx-danger-700);
+}
+
+[data-theme="dark"] .nvx-lazy-error-message {
+  color: var(--nvx-danger-300);
+}
+
+[data-theme="dark"] .nvx-lazy-error-details {
+  color: var(--nvx-danger-400);
+}
+
+[data-theme="dark"] .nvx-lazy-error-cancel {
+  border-color: var(--nvx-lazy-neutral-600);
+  color: var(--nvx-lazy-neutral-400);
+}
+
+[data-theme="dark"] .nvx-lazy-error-cancel:hover {
+  background: var(--nvx-lazy-neutral-700);
+  border-color: var(--nvx-lazy-neutral-500);
+  color: white;
+}
+
+/* =====================================*/
+   🎯 ACCESSIBILITY - NEVOX A11Y
+/* =====================================*/
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  .nvx-lazy,
+  .nvx-lazy-media,
+  .nvx-lazy-img,
+  .nvx-lazy-bg,
+  .nvx-lazy-iframe,
+  .nvx-lazy-video,
+  .nvx-lazy-shimmer,
+  .nvx-lazy-pulse,
+  .nvx-lazy-error,
+  .nvx-lazy-error-icon,
+  .nvx-lazy-error-retry,
+  .nvx-lazy-error-cancel,
+  .nvx-lazy-slow-network::after,
+  .nvx-lazy-retry-indicator,
+  .nvx-lazy-cache-refresh,
+  .nvx-lazy-abort,
+  [class*="nvx-lazy-"] {
+    transition: none !important;
+    animation: none !important;
+  }
+  
+  .nvx-lazy-shimmer {
+    background: var(--nvx-lazy-neutral-200);
+  }
+}
+
+/* HIGH CONTRAST */
+@media (prefers-contrast: high) {
+  .nvx-lazy {
+    border: 2px solid CanvasText;
+  }
+  
+  .nvx-lazy-error {
+    border: 3px solid CanvasText;
+    background: Canvas !important;
+    color: CanvasText !important;
+  }
+  
+  .nvx-lazy-placeholder i {
+    color: CanvasText;
+  }
+  
+  .nvx-lazy-error-retry {
+    border: 2px solid CanvasText;
+    background: Canvas !important;
+    color: CanvasText !important;
+  }
+}
+
+/* FORCED COLORS */
+@media (forced-colors: active) {
+  .nvx-lazy {
+    forced-color-adjust: none;
+    border: 2px solid ButtonText;
+  }
+  
+  .nvx-lazy-error {
+    border: 3px solid ButtonText;
+  }
+  
+  .nvx-lazy-error-retry {
+    border: 2px solid ButtonText;
+    background: ButtonFace !important;
+    color: ButtonText !important;
+  }
+  
+  .nvx-lazy-placeholder i {
+    color: ButtonText;
+  }
+}
+
+/* =====================================*/
+   🎯 RESPONSIVE BREAKPOINTS - NEVOX
+/* =====================================*/
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .nvx-lazy {
+    min-height: 200px;
+  }
+  
+  .nvx-lazy-sm { min-height: 100px; }
+  .nvx-lazy-md { min-height: 200px; }
+  .nvx-lazy-lg { min-height: 300px; }
+  .nvx-lazy-xl { min-height: 400px; }
+  .nvx-lazy-2xl { min-height: 500px; }
+  .nvx-lazy-3xl { min-height: 600px; }
+  
+  .nvx-lazy-placeholder i {
+    font-size: 40px;
+  }
+}
+
+/* MOBILE LANDSCAPE */
+@media (max-width: 768px) {
+  .nvx-lazy {
+    min-height: 160px;
+  }
+  
+  .nvx-lazy-sm { min-height: 80px; }
+  .nvx-lazy-md { min-height: 160px; }
+  .nvx-lazy-lg { min-height: 240px; }
+  .nvx-lazy-xl { min-height: 320px; }
+  .nvx-lazy-2xl { min-height: 400px; }
+  .nvx-lazy-3xl { min-height: 480px; }
+  
+  .nvx-lazy-placeholder i {
+    font-size: 32px;
+    margin-bottom: var(--nvx-lazy-space-3);
+  }
+  
+  .nvx-lazy-error {
+    padding: var(--nvx-lazy-space-4);
+  }
+  
+  .nvx-lazy-error-icon {
+    font-size: 32px;
+  }
+  
+  .nvx-lazy-error-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nvx-lazy-error-retry,
+  .nvx-lazy-error-cancel {
+    width: 100%;
+  }
+}
+
+/* MOBILE PORTRAIT */
+@media (max-width: 480px) {
+  .nvx-lazy {
+    min-height: 120px;
+  }
+  
+  .nvx-lazy-sm { min-height: 60px; }
+  .nvx-lazy-md { min-height: 120px; }
+  .nvx-lazy-lg { min-height: 180px; }
+  .nvx-lazy-xl { min-height: 240px; }
+  .nvx-lazy-2xl { min-height: 300px; }
+  .nvx-lazy-3xl { min-height: 360px; }
+  
+  .nvx-lazy-placeholder i {
+    font-size: 24px;
+    margin-bottom: var(--nvx-lazy-space-2);
+  }
+  
+  .nvx-lazy-placeholder span {
+    font-size: var(--nvx-lazy-text-xs);
+  }
+  
+  .nvx-lazy-offline::before {
+    font-size: var(--nvx-lazy-text-xs);
+    padding: 2px 6px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 360px) {
+  .nvx-lazy {
+    min-height: 100px;
+  }
+  
+  .nvx-lazy-sm { min-height: 50px; }
+  .nvx-lazy-md { min-height: 100px; }
+  .nvx-lazy-lg { min-height: 150px; }
+  .nvx-lazy-xl { min-height: 200px; }
+  .nvx-lazy-2xl { min-height: 250px; }
+  .nvx-lazy-3xl { min-height: 300px; }
+}
+
+/* LANDSCAPE OPTIMIZATION */
+@media (orientation: landscape) and (max-height: 600px) {
+  .nvx-lazy {
+    min-height: 100px;
+  }
+  
+  .nvx-lazy[data-aspect] {
+    aspect-ratio: auto !important;
+    height: 100%;
+  }
+}
+
+/* ULTRA-WIDE SCREENS */
+@media (min-width: 1920px) {
+  .nvx-lazy-xl {
+    min-height: 640px;
+  }
+  
+  .nvx-lazy-2xl {
+    min-height: 800px;
+  }
+  
+  .nvx-lazy-3xl {
+    min-height: 960px;
+  }
+}
+
+/* TOUCH DEVICE OPTIMIZATION */
+@media (hover: none) and (pointer: coarse) {
+  .nvx-lazy {
+    min-height: 200px;
+  }
+  
+  .nvx-lazy-error-retry,
+  .nvx-lazy-error-cancel,
+  .nvx-lazy-cache-refresh,
+  .nvx-lazy-abort {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  .nvx-lazy-placeholder {
+    padding: var(--nvx-lazy-space-6);
+  }
+  
+  .nvx-lazy-placeholder i {
+    font-size: 56px;
+  }
+}
+
+/* =====================================*/
+   🎯 PRINT STYLES - NEVOX PRINT SYSTEM
+/* =====================================*/
+
+@media print {
+  .nvx-lazy {
+    content-visibility: visible !important;
+    contain: none !important;
+    min-height: auto !important;
+    background: transparent !important;
+    border: 1px solid #000 !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .nvx-lazy-media,
+  .nvx-lazy-img,
+  .nvx-lazy-bg,
+  .nvx-lazy-iframe,
+  .nvx-lazy-video,
+  .nvx-lazy-picture {
+    opacity: 1 !important;
+    position: static !important;
+    display: block !important;
+    filter: none !important;
+    transform: none !important;
+    aspect-ratio: auto !important;
+  }
+  
+  .nvx-lazy-placeholder,
+  .nvx-lazy-shimmer,
+  .nvx-lazy-pulse,
+  .nvx-lazy-error,
+  .nvx-lazy-offline::before,
+  .nvx-lazy-slow-network::after,
+  .nvx-lazy-retry-indicator,
+  .nvx-lazy-retry-timer,
+  .nvx-lazy-cached::before,
+  .nvx-lazy-cache-refresh,
+  .nvx-lazy-loading-multiple::before,
+  .nvx-lazy-loading-multiple::after,
+  .nvx-lazy-abort,
+  [data-nvx-load-time]::after,
+  [data-nvx-error-count]::after,
+  [data-nvx-retry-count]::after,
+  [data-nvx-format]::after,
+  [data-nvx-lcp]::after,
+  [data-nvx-cls]::after,
+  [data-nvx-fid]::after,
+  [data-nvx-fcp]::after,
+  [data-nvx-ttfb]::after,
+  [data-nvx-inp]::after {
+    display: none !important;
+  }
+  
+  .nvx-lazy[data-aspect] {
+    aspect-ratio: auto !important;
+    padding-bottom: 0 !important;
+    height: auto !important;
+  }
+}
+
+/* =====================================*/
+   🎯 ANIMATIONS & KEYFRAMES - CONSOLIDATED
+/* =====================================*/
+
+@keyframes nvx-lazy-reveal {
+  0% {
+    opacity: 0;
+    transform: scale(1.02);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes nvx-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes nvx-ripple {
+  to {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+/* =====================================*/
+   🎯 LEGACY BROWSER FALLBACKS
+/* =====================================*/
+
+/* NO INTERSECTION OBSERVER */
+.no-intersectionobserver .nvx-lazy-media,
+.no-intersectionobserver .nvx-lazy-img,
+.no-intersectionobserver .nvx-lazy-bg,
+.no-intersectionobserver .nvx-lazy-iframe,
+.no-intersectionobserver .nvx-lazy-video,
+.no-intersectionobserver .nvx-lazy-picture {
+  opacity: 1;
+}
+
+.no-intersectionobserver .nvx-lazy-placeholder {
+  display: none;
+}
+
+/* NO WEBP SUPPORT */
+.no-webp .nvx-lazy-img[data-webp] {
+  display: none;
+}
+
+/* NO AVIF SUPPORT */
+.no-avif .nvx-lazy-img[data-avif] {
+  display: none;
+}
+
+/* NO CSS GRID */
+.no-cssgrid .nvx-lazy {
+  display: block;
+}
+
+/* NO ASPECT RATIO SUPPORT */
+.no-aspectratio .nvx-lazy[data-aspect] {
+  position: relative;
+  height: 0;
+}
+
+.no-aspectratio .nvx-lazy[data-aspect="16/9"] { padding-bottom: 56.25%; }
+.no-aspectratio .nvx-lazy[data-aspect="4/3"] { padding-bottom: 75%; }
+.no-aspectratio .nvx-lazy[data-aspect="1/1"] { padding-bottom: 100%; }
+.no-aspectratio .nvx-lazy[data-aspect="3/4"] { padding-bottom: 133.33%; }
+.no-aspectratio .nvx-lazy[data-aspect="21/9"] { padding-bottom: 42.86%; }
+.no-aspectratio .nvx-lazy[data-aspect="9/16"] { padding-bottom: 177.78%; }
+.no-aspectratio .nvx-lazy[data-aspect="3/1"] { padding-bottom: 33.33%; }
+
+/* NO CSS CONTAINMENT */
+.no-contain .nvx-lazy {
+  contain: none;
+}
+
+/* NO CONTENT VISIBILITY */
+.no-content-visibility .nvx-lazy {
+  content-visibility: visible;
+}
+
+/* =====================================*/
+   🎯 DEBUG MODE (DEVELOPMENT ONLY)
+/* =====================================*/
+
+.nvx-lazy-debug {
+  outline: 2px solid var(--nvx-danger-500);
+}
+
+.nvx-lazy-debug::before {
+  content: 'LAZY';
+  position: absolute;
+  top: var(--nvx-lazy-space-2);
+  left: var(--nvx-lazy-space-2);
+  background: var(--nvx-danger-500);
+  color: white;
+  padding: 2px 6px;
+  font-size: var(--nvx-lazy-text-xs);
+  font-weight: var(--nvx-lazy-font-bold);
+  border-radius: var(--nvx-lazy-radius-sm);
+  z-index: 9999;
+}
+
+.nvx-lazy-debug.loaded {
+  outline: 2px solid var(--nvx-success-500);
+}
+
+.nvx-lazy-debug.loaded::before {
+  content: 'LOADED';
+  background: var(--nvx-success-500);
+}
+
+.nvx-lazy-debug.error {
+  outline: 2px solid var(--nvx-warning-500);
+}
+
+.nvx-lazy-debug.error::before {
+  content: 'ERROR';
+  background: var(--nvx-warning-500);
+}
+
+/* =====================================*/
+   ⚡ NEVOX LAZY LOADING v4.1 - COMPLETE
+   NATIVE LAZY LOADING • CORE WEB VITALS
+   FULLY INTEGRATED WITH NEVOX ECOSYSTEM
+   ENTERPRISE-GRADE • PRODUCTION-READY
+/* =====================================*/
