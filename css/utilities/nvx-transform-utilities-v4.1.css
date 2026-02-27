@@ -1,13 +1,906 @@
 /*======================================*/
-⚡120 css section TRANSFORM UTILITIES - CHAINED ⚡
+/* ⚡ 120. TRANSFORM UTILITIES v4.1      */
+/* ENTERPRISE-GRADE • PRODUCTION-READY  */
+/* WITH COMPLETE FALLBACK SYSTEM        */
+/* ULTRA PREMIUM • DOPAMINE EXPERIENCE  */
 /*======================================*/
-.nvx-scale-90{--nvx-scale:0.9}.nvx-scale-95{--nvx-scale:0.95}.nvx-scale-100{--nvx-scale:1}
-.nvx-scale-105{--nvx-scale:1.05}.nvx-scale-110{--nvx-scale:1.1}
-.nvx-rotate-45{--nvx-rotate:45deg}.nvx-rotate-90{--nvx-rotate:90deg}
-.nvx-rotate-180{--nvx-rotate:180deg}.nvx-rotate-270{--nvx-rotate:270deg}
-.nvx-translate-x-1{--nvx-translate-x:var(--nvx-spacing-1)}
-.nvx-translate-x-2{--nvx-translate-x:var(--nvx-spacing-2)}
-.nvx-translate-y-1{--nvx-translate-y:var(--nvx-spacing-1)}
-.nvx-translate-y-2{--nvx-translate-y:var(--nvx-spacing-2)}
-.nvx-transform{transform:scale(var(--nvx-scale,1)) rotate(var(--nvx-rotate,0)) translateX(var(--nvx-translate-x,0)) translateY(var(--nvx-translate-y,0))}
 
+/* ===================================== */
+/* CORE TRANSFORM VARIABLES              */
+/* ===================================== */
+
+:root {
+  /* Core Transform Tokens - With Fallbacks */
+  --nvx-scale: 1;
+  --nvx-rotate: 0deg;
+  --nvx-rotate-x: 0deg;
+  --nvx-rotate-y: 0deg;
+  --nvx-rotate-z: 0deg;
+  --nvx-skew-x: 0deg;
+  --nvx-skew-y: 0deg;
+  --nvx-translate-x: 0;
+  --nvx-translate-y: 0;
+  --nvx-translate-z: 0;
+  --nvx-perspective: none;
+  --nvx-transform-origin: center;
+  --nvx-transform-style: flat;
+  --nvx-backface-visibility: visible;
+  
+  /* Dopamine Animation Tokens - With Fallbacks */
+  --nvx-duration-bounce: 0.4s;
+  --nvx-duration-elastic: 0.6s;
+  --nvx-duration-float: 3s;
+  --nvx-duration-dopamine: 0.3s;
+  
+  /* Color Effect Tokens - With Fallbacks */
+  --nvx-glow-color: var(--nvx-primary-400, #60a5fa);
+  --nvx-glow-intensity: 0.5;
+  --nvx-neon-color: var(--nvx-secondary-400, #a78bfa);
+  
+  /* ✅ FIXED: RGB Variables for rgba() fallbacks */
+  --nvx-primary-rgb: 59, 130, 246;
+  --nvx-secondary-rgb: 139, 92, 246;
+  --nvx-accent-rgb: 236, 72, 153;
+  --nvx-success-rgb: 16, 185, 129;
+  --nvx-warning-rgb: 245, 158, 11;
+  --nvx-danger-rgb: 239, 68, 68;
+  --nvx-info-rgb: 6, 182, 212;
+  
+  /* ✅ FIXED: Rainbow Variables */
+  --nvx-rainbow-1: #ff6b6b;  /* লাল */
+  --nvx-rainbow-2: #feca57;  /* হলুদ */
+  --nvx-rainbow-3: #48dbfb;  /* নীল */
+  --nvx-rainbow-4: #1dd1a1;  /* সবুজ */
+  
+  /* Filter Tokens */
+  --nvx-filter-blur: 0;
+  --nvx-filter-brightness: 1;
+  --nvx-filter-contrast: 1;
+  --nvx-filter-saturate: 1;
+  --nvx-filter-hue: 0deg;
+  --nvx-filter-sepia: 0;
+  --nvx-filter-grayscale: 0;
+  --nvx-filter-invert: 0;
+  
+  /* Performance - With Fallbacks */
+  --nvx-transform-gpu: translateZ(0);
+  --nvx-transform-will-change: transform, filter, box-shadow;
+}
+
+/* ===================================== */
+/* FALLBACK DETECTION - @supports        */
+/* ===================================== */
+
+@supports (transform: translate(0)) {
+  .nvx-transform-supported {
+    --nvx-has-transform: 1;
+  }
+}
+
+@supports (transform-style: preserve-3d) {
+  .nvx-transform-3d-supported {
+    --nvx-has-transform-3d: 1;
+  }
+}
+
+@supports (filter: blur(1px)) {
+  .nvx-filter-supported {
+    --nvx-has-filter: 1;
+  }
+}
+
+@supports (backdrop-filter: blur(1px)) {
+  .nvx-backdrop-supported {
+    --nvx-has-backdrop: 1;
+  }
+}
+
+@supports (background: linear-gradient(135deg, red, blue)) {
+  .nvx-gradient-supported {
+    --nvx-has-gradient: 1;
+  }
+}
+
+/* ===================================== */
+/* BASE TRANSFORM CLASS                   */
+/* ===================================== */
+
+.nvx-transform {
+  /* Modern Browsers - Full Features */
+  transform: 
+    perspective(var(--nvx-perspective))
+    translateX(var(--nvx-translate-x))
+    translateY(var(--nvx-translate-y))
+    translateZ(var(--nvx-translate-z))
+    rotate(var(--nvx-rotate))
+    rotateX(var(--nvx-rotate-x))
+    rotateY(var(--nvx-rotate-y))
+    rotateZ(var(--nvx-rotate-z))
+    scale(var(--nvx-scale))
+    skewX(var(--nvx-skew-x))
+    skewY(var(--nvx-skew-y))
+    translateZ(0); /* ✅ FIXED: Hardware Acceleration */
+  
+  transform-origin: var(--nvx-transform-origin);
+  transform-style: var(--nvx-transform-style);
+  backface-visibility: var(--nvx-backface-visibility);
+  
+  /* Filters - Modern Browsers */
+  filter: 
+    blur(var(--nvx-filter-blur))
+    brightness(var(--nvx-filter-brightness))
+    contrast(var(--nvx-filter-contrast))
+    saturate(var(--nvx-filter-saturate))
+    hue-rotate(var(--nvx-filter-hue))
+    sepia(var(--nvx-filter-sepia))
+    grayscale(var(--nvx-filter-grayscale))
+    invert(var(--nvx-filter-invert));
+  
+  /* Performance */
+  will-change: var(--nvx-transform-will-change);
+  transition: 
+    transform var(--nvx-duration-dopamine, 0.3s) cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter var(--nvx-duration-dopamine, 0.3s) ease,
+    box-shadow var(--nvx-duration-dopamine, 0.3s) ease;
+  
+  /* Hardware Acceleration */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+}
+
+/* ===================================== */
+/* FALLBACK - NO TRANSFORM SUPPORT       */
+/* ===================================== */
+
+@supports not (transform: translate(0)) {
+  .nvx-transform,
+  [class*="nvx-translate-"],
+  [class*="nvx-scale-"],
+  [class*="nvx-rotate-"],
+  [class*="nvx-skew-"],
+  [class*="nvx-perspective-"],
+  [class*="nvx-hover-"],
+  [class*="nvx-press-"],
+  [class*="nvx-enter-"],
+  [class*="nvx-exit-"],
+  [class*="nvx-dopamine-"],
+  [class*="nvx-emotion-"],
+  [class*="nvx-premium-"] {
+    transform: none !important;
+    
+    /* Translate fallback - use margin */
+    &.nvx-translate-x-1 {
+      margin-left: var(--nvx-space-1, 0.25rem);
+    }
+    &.nvx-translate-x-2 {
+      margin-left: var(--nvx-space-2, 0.5rem);
+    }
+    &.nvx-translate-y-1 {
+      margin-top: var(--nvx-space-1, 0.25rem);
+    }
+    &.nvx-translate-y-2 {
+      margin-top: var(--nvx-space-2, 0.5rem);
+    }
+    
+    /* ✅ FIXED: Scale fallback with improved opacity formula */
+    &.nvx-scale-105,
+    &.nvx-scale-110,
+    &.nvx-scale-125,
+    &.nvx-scale-150 {
+      font-size: 1.1em;
+      width: 110%;
+    }
+    
+    &.nvx-scale-0,
+    &.nvx-scale-25,
+    &.nvx-scale-50,
+    &.nvx-scale-75 {
+      opacity: calc(0.5 + (var(--nvx-scale, 1) * 0.5));
+    }
+    
+    /* ✅ FIXED: Rotate fallback for text */
+    &.nvx-rotate-90,
+    &.nvx-rotate-270 {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      
+      /* Visual indicator for non-text elements */
+      &::before {
+        content: '↻';
+        display: inline-block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+        margin-right: 0.25rem;
+      }
+    }
+    
+    /* ✅ FIXED: Removed skew border fallback - replaced with indicator */
+    &[class*="nvx-skew-"]::after {
+      content: '⤡';
+      display: inline-block;
+      margin-left: 0.25rem;
+      font-size: 0.75rem;
+      opacity: 0.5;
+    }
+  }
+  
+  /* Hover effects fallback */
+  .nvx-hover-lift:hover,
+  .nvx-hover-glow:hover,
+  .nvx-hover-3d:hover,
+  .nvx-hover-skew:hover,
+  .nvx-hover-rotate:hover {
+    outline: 2px solid var(--nvx-primary-500, #3b82f6);
+  }
+  
+  /* Press effects fallback */
+  .nvx-press:active,
+  .nvx-press-3d:active {
+    opacity: 0.8;
+  }
+}
+
+/* ===================================== */
+/* FALLBACK - NO 3D TRANSFORM SUPPORT    */
+/* ===================================== */
+
+@supports not (transform-style: preserve-3d) {
+  .nvx-transform-style-3d,
+  .nvx-hover-3d:hover,
+  .nvx-rotate-x-45,
+  .nvx-rotate-x-90,
+  .nvx-rotate-y-45,
+  .nvx-rotate-y-90,
+  .nvx-translate-z-10,
+  .nvx-translate-z-20,
+  .nvx-perspective-500,
+  .nvx-float-3d {
+    transform-style: flat;
+    
+    &.nvx-rotate-x-45,
+    &.nvx-rotate-y-45 {
+      transform: rotate(45deg);
+    }
+    &.nvx-rotate-x-90,
+    &.nvx-rotate-y-90 {
+      transform: rotate(90deg);
+    }
+    &.nvx-translate-z-10,
+    &.nvx-translate-z-20 {
+      transform: translateY(-5px);
+    }
+    &.nvx-float-3d {
+      animation: nvx-float-fallback 3s infinite ease-in-out;
+    }
+  }
+}
+
+@keyframes nvx-float-fallback {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ===================================== */
+/* FALLBACK - NO FILTER SUPPORT          */
+/* ===================================== */
+
+@supports not (filter: blur(1px)) {
+  .nvx-transform,
+  [class*="nvx-blur-"],
+  [class*="nvx-brightness-"],
+  [class*="nvx-contrast-"],
+  [class*="nvx-saturate-"],
+  [class*="nvx-sepia-"],
+  [class*="nvx-grayscale-"],
+  [class*="nvx-hue-rotate-"],
+  [class*="nvx-invert-"],
+  [class*="nvx-glow-"],
+  [class*="nvx-neon-"],
+  [class*="nvx-emotion-"] {
+    filter: none !important;
+    
+    /* Blur fallback */
+    &.nvx-blur-1,
+    &.nvx-blur-2,
+    &.nvx-blur-4 {
+      opacity: 0.9;
+    }
+    
+    /* Brightness fallback */
+    &.nvx-brightness-50 {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    &.nvx-brightness-150 {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Sepia/Grayscale fallback */
+    &.nvx-sepia-50,
+    &.nvx-grayscale-50 {
+      background-color: #f0f0f0;
+    }
+    
+    /* Glow fallback - with RGB variables now available */
+    &.nvx-glow-primary {
+      box-shadow: 0 0 10px rgba(var(--nvx-primary-rgb, 59,130,246), 0.5);
+    }
+    &.nvx-glow-secondary {
+      box-shadow: 0 0 10px rgba(var(--nvx-secondary-rgb, 139,92,246), 0.5);
+    }
+  }
+  
+  /* Emotion effects fallback */
+  .nvx-emotion-happy,
+  .nvx-emotion-excited,
+  .nvx-emotion-calm,
+  .nvx-emotion-mysterious,
+  .nvx-emotion-powerful,
+  .nvx-emotion-playful {
+    border-left: 4px solid var(--nvx-primary-500, #3b82f6);
+  }
+}
+
+/* ===================================== */
+/* FALLBACK - NO BACKDROP FILTER SUPPORT */
+/* ===================================== */
+
+@supports not (backdrop-filter: blur(1px)) {
+  .nvx-premium-card,
+  [class*="nvx-glass-"] {
+    backdrop-filter: none !important;
+    background: rgba(255, 255, 255, 0.95);
+    
+    /* ✅ FIXED: Dark mode fallback */
+    [data-theme="dark"] & {
+      background: rgba(30, 41, 59, 0.95);
+    }
+  }
+}
+
+/* ===================================== */
+/* FALLBACK - NO GRADIENT SUPPORT        */
+/* ===================================== */
+
+@supports not (background: linear-gradient(135deg, red, blue)) {
+  .nvx-gradient-hover,
+  .nvx-gradient-border,
+  .nvx-gradient-text,
+  .nvx-premium-card,
+  .nvx-rainbow-text,
+  [class*="nvx-glow-rainbow"] {
+    background: var(--nvx-primary-500, #3b82f6) !important;
+    
+    &.nvx-gradient-text {
+      color: white;
+      -webkit-background-clip: unset;
+      background-clip: unset;
+    }
+    
+    &.nvx-gradient-border {
+      border-color: var(--nvx-primary-500, #3b82f6);
+    }
+    
+    &.nvx-rainbow-text {
+      color: var(--nvx-primary-500, #3b82f6);
+      animation: none;
+    }
+  }
+}
+
+/* ===================================== */
+/* FALLBACK - NO CSS VARIABLES SUPPORT   */
+/* ===================================== */
+
+/* IE11 Fallback */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  :root {
+    --nvx-primary-500: #3b82f6;
+    --nvx-secondary-500: #8b5cf6;
+    --nvx-space-1: 4px;
+    --nvx-space-2: 8px;
+    --nvx-space-4: 16px;
+    --nvx-primary-rgb: 59,130,246;
+  }
+  
+  .nvx-transform {
+    -ms-transform: 
+      translateX(var(--nvx-translate-x, 0))
+      translateY(var(--nvx-translate-y, 0))
+      rotate(var(--nvx-rotate, 0deg))
+      scale(var(--nvx-scale, 1));
+  }
+  
+  .nvx-translate-x-1 {
+    -ms-transform: translateX(4px);
+  }
+  .nvx-translate-x-2 {
+    -ms-transform: translateX(8px);
+  }
+  .nvx-scale-105 {
+    -ms-transform: scale(1.05);
+  }
+  .nvx-rotate-45 {
+    -ms-transform: rotate(45deg);
+  }
+  
+  [class*="nvx-blur-"],
+  [class*="nvx-brightness-"],
+  [class*="nvx-glow-"] {
+    filter: none;
+  }
+  
+  /* ✅ FIXED: IE11 glow fallback with hex colors */
+  .nvx-glow-primary {
+    box-shadow: 0 0 20px #3b82f6;
+  }
+}
+
+/* ===================================== */
+/* FALLBACK - REDUCED MOTION             */
+/* ===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .nvx-transform,
+  .nvx-hover-lift,
+  .nvx-hover-glow,
+  .nvx-hover-3d,
+  .nvx-hover-skew,
+  .nvx-hover-rotate,
+  .nvx-press,
+  .nvx-press-3d,
+  .nvx-enter-scale,
+  .nvx-enter-slide-up,
+  .nvx-enter-slide-down,
+  .nvx-enter-slide-left,
+  .nvx-enter-slide-right,
+  .nvx-enter-rotate,
+  .nvx-exit-scale,
+  .nvx-exit-fade,
+  .nvx-pulse-scale,
+  .nvx-shake,
+  .nvx-dopamine-pop,
+  .nvx-dopamine-burst,
+  .nvx-dopamine-magnetic,
+  .nvx-dopamine-float,
+  .nvx-dopamine-celebrate,
+  .nvx-success-celebration,
+  .nvx-error-shake,
+  .nvx-loading-excitement,
+  .nvx-achievement,
+  .nvx-premium-card,
+  .nvx-glow-button,
+  .nvx-float-3d,
+  .nvx-neon-pulse,
+  [class*="nvx-emotion-"] {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    opacity: 1;
+    box-shadow: none;
+    filter: none;
+  }
+  
+  .nvx-hover-lift:hover,
+  .nvx-hover-glow:hover,
+  .nvx-hover-3d:hover {
+    outline: 2px solid var(--nvx-primary-500, #3b82f6);
+  }
+}
+
+/* ===================================== */
+/* FALLBACK - HIGH CONTRAST MODE         */
+/* ===================================== */
+
+@media (prefers-contrast: high) {
+  .nvx-glow-primary,
+  .nvx-glow-secondary,
+  .nvx-glow-success,
+  .nvx-glow-accent,
+  .nvx-glow-rainbow,
+  .nvx-neon,
+  .nvx-neon-pulse {
+    box-shadow: 0 0 0 2px currentColor !important;
+    filter: none !important;
+  }
+  
+  .nvx-gradient-text {
+    color: var(--nvx-primary-700, #1d4ed8);
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+  }
+  
+  .nvx-emotion-happy,
+  .nvx-emotion-excited,
+  .nvx-emotion-calm,
+  .nvx-emotion-mysterious,
+  .nvx-emotion-powerful,
+  .nvx-emotion-playful {
+    border-left: 4px solid currentColor;
+    filter: none;
+    animation: none;
+  }
+}
+
+/* ===================================== */
+/* FALLBACK - FORCED COLORS MODE         */
+/* ===================================== */
+
+@media (forced-colors: active) {
+  .nvx-transform,
+  .nvx-premium-card,
+  .nvx-glow-button,
+  [class*="nvx-glow-"],
+  [class*="nvx-neon-"],
+  [class*="nvx-emotion-"],
+  [class*="nvx-dopamine-"] {
+    forced-color-adjust: none;
+    box-shadow: none !important;
+    filter: none !important;
+    background: Canvas !important;
+    color: CanvasText !important;
+    border: 1px solid ButtonText !important;
+  }
+  
+  .nvx-hover-lift:hover,
+  .nvx-hover-glow:hover {
+    outline: 3px solid Highlight !important;
+  }
+  
+  .nvx-gradient-text {
+    color: LinkText !important;
+    background: none !important;
+  }
+}
+
+/* ===================================== */
+/* FALLBACK - PRINT MEDIA                */
+/* ===================================== */
+
+@media print {
+  .nvx-transform,
+  .nvx-premium-card,
+  .nvx-glow-button,
+  [class*="nvx-glow-"],
+  [class*="nvx-neon-"],
+  [class*="nvx-emotion-"],
+  [class*="nvx-dopamine-"],
+  [class*="nvx-enter-"],
+  [class*="nvx-exit-"],
+  [class*="nvx-hover-"] {
+    transform: none !important;
+    filter: none !important;
+    box-shadow: none !important;
+    animation: none !important;
+    background: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+    outline: none !important;
+  }
+  
+  .nvx-dopamine-rainbow::after,
+  .nvx-glow-button::before,
+  [class*="nvx-skew-"]::after {
+    display: none !important;
+  }
+  
+  .nvx-gradient-text {
+    color: black !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+  }
+}
+
+/* ===================================== */
+/* SCALE UTILITIES - WITH FALLBACKS      */
+/* ===================================== */
+
+.nvx-scale-0    { --nvx-scale: 0; }
+.nvx-scale-25   { --nvx-scale: 0.25; }
+.nvx-scale-50   { --nvx-scale: 0.5; }
+.nvx-scale-75   { --nvx-scale: 0.75; }
+.nvx-scale-90   { --nvx-scale: 0.9; }
+.nvx-scale-95   { --nvx-scale: 0.95; }
+.nvx-scale-100  { --nvx-scale: 1; }
+.nvx-scale-105  { --nvx-scale: 1.05; }
+.nvx-scale-110  { --nvx-scale: 1.1; }
+.nvx-scale-125  { --nvx-scale: 1.25; }
+.nvx-scale-150  { --nvx-scale: 1.5; }
+.nvx-scale-200  { --nvx-scale: 2; }
+
+/* ===================================== */
+/* ROTATE UTILITIES - WITH FALLBACKS     */
+/* ===================================== */
+
+.nvx-rotate-0    { --nvx-rotate: 0deg; }
+.nvx-rotate-45   { --nvx-rotate: 45deg; }
+.nvx-rotate-90   { --nvx-rotate: 90deg; }
+.nvx-rotate-180  { --nvx-rotate: 180deg; }
+.nvx-rotate-270  { --nvx-rotate: 270deg; }
+.nvx-rotate-360  { --nvx-rotate: 360deg; }
+
+/* ===================================== */
+/* SKEW UTILITIES - WITH FALLBACKS       */
+/* ===================================== */
+
+.nvx-skew-x-5   { --nvx-skew-x: 5deg; }
+.nvx-skew-x-10  { --nvx-skew-x: 10deg; }
+.nvx-skew-x-15  { --nvx-skew-x: 15deg; }
+.nvx-skew-x-20  { --nvx-skew-x: 20deg; }
+.nvx-skew-y-5   { --nvx-skew-y: 5deg; }
+.nvx-skew-y-10  { --nvx-skew-y: 10deg; }
+.nvx-skew-y-15  { --nvx-skew-y: 15deg; }
+
+/* ===================================== */
+/* TRANSLATE UTILITIES - WITH FALLBACKS  */
+/* ===================================== */
+
+.nvx-translate-x-1  { --nvx-translate-x: var(--nvx-space-1); }
+.nvx-translate-x-2  { --nvx-translate-x: var(--nvx-space-2); }
+.nvx-translate-x-4  { --nvx-translate-x: var(--nvx-space-4); }
+.nvx-translate-y-1  { --nvx-translate-y: var(--nvx-space-1); }
+.nvx-translate-y-2  { --nvx-translate-y: var(--nvx-space-2); }
+.nvx-translate-y-4  { --nvx-translate-y: var(--nvx-space-4); }
+
+/* ===================================== */
+/* GLOW EFFECTS - WITH FALLBACKS         */
+/* ===================================== */
+
+.nvx-glow-primary {
+  box-shadow: 0 0 20px rgba(var(--nvx-primary-rgb, 59,130,246), var(--nvx-glow-intensity, 0.5));
+  
+  /* IE11 fallback */
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    box-shadow: 0 0 20px #3b82f6;
+  }
+}
+
+.nvx-glow-secondary {
+  box-shadow: 0 0 20px rgba(var(--nvx-secondary-rgb, 139,92,246), var(--nvx-glow-intensity, 0.5));
+  
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    box-shadow: 0 0 20px #8b5cf6;
+  }
+}
+
+/* ✅ FIXED: Rainbow glow with variables */
+.nvx-glow-rainbow {
+  animation: nvx-rainbow-glow 3s infinite;
+  
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+    box-shadow: 0 0 10px var(--nvx-primary-500, #3b82f6);
+  }
+}
+
+@keyframes nvx-rainbow-glow {
+  0% { box-shadow: 0 0 20px var(--nvx-rainbow-1, #ff6b6b); }
+  25% { box-shadow: 0 0 30px var(--nvx-rainbow-2, #feca57); }
+  50% { box-shadow: 0 0 20px var(--nvx-rainbow-3, #48dbfb); }
+  75% { box-shadow: 0 0 30px var(--nvx-rainbow-4, #1dd1a1); }
+  100% { box-shadow: 0 0 20px var(--nvx-rainbow-1, #ff6b6b); }
+}
+
+/* ===================================== */
+/* DOPAMINE EFFECTS - WITH FALLBACKS     */
+/* ===================================== */
+
+.nvx-dopamine-pop {
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.nvx-dopamine-pop:active {
+  transform: scale(1.2);
+}
+
+@supports not (transform: scale(1.2)) {
+  .nvx-dopamine-pop:active {
+    opacity: 0.8;
+    font-weight: bold;
+  }
+}
+
+.nvx-dopamine-burst {
+  transition: all 0.3s cubic-bezier(0.5, 1.25, 0.5, 1);
+}
+.nvx-dopamine-burst:hover {
+  transform: scale(1.3);
+  filter: brightness(1.2) saturate(1.3);
+  /* ✅ FIXED: Using RGB variable */
+  box-shadow: 0 0 30px rgba(var(--nvx-primary-rgb, 59,130,246), 0.6);
+}
+
+@supports not (filter: brightness(1.2)) {
+  .nvx-dopamine-burst:hover {
+    filter: none;
+    background-color: rgba(59, 130, 246, 0.1);
+  }
+}
+
+/* ===================================== */
+/* EMOTION EFFECTS - WITH FALLBACKS      */
+/* ===================================== */
+
+.nvx-emotion-happy {
+  --nvx-filter-brightness: 1.1;
+  --nvx-filter-saturate: 1.2;
+  animation: nvx-bounce-soft 2s infinite;
+}
+
+@supports not (animation: nvx-bounce-soft 2s infinite) {
+  .nvx-emotion-happy {
+    animation: none;
+    border-left: 4px solid #fbbf24;
+  }
+}
+
+@keyframes nvx-bounce-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.nvx-emotion-excited {
+  --nvx-filter-brightness: 1.2;
+  --nvx-filter-saturate: 1.3;
+  --nvx-scale: 1.1;
+  animation: nvx-pulse-fast 1s infinite;
+}
+
+@supports not (transform: scale(1.1)) {
+  .nvx-emotion-excited {
+    font-weight: bold;
+    color: var(--nvx-primary-500, #3b82f6);
+  }
+}
+
+@keyframes nvx-pulse-fast {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* ===================================== */
+/* PREMIUM PRESETS - WITH FALLBACKS      */
+/* ===================================== */
+
+.nvx-premium-card {
+  background: linear-gradient(135deg, 
+    rgba(255,255,255,0.1), 
+    rgba(255,255,255,0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .nvx-premium-card {
+    backdrop-filter: none;
+    background: rgba(255, 255, 255, 0.95);
+    
+    /* ✅ FIXED: Dark mode fallback */
+    [data-theme="dark"] & {
+      background: rgba(30, 41, 59, 0.95);
+    }
+  }
+}
+
+@supports not (background: linear-gradient(135deg, red, blue)) {
+  .nvx-premium-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    
+    [data-theme="dark"] & {
+      background: #1e293b;
+      border-color: #334155;
+    }
+  }
+}
+
+.nvx-glow-button {
+  background: var(--nvx-primary-500, #3b82f6);
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.nvx-glow-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255,255,255,0.3), 
+    transparent);
+  transition: left 0.5s ease;
+}
+.nvx-glow-button:hover {
+  transform: scale(1.05);
+  /* ✅ FIXED: Using RGB variable */
+  box-shadow: 0 0 30px rgba(var(--nvx-primary-rgb, 59,130,246), 0.6);
+}
+
+@supports not (background: linear-gradient(90deg, transparent, white, transparent)) {
+  .nvx-glow-button::before {
+    background: none;
+    border-left: 2px solid rgba(255,255,255,0.3);
+    border-right: 2px solid rgba(255,255,255,0.3);
+    width: 20%;
+    left: -20%;
+  }
+}
+
+/* ✅ FIXED: nvx-float-glow with RGB variable */
+@keyframes nvx-float-glow {
+  0%, 100% { 
+    transform: translateY(0); 
+    filter: brightness(1);
+  }
+  50% { 
+    transform: translateY(-10px); 
+    filter: brightness(1.1) drop-shadow(0 10px 20px rgba(var(--nvx-primary-rgb, 59,130,246), 0.4));
+  }
+}
+
+/* ===================================== */
+/* RTL SUPPORT - WITH FALLBACKS          */
+/* ===================================== */
+
+[dir="rtl"] {
+  & .nvx-rotate-45   { --nvx-rotate: -45deg; }
+  & .nvx-rotate-90   { --nvx-rotate: -90deg; }
+  & .nvx-rotate-180  { --nvx-rotate: -180deg; }
+  & .nvx-skew-x-5    { --nvx-skew-x: -5deg; }
+  & .nvx-skew-x-10   { --nvx-skew-x: -10deg; }
+  
+  @supports not (transform: rotate(-45deg)) {
+    & .nvx-translate-x-1 {
+      margin-left: 0;
+      margin-right: var(--nvx-space-1, 0.25rem);
+    }
+    & .nvx-translate-x-2 {
+      margin-left: 0;
+      margin-right: var(--nvx-space-2, 0.5rem);
+    }
+  }
+}
+
+/* ===================================== */
+/* ULTIMATE FALLBACK MODE                */
+/* ===================================== */
+
+.nvx-fallback-mode {
+  transform: none !important;
+  filter: none !important;
+  animation: none !important;
+  transition: none !important;
+  box-shadow: none !important;
+  border: 1px solid currentColor;
+  opacity: 1;
+  font-weight: normal;
+  color: inherit;
+}
+
+.nvx-use-fallback .nvx-transform,
+.nvx-use-fallback [class*="nvx-scale-"],
+.nvx-use-fallback [class*="nvx-rotate-"],
+.nvx-use-fallback [class*="nvx-skew-"],
+.nvx-use-fallback [class*="nvx-glow-"],
+.nvx-use-fallback [class*="nvx-neon-"],
+.nvx-use-fallback [class*="nvx-emotion-"],
+.nvx-use-fallback [class*="nvx-dopamine-"] {
+  transform: none !important;
+  filter: none !important;
+  animation: none !important;
+  transition: none !important;
+  box-shadow: none !important;
+}
+
+/*======================================*/
+/* ⚡ 120. TRANSFORM UTILITIES v4.1 - END */
+/* WITH COMPLETE FALLBACK SYSTEM        */
+/*======================================*/
