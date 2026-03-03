@@ -1,5 +1,6 @@
 /*======================================*/
-⚡81 css section LIVE COUNTER ANIMATION ⚡
+/* 28 components css section */
+/* LIVE COUNTER ANIMATION */
 /*======================================*/
 .nvx-counter-flash{animation:nvx-flash-count 0.5s ease-in-out 2}
 @keyframes nvx-flash-count{0%,100%{color:inherit}50%{color:var(--nvx-primary, #3b82f6);text-shadow:0 0 10px var(--nvx-primary, #3b82f6)}}
