@@ -1,8 +1,8 @@
 /*=============================*/
-/* nevox  advanced  design  system  v4.1 Features */
+/* 01 nevox advanced design system v4.1 Features */
 /* =============================*/
 
-/*  1. BASE COLOR SYSTEM WITH FALLBACKS - OPTIMIZED */
+/* 1.BASE COLOR SYSTEM WITH FALLBACKS-OPTIMIZED */
 :root {
   /* Primary Colors */
   --nvx-primary-50: #eff6ff;
