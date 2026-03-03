@@ -1,8 +1,9 @@
 /* ==================================== */
-NEVOX ULTRA REACTIONS & TIME SYSTEM - MINIFIED
+/* 76 components css section */
+/* NEVOX ULTRA REACTIONS & TIME SYSTEM - MINIFIED */
 /*===================================== */
 /*======================================*/
-⚡75 css section  REACTIONS SYSTEM - ENHANCED⚡
+/* 76 css section  REACTIONS SYSTEM - ENHANCED */
 /*======================================*/
 .nvx-reactions{display:flex;align-items:center;gap:16px;padding:18px 0;border-top:2px solid var(--nvx-border-glass, rgba(255,255,255,0.1));border-bottom:2px solid var(--nvx-border-glass, rgba(255,255,255,0.1));margin:24px 0;position:relative}
 .nvx-reactions::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--nvx-primary, #3b82f6),transparent)}
