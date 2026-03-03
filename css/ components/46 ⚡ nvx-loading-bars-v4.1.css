@@ -1,5 +1,6 @@
 /*======================================*/
-⚡ 127 css section LOADING BARS - FIXED HTML STRUCTURE ⚡
+/* 46 components  css section */
+/* LOADING BARS - FIXED HTML STRUCTURE */
 /*======================================*/
 .nvx-loading-bars{display:flex;align-items:flex-end;gap:4px;height:40px;padding:0 20px}
 .nvx-loading-bar{width:8px;height:100%;background:linear-gradient(to top,var(--nvx-primary,#3b82f6),var(--nvx-secondary,#8b5cf6));border-radius:4px 4px 0 0;animation:nvx-bar-wave 1.2s ease-in-out infinite}
