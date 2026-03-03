@@ -1,14 +1,15 @@
 /*======================================*/
-/* ⚡ NEVOX DATE PICKER SYSTEM v4.1       */
-/* ENTERPRISE-GRADE • PRODUCTION-READY   */
+/* 29 components css section */
+/* NEVOX DATE PICKER SYSTEM v4.1 */
+/* ENTERPRISE-GRADE • PRODUCTION-READY */
 /* WCAG 2.2 AAA • ISO 9241-171 • EN 301 549 */
-/* SECTION 508 • RTL • I18N • L10N       */
-/* MAXIMUM PERFORMANCE • ZERO DEFECT      */
-/* GLOBAL STANDARD • ULTRA RECOGNIZABLE   */
+/* SECTION 508 • RTL • I18N • L10N */
+/* MAXIMUM PERFORMANCE • ZERO DEFECT */
+/* GLOBAL STANDARD • ULTRA RECOGNIZABLE */
 /*======================================*/
 
 /* ===================================== */
-/* CSS LAYER MANAGEMENT                   */
+/* CSS LAYER MANAGEMENT                  */
 /* ===================================== */
 @layer nvx.datepicker.reset, nvx.datepicker.base, nvx.datepicker.variants, 
        nvx.datepicker.utilities, nvx.datepicker.fallbacks;
@@ -1805,7 +1806,7 @@
  */
 
 /* ===================================== */
-/* ⚡ NEVOX DATE PICKER v4.1 - COMPLETE   */
+/*    NEVOX DATE PICKER v4.1 - COMPLETE  */
 /* ENTERPRISE-GRADE • ZERO DEFECTS       */
 /* GLOBAL STANDARD • ULTRA RECOGNIZABLE  */
 /* ===================================== */
