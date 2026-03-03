@@ -1,5 +1,5 @@
 /*======================================*/
-⚡94 css section  ACCESSIBILITY ⚡
+/* 04 css section  ACCESSIBILITY */
 /*======================================*/
 .nvx-reaction-btn:focus-visible,.nvx-btn:focus-visible{outline:4px solid var(--nvx-primary, #3b82f6);outline-offset:4px}
 .nvx-emoji:focus-visible{outline:3px solid var(--nvx-primary, #3b82f6);border-radius:50%}
