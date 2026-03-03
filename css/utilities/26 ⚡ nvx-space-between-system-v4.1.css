@@ -1,5 +1,6 @@
 /*======================================*/
-/* ⚡ NEVOX SPACE BETWEEN SYSTEM v4.1     */
+/* 26 utilities css section */
+/* NEVOX SPACE BETWEEN SYSTEM v4.1     */
 /* ENTERPRISE-GRADE • PRODUCTION-READY   */
 /* INTERNATIONAL STANDARDS • SEO OPTIMIZED */
 /* COMPLETE FALLBACK SYSTEM • ZERO ERRORS */
@@ -36,7 +37,7 @@
     /* 🎯 EXTEND EXISTING NEVOX SPACE TOKENS (No Duplication) */
     /* Using existing: --nvx-space-0, --nvx-space-px, --nvx-space-0-5, --nvx-space-1, etc. */
     
-    /* 🆕 ADDITIONAL FINE-GRAINED TOKENS */
+    /* ADDITIONAL FINE-GRAINED TOKENS */
     --nvx-space-0-25: calc(var(--nvx-space-0-5, 0.125rem) / 2); /* 0.0625rem */
     --nvx-space-0-75: calc(var(--nvx-space-0-5, 0.125rem) * 1.5); /* 0.1875rem */
     --nvx-space-1-25: calc(var(--nvx-space-1, 0.25rem) * 1.25); /* 0.3125rem */
@@ -48,7 +49,7 @@
     --nvx-space-6-5: calc(var(--nvx-space-6, 1.5rem) * 1.083); /* 1.625rem */
     --nvx-space-7-5: calc(var(--nvx-space-7, 1.75rem) * 1.071); /* 1.875rem */
     
-    /* 🆕 NEGATIVE SPACE TOKENS */
+    /*  NEGATIVE SPACE TOKENS */
     --nvx-space-negative-1: calc(var(--nvx-space-1, 0.25rem) * -1);
     --nvx-space-negative-2: calc(var(--nvx-space-2, 0.5rem) * -1);
     --nvx-space-negative-3: calc(var(--nvx-space-3, 0.75rem) * -1);
@@ -98,7 +99,7 @@
     --nvx-space-margin: var(--nvx-space-4, 1rem);
     --nvx-space-padding: var(--nvx-space-4, 1rem);
     
-    /* 🆕 CUSTOM PROPERTY OVERRIDE */
+    /*  CUSTOM PROPERTY OVERRIDE */
     --nvx-space-custom: 1rem;
   }
 }
@@ -527,7 +528,7 @@
 }
 
 /* ===================================== */
-/* 🆕 CONTAINER QUERY SUPPORT            */
+/*  CONTAINER QUERY SUPPORT            */
 /* ===================================== */
 @layer nvx.space.advanced {
   /* Container setup */
