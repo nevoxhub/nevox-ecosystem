@@ -1,5 +1,6 @@
 /*======================================*/
-⚡77 css section EMOJI PICKER - ENHANCED⚡
+/* 31 components  css section */
+/* EMOJI PICKER - ENHANCED */
 /*======================================*/
 .nvx-emoji-picker{position:absolute;bottom:calc(100% + 10px);left:0;background:var(--nvx-glass, rgba(255,255,255,0.95));backdrop-filter:blur(10px);border:2px solid var(--nvx-border-glass, rgba(255,255,255,0.1));border-radius:24px;padding:16px;box-shadow:0 30px 80px rgba(0,0,0,0.2);display:none;z-index:110;flex-wrap:wrap;gap:8px;width:240px;opacity:0;transform:translateY(10px) scale(0.95);transition:all 0.3s cubic-bezier(0.4,0,0.2,1)}
 .nvx-emoji-picker.active{display:flex;opacity:1;transform:translateY(0) scale(1);animation:nvx-emoji-pop 0.4s}
