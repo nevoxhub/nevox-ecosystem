@@ -1,5 +1,5 @@
 /*======================================*/
- ⚡83 css section COUNTDOWN TIMER ⚡
+ /* 27 components css section COUNTDOWN TIMER */
 /*======================================*/
 .nvx-countdown{display:flex;gap:8px;margin-top:8px}
 .nvx-countdown-item{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:50px;padding:8px;background:rgba(59,130,246,0.1);border-radius:12px;border:1px solid rgba(59,130,246,0.2)}
