@@ -1,5 +1,6 @@
 /*======================================*/
-⚡68 css section EMOJI REACTION FLOAT ⚡
+/* 30 components  css section */
+/* EMOJI REACTION FLOAT */
 /*======================================*/
 .nvx-emoji-float{position:absolute;pointer-events:none;font-size:40px;animation:floatUp 1.2s ease-out forwards;
 z-index:100;left:50%;bottom:40px;transform:translateX(-50%);filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3))}
