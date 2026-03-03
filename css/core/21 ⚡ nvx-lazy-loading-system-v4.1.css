@@ -1,12 +1,12 @@
 /* =====================================*/
-   ⚡ NEVOX LAZY LOADING SYSTEM v4.1
-   FULLY INTEGRATED WITH NEVOX ECOSYSTEM
-   NATIVE LAZY LOADING • CORE WEB VITALS
+   /* 21 NEVOX LAZY LOADING SYSTEM v4.1 */
+  /* FULLY INTEGRATED WITH NEVOX ECOSYSTEM */
+  /* NATIVE LAZY LOADING • CORE WEB VITALS */
 /* =====================================*/
 
 /* =====================================*/
-   NEVOX LAZY LOADING DESIGN TOKENS v4.1
-   Professional Production Grade
+  /* NEVOX LAZY LOADING DESIGN TOKENS v4.1 */
+  /* Professional Production Grade */
 /*======================================*/
 
 :root {
@@ -248,8 +248,8 @@
 }
 
 /* =====================================*/
-   📐 NEVOX DEVICE VIEWPORT INTEGRATION
-   dvh • svh • lvh • All-Device • Enterprise
+   /*📐 NEVOX DEVICE VIEWPORT INTEGRATION */
+   /*dvh • svh • lvh • All-Device • Enterprise */
 /* =====================================*/
 
 /* MODERN VIEWPORT DETECTION */
@@ -305,7 +305,7 @@
 }
 
 /* =====================================*/
-   🎯 BASE LAZY LOADING - NEVOX STYLE
+ /*  🎯 BASE LAZY LOADING - NEVOX STYLE */
 /* =====================================*/
 
 .nvx-lazy {
@@ -371,7 +371,7 @@
 }
 
 /* =====================================*/
-   🎯 NATIVE LAZY LOADING ATTRIBUTE SUPPORT
+  /* 🎯 NATIVE LAZY LOADING ATTRIBUTE SUPPORT */
 /* =====================================*/
 
 .nvx-lazy-img[loading="lazy"] {
@@ -404,7 +404,7 @@
 }
 
 /* =====================================*/
-   🎯 IMAGE FORMAT SUPPORT - WITH ENHANCED FALLBACKS
+  /* 🎯 IMAGE FORMAT SUPPORT - WITH ENHANCED FALLBACKS */
 /* =====================================*/
 
 /* AVIF Support Detection */
@@ -455,7 +455,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 CLIENT HINTS SUPPORT - CONSOLIDATED
+  /* 🎯 CLIENT HINTS SUPPORT - CONSOLIDATED */
 /* =====================================*/
 
 /* Width/Height attributes for CLS prevention - CONSOLIDATED (single definition) */
@@ -494,7 +494,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 CORE WEB VITALS MONITORING
+  /* 🎯 CORE WEB VITALS MONITORING */
 /* =====================================*/
 
 /* Performance Timing Container */
@@ -655,7 +655,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 NETWORK CONDITIONS MONITORING
+  /* 🎯 NETWORK CONDITIONS MONITORING */
 /* =====================================*/
 
 /* Network Information API support */
@@ -720,7 +720,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 LAZY MEDIA ELEMENTS - CONSOLIDATED
+   /* 🎯 LAZY MEDIA ELEMENTS - CONSOLIDATED */
 /* =====================================*/
 
 .nvx-lazy-media,
@@ -780,7 +780,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 ASPECT RATIOS - NEVOX PATTERN
+   /* 🎯 ASPECT RATIOS - NEVOX PATTERN */
 /* =====================================*/
 
 .nvx-lazy[data-aspect="16/9"] { aspect-ratio: 16/9; }
@@ -808,7 +808,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 LOADING STATES - NEVOX SKELETON
+   /* 🎯 LOADING STATES - NEVOX SKELETON */
 /* =====================================*/
 
 /* BLUR-UP EFFECT */
@@ -886,7 +886,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 SIZE VARIANTS - NEVOX SCALE
+   /* 🎯 SIZE VARIANTS - NEVOX SCALE */
 /* =====================================*/
 
 .nvx-lazy-sm { min-height: var(--nvx-lazy-size-sm); }
@@ -904,7 +904,7 @@ picture.nvx-lazy source {
 .nvx-lazy-placeholder-3xl i { font-size: 112px; }
 
 /* =====================================*/
-   🎯 ERROR HANDLING - NEVOX ALERT SYSTEM
+   /* 🎯 ERROR HANDLING - NEVOX ALERT SYSTEM */
 /* =====================================*/
 
 .nvx-lazy-error {
@@ -1058,7 +1058,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 NETWORK STATE - NEVOX TOAST STYLE
+   /* 🎯 NETWORK STATE - NEVOX TOAST STYLE */
 /* =====================================*/
 
 .nvx-lazy-offline {
@@ -1104,7 +1104,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 AUTO-RETRY SYSTEM
+  /* 🎯 AUTO-RETRY SYSTEM */
 /* =====================================*/
 
 .nvx-lazy-retry-indicator {
@@ -1144,7 +1144,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 CACHE SYSTEM
+   /* 🎯 CACHE SYSTEM */
 /* =====================================*/
 
 .nvx-lazy-cached::before {
@@ -1199,7 +1199,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 ANALYTICS & MONITORING
+  /* 🎯 ANALYTICS & MONITORING */
 /* =====================================*/
 
 [data-nvx-load-time]::after {
@@ -1263,7 +1263,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 CONCURRENT LOADING HANDLING
+   /* 🎯 CONCURRENT LOADING HANDLING */
 /* =====================================*/
 
 .nvx-lazy-loading-multiple {
@@ -1331,7 +1331,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 PRIORITY QUEUE SYSTEM
+   /* 🎯 PRIORITY QUEUE SYSTEM */
 /* =====================================*/
 
 .nvx-lazy-priority-viewport {
@@ -1365,7 +1365,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 MEMORY MANAGEMENT & CLEANUP
+  /* 🎯 MEMORY MANAGEMENT & CLEANUP */
 /* =====================================*/
 
 .nvx-lazy-cleanup {
@@ -1379,7 +1379,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 NEVOX COMPONENT INTEGRATION
+   /* 🎯 NEVOX COMPONENT INTEGRATION */
 /* =====================================*/
 
 /* 🃏 ULTRA CARD INTEGRATION */
@@ -1486,7 +1486,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 LOGICAL PROPERTIES - RTL SUPPORT
+  /* 🎯 LOGICAL PROPERTIES - RTL SUPPORT */
 /* =====================================*/
 
 .nvx-lazy {
@@ -1597,7 +1597,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 DARK THEME - NEVOX COMPLETE
+   /* 🎯 DARK THEME - NEVOX COMPLETE */
 /* =====================================*/
 
 [data-theme="dark"] {
@@ -1667,7 +1667,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 ACCESSIBILITY - NEVOX A11Y
+  /* 🎯 ACCESSIBILITY - NEVOX A11Y */
 /* =====================================*/
 
 /* REDUCED MOTION */
@@ -1744,7 +1744,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 RESPONSIVE BREAKPOINTS - NEVOX
+   /* 🎯 RESPONSIVE BREAKPOINTS - NEVOX */
 /* =====================================*/
 
 /* TABLET */
@@ -1895,7 +1895,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 PRINT STYLES - NEVOX PRINT SYSTEM
+   /* 🎯 PRINT STYLES - NEVOX PRINT SYSTEM */
 /* =====================================*/
 
 @media print {
@@ -1958,7 +1958,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 ANIMATIONS & KEYFRAMES - CONSOLIDATED
+   /* 🎯 ANIMATIONS & KEYFRAMES - CONSOLIDATED */
 /* =====================================*/
 
 @keyframes nvx-lazy-reveal {
@@ -1986,7 +1986,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 LEGACY BROWSER FALLBACKS
+   /* 🎯 LEGACY BROWSER FALLBACKS */
 /* =====================================*/
 
 /* NO INTERSECTION OBSERVER */
@@ -2043,7 +2043,7 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   🎯 DEBUG MODE (DEVELOPMENT ONLY)
+   /* 🎯 DEBUG MODE (DEVELOPMENT ONLY) */
 /* =====================================*/
 
 .nvx-lazy-debug {
@@ -2083,8 +2083,8 @@ picture.nvx-lazy source {
 }
 
 /* =====================================*/
-   ⚡ NEVOX LAZY LOADING v4.1 - COMPLETE
-   NATIVE LAZY LOADING • CORE WEB VITALS
-   FULLY INTEGRATED WITH NEVOX ECOSYSTEM
-   ENTERPRISE-GRADE • PRODUCTION-READY
+   /* NEVOX LAZY LOADING v4.1 - COMPLETE */
+   /* NATIVE LAZY LOADING • CORE WEB VITALS*/
+  /* FULLY INTEGRATED WITH NEVOX ECOSYSTEM */
+  /* ENTERPRISE-GRADE • PRODUCTION-READY */
 /* =====================================*/
