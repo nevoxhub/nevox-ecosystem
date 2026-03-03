@@ -1,5 +1,6 @@
 /*======================================*/
-⚡53  css section  READING PROGRESS - VISIBLE ALWAYS ⚡
+/* 77 components  css section */
+/* READING PROGRESS - VISIBLE ALWAYS */
 /*======================================*/
 .nvx-reading-progress{position:absolute;bottom:0;left:0;right:0;height:5px;background:rgba(0,0,0,0.1);
 backdrop-filter:blur(5px);z-index:15}
