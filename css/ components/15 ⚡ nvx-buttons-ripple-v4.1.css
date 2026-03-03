@@ -1,5 +1,6 @@
 /*======================================*/
-⚡89css section BUTTONS WITH RIPPLE EFFECT 
+/* 15 components css section */
+/* BUTTONS WITH RIPPLE EFFECT */
 /*======================================*/
 .nvx-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:12px;font-weight:700;font-size:15px;transition:all 0.3s cubic-bezier(0.4,0,0.2,1);cursor:pointer;border:none;text-decoration:none;position:relative;overflow:hidden;backdrop-filter:blur(10px)}
 .nvx-btn::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,var(--nvx-primary, #3b82f6),var(--nvx-secondary, #8b5cf6));opacity:0;transition:opacity 0.3s}
