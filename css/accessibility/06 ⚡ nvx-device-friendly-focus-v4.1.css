@@ -1,5 +1,5 @@
 /*======================================*/
-/*⚡12 css section⚡ AAL DEVICE FRIENDLY FOCUS */
+/* 06 accessibility css section AAL DEVICE FRIENDLY FOCUS */
 /*======================================*/
 @media (hover: none) and (pointer: coarse) {
   *:focus-visible { outline-width: 4px; outline-offset: 3px; }
