@@ -1,5 +1,5 @@
 /*======================================*/
-⚡92 css section RESPONSIVE ADJUSTMENTS ⚡
+/* 02 responsive css section RESPONSIVE ADJUSTMENTS */
 /*======================================*/
 @media(max-width:768px){.nvx-reactions{flex-wrap:wrap;gap:12px;justify-content:center}
 .nvx-reaction-btn{padding:8px 16px;font-size:14px}.nvx-time-system{flex-direction:column}
