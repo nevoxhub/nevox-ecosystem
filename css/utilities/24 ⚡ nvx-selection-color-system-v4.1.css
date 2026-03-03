@@ -1,5 +1,6 @@
 /*======================================*/
-/* ⚡ NEVOX SELECTION COLOR SYSTEM v4.1  */
+/* 24 utilities css section */
+/* NEVOX SELECTION COLOR SYSTEM v4.1  */
 /* ENTERPRISE-GRADE • PRODUCTION-READY    */
 /* WCAG 2.1 AAA • SECTION 508 COMPLIANT   */
 /* WITH ANIMATION • CONTEXT-AWARE • I18N  */
@@ -74,7 +75,7 @@
 }
 
 /* ===================================== */
-/* BASE SELECTION                          */
+/* BASE SELECTION                        */
 /* ===================================== */
 ::selection {
   background-color: var(--nvx-selection-bg);
@@ -99,7 +100,7 @@ input[type="password"]::-moz-selection {
 }
 
 /* ===================================== */
-/* CONTEXT-AWARE SELECTION                 */
+/* CONTEXT-AWARE SELECTION               */
 /* ===================================== */
 
 /* Code blocks */
@@ -165,7 +166,7 @@ legend::-moz-selection {
 }
 
 /* ===================================== */
-/* INTERNATIONAL SCRIPT COLORS            */
+/* INTERNATIONAL SCRIPT COLORS           */
 /* ===================================== */
 
 /* বাংলা (Bengali) */
@@ -225,7 +226,7 @@ legend::-moz-selection {
 }
 
 /* ===================================== */
-/* VARIANT CLASSES                         */
+/* VARIANT CLASSES                       */
 /* ===================================== */
 .nvx-selection-primary {
   --nvx-selection-bg: var(--nvx-primary-500, #3b82f6);
@@ -280,7 +281,7 @@ legend::-moz-selection {
 }
 
 /* ===================================== */
-/* DARK THEME                              */
+/* DARK THEME                            */
 /* ===================================== */
 [data-theme="dark"] {
   --nvx-selection-bg: var(--nvx-selection-bg-dark, #60a5fa);
@@ -300,7 +301,7 @@ legend::-moz-selection {
 }
 
 /* ===================================== */
-/* ACCESSIBILITY & UTILITIES               */
+/* ACCESSIBILITY & UTILITIES             */
 /* ===================================== */
 
 /* Disable selection */
@@ -361,7 +362,7 @@ legend::-moz-selection {
 }
 
 /* ===================================== */
-/* FALLBACK SYSTEMS                        */
+/* FALLBACK SYSTEMS                      */
 /* ===================================== */
 
 /* No CSS variables */
@@ -401,7 +402,7 @@ legend::-moz-selection {
 }
 
 /* ===================================== */
-/* PURGECSS SAFE LIST                      */
+/* PURGECSS SAFE LIST                    */
 /* ===================================== */
 /* 
   PurgeCSS safe classes:
@@ -412,7 +413,7 @@ legend::-moz-selection {
 */
 
 /* ===================================== */
-/* USAGE EXAMPLES                          */
+/* USAGE EXAMPLES                        */
 /* ===================================== */
 /*
   <!-- Basic usage -->
