@@ -1,11 +1,12 @@
 /* =====================================*/
-   ⚡ NEVOX LAZY LOADING SYSTEM v4.1
-   ALL DEVICE FRIENDLY • UNIVERSAL DESIGN
+/* 01 responsive css section  */
+/* NEVOX LAZY LOADING SYSTEM v4.1 */
+  /* ALL DEVICE FRIENDLY • UNIVERSAL DESIGN */
 /* =====================================*/
 
 /* =====================================*/
-   🎯 DEVICE-SPECIFIC MEDIA QUERIES
-   COMPLETE BREAKPOINT SYSTEM
+  /* 🎯 DEVICE-SPECIFIC MEDIA QUERIES */
+  /* COMPLETE BREAKPOINT SYSTEM */
 /* =====================================*/
 
 /* 🕐 EXTRA SMALL DEVICES - Wearables, Smartwatches */
@@ -297,7 +298,7 @@
 }
 
 /* =====================================*/
-   🎯 FOLDABLE DEVICE OPTIMIZATION
+  /* 🎯 FOLDABLE DEVICE OPTIMIZATION */
 /* =====================================*/
 
 /* Samsung Galaxy Fold, Huawei Mate X, etc. */
@@ -341,7 +342,7 @@
 }
 
 /* =====================================*/
-   🎯 WEARABLE DEVICES (Smartwatches)
+   /* 🎯 WEARABLE DEVICES (Smartwatches) */
 /* =====================================*/
 
 /* Apple Watch, Samsung Galaxy Watch, etc. */
@@ -366,7 +367,7 @@
 }
 
 /* =====================================*/
-   🎯 E-READER DEVICES (Kindle, Kobo, etc.)
+  /* 🎯 E-READER DEVICES (Kindle, Kobo, etc.) */
 /* =====================================*/
 
 @media (monochrome) {
@@ -394,7 +395,7 @@
 }
 
 /* =====================================*/
-   🎯 GAME CONSOLES & STREAMING DEVICES
+  /* 🎯 GAME CONSOLES & STREAMING DEVICES */
 /* =====================================*/
 
 /* PlayStation, Xbox, Apple TV, etc. */
@@ -418,7 +419,7 @@
 }
 
 /* =====================================*/
-   🎯 TOUCH DEVICE OPTIMIZATION (All)
+   /* 🎯 TOUCH DEVICE OPTIMIZATION (All) */
 /* =====================================*/
 
 @media (hover: none) and (pointer: coarse) {
@@ -455,7 +456,7 @@
 }
 
 /* =====================================*/
-   🎯 HIGH REFRESH RATE DEVICES (120Hz+)
+ /*  🎯 HIGH REFRESH RATE DEVICES (120Hz+) */
 /* =====================================*/
 
 @media (prefers-reduced-motion: no-preference) and (min-resolution: 2dppx) {
@@ -467,7 +468,7 @@
 }
 
 /* =====================================*/
-   🎯 LOW BATTERY DEVICES
+   /* 🎯 LOW BATTERY DEVICES */
 /* =====================================*/
 
 @media (prefers-reduced-data: reduce) or (prefers-reduced-transparency: reduce) {
@@ -488,7 +489,7 @@
 }
 
 /* =====================================*/
-   🎯 PRINTER-FRIENDLY (All printers)
+  /* 🎯 PRINTER-FRIENDLY (All printers) */
 /* =====================================*/
 
 @media print {
@@ -510,7 +511,7 @@
 }
 
 /* =====================================*/
-   🎯 PROJECTOR & EXTERNAL DISPLAYS
+ /*  🎯 PROJECTOR & EXTERNAL DISPLAYS */
 /* =====================================*/
 
 @media (projection) {
@@ -527,7 +528,7 @@
 }
 
 /* =====================================*/
-   🎯 CAR INFOTAINMENT SYSTEMS
+  /* 🎯 CAR INFOTAINMENT SYSTEMS */
 /* =====================================*/
 
 @media (max-width: 1024px) and (min-aspect-ratio: 16/9) and (pointer: coarse) and (any-pointer: coarse) {
@@ -546,7 +547,7 @@
 }
 
 /* =====================================*/
-   🎯 AUGMENTED REALITY / VIRTUAL REALITY
+  /* 🎯 AUGMENTED REALITY / VIRTUAL REALITY */
 /* =====================================*/
 
 @media (environment-blending: additive) or (environment-blending: subtractive) {
@@ -559,7 +560,7 @@
 }
 
 /* =====================================*/
-   🎯 DEVICE ORIENTATION + SIZE COMBINATIONS
+   /*🎯 DEVICE ORIENTATION + SIZE COMBINATIONS */
 /* =====================================*/
 
 /* Small device in landscape */
@@ -589,7 +590,7 @@
 }
 
 /* =====================================*/
-   🎯 DEVICE PIXEL RATIO OPTIMIZATION
+  /* 🎯 DEVICE PIXEL RATIO OPTIMIZATION */
 /* =====================================*/
 
 /* Low DPI devices */
@@ -614,7 +615,7 @@
 }
 
 /* =====================================*/
-   🎯 DEVICE MEMORY OPTIMIZATION
+  /* 🎯 DEVICE MEMORY OPTIMIZATION */
 /* =====================================*/
 
 /* Low memory devices */
@@ -644,7 +645,7 @@
 }
 
 /* =====================================*/
-   🎯 CONTAINER QUERIES FOR COMPONENT-LEVEL RESPONSIVENESS
+ /*  🎯 CONTAINER QUERIES FOR COMPONENT-LEVEL RESPONSIVENESS */
 /* =====================================*/
 
 .nvx-lazy-container {
@@ -712,7 +713,7 @@
 }
 
 /* =====================================*/
-   🎯 UNIVERSAL GRID SYSTEM
+  /* 🎯 UNIVERSAL GRID SYSTEM */
 /* =====================================*/
 
 .nvx-lazy-grid {
@@ -753,7 +754,7 @@
 }
 
 /* =====================================*/
-   🎯 FLUID TYPOGRAPHY FOR ALL DEVICES
+  /* 🎯 FLUID TYPOGRAPHY FOR ALL DEVICES */
 /* =====================================*/
 
 .nvx-lazy-fluid-text {
@@ -769,7 +770,7 @@
 }
 
 /* =====================================*/
-   🎯 DEVICE DETECTION UTILITY CLASSES
+  /* 🎯 DEVICE DETECTION UTILITY CLASSES */
 /* =====================================*/
 
 /* Mobile detection */
@@ -792,7 +793,7 @@
 .nvx-orientation-landscape .nvx-lazy { }
 
 /* =====================================*/
-   ⚡ NEVOX LAZY LOADING v4.1
-   ALL DEVICE FRIENDLY • UNIVERSAL DESIGN
-   MAXIMUM PERFORMANCE • ZERO TOLERANCE
+  /* ⚡ NEVOX LAZY LOADING v4.1 */
+  /* ALL DEVICE FRIENDLY • UNIVERSAL DESIGN */
+  /* MAXIMUM PERFORMANCE • ZERO TOLERANCE */
 /* =====================================*/
