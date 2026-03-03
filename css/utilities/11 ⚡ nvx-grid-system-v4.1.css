@@ -1,5 +1,5 @@
 /*======================================*/
-115 css section GRID SYSTEM - COMPLETE (2-12) ⚡
+/* 11 utilities css section GRID SYSTEM  */
 /*======================================*/
 .nvx-grid-cols-2{grid-template-columns:repeat(2,1fr)}
 .nvx-grid-cols-3{grid-template-columns:repeat(3,1fr)}
