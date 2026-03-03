@@ -1,6 +1,7 @@
-/* =====================================*/
-/ NEVOX FORM SYSTEM v4.1 — PROFESSIONAL (FIXED & ADAPTED) /
-/======================================*/
+/* ===================================== */
+/* 08 components css section */
+/* NEVOX FORM SYSTEM v4.1 — PROFESSIONAL */
+/* ====================================== */
 
 .nvx-form-c{max-width:600px;margin:0 auto;padding:var(--nvx-space-8);background:var(--nvx-bg-card);border-radius:var(--nvx-radius-lg);box-shadow:var(--nvx-shadow-lg);border:1px solid var(--nvx-border)}
 .nvx-form-login{max-width:400px}
