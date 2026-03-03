@@ -1,5 +1,6 @@
 /*======================================*/
-/*⚡13  css section ⚡🆕 ALL DEVICE FRIENDLY SKIP LINK */
+/* 09 accesibility css section */
+/* ALL DEVICE FRIENDLY SKIP LINK */
 /*======================================*/
 @media (hover: none) { .nvx-skip-link { padding: 12px 20px; } }
 @media (max-width: 1024px) { .nvx-skip-link:focus { top: 5px; left: 5px; } }
