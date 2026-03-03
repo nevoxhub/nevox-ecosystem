@@ -1,5 +1,6 @@
 /*======================================*/
-⚡79 css section  REACTION HISTORY TOOLTIP ⚡
+/* 73 components css section */
+/* REACTION HISTORY TOOLTIP */
 /*======================================*/
 .nvx-reaction-history{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:#1e293b;color:#fff;padding:12px;border-radius:12px;font-size:13px;max-width:200px;min-width:150px;box-shadow:0 20px 60px rgba(0,0,0,0.3);z-index:120;display:none;margin-bottom:15px}
 .nvx-reaction-history.show{display:block;animation:nvx-fade-in-up 0.3s}
