@@ -1,5 +1,5 @@
 /*======================================*/
-⚡122 css section  RESPONSIVE ⚡
+/* 20 utilities css section  RESPONSIVE */
 /*======================================*/
 @media(max-width:768px){.nvx-grid-cols-2-mobile{grid-template-columns:repeat(2,1fr)}
 .nvx-grid-cols-3-mobile{grid-template-columns:repeat(3,1fr)}.nvx-grid-cols-4-mobile{grid-template-columns:repeat(4,1fr)}
