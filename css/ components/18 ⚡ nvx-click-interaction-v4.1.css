@@ -1,5 +1,6 @@
 /*======================================*/
-⚡123 css section  ULTRA PROFESSIONAL CLICK INTERACTION SYSTEM - FIXED ⚡
+/* 18 components  css section */
+/* ULTRA PROFESSIONAL CLICK INTERACTION SYSTEM */
 /*======================================*/
 .nvx-click-animation{animation:nvx-click-animation .3s cubic-bezier(0.4,0,0.2,1)}@keyframes nvx-click-animation{0%,100%{transform:scale(1)}50%{transform:scale(0.95)}}.nvx-glass-interactive{position:relative;background:linear-gradient(135deg,rgba(255,255,255,0.12),rgba(255,255,255,0.05));border:1px solid rgba(255,255,255,0.18);box-shadow:inset 0 1px 2px rgba(255,255,255,0.1),0 8px 32px rgba(0,0,0,0.15)}.nvx-glass-interactive::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.1),transparent 40%,rgba(0,0,0,0.05));opacity:0;transition:opacity .4s ease}.nvx-glass-interactive:hover::before{opacity:1}@supports(backdrop-filter:blur(20px)){.nvx-glass-interactive{backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%)}}
 .nvx-click-ripple{position:relative;overflow:hidden}.nvx-click-ripple::after{content:'';position:absolute;top:var(--nvx-click-y,50%);left:var(--nvx-click-x,50%);width:0;height:0;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.4) 0%,rgba(255,255,255,0) 70%);transform:translate(-50%,-50%);animation:nvx-ripple-expand .6s cubic-bezier(0.4,0,0.2,1);pointer-events:none}@keyframes nvx-ripple-expand{0%{width:0;height:0;opacity:1}100%{width:400px;height:400px;opacity:0}}
