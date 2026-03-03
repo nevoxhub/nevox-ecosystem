@@ -1,5 +1,5 @@
 /*======================================*/
-/* ⚡25  css  section  User  Panel ⚡   */
+/*106 components css section User Panel */
 /*======================================*/
 .nvx-user-panel{display:flex;align-items:center;gap:15px}
 .nvx-user-avatar{width:40px;height:40px;border-radius:50%;border:2px solid var(--nvx-primary);
