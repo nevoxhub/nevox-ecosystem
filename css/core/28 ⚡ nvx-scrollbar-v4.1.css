@@ -1,5 +1,5 @@
 /*======================================*/
-⚡137 css section  scrollbar⚡
+/* 28 css section  scrollbar */
 /*======================================*/
 :root{--nvx-scrollbar-size:10px;--nvx-scrollbar-radius:6px;--nvx-scrollbar-track:var(--nvx-bg-secondary,#f3f4f6);--nvx-scrollbar-thumb:var(--nvx-primary,#3b82f6);--nvx-scrollbar-thumb-hover:var(--nvx-secondary,#8b5cf6);--nvx-scrollbar-thumb-active:var(--nvx-accent,#ec4899);--nvx-scrollbar-border:2px solid var(--nvx-bg-secondary,#f3f4f6);--nvx-scrollbar-transition:background-color .15s ease,opacity .25s ease;--scroll-percentage:0;--scroll-direction:down;--scroll-heat:0;--scroll-velocity:0}
 [data-nvx-scroll-intel=true] ::-webkit-scrollbar-thumb{background:linear-gradient(to bottom,hsl(calc(210 + var(--scroll-heat)*20),85%,60%),hsl(calc(220 + var(--scroll-heat)*15),85%,60%));opacity:calc(.6 + var(--scroll-heat)*.4);transform:scale(calc(1 + var(--scroll-velocity)*.02));transition:background-color .1s linear,opacity .1s linear,transform .05s linear}
