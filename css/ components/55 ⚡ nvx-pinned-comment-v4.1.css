@@ -1,5 +1,6 @@
 /*======================================*/
-⚡87 css section PINNED COMMENT HIGHLIGHT ⚡
+/* components  css section */
+/* PINNED COMMENT HIGHLIGHT */
 /*======================================*/
 .nvx-pinned-comment{position:relative;background:linear-gradient(135deg,rgba(234,179,8,0.1),rgba(217,119,6,0.1))!important;border-left:4px solid #eab308!important;padding-left:20px!important}
 .nvx-pinned-comment::before{content:'📌';position:absolute;left:8px;top:12px;font-size:14px}
