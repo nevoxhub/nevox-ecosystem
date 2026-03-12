@@ -1,0 +1,760 @@
+/*
+  15 layouts css section 
+  NEVOX ECOSYSTEM v4.1 – CTA SECTION SYSTEM
+  File: 12-nvx-cta-section-v4.1.css
+  Version: 4.1.0
+  Author: NEVOX
+  Last Updated: 2026-03-12
+  Description: Ultra-high quality standalone CTA section with dopamine interactions
+  Compatibility: Works standalone OR with NEVOX ecosystem
+  Features: Gradient backgrounds, hover effects, click impressions, RTL, dark mode
+*/
+
+/* ===================================== */
+/* CORE VARIABLES – NEVOX COMPATIBLE      */
+/* ===================================== */
+:root {
+  /* NEVOX tokens with fallbacks */
+  --nvx-color-brand-primary: var(--nvx-color-brand-primary, #3b82f6);
+  --nvx-color-primary-hover: var(--nvx-color-primary-hover, #2563eb);
+  --nvx-color-primary-active: var(--nvx-color-primary-active, #1d4ed8);
+  --nvx-color-brand-secondary: var(--nvx-color-brand-secondary, #8b5cf6);
+  --nvx-color-success: var(--nvx-color-success, #10b981);
+  --nvx-color-bg-card: var(--nvx-color-bg-card, #ffffff);
+  --nvx-color-bg-card-dark: var(--nvx-color-bg-card-dark, #1e293b);
+  --nvx-color-bg-secondary: var(--nvx-color-bg-secondary, #f8fafc);
+  --nvx-color-bg-secondary-dark: var(--nvx-color-bg-secondary-dark, #1e293b);
+  --nvx-color-text-main: var(--nvx-color-text-main, #0f172a);
+  --nvx-color-text-main-dark: var(--nvx-color-text-main-dark, #f8fafc);
+  --nvx-color-text-secondary: var(--nvx-color-text-secondary, #475569);
+  --nvx-color-text-secondary-dark: var(--nvx-color-text-secondary-dark, #cbd5e1);
+  --nvx-color-text-on-primary: var(--nvx-color-on-primary, #ffffff);
+  --nvx-color-border-main: var(--nvx-color-border-main, #e2e8f0);
+  --nvx-color-border-main-dark: var(--nvx-color-border-main-dark, #334155);
+  --nvx-gradient-primary: var(--nvx-gradient-primary, linear-gradient(135deg, #3b82f6, #8b5cf6));
+  --nvx-gradient-secondary: var(--nvx-gradient-secondary, linear-gradient(135deg, #8b5cf6, #ec4899));
+  --nvx-gradient-success: var(--nvx-gradient-success, linear-gradient(135deg, #10b981, #06b6d4));
+  --nvx-shadow-sm: var(--nvx-shadow-sm, 0 1px 2px 0 rgba(0,0,0,0.05));
+  --nvx-shadow-md: var(--nvx-shadow-md, 0 6px 12px -2px rgba(0,0,0,0.1));
+  --nvx-shadow-lg: var(--nvx-shadow-lg, 0 10px 15px -3px rgba(0,0,0,0.1));
+  --nvx-shadow-xl: var(--nvx-shadow-xl, 0 20px 25px -5px rgba(0,0,0,0.1));
+  --nvx-space-2: var(--nvx-space-2, 0.5rem);
+  --nvx-space-3: var(--nvx-space-3, 0.75rem);
+  --nvx-space-4: var(--nvx-space-4, 1rem);
+  --nvx-space-5: var(--nvx-space-5, 1.25rem);
+  --nvx-space-6: var(--nvx-space-6, 1.5rem);
+  --nvx-space-8: var(--nvx-space-8, 2rem);
+  --nvx-space-10: var(--nvx-space-10, 2.5rem);
+  --nvx-space-16: var(--nvx-space-16, 4rem);
+  --nvx-radius-sm: var(--nvx-radius-sm, 0.5rem);
+  --nvx-radius-md: var(--nvx-radius-md, 0.75rem);
+  --nvx-radius-lg: var(--nvx-radius-lg, 1rem);
+  --nvx-radius-xl: var(--nvx-radius-xl, 1.5rem);
+  --nvx-radius-full: var(--nvx-radius-full, 9999px);
+  --nvx-duration-fast: var(--nvx-duration-fast, 150ms);
+  --nvx-duration-medium: var(--nvx-duration-medium, 300ms);
+  --nvx-duration-slow: var(--nvx-duration-slow, 500ms);
+  --nvx-ease-standard: var(--nvx-ease-standard, cubic-bezier(0.4, 0, 0.2, 1));
+  --nvx-ease-emphasized: var(--nvx-ease-emphasized, cubic-bezier(0.2, 0, 0, 1));
+  --nvx-ease-bounce: var(--nvx-ease-bounce, cubic-bezier(0.34, 1.56, 0.64, 1));
+  --nvx-focus-ring: var(--nvx-focus-ring, 3px solid #3b82f6);
+  --nvx-focus-offset: var(--nvx-focus-offset, 2px);
+  --nvx-z-base: var(--nvx-z-base, 1);
+  --nvx-z-hover: var(--nvx-z-hover, 10);
+  --nvx-container-sm: var(--nvx-container-sm, 640px);
+  --nvx-container-md: var(--nvx-container-md, 768px);
+  --nvx-container-lg: var(--nvx-container-lg, 1024px);
+  --nvx-container-xl: var(--nvx-container-xl, 1280px);
+}
+
+/* ===================================== */
+/* CTA SECTION CONTAINER                  */
+/* ===================================== */
+.nvx-cta {
+  position: relative;
+  width: 100%;
+  padding: var(--nvx-space-16) var(--nvx-space-6);
+  background: var(--nvx-gradient-primary);
+  overflow: hidden;
+  isolation: isolate;
+  container: nvx-cta / inline-size;
+}
+
+/* CTA with secondary gradient */
+.nvx-cta--secondary {
+  background: var(--nvx-gradient-secondary);
+}
+
+/* CTA with success gradient */
+.nvx-cta--success {
+  background: var(--nvx-gradient-success);
+}
+
+/* CTA with custom background */
+.nvx-cta--custom {
+  background: var(--nvx-color-bg-secondary);
+}
+
+/* Background overlay for better text readability */
+.nvx-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.15) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Decorative elements */
+.nvx-cta::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  transform: rotate(30deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===================================== */
+/* CTA CONTENT CONTAINER                  */
+/* ===================================== */
+.nvx-cta-content {
+  position: relative;
+  max-width: var(--nvx-container-xl);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--nvx-space-6);
+  z-index: 1;
+}
+
+/* Left aligned CTA */
+.nvx-cta-content--left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Right aligned CTA */
+.nvx-cta-content--right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* ===================================== */
+/* CTA BADGE                              */
+/* ===================================== */
+.nvx-cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--nvx-space-2);
+  padding: var(--nvx-space-2) var(--nvx-space-4);
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: var(--nvx-radius-full);
+  color: var(--nvx-color-text-on-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--nvx-space-2);
+  animation: nvx-cta-badge-pulse 2s var(--nvx-ease-standard) infinite;
+}
+
+@keyframes nvx-cta-badge-pulse {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+/* ===================================== */
+/* CTA TITLE                              */
+/* ===================================== */
+.nvx-cta-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--nvx-color-text-on-primary);
+  margin: 0;
+  max-width: 800px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nvx-cta--custom .nvx-cta-title {
+  color: var(--nvx-color-text-main);
+}
+
+/* ===================================== */
+/* CTA DESCRIPTION                        */
+/* ===================================== */
+.nvx-cta-description {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255,255,255,0.9);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0;
+}
+
+.nvx-cta--custom .nvx-cta-description {
+  color: var(--nvx-color-text-secondary);
+}
+
+/* ===================================== */
+/* CTA BUTTON GROUP                       */
+/* ===================================== */
+.nvx-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--nvx-space-4);
+  margin-top: var(--nvx-space-4);
+}
+
+.nvx-cta-content--left .nvx-cta-buttons {
+  justify-content: flex-start;
+}
+
+.nvx-cta-content--right .nvx-cta-buttons {
+  justify-content: flex-end;
+}
+
+/* ===================================== */
+/* CTA PRIMARY BUTTON                     */
+/* ===================================== */
+.nvx-cta-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--nvx-space-2);
+  padding: var(--nvx-space-4) var(--nvx-space-8);
+  background: white;
+  border: 2px solid transparent;
+  border-radius: var(--nvx-radius-full);
+  color: var(--nvx-color-brand-primary);
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: all var(--nvx-duration-medium) var(--nvx-ease-bounce);
+  min-width: 180px;
+  min-height: 56px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--nvx-shadow-lg);
+}
+
+.nvx-cta-btn-primary:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--nvx-shadow-xl);
+  background: var(--nvx-color-bg-card);
+  color: var(--nvx-color-primary-hover);
+}
+
+.nvx-cta-btn-primary:active {
+  transform: translateY(0) scale(0.98);
+  transition-duration: var(--nvx-duration-fast);
+}
+
+.nvx-cta-btn-primary:focus-visible {
+  outline: var(--nvx-focus-ring);
+  outline-offset: var(--nvx-focus-offset);
+}
+
+/* Ripple effect */
+.nvx-cta-btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59,130,246,0.3) 0%, rgba(59,130,246,0) 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.nvx-cta-btn-primary:active::after {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  transition: 0s;
+}
+
+/* ===================================== */
+/* CTA SECONDARY BUTTON                   */
+/* ===================================== */
+.nvx-cta-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--nvx-space-2);
+  padding: var(--nvx-space-4) var(--nvx-space-8);
+  background: transparent;
+  border: 2px solid white;
+  border-radius: var(--nvx-radius-full);
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: all var(--nvx-duration-medium) var(--nvx-ease-bounce);
+  min-width: 180px;
+  min-height: 56px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.nvx-cta-btn-secondary:hover {
+  background: white;
+  color: var(--nvx-color-brand-primary);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--nvx-shadow-lg);
+}
+
+.nvx-cta-btn-secondary:active {
+  transform: translateY(0) scale(0.98);
+  transition-duration: var(--nvx-duration-fast);
+}
+
+.nvx-cta-btn-secondary:focus-visible {
+  outline: var(--nvx-focus-ring);
+  outline-offset: var(--nvx-focus-offset);
+}
+
+/* ===================================== */
+/* CTA OUTLINE BUTTON (for custom bg)     */
+/* ===================================== */
+.nvx-cta--custom .nvx-cta-btn-primary {
+  background: var(--nvx-color-brand-primary);
+  color: white;
+}
+
+.nvx-cta--custom .nvx-cta-btn-primary:hover {
+  background: var(--nvx-color-primary-hover);
+}
+
+.nvx-cta--custom .nvx-cta-btn-secondary {
+  border-color: var(--nvx-color-brand-primary);
+  color: var(--nvx-color-brand-primary);
+}
+
+.nvx-cta--custom .nvx-cta-btn-secondary:hover {
+  background: var(--nvx-color-brand-primary);
+  color: white;
+}
+
+/* ===================================== */
+/* CTA LINK BUTTON (text only)            */
+/* ===================================== */
+.nvx-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--nvx-space-2);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: var(--nvx-space-2) var(--nvx-space-4);
+  border-radius: var(--nvx-radius-md);
+  transition: all var(--nvx-duration-fast) var(--nvx-ease-standard);
+  min-height: 44px;
+}
+
+.nvx-cta-link:hover {
+  gap: var(--nvx-space-4);
+  background: rgba(255,255,255,0.1);
+}
+
+.nvx-cta-link::after {
+  content: '→';
+  transition: transform var(--nvx-duration-fast) var(--nvx-ease-emphasized);
+}
+
+.nvx-cta-link:hover::after {
+  transform: translateX(4px);
+}
+
+.nvx-cta--custom .nvx-cta-link {
+  color: var(--nvx-color-brand-primary);
+}
+
+.nvx-cta--custom .nvx-cta-link:hover {
+  background: rgba(59,130,246,0.1);
+}
+
+/* ===================================== */
+/* CTA STATS SECTION                      */
+/* ===================================== */
+.nvx-cta-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--nvx-space-8);
+  margin-top: var(--nvx-space-8);
+  padding-top: var(--nvx-space-8);
+  border-top: 1px solid rgba(255,255,255,0.2);
+  width: 100%;
+  max-width: 800px;
+}
+
+.nvx-cta-stat {
+  text-align: center;
+}
+
+.nvx-cta-stat-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: var(--nvx-space-1);
+}
+
+.nvx-cta-stat-label {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.nvx-cta--custom .nvx-cta-stat-value {
+  color: var(--nvx-color-text-main);
+}
+
+.nvx-cta--custom .nvx-cta-stat-label {
+  color: var(--nvx-color-text-secondary);
+}
+
+/* ===================================== */
+/* CTA FORM                               */
+/* ===================================== */
+.nvx-cta-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--nvx-space-3);
+  max-width: 500px;
+  width: 100%;
+  margin-top: var(--nvx-space-4);
+}
+
+.nvx-cta-input {
+  flex: 1;
+  min-width: 200px;
+  padding: var(--nvx-space-4) var(--nvx-space-6);
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: var(--nvx-radius-full);
+  color: white;
+  font-size: 1rem;
+  transition: all var(--nvx-duration-fast) var(--nvx-ease-standard);
+}
+
+.nvx-cta-input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.nvx-cta-input:focus {
+  outline: none;
+  border-color: white;
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+}
+
+.nvx-cta-input:focus-visible {
+  outline: var(--nvx-focus-ring);
+  outline-offset: var(--nvx-focus-offset);
+}
+
+.nvx-cta-submit {
+  padding: var(--nvx-space-4) var(--nvx-space-8);
+  background: white;
+  border: none;
+  border-radius: var(--nvx-radius-full);
+  color: var(--nvx-color-brand-primary);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--nvx-duration-medium) var(--nvx-ease-bounce);
+  min-width: 120px;
+  min-height: 56px;
+}
+
+.nvx-cta-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--nvx-shadow-lg);
+}
+
+.nvx-cta-submit:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.nvx-cta-submit:focus-visible {
+  outline: var(--nvx-focus-ring);
+  outline-offset: var(--nvx-focus-offset);
+}
+
+/* ===================================== */
+/* IMPRESSION TRACKING                    */
+/* ===================================== */
+.nvx-cta[data-track="impression"],
+.nvx-cta-btn-primary[data-track="click"],
+.nvx-cta-btn-secondary[data-track="click"],
+.nvx-cta-link[data-track="click"],
+.nvx-cta-submit[data-track="conversion"] {
+  /* Hooks for JavaScript tracking */
+}
+
+/* ===================================== */
+/* RESPONSIVE BREAKPOINTS                 */
+/* ===================================== */
+
+/* Tablet */
+@container nvx-cta (max-width: 800px) {
+  .nvx-cta-content {
+    padding: 0 var(--nvx-space-4);
+  }
+  
+  .nvx-cta-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+  
+  .nvx-cta-stats {
+    gap: var(--nvx-space-4);
+  }
+  
+  .nvx-cta-stat-value {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@container nvx-cta (max-width: 500px) {
+  .nvx-cta {
+    padding: var(--nvx-space-10) var(--nvx-space-4);
+  }
+  
+  .nvx-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nvx-cta-btn-primary,
+  .nvx-cta-btn-secondary {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .nvx-cta-stats {
+    flex-direction: column;
+    gap: var(--nvx-space-4);
+    align-items: flex-start;
+  }
+  
+  .nvx-cta-form {
+    flex-direction: column;
+  }
+  
+  .nvx-cta-input {
+    width: 100%;
+  }
+  
+  .nvx-cta-submit {
+    width: 100%;
+  }
+}
+
+/* Fallback for browsers without container queries */
+@media (max-width: 800px) {
+  .nvx-cta-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+  
+  .nvx-cta-stat-value {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .nvx-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nvx-cta-btn-primary,
+  .nvx-cta-btn-secondary {
+    width: 100%;
+  }
+  
+  .nvx-cta-stats {
+    flex-direction: column;
+    gap: var(--nvx-space-4);
+  }
+  
+  .nvx-cta-form {
+    flex-direction: column;
+  }
+}
+
+/* ===================================== */
+/* DARK THEME SUPPORT                     */
+/* ===================================== */
+@media (prefers-color-scheme: dark) {
+  .nvx-cta--custom {
+    background: var(--nvx-color-bg-secondary-dark);
+  }
+  
+  .nvx-cta--custom .nvx-cta-title {
+    color: var(--nvx-color-text-main-dark);
+  }
+  
+  .nvx-cta--custom .nvx-cta-description {
+    color: var(--nvx-color-text-secondary-dark);
+  }
+  
+  .nvx-cta--custom .nvx-cta-stat-value {
+    color: var(--nvx-color-text-main-dark);
+  }
+  
+  .nvx-cta--custom .nvx-cta-stat-label {
+    color: var(--nvx-color-text-secondary-dark);
+  }
+}
+
+[data-theme="dark"] .nvx-cta--custom {
+  background: var(--nvx-color-bg-secondary-dark);
+}
+
+[data-theme="dark"] .nvx-cta--custom .nvx-cta-title {
+  color: var(--nvx-color-text-main-dark);
+}
+
+[data-theme="dark"] .nvx-cta--custom .nvx-cta-description {
+  color: var(--nvx-color-text-secondary-dark);
+}
+
+/* ===================================== */
+/* RTL SUPPORT                            */
+/* ===================================== */
+[dir="rtl"] .nvx-cta-btn-primary,
+[dir="rtl"] .nvx-cta-btn-secondary,
+[dir="rtl"] .nvx-cta-link {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nvx-cta-link::after {
+  content: '←';
+}
+
+[dir="rtl"] .nvx-cta-link:hover::after {
+  transform: translateX(-4px);
+}
+
+[dir="rtl"] .nvx-cta-form {
+  flex-direction: row-reverse;
+}
+
+/* ===================================== */
+/* REDUCED MOTION                         */
+/* ===================================== */
+@media (prefers-reduced-motion: reduce) {
+  .nvx-cta-btn-primary,
+  .nvx-cta-btn-secondary,
+  .nvx-cta-link,
+  .nvx-cta-submit,
+  .nvx-cta-badge {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  
+  .nvx-cta-btn-primary:hover,
+  .nvx-cta-btn-secondary:hover,
+  .nvx-cta-link:hover,
+  .nvx-cta-submit:hover {
+    transform: none !important;
+  }
+  
+  .nvx-cta-btn-primary::after {
+    display: none !important;
+  }
+}
+
+/* ===================================== */
+/* HIGH CONTRAST MODE                     */
+/* ===================================== */
+@media (prefers-contrast: high) {
+  .nvx-cta {
+    background: Canvas !important;
+    border: 3px solid CanvasText;
+  }
+  
+  .nvx-cta-title,
+  .nvx-cta-description,
+  .nvx-cta-stat-value,
+  .nvx-cta-stat-label {
+    color: CanvasText !important;
+  }
+  
+  .nvx-cta-btn-primary,
+  .nvx-cta-btn-secondary,
+  .nvx-cta-submit {
+    border: 2px solid CanvasText !important;
+    background: Canvas !important;
+    color: CanvasText !important;
+  }
+  
+  .nvx-cta-btn-primary:hover,
+  .nvx-cta-btn-secondary:hover,
+  .nvx-cta-submit:hover {
+    background: CanvasText !important;
+    color: Canvas !important;
+  }
+  
+  .nvx-cta-badge {
+    border: 2px solid CanvasText !important;
+    background: Canvas !important;
+    color: CanvasText !important;
+  }
+}
+
+/* ===================================== */
+/* PRINT STYLES                           */
+/* ===================================== */
+@media print {
+  .nvx-cta {
+    background: #fff !important;
+    border: 2px solid #000 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .nvx-cta-title,
+  .nvx-cta-description,
+  .nvx-cta-stat-value,
+  .nvx-cta-stat-label {
+    color: #000 !important;
+  }
+  
+  .nvx-cta-btn-primary,
+  .nvx-cta-btn-secondary,
+  .nvx-cta-submit,
+  .nvx-cta-form {
+    display: none !important;
+  }
+}
+
+/* ===================================== */
+/* NEVOX CTA SECTION v4.1 – COMPLETE      */
+/* ===================================== */
