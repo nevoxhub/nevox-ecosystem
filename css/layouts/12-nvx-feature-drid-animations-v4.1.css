@@ -1,0 +1,104 @@
+/* ===================================== */
+/* 12 layouts css section */
+/* NEVOX FEATURE GRID ANIMATIONS v4.1    */
+/* শুধু অ্যানিমেশন - আলাদা ফাইল          */
+/* ===================================== */
+
+@keyframes nvx-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes nvx-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes nvx-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes nvx-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes nvx-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* অ্যানিমেশন ক্লাস */
+.nvx-animate-shimmer {
+  background: linear-gradient(90deg, 
+    var(--nvx-color-bg-tertiary) 25%, 
+    var(--nvx-color-bg-card) 50%, 
+    var(--nvx-color-bg-tertiary) 75%);
+  background-size: 200% 100%;
+  animation: nvx-shimmer 1.5s infinite;
+}
+
+.nvx-animate-pulse {
+  animation: nvx-pulse 2s infinite;
+}
+
+.nvx-animate-float {
+  animation: nvx-float 3s infinite;
+}
+
+.nvx-animate-spin {
+  animation: nvx-spin 1s linear infinite;
+}
+
+.nvx-animate-slide-in {
+  animation: nvx-slide-in 0.5s var(--nvx-ease-bounce);
+}
+
+/* হোভার অ্যানিমেশন */
+.nvx-hover-grow {
+  transition: transform 0.3s var(--nvx-ease-bounce);
+}
+
+.nvx-hover-grow:hover {
+  transform: scale(1.05);
+}
+
+.nvx-hover-float {
+  transition: transform 0.3s var(--nvx-ease-bounce);
+}
+
+.nvx-hover-float:hover {
+  transform: translateY(-5px);
+}
+
+.nvx-hover-rotate {
+  transition: transform 0.3s var(--nvx-ease-bounce);
+}
+
+.nvx-hover-rotate:hover {
+  transform: rotate(5deg);
+}
+
+/* রিডিউসড মোশন */
+@media (prefers-reduced-motion: reduce) {
+  .nvx-animate-shimmer,
+  .nvx-animate-pulse,
+  .nvx-animate-float,
+  .nvx-animate-spin,
+  .nvx-animate-slide-in {
+    animation: none !important;
+  }
+  
+  .nvx-hover-grow:hover,
+  .nvx-hover-float:hover,
+  .nvx-hover-rotate:hover {
+    transform: none !important;
+  }
+}
