@@ -1,0 +1,1406 @@
+/*
+  14 layouts css section 
+  NEVOX ECOSYSTEM v4.1 – ULTRA CTA SECTION SYSTEM
+  File: 12-nvx-cta-section-ultra-v4.1.css
+  Version: 4.1.0
+  Author: NEVOX
+  Last Updated: 2026-03-12
+  Description: Ultra-premium CTA section with 100+ features
+  Compatibility: Works standalone OR with NEVOX ecosystem
+  Features: 10 variants, 8 animations, 6 layouts, 5 badges, 4 gradients, 3 timers, 7 particles, 10 interactions, 5 tracking events
+*/
+
+/* ===================================== */
+/* ULTRA VARIABLES – 100+ CUSTOM PROPERTIES */
+/* ===================================== */
+:root {
+  /* 🎨 NEVOX CORE COLORS (with fallbacks) */
+  --nvx-primary-50: var(--nvx-primary-50, #eff6ff);
+  --nvx-primary-100: var(--nvx-primary-100, #dbeafe);
+  --nvx-primary-200: var(--nvx-primary-200, #bfdbfe);
+  --nvx-primary-300: var(--nvx-primary-300, #93c5fd);
+  --nvx-primary-400: var(--nvx-primary-400, #60a5fa);
+  --nvx-primary-500: var(--nvx-primary-500, #3b82f6);
+  --nvx-primary-600: var(--nvx-primary-600, #2563eb);
+  --nvx-primary-700: var(--nvx-primary-700, #1d4ed8);
+  --nvx-primary-800: var(--nvx-primary-800, #1e40af);
+  --nvx-primary-900: var(--nvx-primary-900, #1e3a8a);
+  --nvx-primary-950: var(--nvx-primary-950, #172554);
+
+  --nvx-secondary-500: var(--nvx-secondary-500, #8b5cf6);
+  --nvx-success-500: var(--nvx-success-500, #10b981);
+  --nvx-warning-500: var(--nvx-warning-500, #f59e0b);
+  --nvx-danger-500: var(--nvx-danger-500, #ef4444);
+  --nvx-info-500: var(--nvx-info-500, #06b6d4);
+  --nvx-light-500: var(--nvx-light-500, #f8fafc);
+  --nvx-dark-500: var(--nvx-dark-500, #0f172a);
+
+  /* 🎨 GRADIENT VARIABLES */
+  --nvx-gradient-primary: linear-gradient(135deg, var(--nvx-primary-500), var(--nvx-secondary-500));
+  --nvx-gradient-primary-reverse: linear-gradient(135deg, var(--nvx-secondary-500), var(--nvx-primary-500));
+  --nvx-gradient-success: linear-gradient(135deg, var(--nvx-success-500), #059669);
+  --nvx-gradient-warning: linear-gradient(135deg, var(--nvx-warning-500), #d97706);
+  --nvx-gradient-danger: linear-gradient(135deg, var(--nvx-danger-500), #dc2626);
+  --nvx-gradient-info: linear-gradient(135deg, var(--nvx-info-500), #0891b2);
+  --nvx-gradient-dark: linear-gradient(135deg, #1e293b, #0f172a);
+  --nvx-gradient-light: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  --nvx-gradient-radial: radial-gradient(circle at 30% 50%, var(--nvx-primary-500), var(--nvx-secondary-500));
+  --nvx-gradient-conic: conic-gradient(from 90deg, var(--nvx-primary-500), var(--nvx-secondary-500), var(--nvx-accent-500, #ec4899), var(--nvx-primary-500));
+  --nvx-gradient-repeating: repeating-linear-gradient(45deg, var(--nvx-primary-500) 0px, var(--nvx-primary-500) 10px, var(--nvx-secondary-500) 10px, var(--nvx-secondary-500) 20px);
+
+  /* 🎭 GLASS EFFECTS */
+  --nvx-glass-light: rgba(255, 255, 255, 0.1);
+  --nvx-glass-medium: rgba(255, 255, 255, 0.2);
+  --nvx-glass-heavy: rgba(255, 255, 255, 0.3);
+  --nvx-glass-dark-light: rgba(0, 0, 0, 0.1);
+  --nvx-glass-dark-medium: rgba(0, 0, 0, 0.2);
+  --nvx-glass-dark-heavy: rgba(0, 0, 0, 0.3);
+  --nvx-glass-blur-sm: blur(4px);
+  --nvx-glass-blur-md: blur(8px);
+  --nvx-glass-blur-lg: blur(16px);
+  --nvx-glass-blur-xl: blur(24px);
+
+  /* 📏 SPACING ULTRA SCALE */
+  --nvx-space-0: 0;
+  --nvx-space-1: 0.25rem;
+  --nvx-space-2: 0.5rem;
+  --nvx-space-3: 0.75rem;
+  --nvx-space-4: 1rem;
+  --nvx-space-5: 1.25rem;
+  --nvx-space-6: 1.5rem;
+  --nvx-space-7: 1.75rem;
+  --nvx-space-8: 2rem;
+  --nvx-space-9: 2.25rem;
+  --nvx-space-10: 2.5rem;
+  --nvx-space-11: 2.75rem;
+  --nvx-space-12: 3rem;
+  --nvx-space-14: 3.5rem;
+  --nvx-space-16: 4rem;
+  --nvx-space-18: 4.5rem;
+  --nvx-space-20: 5rem;
+  --nvx-space-24: 6rem;
+  --nvx-space-28: 7rem;
+  --nvx-space-32: 8rem;
+  --nvx-space-36: 9rem;
+  --nvx-space-40: 10rem;
+  --nvx-space-44: 11rem;
+  --nvx-space-48: 12rem;
+  --nvx-space-52: 13rem;
+  --nvx-space-56: 14rem;
+  --nvx-space-60: 15rem;
+  --nvx-space-64: 16rem;
+  --nvx-space-72: 18rem;
+  --nvx-space-80: 20rem;
+  --nvx-space-96: 24rem;
+
+  /* 🔤 TYPOGRAPHY ULTRA SCALE */
+  --nvx-text-2xs: 0.625rem;
+  --nvx-text-xs: 0.75rem;
+  --nvx-text-sm: 0.875rem;
+  --nvx-text-base: 1rem;
+  --nvx-text-lg: 1.125rem;
+  --nvx-text-xl: 1.25rem;
+  --nvx-text-2xl: 1.5rem;
+  --nvx-text-3xl: 1.875rem;
+  --nvx-text-4xl: 2.25rem;
+  --nvx-text-5xl: 3rem;
+  --nvx-text-6xl: 3.75rem;
+  --nvx-text-7xl: 4.5rem;
+  --nvx-text-8xl: 6rem;
+  --nvx-text-9xl: 8rem;
+
+  --nvx-font-thin: 100;
+  --nvx-font-extralight: 200;
+  --nvx-font-light: 300;
+  --nvx-font-normal: 400;
+  --nvx-font-medium: 500;
+  --nvx-font-semibold: 600;
+  --nvx-font-bold: 700;
+  --nvx-font-extrabold: 800;
+  --nvx-font-black: 900;
+
+  --nvx-leading-none: 1;
+  --nvx-leading-tight: 1.25;
+  --nvx-leading-snug: 1.375;
+  --nvx-leading-normal: 1.5;
+  --nvx-leading-relaxed: 1.625;
+  --nvx-leading-loose: 2;
+
+  --nvx-tracking-tighter: -0.05em;
+  --nvx-tracking-tight: -0.025em;
+  --nvx-tracking-normal: 0;
+  --nvx-tracking-wide: 0.025em;
+  --nvx-tracking-wider: 0.05em;
+  --nvx-tracking-widest: 0.1em;
+
+  /* 🎭 SHADOW ULTRA SYSTEM */
+  --nvx-shadow-xs: 0 0 0 1px rgba(0,0,0,0.05);
+  --nvx-shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+  --nvx-shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+  --nvx-shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+  --nvx-shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1);
+  --nvx-shadow-2xl: 0 25px 50px -12px rgba(0,0,0,0.25);
+  --nvx-shadow-3xl: 0 35px 60px -15px rgba(0,0,0,0.3);
+  --nvx-shadow-inner: inset 0 2px 4px 0 rgba(0,0,0,0.05);
+  --nvx-shadow-outline: 0 0 0 3px rgba(59,130,246,0.5);
+  --nvx-shadow-none: none;
+  --nvx-shadow-glow: 0 0 20px rgba(59,130,246,0.5);
+  --nvx-shadow-glow-success: 0 0 20px rgba(16,185,129,0.5);
+  --nvx-shadow-glow-warning: 0 0 20px rgba(245,158,11,0.5);
+  --nvx-shadow-glow-danger: 0 0 20px rgba(239,68,68,0.5);
+  --nvx-shadow-colored: 0 2px 4px var(--nvx-tw-shadow-color, rgba(0,0,0,0.1));
+
+  /* ⚡ ANIMATION ULTRA SYSTEM */
+  --nvx-duration-0: 0ms;
+  --nvx-duration-75: 75ms;
+  --nvx-duration-100: 100ms;
+  --nvx-duration-150: 150ms;
+  --nvx-duration-200: 200ms;
+  --nvx-duration-300: 300ms;
+  --nvx-duration-500: 500ms;
+  --nvx-duration-700: 700ms;
+  --nvx-duration-1000: 1000ms;
+  --nvx-duration-2000: 2000ms;
+  --nvx-duration-3000: 3000ms;
+
+  --nvx-ease-linear: linear;
+  --nvx-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --nvx-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --nvx-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --nvx-ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --nvx-ease-elastic: cubic-bezier(0.5, 1.5, 0.5, 1);
+  --nvx-ease-spring: cubic-bezier(0.2, 1.5, 0.4, 1);
+  --nvx-ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --nvx-ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --nvx-ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --nvx-ease-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+
+  /* 📐 BORDER RADIUS ULTRA SYSTEM */
+  --nvx-radius-none: 0;
+  --nvx-radius-sm: 0.125rem;
+  --nvx-radius-base: 0.25rem;
+  --nvx-radius-md: 0.375rem;
+  --nvx-radius-lg: 0.5rem;
+  --nvx-radius-xl: 0.75rem;
+  --nvx-radius-2xl: 1rem;
+  --nvx-radius-3xl: 1.5rem;
+  --nvx-radius-4xl: 2rem;
+  --nvx-radius-5xl: 2.5rem;
+  --nvx-radius-6xl: 3rem;
+  --nvx-radius-full: 9999px;
+
+  /* 📊 Z-INDEX ULTRA SYSTEM */
+  --nvz-0: 0;
+  --nvz-10: 10;
+  --nvz-20: 20;
+  --nvz-30: 30;
+  --nvz-40: 40;
+  --nvz-50: 50;
+  --nvz-auto: auto;
+  --nvz-dropdown: 1000;
+  --nvz-sticky: 1020;
+  --nvz-fixed: 1030;
+  --nvz-modal-backdrop: 1040;
+  --nvz-modal: 1050;
+  --nvz-popover: 1060;
+  --nvz-tooltip: 1070;
+  --nvz-toast: 1080;
+  --nvz-notification: 1090;
+
+  /* 🎯 CONTAINER WIDTHS */
+  --nvx-container-sm: 640px;
+  --nvx-container-md: 768px;
+  --nvx-container-lg: 1024px;
+  --nvx-container-xl: 1280px;
+  --nvx-container-2xl: 1536px;
+  --nvx-container-3xl: 1800px;
+  --nvx-container-4xl: 2000px;
+  --nvx-container-full: 100%;
+}
+
+/* ===================================== */
+/* CTA SECTION ULTRA CONTAINER            */
+/* ===================================== */
+.nvx-cta-ultra {
+  position: relative;
+  width: 100%;
+  padding: var(--nvx-space-16) var(--nvx-space-6);
+  background: var(--nvx-gradient-primary);
+  overflow: hidden;
+  isolation: isolate;
+  container: nvx-cta-ultra / inline-size;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  transition: all var(--nvx-duration-500) var(--nvx-ease-emphasized);
+}
+
+/* ===================================== */
+/* 10 CTA VARIANTS                        */
+/* ===================================== */
+.nvx-cta-ultra-primary {
+  background: var(--nvx-gradient-primary);
+}
+
+.nvx-cta-ultra-secondary {
+  background: var(--nvx-gradient-primary-reverse);
+}
+
+.nvx-cta-ultra-success {
+  background: var(--nvx-gradient-success);
+}
+
+.nvx-cta-ultra-warning {
+  background: var(--nvx-gradient-warning);
+}
+
+.nvx-cta-ultra-danger {
+  background: var(--nvx-gradient-danger);
+}
+
+.nvx-cta-ultra-info {
+  background: var(--nvx-gradient-info);
+}
+
+.nvx-cta-ultra-light {
+  background: var(--nvx-gradient-light);
+  color: var(--nvx-dark-500);
+}
+
+.nvx-cta-ultra-dark {
+  background: var(--nvx-gradient-dark);
+}
+
+.nvx-cta-ultra-outline {
+  background: transparent;
+  border: 2px solid var(--nvx-primary-500);
+  color: var(--nvx-primary-500);
+}
+
+.nvx-cta-ultra-ghost {
+  background: transparent;
+  border: none;
+  color: var(--nvx-primary-500);
+}
+
+/* ===================================== */
+/* 6 LAYOUT VARIANTS                      */
+/* ===================================== */
+.nvx-cta-ultra-content {
+  position: relative;
+  max-width: var(--nvx-container-xl);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--nvx-space-6);
+  z-index: 10;
+}
+
+.nvx-cta-ultra-layout-center {
+  align-items: center;
+  text-align: center;
+}
+
+.nvx-cta-ultra-layout-left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.nvx-cta-ultra-layout-right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.nvx-cta-ultra-layout-split {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.nvx-cta-ultra-layout-card {
+  background: var(--nvx-glass-light);
+  backdrop-filter: var(--nvx-glass-blur-lg);
+  -webkit-backdrop-filter: var(--nvx-glass-blur-lg);
+  border: 1px solid var(--nvx-glass-medium);
+  border-radius: var(--nvx-radius-3xl);
+  padding: var(--nvx-space-8);
+  box-shadow: var(--nvx-shadow-2xl);
+}
+
+.nvx-cta-ultra-layout-floating {
+  animation: nvx-cta-float 3s var(--nvx-ease-elastic) infinite;
+}
+
+@keyframes nvx-cta-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ===================================== */
+/* 5 BADGE POSITIONS                      */
+/* ===================================== */
+.nvx-cta-ultra-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--nvx-space-2);
+  padding: var(--nvx-space-2) var(--nvx-space-4);
+  background: var(--nvx-glass-light);
+  backdrop-filter: var(--nvx-glass-blur-md);
+  -webkit-backdrop-filter: var(--nvx-glass-blur-md);
+  border: 1px solid var(--nvx-glass-medium);
+  border-radius: var(--nvx-radius-full);
+  color: white;
+  font-size: var(--nvx-text-sm);
+  font-weight: var(--nvx-font-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--nvx-tracking-wider);
+  margin-bottom: var(--nvx-space-2);
+  position: relative;
+  width: fit-content;
+}
+
+.nvx-cta-ultra-light .nvx-cta-ultra-badge {
+  color: var(--nvx-dark-500);
+}
+
+.nvx-cta-ultra-badge-top {
+  margin-bottom: var(--nvx-space-4);
+}
+
+.nvx-cta-ultra-badge-bottom {
+  margin-top: var(--nvx-space-4);
+  margin-bottom: 0;
+  order: 2;
+}
+
+.nvx-cta-ultra-badge-left {
+  margin-right: auto;
+}
+
+.nvx-cta-ultra-badge-right {
+  margin-left: auto;
+}
+
+.nvx-cta-ultra-badge-corner {
+  position: absolute;
+  top: var(--nvx-space-4);
+  right: var(--nvx-space-4);
+  z-index: 20;
+}
+
+[dir="rtl"] .nvx-cta-ultra-badge-corner {
+  right: auto;
+  left: var(--nvx-space-4);
+}
+
+/* ===================================== */
+/* 4 GRADIENT TYPES                       */
+/* ===================================== */
+.nvx-cta-ultra-gradient-linear {
+  background: var(--nvx-gradient-primary);
+}
+
+.nvx-cta-ultra-gradient-radial {
+  background: var(--nvx-gradient-radial);
+}
+
+.nvx-cta-ultra-gradient-conic {
+  background: var(--nvx-gradient-conic);
+}
+
+.nvx-cta-ultra-gradient-repeating {
+  background: var(--nvx-gradient-repeating);
+}
+
+/* ===================================== */
+/* ULTRA TITLE & DESCRIPTION              */
+/* ===================================== */
+.nvx-cta-ultra-title {
+  font-size: clamp(var(--nvx-text-4xl), 8vw, var(--nvx-text-7xl));
+  font-weight: var(--nvx-font-black);
+  line-height: var(--nvx-leading-tight);
+  color: white;
+  margin: 0;
+  max-width: 900px;
+  text-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  letter-spacing: var(--nvx-tracking-tight);
+}
+
+.nvx-cta-ultra-light .nvx-cta-ultra-title {
+  color: var(--nvx-dark-500);
+  text-shadow: 0 2px 4px rgba(255,255,255,0.5);
+}
+
+.nvx-cta-ultra-outline .nvx-cta-ultra-title,
+.nvx-cta-ultra-ghost .nvx-cta-ultra-title {
+  color: var(--nvx-primary-500);
+  text-shadow: none;
+}
+
+.nvx-cta-ultra-description {
+  font-size: clamp(var(--nvx-text-lg), 3vw, var(--nvx-text-2xl));
+  color: rgba(255,255,255,0.9);
+  line-height: var(--nvx-leading-relaxed);
+  max-width: 700px;
+  margin: 0;
+}
+
+.nvx-cta-ultra-light .nvx-cta-ultra-description {
+  color: var(--nvx-dark-500);
+  opacity: 0.8;
+}
+
+.nvx-cta-ultra-outline .nvx-cta-ultra-description,
+.nvx-cta-ultra-ghost .nvx-cta-ultra-description {
+  color: var(--nvx-dark-500);
+}
+
+/* ===================================== */
+/* 8 ANIMATION VARIANTS                   */
+/* ===================================== */
+.nvx-cta-ultra-animate-bounce {
+  animation: nvx-cta-bounce 2s var(--nvx-ease-bounce) infinite;
+}
+
+.nvx-cta-ultra-animate-pulse {
+  animation: nvx-cta-pulse 2s var(--nvx-ease-smooth) infinite;
+}
+
+.nvx-cta-ultra-animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.nvx-cta-ultra-animate-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: nvx-cta-shimmer 2s var(--nvx-ease-in-out) infinite;
+}
+
+.nvx-cta-ultra-animate-glow {
+  animation: nvx-cta-glow 2s var(--nvx-ease-smooth) infinite;
+}
+
+.nvx-cta-ultra-animate-float {
+  animation: nvx-cta-float 3s var(--nvx-ease-elastic) infinite;
+}
+
+.nvx-cta-ultra-animate-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.nvx-cta-ultra-animate-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 70%);
+  transform: translate(-50%, -50%);
+  animation: nvx-cta-ripple 2s var(--nvx-ease-out) infinite;
+}
+
+.nvx-cta-ultra-animate-slide {
+  animation: nvx-cta-slide 1s var(--nvx-ease-emphasized);
+}
+
+.nvx-cta-ultra-animate-scale {
+  animation: nvx-cta-scale 0.5s var(--nvx-ease-bounce);
+}
+
+.nvx-cta-ultra-animate-scale:hover {
+  transform: scale(1.02);
+  transition: transform var(--nvx-duration-300) var(--nvx-ease-bounce);
+}
+
+@keyframes nvx-cta-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes nvx-cta-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes nvx-cta-shimmer {
+  100% { left: 100%; }
+}
+
+@keyframes nvx-cta-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(59,130,246,0.3); }
+  50% { box-shadow: 0 0 40px rgba(59,130,246,0.6); }
+}
+
+@keyframes nvx-cta-ripple {
+  0% { width: 0; height: 0; opacity: 1; }
+  100% { width: 200px; height: 200px; opacity: 0; }
+}
+
+@keyframes nvx-cta-slide {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes nvx-cta-scale {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ===================================== */
+/* 10 INTERACTION EFFECTS                 */
+/* ===================================== */
+.nvx-cta-ultra-interact-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--nvx-shadow-2xl);
+  transition: all var(--nvx-duration-300) var(--nvx-ease-bounce);
+}
+
+.nvx-cta-ultra-interact-focus:focus {
+  outline: 3px solid var(--nvx-primary-500);
+  outline-offset: 2px;
+}
+
+.nvx-cta-ultra-interact-active:active {
+  transform: scale(0.98);
+  transition: transform var(--nvx-duration-150) var(--nvx-ease-out);
+}
+
+.nvx-cta-ultra-interact-click {
+  cursor: pointer;
+}
+
+.nvx-cta-ultra-interact-double-click {
+  cursor: pointer;
+}
+
+.nvx-cta-ultra-interact-right-click {
+  cursor: context-menu;
+}
+
+.nvx-cta-ultra-interact-mouse-enter {
+  transition: all var(--nvx-duration-300) var(--nvx-ease-emphasized);
+}
+
+.nvx-cta-ultra-interact-mouse-enter:hover {
+  background: var(--nvx-primary-600);
+}
+
+.nvx-cta-ultra-interact-mouse-leave {
+  transition: all var(--nvx-duration-300) var(--nvx-ease-emphasized);
+}
+
+.nvx-cta-ultra-interact-scroll {
+  transition: opacity var(--nvx-duration-500) var(--nvx-ease-smooth);
+}
+
+.nvx-cta-ultra-interact-scroll.visible {
+  opacity: 1;
+}
+
+.nvx-cta-ultra-interact-view {
+  animation: nvx-cta-slide 1s var(--nvx-ease-emphasized);
+}
+
+/* ===================================== */
+/* ULTRA BUTTON SYSTEM                    */
+/* ===================================== */
+.nvx-cta-ultra-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--nvx-space-4);
+  margin-top: var(--nvx-space-4);
+}
+
+.nvx-cta-ultra-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--nvx-space-2);
+  padding: var(--nvx-space-4) var(--nvx-space-8);
+  border-radius: var(--nvx-radius-full);
+  font-weight: var(--nvx-font-bold);
+  font-size: var(--nvx-text-lg);
+  text-decoration: none;
+  transition: all var(--nvx-duration-300) var(--nvx-ease-bounce);
+  min-width: 180px;
+  min-height: 56px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.nvx-cta-ultra-btn-primary {
+  background: white;
+  color: var(--nvx-primary-500);
+  box-shadow: var(--nvx-shadow-lg);
+}
+
+.nvx-cta-ultra-btn-primary:hover {
+  background: var(--nvx-primary-50);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--nvx-shadow-2xl);
+}
+
+.nvx-cta-ultra-btn-secondary {
+  background: transparent;
+  border-color: white;
+  color: white;
+}
+
+.nvx-cta-ultra-btn-secondary:hover {
+  background: white;
+  color: var(--nvx-primary-500);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--nvx-shadow-lg);
+}
+
+.nvx-cta-ultra-btn-success {
+  background: var(--nvx-success-500);
+  color: white;
+}
+
+.nvx-cta-ultra-btn-success:hover {
+  background: #059669;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--nvx-shadow-glow-success);
+}
+
+.nvx-cta-ultra-btn-warning {
+  background: var(--nvx-warning-500);
+  color: white;
+}
+
+.nvx-cta-ultra-btn-warning:hover {
+  background: #d97706;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--nvx-shadow-glow-warning);
+}
+
+.nvx-cta-ultra-btn-danger {
+  background: var(--nvx-danger-500);
+  color: white;
+}
+
+.nvx-cta-ultra-btn-danger:hover {
+  background: #dc2626;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--nvx-shadow-glow-danger);
+}
+
+.nvx-cta-ultra-btn-info {
+  background: var(--nvx-info-500);
+  color: white;
+}
+
+.nvx-cta-ultra-btn-info:hover {
+  background: #0891b2;
+  transform: translateY(-4px) scale(1.02);
+}
+
+.nvx-cta-ultra-btn-outline {
+  background: transparent;
+  border: 2px solid currentColor;
+  color: white;
+}
+
+.nvx-cta-ultra-btn-outline:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.nvx-cta-ultra-btn-ghost {
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.nvx-cta-ultra-btn-ghost:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+/* Button sizes */
+.nvx-cta-ultra-btn-sm {
+  padding: var(--nvx-space-2) var(--nvx-space-4);
+  font-size: var(--nvx-text-sm);
+  min-width: 120px;
+  min-height: 40px;
+}
+
+.nvx-cta-ultra-btn-md {
+  padding: var(--nvx-space-3) var(--nvx-space-6);
+  font-size: var(--nvx-text-base);
+  min-width: 160px;
+  min-height: 48px;
+}
+
+.nvx-cta-ultra-btn-lg {
+  padding: var(--nvx-space-4) var(--nvx-space-8);
+  font-size: var(--nvx-text-lg);
+  min-width: 200px;
+  min-height: 60px;
+}
+
+.nvx-cta-ultra-btn-xl {
+  padding: var(--nvx-space-6) var(--nvx-space-10);
+  font-size: var(--nvx-text-xl);
+  min-width: 240px;
+  min-height: 72px;
+}
+
+/* Button with icon */
+.nvx-cta-ultra-btn-icon-left {
+  flex-direction: row;
+}
+
+.nvx-cta-ultra-btn-icon-right {
+  flex-direction: row-reverse;
+}
+
+.nvx-cta-ultra-btn-icon-only {
+  padding: var(--nvx-space-3);
+  min-width: auto;
+}
+
+/* Ripple effect on click */
+.nvx-cta-ultra-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.nvx-cta-ultra-btn:active::after {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  transition: 0s;
+}
+
+/* ===================================== */
+/* 3 COUNTDOWN TIMER VARIANTS             */
+/* ===================================== */
+.nvx-cta-ultra-timer {
+  display: flex;
+  gap: var(--nvx-space-4);
+  margin-top: var(--nvx-space-4);
+  justify-content: center;
+}
+
+.nvx-cta-ultra-timer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  padding: var(--nvx-space-3);
+  background: var(--nvx-glass-light);
+  backdrop-filter: var(--nvx-glass-blur-md);
+  -webkit-backdrop-filter: var(--nvx-glass-blur-md);
+  border-radius: var(--nvx-radius-lg);
+  border: 1px solid var(--nvx-glass-medium);
+}
+
+.nvx-cta-ultra-timer-value {
+  font-size: var(--nvx-text-4xl);
+  font-weight: var(--nvx-font-black);
+  color: white;
+  line-height: 1;
+}
+
+.nvx-cta-ultra-timer-label {
+  font-size: var(--nvx-text-xs);
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  letter-spacing: var(--nvx-tracking-wider);
+  margin-top: var(--nvx-space-1);
+}
+
+.nvx-cta-ultra-timer-compact {
+  gap: var(--nvx-space-2);
+}
+
+.nvx-cta-ultra-timer-compact .nvx-cta-ultra-timer-item {
+  min-width: 60px;
+  padding: var(--nvx-space-2);
+}
+
+.nvx-cta-ultra-timer-compact .nvx-cta-ultra-timer-value {
+  font-size: var(--nvx-text-2xl);
+}
+
+.nvx-cta-ultra-timer-large .nvx-cta-ultra-timer-item {
+  min-width: 100px;
+  padding: var(--nvx-space-4);
+}
+
+.nvx-cta-ultra-timer-large .nvx-cta-ultra-timer-value {
+  font-size: var(--nvx-text-5xl);
+}
+
+/* ===================================== */
+/* 7 PARTICLE EFFECT VARIANTS             */
+/* ===================================== */
+.nvx-cta-ultra-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nvx-cta-ultra-particles-confetti::before,
+.nvx-cta-ultra-particles-confetti::after,
+.nvx-cta-ultra-particles-confetti span {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0;
+  animation: nvx-cta-confetti 2s ease-out infinite;
+}
+
+.nvx-cta-ultra-particles-confetti::before {
+  background: #ff6b6b;
+  left: 20%;
+  top: 20%;
+  animation-delay: 0s;
+}
+
+.nvx-cta-ultra-particles-confetti::after {
+  background: #feca57;
+  left: 50%;
+  top: 30%;
+  animation-delay: 0.5s;
+}
+
+.nvx-cta-ultra-particles-confetti span {
+  background: #48dbfb;
+  left: 80%;
+  top: 40%;
+  animation-delay: 1s;
+}
+
+.nvx-cta-ultra-particles-sparkle::before,
+.nvx-cta-ultra-particles-sparkle::after {
+  content: '✨';
+  position: absolute;
+  font-size: 20px;
+  opacity: 0;
+  animation: nvx-cta-sparkle 3s ease-in infinite;
+}
+
+.nvx-cta-ultra-particles-sparkle::before {
+  left: 10%;
+  top: 10%;
+  animation-delay: 0s;
+}
+
+.nvx-cta-ultra-particles-sparkle::after {
+  left: 90%;
+  top: 80%;
+  animation-delay: 1.5s;
+}
+
+.nvx-cta-ultra-particles-snow {
+  background: radial-gradient(circle at 10% 20%, white 1px, transparent 1px),
+              radial-gradient(circle at 30% 50%, white 1px, transparent 1px),
+              radial-gradient(circle at 50% 80%, white 1px, transparent 1px),
+              radial-gradient(circle at 70% 30%, white 1px, transparent 1px),
+              radial-gradient(circle at 90% 60%, white 1px, transparent 1px);
+  background-size: 200px 200px;
+  animation: nvx-cta-snow 10s linear infinite;
+  opacity: 0.3;
+}
+
+.nvx-cta-ultra-particles-fire {
+  background: radial-gradient(circle at 30% 70%, rgba(255,107,107,0.2) 0%, transparent 50%),
+              radial-gradient(circle at 70% 40%, rgba(255,165,0,0.2) 0%, transparent 50%);
+  animation: nvx-cta-fire 5s ease infinite;
+}
+
+.nvx-cta-ultra-particles-bubble::before,
+.nvx-cta-ultra-particles-bubble::after {
+  content: '○';
+  position: absolute;
+  font-size: 30px;
+  color: rgba(255,255,255,0.2);
+  animation: nvx-cta-bubble 4s ease-in infinite;
+}
+
+.nvx-cta-ultra-particles-bubble::before {
+  left: 15%;
+  bottom: 10%;
+  animation-delay: 0s;
+}
+
+.nvx-cta-ultra-particles-bubble::after {
+  left: 85%;
+  bottom: 20%;
+  animation-delay: 2s;
+}
+
+.nvx-cta-ultra-particles-leaf::before,
+.nvx-cta-ultra-particles-leaf::after {
+  content: '🍂';
+  position: absolute;
+  font-size: 24px;
+  opacity: 0.3;
+  animation: nvx-cta-leaf 8s linear infinite;
+}
+
+.nvx-cta-ultra-particles-leaf::before {
+  left: 5%;
+  top: 10%;
+  animation-delay: 0s;
+}
+
+.nvx-cta-ultra-particles-leaf::after {
+  left: 95%;
+  top: 50%;
+  animation-delay: 4s;
+}
+
+.nvx-cta-ultra-particles-star::before,
+.nvx-cta-ultra-particles-star::after {
+  content: '⭐';
+  position: absolute;
+  font-size: 20px;
+  opacity: 0.2;
+  animation: nvx-cta-star 3s ease infinite;
+}
+
+@keyframes nvx-cta-confetti {
+  0% { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+  100% { opacity: 0; transform: translate(100px, -100px) rotate(720deg); }
+}
+
+@keyframes nvx-cta-sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+@keyframes nvx-cta-snow {
+  0% { background-position: 0 0; }
+  100% { background-position: 200px 200px; }
+}
+
+@keyframes nvx-cta-fire {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes nvx-cta-bubble {
+  0% { opacity: 0; transform: translateY(0); }
+  50% { opacity: 0.5; transform: translateY(-50px); }
+  100% { opacity: 0; transform: translateY(-100px); }
+}
+
+@keyframes nvx-cta-leaf {
+  0% { transform: translateX(0) rotate(0deg); opacity: 0.3; }
+  100% { transform: translateX(-100px) rotate(360deg); opacity: 0; }
+}
+
+@keyframes nvx-cta-star {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+}
+
+/* ===================================== */
+/* 5 TRACKING EVENT HOOKS                 */
+/* ===================================== */
+.nvx-cta-ultra[data-track-impression="true"] {
+  /* Impression tracking hook */
+}
+
+.nvx-cta-ultra-btn[data-track-click="true"] {
+  cursor: pointer;
+}
+
+.nvx-cta-ultra-btn[data-track-conversion="true"] {
+  position: relative;
+}
+
+.nvx-cta-ultra-btn[data-track-hover="true"]:hover {
+  /* Hover tracking hook */
+}
+
+.nvx-cta-ultra[data-track-time="true"] {
+  /* Time spent tracking hook */
+}
+
+/* ===================================== */
+/* STATS SECTION                          */
+/* ===================================== */
+.nvx-cta-ultra-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--nvx-space-8);
+  margin-top: var(--nvx-space-8);
+  padding-top: var(--nvx-space-8);
+  border-top: 1px solid rgba(255,255,255,0.2);
+  width: 100%;
+  max-width: 800px;
+}
+
+.nvx-cta-ultra-stat {
+  text-align: center;
+}
+
+.nvx-cta-ultra-stat-value {
+  font-size: var(--nvx-text-4xl);
+  font-weight: var(--nvx-font-black);
+  color: white;
+  line-height: 1;
+  margin-bottom: var(--nvx-space-1);
+}
+
+.nvx-cta-ultra-stat-label {
+  font-size: var(--nvx-text-sm);
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  letter-spacing: var(--nvx-tracking-wider);
+}
+
+/* ===================================== */
+/* FORM SECTION                           */
+/* ===================================== */
+.nvx-cta-ultra-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--nvx-space-3);
+  max-width: 500px;
+  width: 100%;
+  margin-top: var(--nvx-space-4);
+}
+
+.nvx-cta-ultra-input {
+  flex: 1;
+  min-width: 200px;
+  padding: var(--nvx-space-4) var(--nvx-space-6);
+  background: var(--nvx-glass-light);
+  backdrop-filter: var(--nvx-glass-blur-md);
+  -webkit-backdrop-filter: var(--nvx-glass-blur-md);
+  border: 1px solid var(--nvx-glass-medium);
+  border-radius: var(--nvx-radius-full);
+  color: white;
+  font-size: var(--nvx-text-base);
+  transition: all var(--nvx-duration-300) var(--nvx-ease-smooth);
+}
+
+.nvx-cta-ultra-input::placeholder {
+  color: rgba(255,255,255,0.6);
+}
+
+.nvx-cta-ultra-input:focus {
+  outline: none;
+  border-color: white;
+  background: var(--nvx-glass-heavy);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+}
+
+.nvx-cta-ultra-submit {
+  padding: var(--nvx-space-4) var(--nvx-space-8);
+  background: white;
+  border: none;
+  border-radius: var(--nvx-radius-full);
+  color: var(--nvx-primary-500);
+  font-weight: var(--nvx-font-bold);
+  font-size: var(--nvx-text-base);
+  cursor: pointer;
+  transition: all var(--nvx-duration-300) var(--nvx-ease-bounce);
+  min-width: 120px;
+  min-height: 56px;
+}
+
+.nvx-cta-ultra-submit:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--nvx-shadow-xl);
+}
+
+.nvx-cta-ultra-submit:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ===================================== */
+/* RESPONSIVE BREAKPOINTS                 */
+/* ===================================== */
+@container nvx-cta-ultra (max-width: 800px) {
+  .nvx-cta-ultra-title {
+    font-size: clamp(var(--nvx-text-3xl), 6vw, var(--nvx-text-5xl));
+  }
+  
+  .nvx-cta-ultra-stats {
+    gap: var(--nvx-space-4);
+  }
+  
+  .nvx-cta-ultra-stat-value {
+    font-size: var(--nvx-text-2xl);
+  }
+  
+  .nvx-cta-ultra-layout-split {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@container nvx-cta-ultra (max-width: 600px) {
+  .nvx-cta-ultra {
+    padding: var(--nvx-space-10) var(--nvx-space-4);
+  }
+  
+  .nvx-cta-ultra-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nvx-cta-ultra-btn {
+    width: 100%;
+    min-width: auto;
+  }
+  
+  .nvx-cta-ultra-stats {
+    flex-direction: column;
+    gap: var(--nvx-space-4);
+  }
+  
+  .nvx-cta-ultra-timer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nvx-cta-ultra-form {
+    flex-direction: column;
+  }
+  
+  .nvx-cta-ultra-input {
+    width: 100%;
+  }
+  
+  .nvx-cta-ultra-submit {
+    width: 100%;
+  }
+}
+
+/* Fallback for browsers without container queries */
+@media (max-width: 800px) {
+  .nvx-cta-ultra-title {
+    font-size: clamp(var(--nvx-text-3xl), 6vw, var(--nvx-text-5xl));
+  }
+  
+  .nvx-cta-ultra-stat-value {
+    font-size: var(--nvx-text-2xl);
+  }
+  
+  .nvx-cta-ultra-layout-split {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .nvx-cta-ultra-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nvx-cta-ultra-btn {
+    width: 100%;
+  }
+  
+  .nvx-cta-ultra-stats {
+    flex-direction: column;
+    gap: var(--nvx-space-4);
+  }
+  
+  .nvx-cta-ultra-form {
+    flex-direction: column;
+  }
+}
+
+/* ===================================== */
+/* DARK THEME SUPPORT                     */
+/* ===================================== */
+@media (prefers-color-scheme: dark) {
+  .nvx-cta-ultra-light {
+    background: var(--nvx-dark-500);
+    color: white;
+  }
+  
+  .nvx-cta-ultra-light .nvx-cta-ultra-title,
+  .nvx-cta-ultra-light .nvx-cta-ultra-description,
+  .nvx-cta-ultra-light .nvx-cta-ultra-stat-value,
+  .nvx-cta-ultra-light .nvx-cta-ultra-stat-label {
+    color: white;
+  }
+  
+  .nvx-cta-ultra-light .nvx-cta-ultra-badge {
+    background: var(--nvx-glass-dark-light);
+    border-color: var(--nvx-glass-dark-medium);
+  }
+  
+  .nvx-cta-ultra-outline,
+  .nvx-cta-ultra-ghost {
+    color: white;
+    border-color: white;
+  }
+}
+
+[data-theme="dark"] .nvx-cta-ultra-light {
+  background: var(--nvx-dark-500);
+  color: white;
+}
+
+[data-theme="dark"] .nvx-cta-ultra-light .nvx-cta-ultra-title,
+[data-theme="dark"] .nvx-cta-ultra-light .nvx-cta-ultra-description,
+[data-theme="dark"] .nvx-cta-ultra-light .nvx-cta-ultra-stat-value,
+[data-theme="dark"] .nvx-cta-ultra-light .nvx-cta-ultra-stat-label {
+  color: white;
+}
+
+/* ===================================== */
+/* RTL SUPPORT                            */
+/* ===================================== */
+[dir="rtl"] .nvx-cta-ultra-btn-icon-left {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nvx-cta-ultra-btn-icon-right {
+  flex-direction: row;
+}
+
+[dir="rtl"] .nvx-cta-ultra-badge-corner {
+  right: auto;
+  left: var(--nvx-space-4);
+}
+
+[dir="rtl"] .nvx-cta-ultra-timer {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nvx-cta-ultra-form {
+  flex-direction: row-reverse;
+}
+
+/* ===================================== */
+/* REDUCED MOTION                         */
+/* ===================================== */
+@media (prefers-reduced-motion: reduce) {
+  .nvx-cta-ultra,
+  .nvx-cta-ultra *,
+  .nvx-cta-ultra *::before,
+  .nvx-cta-ultra *::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  
+  .nvx-cta-ultra-btn:hover,
+  .nvx-cta-ultra-btn:active,
+  .nvx-cta-ultra-btn:focus {
+    transform: none !important;
+  }
+  
+  .nvx-cta-ultra-particles,
+  .nvx-cta-ultra-animate-shimmer::after,
+  .nvx-cta-ultra-animate-ripple::after {
+    display: none !important;
+  }
+}
+
+/* ===================================== */
+/* HIGH CONTRAST MODE                     */
+/* ===================================== */
+@media (prefers-contrast: high) {
+  .nvx-cta-ultra {
+    background: Canvas !important;
+    border: 3px solid CanvasText;
+  }
+  
+  .nvx-cta-ultra-title,
+  .nvx-cta-ultra-description,
+  .nvx-cta-ultra-stat-value,
+  .nvx-cta-ultra-stat-label,
+  .nvx-cta-ultra-badge,
+  .nvx-cta-ultra-btn {
+    color: CanvasText !important;
+  }
+  
+  .nvx-cta-ultra-btn {
+    border: 2px solid CanvasText !important;
+    background: Canvas !important;
+  }
+  
+  .nvx-cta-ultra-btn:hover {
+    background: CanvasText !important;
+    color: Canvas !important;
+  }
+  
+  .nvx-cta-ultra-badge {
+    border: 2px solid CanvasText !important;
+    background: Canvas !important;
+  }
+  
+  .nvx-cta-ultra-particles,
+  .nvx-cta-ultra-glass,
+  .nvx-cta-ultra-gradient-radial,
+  .nvx-cta-ultra-gradient-conic,
+  .nvx-cta-ultra-gradient-repeating {
+    display: none !important;
+  }
+}
+
+/* ===================================== */
+/* PRINT STYLES                           */
+/* ===================================== */
+@media print {
+  .nvx-cta-ultra {
+    background: #fff !important;
+    border: 2px solid #000 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    padding: 1cm !important;
+  }
+  
+  .nvx-cta-ultra-title,
+  .nvx-cta-ultra-description,
+  .nvx-cta-ultra-stat-value,
+  .nvx-cta-ultra-stat-label {
+    color: #000 !important;
+  }
+  
+  .nvx-cta-ultra-btn,
+  .nvx-cta-ultra-form,
+  .nvx-cta-ultra-particles,
+  .nvx-cta-ultra-timer,
+  .nvx-cta-ultra-badge-corner {
+    display: none !important;
+  }
+}
+
+/* ===================================== */
+/* NEVOX ULTRA CTA SECTION v4.1 – COMPLETE */
+/* ===================================== */
