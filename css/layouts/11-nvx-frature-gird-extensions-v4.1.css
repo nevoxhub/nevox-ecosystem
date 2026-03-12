@@ -1,0 +1,381 @@
+/* ===================================== */
+/* 11 layouts css section */
+/* NEVOX FEATURE GRID EXTENSIONS v4.1    */
+/* আলাদা ফাইল - ইচ্ছামতো লোড করুন        */
+/* সম্পূর্ণ কম্প্যাটিবল মূল গ্রিডের সাথে  */
+/* ===================================== */
+
+:root {
+  /* এক্সটেনশন ভেরিয়েবল (মূল গ্রিডের সাথে কনফ্লিক্ট হবে না) */
+  --nvx-ext-counter-size: 2.5rem;
+  --nvx-ext-avatar-size: 2.5rem;
+  --nvx-ext-progress-height: 6px;
+}
+
+/* ===================================== */
+/* ১. অ্যানিমেটেড কাউন্টার              */
+/* ===================================== */
+.nvx-feature-counter {
+  font-size: var(--nvx-ext-counter-size);
+  font-weight: 800;
+  background: var(--nvx-gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  animation: nvx-counter-float 2s infinite ease-in-out;
+  display: inline-block;
+}
+
+@keyframes nvx-counter-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* গ্রিডের সাথে কাজ করার গ্যারান্টি */
+.nvx-feature-item .nvx-feature-counter {
+  display: block;
+  text-align: center;
+}
+
+/* ===================================== */
+/* ২. প্রগ্রেস বার                       */
+/* ===================================== */
+.nvx-feature-progress {
+  width: 100%;
+  height: var(--nvx-ext-progress-height);
+  background: var(--nvx-color-border-main);
+  border-radius: var(--nvx-radius-full);
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.nvx-feature-progress-bar {
+  height: 100%;
+  width: var(--progress, 0%);
+  background: var(--nvx-gradient-primary);
+  border-radius: var(--nvx-radius-full);
+  transition: width 1s var(--nvx-ease-bounce);
+}
+
+/* হোভার এফেক্ট - মূল গ্রিডের সাথে মিলিয়ে */
+.nvx-feature-item:hover .nvx-feature-progress-bar {
+  width: 100%;
+}
+
+/* ===================================== */
+/* ৩. রেটিং সিস্টেম                      */
+/* ===================================== */
+.nvx-feature-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0.75rem 0;
+  flex-wrap: wrap;
+}
+
+.nvx-feature-star {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--nvx-color-border-main);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  transition: transform 0.2s var(--nvx-ease-standard);
+}
+
+.nvx-feature-star.filled {
+  background-color: #fbbf24;
+}
+
+.nvx-feature-star.half {
+  background: linear-gradient(90deg, #fbbf24 50%, var(--nvx-color-border-main) 50%);
+}
+
+.nvx-feature-star:hover {
+  transform: scale(1.2);
+}
+
+.nvx-feature-rating-count {
+  font-size: 0.875rem;
+  color: var(--nvx-color-text-secondary);
+  margin-left: 0.5rem;
+}
+
+/* ===================================== */
+/* ৪. ইউজার অ্যাভাটার গ্রুপ             */
+/* ===================================== */
+.nvx-feature-users {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.nvx-feature-user-avatar {
+  width: var(--nvx-ext-avatar-size);
+  height: var(--nvx-ext-avatar-size);
+  border-radius: 50%;
+  border: 2px solid var(--nvx-color-bg-card);
+  margin-right: -0.5rem;
+  transition: transform 0.3s var(--nvx-ease-bounce);
+  object-fit: cover;
+}
+
+[dir="rtl"] .nvx-feature-user-avatar {
+  margin-right: 0;
+  margin-left: -0.5rem;
+}
+
+.nvx-feature-user-avatar:hover {
+  transform: scale(1.1) translateY(-3px);
+  z-index: 10;
+}
+
+.nvx-feature-user-count {
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--nvx-color-text-secondary);
+  background: var(--nvx-color-bg-tertiary);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--nvx-radius-full);
+}
+
+/* ===================================== */
+/* ৫. প্রাইস ট্যাগ                       */
+/* ===================================== */
+.nvx-feature-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.nvx-feature-price-currency {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--nvx-color-text-secondary);
+}
+
+.nvx-feature-price-amount {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--nvx-gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.nvx-feature-price-period {
+  font-size: 0.875rem;
+  color: var(--nvx-color-text-secondary);
+}
+
+.nvx-feature-price-save {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--nvx-color-success);
+  color: white;
+  border-radius: var(--nvx-radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+/* ===================================== */
+/* ৬. ট্যাগ সিস্টেম                      */
+/* ===================================== */
+.nvx-feature-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.nvx-feature-tag {
+  padding: 0.25rem 0.75rem;
+  background: var(--nvx-color-bg-tertiary);
+  border: 1px solid var(--nvx-color-border-main);
+  border-radius: var(--nvx-radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--nvx-color-text-secondary);
+  transition: all 0.3s var(--nvx-ease-standard);
+  cursor: default;
+}
+
+.nvx-feature-tag:hover {
+  background: var(--nvx-color-brand-primary);
+  color: white;
+  border-color: var(--nvx-color-brand-primary);
+  transform: translateY(-2px);
+}
+
+/* ===================================== */
+/* ৭. মিডিয়া থাম্বনেইল                  */
+/* ===================================== */
+.nvx-feature-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: var(--nvx-radius-lg);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.nvx-feature-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--nvx-ease-emphasized);
+}
+
+.nvx-feature-media:hover img {
+  transform: scale(1.05);
+}
+
+.nvx-feature-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 3rem;
+  height: 3rem;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--nvx-color-brand-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.nvx-feature-media:hover .nvx-feature-play-btn {
+  opacity: 1;
+}
+
+/* ===================================== */
+/* ৮. কম্প্যারিজন মার্কার                */
+/* ===================================== */
+.nvx-feature-compare-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.nvx-feature-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--nvx-color-success);
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.nvx-feature-cross {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--nvx-color-danger);
+  color: white;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* ===================================== */
+/* ডার্ক মোড সাপোর্ট                     */
+/* ===================================== */
+@media (prefers-color-scheme: dark) {
+  .nvx-feature-user-count {
+    background: var(--nvx-color-bg-tertiary-dark);
+  }
+  
+  .nvx-feature-tag {
+    background: var(--nvx-color-bg-tertiary-dark);
+    border-color: var(--nvx-color-border-main-dark);
+  }
+}
+
+[data-theme="dark"] .nvx-feature-user-count {
+  background: var(--nvx-color-bg-tertiary-dark);
+}
+
+[data-theme="dark"] .nvx-feature-tag {
+  background: var(--nvx-color-bg-tertiary-dark);
+  border-color: var(--nvx-color-border-main-dark);
+}
+
+/* ===================================== */
+/* RTL support                           */
+/* ===================================== */
+[dir="rtl"] .nvx-feature-user-avatar {
+  margin-right: 0;
+  margin-left: -0.5rem;
+}
+
+[dir="rtl"] .nvx-feature-price-save {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .nvx-feature-rating-count {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+/* ===================================== */
+/* রিডিউসড মোশন সাপোর্ট                 */
+/* ===================================== */
+@media (prefers-reduced-motion: reduce) {
+  .nvx-feature-counter,
+  .nvx-feature-progress-bar,
+  .nvx-feature-user-avatar,
+  .nvx-feature-star,
+  .nvx-feature-tag,
+  .nvx-feature-media img,
+  .nvx-feature-play-btn {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .nvx-feature-counter {
+    animation: none !important;
+  }
+}
+
+/* ===================================== */
+/* রেসপন্সিভ অ্যাডজাস্টমেন্ট            */
+/* ===================================== */
+@media (max-width: 600px) {
+  .nvx-feature-price-amount {
+    font-size: 2rem;
+  }
+  
+  .nvx-feature-user-avatar {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .nvx-feature-tags {
+    gap: 0.25rem;
+  }
+  
+  .nvx-feature-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+/* ===================================== */
+/* নেভক্স ফিচার গ্রিড এক্সটেনশন v4.1    */
+/* সম্পূর্ণ কম্প্যাটিবল • আলাদা লোড করুন */
+/* ===================================== */
