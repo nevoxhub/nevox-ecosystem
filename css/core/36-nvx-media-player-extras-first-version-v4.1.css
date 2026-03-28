@@ -1,0 +1,512 @@
+/* =================================================== */
+/* 36 core css section */
+/* NEVOX MEDIA PLAYER v4.1 - EXTENDED FEATURES        */
+/* Add this file after first version CSS              */
+/* =================================================== */
+
+/* Cast & AirPlay Support */
+.nvx-media-cast {
+    position: relative;
+}
+
+.nvx-media-cast-menu {
+    position: absolute;
+    bottom: calc(100% + 0.5rem);
+    right: 0;
+    min-width: 200px;
+    background: rgba(0,0,0,0.9);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 1030;
+    pointer-events: none;
+}
+
+.nvx-media-cast:hover .nvx-media-cast-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.nvx-media-cast-device {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+}
+
+.nvx-media-cast-device:hover {
+    background: #3b82f6;
+}
+
+.nvx-media-cast-device.connected {
+    background: #10b981;
+}
+
+/* Ripple Effect on Buttons */
+.nvx-media-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.nvx-media-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.nvx-media-btn:active::after {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    transition: 0s;
+}
+
+/* Vertical Volume Slider */
+.nvx-media-volume-slider {
+    position: absolute;
+    bottom: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 100px;
+    background: rgba(0,0,0,0.9);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    pointer-events: none;
+    z-index: 1030;
+}
+
+.nvx-media-volume:hover .nvx-media-volume-slider {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.nvx-media-volume-track {
+    position: relative;
+    width: 100px;
+    height: 80px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 9999px;
+    cursor: pointer;
+    transform: rotate(-90deg) translateX(-50%) translateY(-50%);
+}
+
+.nvx-media-volume-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3b82f6;
+    border-radius: 9999px;
+    transition: height 0.2s ease;
+}
+
+.nvx-media-volume-value {
+    font-size: 0.75rem;
+    color: #ffffff;
+    margin-top: 0.25rem;
+}
+
+/* Fullscreen Fallback */
+.nvx-media-player:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    border-radius: 0;
+}
+
+.nvx-media-player:fullscreen .nvx-media-container {
+    height: 100vh;
+    aspect-ratio: auto;
+}
+
+.nvx-media-player:-webkit-full-screen {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+}
+
+.nvx-media-player:-moz-full-screen {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+}
+
+/* Modern Controls Bar */
+.nvx-media-controls-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.nvx-media-controls-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nvx-media-controls-group-left {
+    justify-content: flex-start;
+}
+
+.nvx-media-controls-group-center {
+    justify-content: center;
+}
+
+.nvx-media-controls-group-right {
+    justify-content: flex-end;
+}
+
+/* Button Size Variants */
+.nvx-media-btn-sm {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+}
+
+.nvx-media-btn-lg {
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+}
+
+/* Play/Pause Overlay Button */
+.nvx-media-play-pause {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 16;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nvx-media-player:hover .nvx-media-play-pause {
+    opacity: 1;
+}
+
+.nvx-media-play-pause.playing {
+    opacity: 0;
+}
+
+.nvx-media-play-pause:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Time Preview on Hover */
+.nvx-media-time-preview {
+    position: absolute;
+    bottom: calc(100% + 0.5rem);
+    left: 0;
+    background: rgba(0,0,0,0.9);
+    color: #ffffff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    pointer-events: none;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.nvx-media-progress-container:hover .nvx-media-time-preview {
+    opacity: 1;
+}
+
+/* Iframe Support (YouTube, Vimeo) */
+.nvx-media-player iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #000000;
+    border: none;
+}
+
+.nvx-media-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@supports not (aspect-ratio: 16/9) {
+    .nvx-media-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Improved Settings Menu */
+.nvx-media-settings-menu {
+    position: absolute;
+    bottom: calc(100% + 0.5rem);
+    right: 0;
+    min-width: 200px;
+    background: rgba(0,0,0,0.9);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 1030;
+    pointer-events: none;
+}
+
+.nvx-media-settings:hover .nvx-media-settings-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.nvx-media-settings-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+}
+
+.nvx-media-settings-item:hover {
+    background: #3b82f6;
+}
+
+.nvx-media-settings-item.active {
+    background: #3b82f6;
+    font-weight: 600;
+}
+
+/* Improved Quality & Speed Menu */
+.nvx-media-quality-menu,
+.nvx-media-speed-menu {
+    position: absolute;
+    bottom: calc(100% + 0.5rem);
+    right: 0;
+    min-width: 120px;
+    background: rgba(0,0,0,0.9);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 1030;
+    pointer-events: none;
+}
+
+.nvx-media-quality:hover .nvx-media-quality-menu,
+.nvx-media-speed:hover .nvx-media-speed-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.nvx-media-quality-option,
+.nvx-media-speed-option {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    text-align: left;
+    background: transparent;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+[dir="rtl"] .nvx-media-quality-option {
+    text-align: right;
+}
+
+.nvx-media-quality-option:hover,
+.nvx-media-speed-option:hover {
+    background: #3b82f6;
+}
+
+.nvx-media-quality-option.active,
+.nvx-media-speed-option.active {
+    background: #3b82f6;
+    font-weight: 600;
+}
+
+/* Improved Ad System */
+.nvx-media-ad-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 101;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nvx-media-ad-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nvx-media-ad-banner {
+    max-width: 90%;
+    max-height: 90%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.nvx-media-ad-banner:hover {
+    transform: scale(1.02);
+}
+
+.nvx-media-ad-skip {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(0,0,0,0.6);
+    color: #ffffff;
+    border: none;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nvx-media-ad-skip:hover {
+    background: #3b82f6;
+}
+
+.nvx-media-ad-timer {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0,0,0,0.6);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    color: #ffffff;
+}
+
+.nvx-media-ad-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: #3b82f6;
+    width: 0%;
+    transition: width 5s linear;
+}
+
+/* RTL Support for New Features */
+[dir="rtl"] .nvx-media-settings-menu {
+    left: 0;
+    right: auto;
+}
+
+[dir="rtl"] .nvx-media-quality-menu,
+[dir="rtl"] .nvx-media-speed-menu {
+    left: 0;
+    right: auto;
+}
+
+[dir="rtl"] .nvx-media-ad-skip {
+    left: 1rem;
+    right: auto;
+}
+
+[dir="rtl"] .nvx-media-ad-timer {
+    left: 1rem;
+    right: auto;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .nvx-media-btn::after {
+        display: none;
+    }
+    
+    .nvx-media-play-pause {
+        transition: none;
+    }
+    
+    .nvx-media-ad-progress {
+        transition: none;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .nvx-media-cast-device:hover {
+        outline: 2px solid white;
+    }
+    
+    .nvx-media-settings-item:hover {
+        outline: 2px solid white;
+    }
+}
